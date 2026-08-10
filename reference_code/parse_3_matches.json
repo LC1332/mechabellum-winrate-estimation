@@ -1,0 +1,6529 @@
+[
+  {
+    "file": "/Users/admin/Documents/GitHub/mechabellum-winrate-estimation/local_data/humen_replay/2207_20260725--134225731_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr",
+    "match_mode": "VS_1_1",
+    "is_2v2": false,
+    "players": [
+      {
+        "name": "你是蓬莱花仙",
+        "first_round_supply": 200,
+        "round_supply_increase": 200,
+        "rounds": [
+          {
+            "round": 0,
+            "supply_remaining": 0,
+            "econ_spent": null,
+            "actions": [],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 0,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 0,
+            "o_by_unit": {},
+            "cumulative_o": 0
+          },
+          {
+            "round": 1,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 200,
+            "o_by_unit": {
+              "10": 200
+            },
+            "cumulative_o": 200
+          },
+          {
+            "round": 2,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "7": 200,
+              "31": 100,
+              "10": 100
+            },
+            "cumulative_o": 600
+          },
+          {
+            "round": 3,
+            "supply_remaining": 100,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "tech": "未知科技(10231)",
+                "tech_id": 10231,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 50,
+              "tech": 50
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "9": 100,
+              "31": 250,
+              "13": 50
+            },
+            "cumulative_o": 1000
+          },
+          {
+            "round": 4,
+            "supply_remaining": 0,
+            "econ_spent": 300,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "tech": "未知科技(631)",
+                "tech_id": 631,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 500,
+            "o_by_unit": {
+              "10": 200,
+              "31": 300,
+              "8": 0
+            },
+            "cumulative_o": 1500
+          },
+          {
+            "round": 5,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 21,
+                "unit": "剑齿虎(sabertooth)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "tech": "未知科技(123101)",
+                "tech_id": 123101,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 100,
+              "tech": 50
+            },
+            "round_total": 750,
+            "o_by_unit": {
+              "31": 550,
+              "21": 0,
+              "20": 200
+            },
+            "cumulative_o": 2250
+          },
+          {
+            "round": 6,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Range enhancement",
+                "tech_id": 10207,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "unlock",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 0
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 500,
+              "level": 250,
+              "tech": 50
+            },
+            "round_total": 800,
+            "o_by_unit": {
+              "10": 100,
+              "7": 500,
+              "31": 200,
+              "24": 0
+            },
+            "cumulative_o": 3050
+          },
+          {
+            "round": 7,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "unlock",
+                "uid": 28,
+                "unit": "猎犬(hound)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 250,
+              "tech": 0
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "7": 700,
+              "31": 150,
+              "28": 0
+            },
+            "cumulative_o": 3900
+          },
+          {
+            "round": 8,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Aerial specialization",
+                "tech_id": 3207,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 6,
+                "unit": "黄蜂(wasp)"
+              },
+              {
+                "uid": 6,
+                "unit": "黄蜂(wasp)"
+              },
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 600,
+            "o_by_unit": {
+              "7": 350,
+              "10": 100,
+              "31": 150
+            },
+            "cumulative_o": 4500
+          },
+          {
+            "round": 9,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "tech": "Loose formation",
+                "tech_id": 3510,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 300,
+              "tech": 50
+            },
+            "round_total": 650,
+            "o_by_unit": {
+              "7": 200,
+              "31": 400,
+              "10": 50
+            },
+            "cumulative_o": 5150
+          },
+          {
+            "round": 10,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "tech": "Anti air barrage",
+                "tech_id": 1105,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "cost": 400
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 300,
+              "tech": 50
+            },
+            "round_total": 950,
+            "o_by_unit": {
+              "10": 200,
+              "31": 200,
+              "1": 450,
+              "7": 100
+            },
+            "cumulative_o": 6100
+          },
+          {
+            "round": 11,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 28,
+                "unit": "猎犬(hound)",
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 28,
+                "unit": "猎犬(hound)",
+                "tech": "Fire extinguisher",
+                "tech_id": 4228,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "cost": 400
+              },
+              {
+                "type": "buy",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "cost": 400
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 1,
+                "unit": "堡垒(fortress)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 850,
+              "level": 400,
+              "tech": 50
+            },
+            "round_total": 1300,
+            "o_by_unit": {
+              "31": 300,
+              "1": 850,
+              "28": 100,
+              "7": 50
+            },
+            "cumulative_o": 7400
+          },
+          {
+            "round": 12,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 18,
+                "unit": "幽灵(wraith)",
+                "tech": "Degeneration beam",
+                "tech_id": 180418,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "cost": 200
+              },
+              {
+                "type": "tech",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "tech": "Energy shield",
+                "tech_id": 206,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 28,
+                "unit": "猎犬(hound)"
+              },
+              {
+                "uid": 1,
+                "unit": "堡垒(fortress)"
+              },
+              {
+                "uid": 1,
+                "unit": "堡垒(fortress)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 500,
+              "level": 350,
+              "tech": 100
+            },
+            "round_total": 950,
+            "o_by_unit": {
+              "18": 50,
+              "1": 50,
+              "31": 100,
+              "10": 100,
+              "7": 150,
+              "6": 500
+            },
+            "cumulative_o": 8350
+          },
+          {
+            "round": 13,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "tech",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "tech": "Range enhancement",
+                "tech_id": 10201,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 1,
+                "unit": "堡垒(fortress)",
+                "cost": 400
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 18,
+                "unit": "幽灵(wraith)"
+              },
+              {
+                "uid": 18,
+                "unit": "幽灵(wraith)"
+              },
+              {
+                "uid": 6,
+                "unit": "黄蜂(wasp)"
+              },
+              {
+                "uid": 6,
+                "unit": "黄蜂(wasp)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 250,
+              "tech": 50
+            },
+            "round_total": 1000,
+            "o_by_unit": {
+              "31": 150,
+              "7": 100,
+              "20": 200,
+              "1": 450,
+              "10": 100
+            },
+            "cumulative_o": 9350
+          }
+        ],
+        "final_o_by_unit": {
+          "31": 2850,
+          "7": 2350,
+          "1": 1800,
+          "10": 1150,
+          "6": 500,
+          "20": 400,
+          "9": 100,
+          "28": 100,
+          "13": 50,
+          "18": 50,
+          "8": 0,
+          "21": 0,
+          "24": 0
+        },
+        "final_total_o": 9350
+      },
+      {
+        "name": "哈宝哈宝蛤不思饱Habsburg",
+        "first_round_supply": 200,
+        "round_supply_increase": 200,
+        "rounds": [
+          {
+            "round": 0,
+            "supply_remaining": 0,
+            "econ_spent": null,
+            "actions": [],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 0,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 0,
+            "o_by_unit": {},
+            "cumulative_o": 0
+          },
+          {
+            "round": 1,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 31,
+                "unit": "未知兵种(31)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 200,
+            "o_by_unit": {
+              "10": 200
+            },
+            "cumulative_o": 200
+          },
+          {
+            "round": 2,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 300,
+            "o_by_unit": {
+              "9": 200,
+              "10": 100
+            },
+            "cumulative_o": 500
+          },
+          {
+            "round": 3,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "tech": "Range enhancement",
+                "tech_id": 10224,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 2,
+                "unit": "神射手(marksmen)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 0,
+              "tech": 50
+            },
+            "round_total": 350,
+            "o_by_unit": {
+              "24": 250,
+              "10": 100,
+              "7": 0
+            },
+            "cumulative_o": 850
+          },
+          {
+            "round": 4,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "unlock",
+                "uid": 21,
+                "unit": "剑齿虎(sabertooth)",
+                "cost": 0
+              },
+              {
+                "type": "level",
+                "uid": 31,
+                "unit": "未知兵种(31)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 200,
+              "tech": 0
+            },
+            "round_total": 800,
+            "o_by_unit": {
+              "24": 450,
+              "31": 150,
+              "9": 200,
+              "21": 0
+            },
+            "cumulative_o": 1650
+          },
+          {
+            "round": 5,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "cost": 0
+              },
+              {
+                "type": "unlock",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 0
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 150
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 150
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 150
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 450,
+              "level": 50,
+              "tech": 0
+            },
+            "round_total": 500,
+            "o_by_unit": {
+              "8": 0,
+              "16": 450,
+              "24": 50
+            },
+            "cumulative_o": 2150
+          },
+          {
+            "round": 6,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Range enhancement",
+                "tech_id": 10216,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 150
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 150
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 150
+              },
+              {
+                "type": "unlock",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 450,
+              "level": 50,
+              "tech": 50
+            },
+            "round_total": 550,
+            "o_by_unit": {
+              "16": 550,
+              "13": 0
+            },
+            "cumulative_o": 2700
+          },
+          {
+            "round": 7,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "tech": "High explosive ammo",
+                "tech_id": 424,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 300,
+              "tech": 50
+            },
+            "round_total": 750,
+            "o_by_unit": {
+              "10": 400,
+              "16": 200,
+              "24": 150,
+              "8": 0
+            },
+            "cumulative_o": 3450
+          },
+          {
+            "round": 8,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Range enhancement",
+                "tech_id": 10207,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 28,
+                "unit": "猎犬(hound)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 200,
+              "tech": 50
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "24": 350,
+              "7": 450,
+              "16": 50,
+              "28": 0
+            },
+            "cumulative_o": 4300
+          },
+          {
+            "round": 9,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "tech": "Subterranean blitz",
+                "tech_id": 2610,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 15,
+                "unit": "弧光(arclight)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 100,
+              "tech": 50
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "24": 450,
+              "10": 350,
+              "16": 50,
+              "15": 0
+            },
+            "cumulative_o": 5150
+          },
+          {
+            "round": 10,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "tech": "未知科技(1022002)",
+                "tech_id": 1022002,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "tech": "Armor enhancement",
+                "tech_id": 3024,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 50,
+              "tech": 100
+            },
+            "round_total": 450,
+            "o_by_unit": {
+              "24": 100,
+              "2002": 50,
+              "10": 300,
+              "30": 0
+            },
+            "cumulative_o": 5600
+          },
+          {
+            "round": 11,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "cost": 800
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Electromagnetic shot",
+                "tech_id": 1816,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 1000,
+              "level": 400,
+              "tech": 50
+            },
+            "round_total": 1450,
+            "o_by_unit": {
+              "10": 300,
+              "2002": 850,
+              "24": 100,
+              "16": 100,
+              "7": 100
+            },
+            "cumulative_o": 7050
+          },
+          {
+            "round": 12,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "tech": "Armor enhancement",
+                "tech_id": 3013,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "cost": 800
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 1000,
+              "level": 200,
+              "tech": 50
+            },
+            "round_total": 1250,
+            "o_by_unit": {
+              "13": 50,
+              "2002": 900,
+              "24": 100,
+              "10": 200
+            },
+            "cumulative_o": 8300
+          },
+          {
+            "round": 13,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2002,
+                "unit": "未知兵种(2002)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 2002,
+                "unit": "未知兵种(2002)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 250,
+              "tech": 0
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "7": 300,
+              "2002": 50,
+              "24": 450,
+              "16": 50
+            },
+            "cumulative_o": 9150
+          }
+        ],
+        "final_o_by_unit": {
+          "24": 2450,
+          "10": 1950,
+          "2002": 1850,
+          "16": 1450,
+          "7": 850,
+          "9": 400,
+          "31": 150,
+          "13": 50,
+          "21": 0,
+          "8": 0,
+          "28": 0,
+          "15": 0,
+          "30": 0
+        },
+        "final_total_o": 9150
+      }
+    ]
+  },
+  {
+    "file": "/Users/admin/Documents/GitHub/mechabellum-winrate-estimation/local_data/humen_replay/2207_20260729--134245856_[juliensam23]VS[my98765431].grbr",
+    "match_mode": "VS_1_1",
+    "is_2v2": false,
+    "players": [
+      {
+        "name": "juliensam23",
+        "first_round_supply": 200,
+        "round_supply_increase": 200,
+        "rounds": [
+          {
+            "round": 0,
+            "supply_remaining": 0,
+            "econ_spent": null,
+            "actions": [],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 0,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 0,
+            "o_by_unit": {},
+            "cumulative_o": 0
+          },
+          {
+            "round": 1,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              },
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 200,
+            "o_by_unit": {
+              "10": 200
+            },
+            "cumulative_o": 200
+          },
+          {
+            "round": 2,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "13": 400
+            },
+            "cumulative_o": 600
+          },
+          {
+            "round": 3,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "unlock",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 600,
+            "o_by_unit": {
+              "7": 600
+            },
+            "cumulative_o": 1200
+          },
+          {
+            "round": 4,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 25,
+                "unit": "幻影射线(phantom ray)"
+              },
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 600,
+            "o_by_unit": {
+              "7": 200,
+              "13": 400
+            },
+            "cumulative_o": 1800
+          },
+          {
+            "round": 5,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 25,
+                "unit": "幻影射线(phantom ray)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 25,
+                "unit": "幻影射线(phantom ray)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 50,
+              "tech": 0
+            },
+            "round_total": 450,
+            "o_by_unit": {
+              "13": 50,
+              "25": 400
+            },
+            "cumulative_o": 2250
+          },
+          {
+            "round": 6,
+            "supply_remaining": 350,
+            "econ_spent": -150,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 800
+              },
+              {
+                "type": "tech",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "tech": "Range enhancement",
+                "tech_id": 10217,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 25,
+                "unit": "幻影射线(phantom ray)"
+              },
+              {
+                "uid": 25,
+                "unit": "幻影射线(phantom ray)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 1000,
+              "level": 0,
+              "tech": 50
+            },
+            "round_total": 1050,
+            "o_by_unit": {
+              "17": 850,
+              "13": 200
+            },
+            "cumulative_o": 3300
+          },
+          {
+            "round": 7,
+            "supply_remaining": 0,
+            "econ_spent": 550,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 800
+              },
+              {
+                "type": "tech",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "tech": "Launcher overload",
+                "tech_id": 10317,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 900,
+              "level": 0,
+              "tech": 50
+            },
+            "round_total": 950,
+            "o_by_unit": {
+              "17": 850,
+              "10": 100
+            },
+            "cumulative_o": 4250
+          },
+          {
+            "round": 8,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "tech": "High explosive ammo",
+                "tech_id": 417,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 800
+              },
+              {
+                "type": "tech",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "tech": "Field maintenance",
+                "tech_id": 913,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 1100,
+              "level": 50,
+              "tech": 100
+            },
+            "round_total": 1250,
+            "o_by_unit": {
+              "17": 850,
+              "13": 250,
+              "10": 100,
+              "7": 50
+            },
+            "cumulative_o": 5500
+          },
+          {
+            "round": 9,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 800
+              },
+              {
+                "type": "tech",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "tech": "Sledgehammer production",
+                "tech_id": 12217,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 900,
+              "level": 0,
+              "tech": 50
+            },
+            "round_total": 950,
+            "o_by_unit": {
+              "17": 850,
+              "10": 100
+            },
+            "cumulative_o": 6450
+          },
+          {
+            "round": 10,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Aerial specialization",
+                "tech_id": 3207,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 17,
+                "unit": "战争工厂(warfactory)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 50,
+              "tech": 50
+            },
+            "round_total": 700,
+            "o_by_unit": {
+              "7": 700
+            },
+            "cumulative_o": 7150
+          },
+          {
+            "round": 11,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 17,
+                "unit": "战争工厂(warfactory)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              },
+              {
+                "uid": 7,
+                "unit": "野马(mustang)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 2000,
+              "level": 50,
+              "tech": 0
+            },
+            "round_total": 2050,
+            "o_by_unit": {
+              "7": 50,
+              "17": 1600,
+              "13": 400
+            },
+            "cumulative_o": 9200
+          },
+          {
+            "round": 12,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Armor piercing bullets",
+                "tech_id": 10607,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Missile interceptor",
+                "tech_id": 3307,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 17,
+                "unit": "战争工厂(warfactory)"
+              },
+              {
+                "uid": 17,
+                "unit": "战争工厂(warfactory)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              },
+              {
+                "uid": 13,
+                "unit": "大锤(sledgehammer)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 100,
+              "tech": 100
+            },
+            "round_total": 900,
+            "o_by_unit": {
+              "7": 800,
+              "10": 100
+            },
+            "cumulative_o": 10100
+          },
+          {
+            "round": 13,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "tech": "Range enhancement",
+                "tech_id": 10207,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 50,
+              "tech": 50
+            },
+            "round_total": 700,
+            "o_by_unit": {
+              "7": 700
+            },
+            "cumulative_o": 10800
+          }
+        ],
+        "final_o_by_unit": {
+          "17": 5000,
+          "7": 3100,
+          "13": 1700,
+          "10": 600,
+          "25": 400
+        },
+        "final_total_o": 10800
+      },
+      {
+        "name": "my98765431",
+        "first_round_supply": 200,
+        "round_supply_increase": 200,
+        "rounds": [
+          {
+            "round": 0,
+            "supply_remaining": 0,
+            "econ_spent": null,
+            "actions": [],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 0,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 0,
+            "o_by_unit": {},
+            "cumulative_o": 0
+          },
+          {
+            "round": 1,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 200,
+            "o_by_unit": {
+              "10": 200
+            },
+            "cumulative_o": 200
+          },
+          {
+            "round": 2,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "16": 200,
+              "10": 200
+            },
+            "cumulative_o": 600
+          },
+          {
+            "round": 3,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "cost": 300
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 500,
+              "level": 50,
+              "tech": 0
+            },
+            "round_total": 550,
+            "o_by_unit": {
+              "16": 250,
+              "22": 300
+            },
+            "cumulative_o": 1150
+          },
+          {
+            "round": 4,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Launcher overload",
+                "tech_id": 10316,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "tech": "Aerial specialization",
+                "tech_id": 5322,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 22,
+                "unit": "台风(typhoon)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 0,
+              "tech": 100
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "10": 100,
+              "16": 250,
+              "22": 50
+            },
+            "cumulative_o": 1550
+          },
+          {
+            "round": 5,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "cost": 300
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 900,
+              "level": 100,
+              "tech": 0
+            },
+            "round_total": 1000,
+            "o_by_unit": {
+              "22": 350,
+              "16": 450,
+              "24": 200
+            },
+            "cumulative_o": 2550
+          },
+          {
+            "round": 6,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Range enhancement",
+                "tech_id": 10216,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 22,
+                "unit": "台风(typhoon)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "16": 350,
+              "22": 50
+            },
+            "cumulative_o": 2950
+          },
+          {
+            "round": 7,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "tech": "Energy shield",
+                "tech_id": 2922,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 100,
+              "tech": 50
+            },
+            "round_total": 350,
+            "o_by_unit": {
+              "22": 100,
+              "16": 50,
+              "10": 200
+            },
+            "cumulative_o": 3300
+          },
+          {
+            "round": 8,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 150,
+              "tech": 0
+            },
+            "round_total": 750,
+            "o_by_unit": {
+              "16": 750
+            },
+            "cumulative_o": 4050
+          },
+          {
+            "round": 9,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "tech": "Energy shield",
+                "tech_id": 10222,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Energy shield",
+                "tech_id": 216,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 21,
+                "unit": "剑齿虎(sabertooth)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 100,
+              "tech": 100
+            },
+            "round_total": 500,
+            "o_by_unit": {
+              "22": 150,
+              "10": 300,
+              "16": 50
+            },
+            "cumulative_o": 4550
+          },
+          {
+            "round": 10,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 22,
+                "unit": "台风(typhoon)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 250,
+              "tech": 0
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "16": 800,
+              "22": 50
+            },
+            "cumulative_o": 5400
+          },
+          {
+            "round": 11,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              },
+              {
+                "type": "tech",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "tech": "Swarm missiles",
+                "tech_id": 110291,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 1600,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 1800,
+            "o_by_unit": {
+              "16": 150,
+              "29": 1650
+            },
+            "cumulative_o": 7200
+          },
+          {
+            "round": 12,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Quantum reassembly",
+                "tech_id": 2916,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 1700,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 1900,
+            "o_by_unit": {
+              "16": 200,
+              "29": 1600,
+              "10": 100
+            },
+            "cumulative_o": 9100
+          },
+          {
+            "round": 13,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "tech": "Disintegration",
+                "tech_id": 11029,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              },
+              {
+                "type": "buy",
+                "uid": 29,
+                "unit": "深渊(abyss)",
+                "cost": 800
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 2400,
+              "level": 0,
+              "tech": 50
+            },
+            "round_total": 2450,
+            "o_by_unit": {
+              "29": 2450
+            },
+            "cumulative_o": 11550
+          }
+        ],
+        "final_o_by_unit": {
+          "29": 5700,
+          "16": 3500,
+          "10": 1100,
+          "22": 1050,
+          "24": 200
+        },
+        "final_total_o": 11550
+      }
+    ]
+  },
+  {
+    "file": "/Users/admin/Documents/GitHub/mechabellum-winrate-estimation/local_data/humen_replay/2207_20260801--134267483_[TiNaAch]VS[[TUFF] Mathismight].grbr",
+    "match_mode": "VS_1_1",
+    "is_2v2": false,
+    "players": [
+      {
+        "name": "TiNaAch",
+        "first_round_supply": 200,
+        "round_supply_increase": 200,
+        "rounds": [
+          {
+            "round": 0,
+            "supply_remaining": 0,
+            "econ_spent": null,
+            "actions": [],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 0,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 0,
+            "o_by_unit": {},
+            "cumulative_o": 0
+          },
+          {
+            "round": 1,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "unlock",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 2,
+                "unit": "神射手(marksmen)"
+              },
+              {
+                "uid": 2,
+                "unit": "神射手(marksmen)"
+              },
+              {
+                "uid": 2,
+                "unit": "神射手(marksmen)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 400,
+            "o_by_unit": {
+              "24": 200,
+              "10": 200
+            },
+            "cumulative_o": 400
+          },
+          {
+            "round": 2,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 300,
+            "o_by_unit": {
+              "10": 300,
+              "9": 0
+            },
+            "cumulative_o": 700
+          },
+          {
+            "round": 3,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 50,
+              "tech": 0
+            },
+            "round_total": 750,
+            "o_by_unit": {
+              "2": 50,
+              "19": 600,
+              "9": 100
+            },
+            "cumulative_o": 1450
+          },
+          {
+            "round": 4,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "tech",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "tech": "High explosive ammo",
+                "tech_id": 424,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 7,
+                "unit": "野马(mustang)",
+                "cost": 0
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 18,
+                "unit": "幽灵(wraith)"
+              },
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              },
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 500,
+            "o_by_unit": {
+              "24": 250,
+              "10": 100,
+              "7": 0,
+              "2": 150
+            },
+            "cumulative_o": 1950
+          },
+          {
+            "round": 5,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 13,
+                "unit": "大锤(sledgehammer)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 50,
+              "tech": 0
+            },
+            "round_total": 750,
+            "o_by_unit": {
+              "2": 50,
+              "24": 200,
+              "19": 300,
+              "10": 200,
+              "13": 0
+            },
+            "cumulative_o": 2700
+          },
+          {
+            "round": 6,
+            "supply_remaining": 50,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 250,
+              "tech": 0
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "19": 450,
+              "24": 250,
+              "10": 100,
+              "2": 50
+            },
+            "cumulative_o": 3550
+          },
+          {
+            "round": 7,
+            "supply_remaining": 50,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "tech": "Range enhancement",
+                "tech_id": 10224,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "tech": "Range enhancement",
+                "tech_id": 10219,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 0
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 22,
+                "unit": "台风(typhoon)"
+              },
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 100,
+              "tech": 100
+            },
+            "round_total": 500,
+            "o_by_unit": {
+              "24": 50,
+              "19": 50,
+              "10": 400,
+              "20": 0
+            },
+            "cumulative_o": 4050
+          },
+          {
+            "round": 8,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 250,
+              "tech": 0
+            },
+            "round_total": 650,
+            "o_by_unit": {
+              "24": 250,
+              "10": 250,
+              "19": 50,
+              "2": 100
+            },
+            "cumulative_o": 4700
+          },
+          {
+            "round": 9,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "tech": "Photon emission",
+                "tech_id": 180326,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "tech": "Subterranean blitz",
+                "tech_id": 2610,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 150,
+              "tech": 100
+            },
+            "round_total": 650,
+            "o_by_unit": {
+              "10": 350,
+              "26": 50,
+              "2": 50,
+              "24": 200
+            },
+            "cumulative_o": 5350
+          },
+          {
+            "round": 10,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "tech",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "tech": "Mechanical rage",
+                "tech_id": 10524,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 15,
+                "unit": "弧光(arclight)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 26,
+                "unit": "先知(farseer)"
+              },
+              {
+                "uid": 26,
+                "unit": "先知(farseer)"
+              },
+              {
+                "uid": 26,
+                "unit": "先知(farseer)"
+              },
+              {
+                "uid": 24,
+                "unit": "狼蛛(tarantula)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 200,
+              "tech": 50
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "24": 150,
+              "10": 50,
+              "19": 650,
+              "15": 0
+            },
+            "cumulative_o": 6200
+          },
+          {
+            "round": 11,
+            "supply_remaining": 50,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "tech": "Electromagnetic shot",
+                "tech_id": 1802,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "tech": "Field maintenance",
+                "tech_id": 919,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 500,
+              "level": 200,
+              "tech": 100
+            },
+            "round_total": 800,
+            "o_by_unit": {
+              "24": 100,
+              "2": 50,
+              "19": 450,
+              "10": 200,
+              "30": 0
+            },
+            "cumulative_o": 7000
+          },
+          {
+            "round": 12,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "cost": 300
+              },
+              {
+                "type": "tech",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "tech": "Scanning radar",
+                "tech_id": 180526,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 19,
+                "unit": "蝎子(scorpion)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 500,
+              "level": 400,
+              "tech": 50
+            },
+            "round_total": 950,
+            "o_by_unit": {
+              "26": 450,
+              "19": 150,
+              "2": 150,
+              "10": 200
+            },
+            "cumulative_o": 7950
+          },
+          {
+            "round": 13,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "tech": "Doubleshot",
+                "tech_id": 719,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 24,
+                "unit": "狼蛛(tarantula)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 19,
+                "unit": "蝎子(scorpion)",
+                "cost": 300
+              },
+              {
+                "type": "level",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "cost": 0
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 18,
+                "unit": "幽灵(wraith)"
+              },
+              {
+                "uid": 26,
+                "unit": "先知(farseer)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 600,
+              "tech": 50
+            },
+            "round_total": 1250,
+            "o_by_unit": {
+              "19": 500,
+              "2": 150,
+              "24": 350,
+              "10": 200,
+              "26": 50,
+              "8": 0
+            },
+            "cumulative_o": 9200
+          }
+        ],
+        "final_o_by_unit": {
+          "19": 3200,
+          "10": 2550,
+          "24": 2000,
+          "2": 800,
+          "26": 550,
+          "9": 100,
+          "7": 0,
+          "13": 0,
+          "20": 0,
+          "15": 0,
+          "30": 0,
+          "8": 0
+        },
+        "final_total_o": 9200
+      },
+      {
+        "name": "[TUFF] Mathismight",
+        "first_round_supply": 200,
+        "round_supply_increase": 200,
+        "rounds": [
+          {
+            "round": 0,
+            "supply_remaining": 0,
+            "econ_spent": null,
+            "actions": [],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 0,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 0,
+            "o_by_unit": {},
+            "cumulative_o": 0
+          },
+          {
+            "round": 1,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "unlock",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              },
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 200,
+              "level": 0,
+              "tech": 0
+            },
+            "round_total": 200,
+            "o_by_unit": {
+              "10": 200
+            },
+            "cumulative_o": 200
+          },
+          {
+            "round": 2,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "unlock",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "tech": "未知科技(10930)",
+                "tech_id": 10930,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 0,
+              "tech": 50
+            },
+            "round_total": 350,
+            "o_by_unit": {
+              "10": 200,
+              "2": 100,
+              "30": 50
+            },
+            "cumulative_o": 550
+          },
+          {
+            "round": 3,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 5,
+                "unit": "犀牛(rhino)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 2,
+                "unit": "神射手(marksmen)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 100,
+              "tech": 0
+            },
+            "round_total": 800,
+            "o_by_unit": {
+              "30": 200,
+              "10": 400,
+              "5": 200
+            },
+            "cumulative_o": 1350
+          },
+          {
+            "round": 4,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "tech": "Range enhancement",
+                "tech_id": 10220,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 18,
+                "unit": "幽灵(wraith)"
+              },
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 50,
+              "tech": 50
+            },
+            "round_total": 500,
+            "o_by_unit": {
+              "20": 500
+            },
+            "cumulative_o": 1850
+          },
+          {
+            "round": 5,
+            "supply_remaining": 0,
+            "econ_spent": 250,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "tech": "Scorching fire",
+                "tech_id": 10620,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 5,
+                "unit": "犀牛(rhino)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 700,
+              "level": 250,
+              "tech": 50
+            },
+            "round_total": 1000,
+            "o_by_unit": {
+              "30": 100,
+              "20": 450,
+              "2": 100,
+              "10": 350
+            },
+            "cumulative_o": 2850
+          },
+          {
+            "round": 6,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "tech": "Scorching fire",
+                "tech_id": 10620,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 150,
+              "tech": 50
+            },
+            "round_total": 600,
+            "o_by_unit": {
+              "20": 150,
+              "10": 200,
+              "30": 50,
+              "16": 200
+            },
+            "cumulative_o": 3450
+          },
+          {
+            "round": 7,
+            "supply_remaining": 100,
+            "econ_spent": 100,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "tech": "Subterranean blitz",
+                "tech_id": 2610,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 2,
+                "unit": "神射手(marksmen)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 5,
+                "unit": "犀牛(rhino)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              },
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 200,
+              "tech": 50
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "10": 300,
+              "2": 50,
+              "20": 300,
+              "5": 200
+            },
+            "cumulative_o": 4300
+          },
+          {
+            "round": 8,
+            "supply_remaining": 0,
+            "econ_spent": 300,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Quantum reassembly",
+                "tech_id": 2916,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "tech",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "tech": "未知科技(10230)",
+                "tech_id": 10230,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 200,
+              "tech": 100
+            },
+            "round_total": 700,
+            "o_by_unit": {
+              "16": 300,
+              "20": 100,
+              "10": 250,
+              "30": 50
+            },
+            "cumulative_o": 5000
+          },
+          {
+            "round": 9,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 26,
+                "unit": "先知(farseer)",
+                "tech": "Photon emission",
+                "tech_id": 180326,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 5,
+                "unit": "犀牛(rhino)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 16,
+                "unit": "凤凰(phoenix)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 600,
+              "level": 400,
+              "tech": 50
+            },
+            "round_total": 1050,
+            "o_by_unit": {
+              "26": 50,
+              "20": 300,
+              "16": 100,
+              "10": 300,
+              "30": 100,
+              "5": 200
+            },
+            "cumulative_o": 6050
+          },
+          {
+            "round": 10,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "tech": "未知科技(180430)",
+                "tech_id": 180430,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "cost": 100
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 26,
+                "unit": "先知(farseer)"
+              },
+              {
+                "uid": 26,
+                "unit": "先知(farseer)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 250,
+              "tech": 50
+            },
+            "round_total": 700,
+            "o_by_unit": {
+              "30": 350,
+              "20": 250,
+              "10": 100
+            },
+            "cumulative_o": 6750
+          },
+          {
+            "round": 11,
+            "supply_remaining": 0,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 4,
+                "level": 5,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "tech": "Ignite",
+                "tech_id": 180620,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 9,
+                "unit": "毒牙(fang)",
+                "cost": 100
+              },
+              {
+                "type": "buy",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              },
+              {
+                "uid": 30,
+                "unit": "未知兵种(30)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 400,
+              "tech": 50
+            },
+            "round_total": 850,
+            "o_by_unit": {
+              "16": 100,
+              "30": 200,
+              "10": 100,
+              "20": 250,
+              "9": 200
+            },
+            "cumulative_o": 7600
+          },
+          {
+            "round": 12,
+            "supply_remaining": 50,
+            "econ_spent": 150,
+            "actions": [
+              {
+                "type": "tech",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "tech": "Range enhancement",
+                "tech_id": 10208,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "tech": "Kinetic Charge",
+                "tech_id": 180808,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Range enhancement",
+                "tech_id": 10216,
+                "cost": 50
+              },
+              {
+                "type": "unlock",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "cost": 0
+              },
+              {
+                "type": "buy",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "cost": 200
+              },
+              {
+                "type": "buy",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "cost": 100
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 9,
+                "unit": "毒牙(fang)"
+              },
+              {
+                "uid": 20,
+                "unit": "火獾(fire badger)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 300,
+              "level": 150,
+              "tech": 150
+            },
+            "round_total": 600,
+            "o_by_unit": {
+              "8": 100,
+              "20": 150,
+              "16": 50,
+              "6": 200,
+              "10": 100
+            },
+            "cumulative_o": 8200
+          },
+          {
+            "round": 13,
+            "supply_remaining": 50,
+            "econ_spent": 200,
+            "actions": [
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 4,
+                "level": 5,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 20,
+                "unit": "火獾(fire badger)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 1,
+                "level": 2,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 3,
+                "level": 4,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 30,
+                "unit": "未知兵种(30)",
+                "from_level": 2,
+                "level": 3,
+                "cost": 50
+              },
+              {
+                "type": "tech",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "tech": "Electromagnetic shot",
+                "tech_id": 1816,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 16,
+                "unit": "凤凰(phoenix)",
+                "cost": 200
+              },
+              {
+                "type": "level",
+                "uid": 10,
+                "unit": "爬虫(crawler)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "level",
+                "uid": 8,
+                "unit": "钢球(steel ball)",
+                "from_level": 0,
+                "level": 1,
+                "cost": 50
+              },
+              {
+                "type": "buy",
+                "uid": 6,
+                "unit": "黄蜂(wasp)",
+                "cost": 200
+              }
+            ],
+            "reinforcements": [
+              {
+                "uid": 8,
+                "unit": "钢球(steel ball)"
+              },
+              {
+                "uid": 8,
+                "unit": "钢球(steel ball)"
+              },
+              {
+                "uid": 10,
+                "unit": "爬虫(crawler)"
+              }
+            ],
+            "cat_cost": {
+              "unlock": 0,
+              "buy": 400,
+              "level": 600,
+              "tech": 50
+            },
+            "round_total": 1050,
+            "o_by_unit": {
+              "20": 200,
+              "16": 350,
+              "30": 200,
+              "10": 50,
+              "8": 50,
+              "6": 200
+            },
+            "cumulative_o": 9250
+          }
+        ],
+        "final_o_by_unit": {
+          "20": 2650,
+          "10": 2550,
+          "30": 1300,
+          "16": 1100,
+          "5": 600,
+          "6": 400,
+          "2": 250,
+          "9": 200,
+          "8": 150,
+          "26": 50
+        },
+        "final_total_o": 9250
+      }
+    ]
+  }
+]
