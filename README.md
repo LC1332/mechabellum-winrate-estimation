@@ -18,7 +18,11 @@ Machine learning estimate mechabellum's winrate.
     - 仅记录每个玩家 每局在各个兵种上的投资， 以及局面结束后玩家在各个兵种上的总投资
     - 记录每回合结束后是哪个玩家赢了 注意区分是战斗胜利 一方投降或者null的情况
     - 赢了的玩家对没赢玩家造成的扣血 以及对方原始的总血量
-- [ ] 预留10%数据作为测试数据，训练一个2层的transformer
+- [x] 确定归一化常数
+    - 在18个回合的对局上，我想知道 每回合的投入，以及总投入的 robust均值（去掉首尾各3%）、方差(防止奇异值方差至少为100) 以及多少数据落在了3 sigma之外，帮我画两个盒图来进行展示(jpg形式)等我确认之后 均值就作为transformer的输入
+- [ ] 预留10%数据作为测试数据，训练一个2/3层的transformer
+    - 2，3，4层都尝试看看 看看哪个更好
+    - 注意有Q和V两种方式 Q是t时刻只能看到我自己策略的，V是t时刻能看到双方策略的
 - [ ] 搭建demo，可以随机选取测试集的对局形成体验
 - [ ] 制作一个更好的前端
 
@@ -26,6 +30,46 @@ Machine learning estimate mechabellum's winrate.
 
 - local_data 存储不上传git的数据（帮我加入gitignore）
 - information 只存储md文件
+
+## 最终确定的归一化系数
+
+回合投入这么计算是合理的
+第一回合 初始兵种 200*2+100*3 = 700 + 回合投入200 = 900 ， 实际均值913 是接近的
+第二回合 回合投入 400
+第三回合 回合投入 600 均值 638.28 也符合
+第四回合 回合投入 800
+第五回合 回合投入 1000
+之后按照每回合 200增长 其实就可以
+按照我这个规则的就可以
+
+总投入比如第三回合后的总投入就按照900+400+600 来计算 ，统计均值是 2,018
+（因为大家会拿增援什么的 会偏高一些） 总体也是可以接受的。
+
+## transformer训练
+
+训练两个独立transformer
+
+Q-value （包含双方状态 和 我方策略）
+每回合都可以看到双方的总投入O_1:{t-1}，以及我方当前回合的投入o_t
+来预测t回合策略下的 最终的累积reward
+
+V-func (仅仅包含双方状态)
+每回合可以看到双方的总投入O_1:t，相当于买定离手之后，看双方战斗谁会赢
+
+reward = 我方当回合输赢reward + 血量带来收益 + 累积回合收益
+
+我方当回合输赢reward 为100/-100
+这里扣血收益系数先定为0 ， 我还没想好怎么用 照理说 扣血多reward应该更大
+累积回合收益就是向后看 beta r_t+1 + beta^2 r_t+2 ... 
+注意如果最终游戏结果是确定的 按照 1000/-1000 来记录最终状态
+如果是一方投降 按照对方+200 来计算
+如果是null 最终状态是0
+
+- 这里尽量使用一个transformer整体训练（T回合产生T个loss）。这样更scalable
+- 注意Q-value训练是不对称的 一个战斗要正反都参与训练一次。
+
+交付物产生一些合适的模型
+并且找较好的结果，在测试集上绘制Q-value的gt vs pred散点图 和 V-func的gt vs pred 散点图
 
 ## 密集回放数据集
 
@@ -44,6 +88,23 @@ python3 reference_code/build_dense_dataset.py
 数据集固定为 `[对局, 18 回合, 双方, 43 兵种维度]`。43 维是当前 33 个普通兵种加 10 个预留槽；逐回合净投资与累计投资均为 `float32`，出售为负数。`round_mask` 标识有效回合，`round_winner` 使用 `-1/null、0/左方、1/右方`，`round_outcome_type` 使用 `0/null、1/正常战斗、2/投降`。末回合投资保留动作日志回退，并由 `investment_source=2` 标识低置信度。
 
 仅导出从 round 0 开始且所有玩家回合连续对齐的回放；round 0 不进入训练序列，round 1 包含开局编队投资。2v2 以玩家 `[0,1]` 和 `[2,3]` 分队，投资、扣血和 `MaxReactorCore` 均按队内平均。将 NPZ 和 JSON 一起复制到 GPU 服务器即可；本阶段不做 10% 切分、reward 计算或 Transformer 训练。
+
+## 归一化常数统计
+
+在仓库根目录运行：
+
+```bash
+python3 reference_code/analyze_normalization.py
+```
+
+脚本会以每个有效的“对局 × 回合 × 阵营”为样本，对当回合投入和盘面总价值分别按回合统计。每项先移除首尾各 3%（向下取整）样本，再计算均值和方差；归一化方差最小为 100，并报告原始样本落在 3σ 之外的数量。
+
+- `data/mechabellum_normalization_v1.json`：供训练代码读取的 2 × 18 回合统计。
+- `information/mechabellum_normalization_v1.md`：中文统计表和计算口径。
+- `data/investment_delta_by_round_boxplot.jpg`：当回合投入盒图。
+- `data/investment_cumulative_by_round_boxplot.jpg`：盘面总价值盒图。
+
+当前数据集只有第 1–13 回合存在有效样本；第 14–18 回合的 JSON 统计为 `null`，训练时应继续使用 `round_mask` 跳过它们。确认这些常数前不将其接入 Transformer。
 
 ## 方法
 
