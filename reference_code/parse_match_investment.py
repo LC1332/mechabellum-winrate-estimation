@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Parse replay investment from adjacent final-state snapshots.
+"""Parse per-unit net investment from Mechabellum replay snapshots.
 
-The action log is not the source of truth: PAD_Undo may leave an earlier
-buy/unlock/tech action behind.  Records with a following snapshot are therefore
-derived from final state deltas.  The last record is an undo-filtered, lower
-confidence fallback.
+Adjacent player snapshots are the primary source of truth because an action log
+can retain undone actions.  The final action record has no following snapshot,
+so it is parsed with undo filtering and explicitly marked lower confidence.
 """
 from __future__ import annotations
 
@@ -17,6 +16,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 XSI = "{http://www.w3.org/2001/XMLSchema-instance}type"
+FIELD_RECOVERY_SKILL_ID = 900001
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG_PATH = Path(__file__).with_name("unit_cost_source.json")
 RESERVED_NEW_UNIT_DIMS = 10
@@ -58,6 +58,11 @@ def unit_label(uid):
     return f"{unit['name_cn']}({unit['name_en']})" if unit else f"未知兵种({uid})"
 
 
+def unit_report_label(uid):
+    unit = CATALOG.get(numeric(uid))
+    return unit["name_cn"] if unit else f"未知兵种({uid})"
+
+
 def tech_label(uid, tech_id):
     tech = CATALOG.get(numeric(uid), {}).get("technologies_by_id", {}).get(numeric(tech_id))
     return f"{tech['name_cn']}({tech['name_en']})" if tech else f"未知科技({tech_id})"
@@ -79,35 +84,62 @@ def snapshot(record):
     for u in data.findall("activeTechnologies/UnitData"):
         uid = numeric(u.findtext("id"))
         techs[uid].update(numeric(x.get("data")) for x in u.findall("techs/tech") if x.get("data"))
+    commander_skills = {
+        numeric(skill.findtext("index")): numeric(skill.findtext("id"))
+        for skill in data.findall("commanderSkills/CommanderSkillData")
+        if skill.findtext("index") is not None and skill.findtext("id") is not None
+    }
     return {
         "round": int(record.findtext("round") or 0),
         "supply": int(data.findtext("supply") or 0),
-        "units": units, "unlocked": unlocked, "techs": techs,
+        "reactor_core": int(data.findtext("reactorCore") or 0),
+        "units": units,
+        "unlocked": unlocked,
+        "techs": techs,
+        "commander_skills": commander_skills,
+        "pre_round_fight_result": data.findtext("preRoundFightResult"),
     }
 
 
-def raw_actions(record):
+def raw_actions(record, commander_skills=None):
+    """Return economic actions and resolved Field Recovery actions in log order."""
+    commander_skills = commander_skills or {}
     out = []
-    for a in record.findall("actionRecords/MatchActionData"):
-        kind = a.get(XSI)
+    for action in record.findall("actionRecords/MatchActionData"):
+        kind = action.get(XSI)
         if kind in {"PAD_BuyUnit", "PAD_UnlockUnit", "PAD_UpgradeUnit", "PAD_UpgradeTechnology"}:
-            out.append({"kind": kind, "uid": numeric(a.findtext("UID")),
-                        "uidx": a.findtext("UIDX"), "tech_id": numeric(a.findtext("TechID"))})
+            out.append({"kind": kind, "uid": numeric(action.findtext("UID")),
+                        "uidx": action.findtext("UIDX"), "tech_id": numeric(action.findtext("TechID"))})
+        elif kind == "PAD_ReleaseCommanderSkill":
+            skill_id = numeric(action.findtext("ID"))
+            skill_index = numeric(action.findtext("SkillIndex"))
+            if skill_id == 0:
+                skill_id = commander_skills.get(skill_index, skill_id)
+            if skill_id == FIELD_RECOVERY_SKILL_ID:
+                out.append({"kind": "PAD_SellUnit", "uidx": action.findtext("UnitIndex"),
+                            "skill_id": skill_id, "skill_index": skill_index})
+        elif kind == "PAD_GiveUp":
+            out.append({"kind": "PAD_GiveUp"})
         elif kind == "PAD_Undo":
             out.append({"kind": "PAD_Undo"})
     return out
 
 
-def undo_filtered_actions(record):
-    """Best-effort final-record fallback: undo reverses the latest econ action."""
+def undo_filtered_actions(record, commander_skills=None):
+    """Best-effort final-record fallback: undo reverses the latest tracked action."""
     kept = []
-    for action in raw_actions(record):
+    for action in raw_actions(record, commander_skills):
         if action["kind"] == "PAD_Undo":
             if kept:
                 kept.pop()
-        else:
+        elif action["kind"] != "PAD_GiveUp":
             kept.append(action)
     return kept
+
+
+def has_give_up(record):
+    return any(action.get(XSI) == "PAD_GiveUp"
+               for action in record.findall("actionRecords/MatchActionData"))
 
 
 def slot_mapping(replay_roots):
@@ -132,9 +164,33 @@ def slot_mapping(replay_roots):
 
 def action_cost(uid, kind, *, sell_supply=None, tech_id=None, prior_tech_count=0):
     unit = CATALOG.get(uid)
-    if kind == "buy":
-        return ((sell_supply, "replay_sell_supply") if sell_supply and sell_supply > 0
-                else (None, "unknown_buy_without_sellsupply"))
+    if kind == "reinforcement":
+        # A free reinforcement still contributes the unit's normal capital
+        # value.  Do not let a mass-production/other modified SellSupply make
+        # a free unit look cheaper than its original catalogue price.
+        if unit and unit["base_buy_cost"] is not None:
+            return unit["base_buy_cost"], "free_reinforcement_catalog_base_buy_cost"
+        if sell_supply and sell_supply > 0:
+            return sell_supply, "free_reinforcement_replay_sell_supply_fallback"
+        return None, "unknown_reinforcement_without_base_cost"
+    if kind in {"buy", "initial"}:
+        if sell_supply and sell_supply > 0:
+            basis = {
+                "buy": "replay_sell_supply",
+                "initial": "initial_loadout_sell_supply",
+            }[kind]
+            return sell_supply, basis
+        if unit and unit["base_buy_cost"] is not None:
+            basis = "initial_loadout_catalog_default" if kind == "initial" else "catalog_default"
+            return unit["base_buy_cost"], basis
+        basis = "unknown_initial_unit_without_sellsupply" if kind == "initial" else "unknown_buy_without_sellsupply"
+        return None, basis
+    if kind == "sell":
+        # Zero is a meaningful replay value: the unit can be removed without a
+        # refund (for example, a generated unit).  Treat only a missing value
+        # as unknown.
+        return ((-sell_supply, "replay_sell_supply_refund") if sell_supply is not None
+                else (None, "unknown_sell_without_sellsupply"))
     if kind == "level":
         if sell_supply and sell_supply > 0:
             return sell_supply / 2, "replay_sell_supply_half"
@@ -146,8 +202,13 @@ def action_cost(uid, kind, *, sell_supply=None, tech_id=None, prior_tech_count=0
                 else (None, "unknown_unlock"))
     if kind == "tech":
         tech = unit and unit["technologies_by_id"].get(tech_id)
-        return ((tech["base_cost"] + 200 * prior_tech_count, "catalog_base_plus_tech_surcharge")
-                if tech else (None, "unknown_tech"))
+        if tech:
+            return tech["base_cost"] + 200 * prior_tech_count, "catalog_base_plus_tech_surcharge"
+        if unit and unit.get("special_unit"):
+            # The dense v1 contract explicitly treats unpriced experimental
+            # unit technologies as zero-cost rather than dropping the match.
+            return 0, "assumed_zero_special_unit_tech"
+        return None, "unknown_tech"
     raise ValueError(kind)
 
 
@@ -160,9 +221,23 @@ def make_action(kind, uid, **extra):
     )
     out = {"type": kind, "uid": uid, "unit": unit_label(uid), "cost": cost, "cost_basis": basis}
     out.update(extra)
+    if kind == "sell" and cost is not None:
+        out["refund"] = -cost
     if kind == "tech":
         out["tech"] = tech_label(uid, extra["tech_id"])
     return out
+
+
+def initial_loadout_actions(state):
+    """Count the five normal starting units as R1 investment, not supply spend."""
+    if state["round"] != 1:
+        return []
+    units = sorted(state["units"].items(), key=lambda item: int(item[0]) if item[0].isdigit() else item[0])
+    return [
+        make_action("initial", unit["uid"], sell_supply=unit["sell_supply"],
+                    instance_index=index, initial_loadout=True)
+        for index, unit in units
+    ]
 
 
 def state_actions(before, after, record):
@@ -176,8 +251,9 @@ def state_actions(before, after, record):
             actions.append(make_action("tech", uid, tech_id=tech_id, prior_tech_count=previous))
             previous += 1
 
+    effective = undo_filtered_actions(record, before.get("commander_skills"))
     new = [(idx, u) for idx, u in after["units"].items() if idx not in before["units"]]
-    buy_logs = [a for a in undo_filtered_actions(record) if a["kind"] == "PAD_BuyUnit"]
+    buy_logs = [a for a in effective if a["kind"] == "PAD_BuyUnit"]
     consumed = set()
     for log in buy_logs:
         for idx, unit in new:
@@ -187,6 +263,19 @@ def state_actions(before, after, record):
                 break
     reinforcements = [{"uid": u["uid"], "unit": unit_label(u["uid"]), "instance_index": idx}
                       for idx, u in new if idx not in consumed]
+    for reinforcement in reinforcements:
+        unit = after["units"][reinforcement["instance_index"]]
+        actions.append(make_action(
+            "reinforcement", unit["uid"], sell_supply=unit["sell_supply"],
+            instance_index=reinforcement["instance_index"], free=True,
+        ))
+
+    sale_indices = {a["uidx"] for a in effective if a["kind"] == "PAD_SellUnit"}
+    for idx in sorted(set(before["units"]) - set(after["units"]), key=str):
+        if idx in sale_indices:
+            unit = before["units"][idx]
+            actions.append(make_action("sell", unit["uid"], sell_supply=unit["sell_supply"], instance_index=idx))
+
     for idx, after_unit in after["units"].items():
         before_unit = before["units"].get(idx)
         if not before_unit or after_unit["level"] <= before_unit["level"]:
@@ -200,19 +289,30 @@ def state_actions(before, after, record):
 def fallback_actions(before, record):
     """Last snapshot only: undo-filtered actions, marked low confidence."""
     actions = []
-    for log in undo_filtered_actions(record):
-        uid = log["uid"]
+    prior_tech_counts = {uid: len(techs) for uid, techs in before["techs"].items()}
+    for log in undo_filtered_actions(record, before.get("commander_skills")):
+        uid = log.get("uid")
         if log["kind"] == "PAD_BuyUnit":
             actions.append(make_action("buy", uid, sell_supply=None))
         elif log["kind"] == "PAD_UnlockUnit":
             actions.append(make_action("unlock", uid))
         elif log["kind"] == "PAD_UpgradeUnit":
             unit = before["units"].get(log["uidx"], {})
-            actions.append(make_action("level", unit.get("uid"), sell_supply=unit.get("sell_supply"),
+            # A last-round upgrade can target a unit purchased earlier in the
+            # same action log, so it is absent from the current snapshot.  The
+            # action UID is the deterministic fallback in that case.
+            uid = unit.get("uid", uid)
+            actions.append(make_action("level", uid, sell_supply=unit.get("sell_supply"),
                                        instance_index=log["uidx"]))
         elif log["kind"] == "PAD_UpgradeTechnology":
-            prior = len(before["techs"].get(uid, set()))
+            prior = prior_tech_counts.get(uid, 0)
             actions.append(make_action("tech", uid, tech_id=log["tech_id"], prior_tech_count=prior))
+            prior_tech_counts[uid] = prior + 1
+        elif log["kind"] == "PAD_SellUnit":
+            unit = before["units"].get(log["uidx"], {})
+            if unit:
+                actions.append(make_action("sell", unit["uid"], sell_supply=unit["sell_supply"],
+                                           instance_index=log["uidx"]))
     return actions, []
 
 
@@ -221,8 +321,6 @@ def summarize_round(actions):
     for action in actions:
         if action["cost"] is None:
             unknown.append(action)
-            # Keep the original unit dimension visible even when the action
-            # cannot contribute an exact monetary amount.
             by_unit.setdefault(action["uid"], 0)
         else:
             cat[action["type"]] += action["cost"]
@@ -230,9 +328,95 @@ def summarize_round(actions):
     return dict(cat), dict(by_unit), unknown, sum(cat.values())
 
 
+def _round_results(players):
+    """Return 1v1 round winners from surrender or the following snapshot."""
+    if len(players) != 2:
+        return []
+    by_player_round = [{rd["round"]: rd for rd in player["rounds"]} for player in players]
+    results = []
+    for round_no in sorted(set(by_player_round[0]) & set(by_player_round[1])):
+        current = [rounds[round_no] for rounds in by_player_round]
+        quitters = [i for i, rd in enumerate(current) if rd["gave_up"]]
+        winner, source = None, "unavailable"
+        if len(quitters) == 1:
+            winner, source = 1 - quitters[0], "give_up"
+        else:
+            following = [rounds.get(round_no + 1) for rounds in by_player_round]
+            wins = [i for i, rd in enumerate(following)
+                    if rd and rd["pre_round_fight_result"] == "Win"]
+            losses = [i for i, rd in enumerate(following)
+                      if rd and rd["pre_round_fight_result"] == "Lose"]
+            if len(wins) == 1 and len(losses) == 1:
+                winner, source = wins[0], "next_snapshot_pre_round_result"
+        results.append({"round": round_no, "winner_player_index": winner,
+                        "winner_name": players[winner]["name"] if winner is not None else None,
+                        "source": source})
+    return results
+
+
+def _round_damage(players):
+    """Attribute a core-health drop to the opposing player for that round."""
+    if len(players) != 2:
+        return []
+    by_player_round = [{rd["round"]: rd for rd in player["rounds"]} for player in players]
+    results = []
+    for round_no in sorted(set(by_player_round[0]) & set(by_player_round[1])):
+        following = [rounds.get(round_no + 1) for rounds in by_player_round]
+        current = [rounds[round_no] for rounds in by_player_round]
+        taken = [
+            max(0, current[index]["reactor_core"] - following[index]["reactor_core"])
+            if following[index] else 0
+            for index in range(2)
+        ]
+        dealt = [taken[1], taken[0]]
+        winners = [index for index, damage in enumerate(dealt) if damage > 0]
+        results.append({
+            "round": round_no,
+            "damage_dealt": dealt,
+            "damage_taken": taken,
+            "winner_player_index": winners[0] if len(winners) == 1 else None,
+            "winner_name": players[winners[0]]["name"] if len(winners) == 1 else None,
+            "source": "next_snapshot_reactor_core",
+        })
+    return results
+
+
+def _classify_victory(players):
+    """Keep core destruction and post-R2 surrender as distinct end states."""
+    if len(players) != 2:
+        return {"victory_type": "unavailable", "winner_player_index": None, "winner_name": None}
+    give_ups = [
+        (player_index, rd["round"])
+        for player_index, player in enumerate(players)
+        for rd in player["rounds"] if rd["gave_up"]
+    ]
+    max_round = max((rd["round"] for player in players for rd in player["rounds"]), default=0)
+    if len(give_ups) == 1:
+        loser, surrender_round = give_ups[0]
+        winner = 1 - loser
+        return {
+            "victory_type": "midgame_surrender" if max_round > 2 else "early_surrender",
+            "winner_player_index": winner, "winner_name": players[winner]["name"],
+            "loser_player_index": loser, "loser_name": players[loser]["name"],
+            "decisive_round": surrender_round,
+        }
+    final_core = [player["rounds"][-1]["reactor_core"] if player["rounds"] else None for player in players]
+    defeated = [index for index, core in enumerate(final_core) if core is not None and core <= 0]
+    if len(defeated) == 1:
+        loser = defeated[0]
+        winner = 1 - loser
+        return {
+            "victory_type": "core_destroyed",
+            "winner_player_index": winner, "winner_name": players[winner]["name"],
+            "loser_player_index": loser, "loser_name": players[loser]["name"],
+            "decisive_round": players[loser]["rounds"][-1]["round"],
+        }
+    return {"victory_type": "undetermined", "winner_player_index": None, "winner_name": None}
+
+
 def parse_root(root, file_path, unknown_slots):
     players = []
-    for pr in root.findall("playerRecords/PlayerRecord"):
+    for player_index, pr in enumerate(root.findall("playerRecords/PlayerRecord")):
         data = pr.find("data")
         first = int(data.findtext("firstRoundSupply") or 0)
         inc = int(data.findtext("roundSupplyIncreaseValue") or 0)
@@ -249,20 +433,39 @@ def parse_root(root, file_path, unknown_slots):
             else:
                 actions, reinforcements = fallback_actions(current, record)
                 econ, confidence = None, "action_fallback_last_snapshot"
+            # The R0 -> R1 new instances are the normal loadout.  Count them
+            # once on R1 as initial investment instead of as free reinforcements.
+            if current["round"] == 0:
+                actions, reinforcements = [], []
+            actions = initial_loadout_actions(current) + actions
             cat, by_unit, unknown, known_total = summarize_round(actions)
             cumulative += known_total
             final_by_unit.update(by_unit)
-            rounds.append({"round": current["round"], "supply_remaining": current["supply"], "econ_spent": econ,
-                           "economy_confidence": confidence, "actions": actions, "reinforcements": reinforcements,
-                           "cat_cost": cat, "o_by_unit": by_unit, "known_total": known_total,
-                           "has_unknown_cost": bool(unknown), "unknown_cost_actions": unknown,
-                           "cumulative_known_total": cumulative})
-        players.append({"name": pr.findtext("name") or "", "first_round_supply": first,
-                        "round_supply_increase": inc, "rounds": rounds,
-                        "final_o_by_unit": dict(final_by_unit), "final_known_total": cumulative})
+            rounds.append({
+                "round": current["round"], "supply_remaining": current["supply"],
+                "reactor_core": current["reactor_core"], "econ_spent": econ,
+                "economy_confidence": confidence, "actions": actions, "reinforcements": reinforcements,
+                "cat_cost": cat, "o_by_unit": by_unit, "known_total": known_total,
+                "known_net_total": known_total, "has_unknown_cost": bool(unknown),
+                "unknown_cost_actions": unknown, "cumulative_known_total": cumulative,
+                "cumulative_known_net_total": cumulative, "cumulative_o_by_unit": dict(final_by_unit),
+                "pre_round_fight_result": current["pre_round_fight_result"], "gave_up": has_give_up(record),
+            })
+        players.append({"player_index": player_index, "name": pr.findtext("name") or "",
+                        "first_round_supply": first, "round_supply_increase": inc, "rounds": rounds,
+                        "final_o_by_unit": dict(final_by_unit), "final_known_total": cumulative,
+                        "final_known_net_total": cumulative})
+    round_damage = _round_damage(players)
+    for result in round_damage:
+        for player_index, player in enumerate(players):
+            round_data = next((rd for rd in player["rounds"] if rd["round"] == result["round"]), None)
+            if round_data is not None:
+                round_data["damage_dealt_to_opponent"] = result["damage_dealt"][player_index]
+                round_data["damage_taken_from_opponent"] = result["damage_taken"][player_index]
     return {"file": str(file_path), "version": root.findtext("Version") or root.findtext("version"),
-            "match_mode": root.findtext("BattleInfo/MatchMode") or "VS_1_1",
-            "players": players, "unknown_unit_slots": unknown_slots}
+            "match_mode": root.findtext("BattleInfo/MatchMode") or "VS_1_1", "players": players,
+            "round_results": _round_results(players), "round_damage": round_damage,
+            "victory": _classify_victory(players), "unknown_unit_slots": unknown_slots}
 
 
 def parse_replay(file_path, unknown_slots=None):
@@ -270,62 +473,136 @@ def parse_replay(file_path, unknown_slots=None):
                       unknown_slots or {"slots": {}, "overflow": []})
 
 
-def select_samples(replay_dir, n=3):
-    ranked = []
-    for f in sorted(glob.glob(str(Path(replay_dir) / "*.grbr"))):
+def _eligible_sample(root):
+    if root.findtext("BattleInfo/MatchMode") != "VS_1_1":
+        return None
+    players = root.findall("playerRecords/PlayerRecord")
+    if len(players) != 2:
+        return None
+    player_records = [p.findall("playerRoundRecords/PlayerRoundRecord") for p in players]
+    sequences = [[int(r.findtext("round") or 0) for r in records] for records in player_records]
+    if not sequences[0] or sequences[0] != sequences[1]:
+        return None
+    expected = list(range(sequences[0][0], sequences[0][-1] + 1))
+    if sequences[0] != expected:
+        return None
+    has_surrender = any(has_give_up(record) for records in player_records for record in records)
+    return len(sequences[0]), has_surrender
+
+
+def select_samples(replay_dir, n=5, require_surrender=False):
+    """Select deterministic complete 1v1 samples, optionally covering surrender."""
+    ranked, surrender_ranked = [], []
+    for file_path in sorted(glob.glob(str(Path(replay_dir) / "*.grbr"))):
         try:
-            root = ET.fromstring(extract_xml(f))
-            if root.findtext("BattleInfo/MatchMode") != "VS_1_1":
-                continue
-            records = root.findall("playerRecords/PlayerRecord/playerRoundRecords/PlayerRoundRecord")
-            numbers = [int(x.findtext("round") or 0) for x in records]
-            if numbers and set(numbers) == set(range(min(numbers), max(numbers) + 1)):
-                ranked.append((len(numbers), f))
+            eligible = _eligible_sample(ET.fromstring(extract_xml(file_path)))
         except Exception:
             continue
-    return [f for _, f in sorted(ranked, reverse=True)[:n]]
+        if not eligible:
+            continue
+        length, has_surrender = eligible
+        (surrender_ranked if has_surrender else ranked).append((length, file_path))
+    ranked.sort(reverse=True)
+    surrender_ranked.sort(reverse=True)
+    if require_surrender:
+        if n < 2:
+            raise ValueError("Surrender coverage requires at least two samples")
+        if not surrender_ranked:
+            raise ValueError("No complete 1v1 replay with PAD_GiveUp is available")
+        if len(ranked) < n - 1:
+            raise ValueError(f"Need {n - 1} complete non-surrender 1v1 replays, found {len(ranked)}")
+        return [file_path for _, file_path in ranked[:n - 1]] + [surrender_ranked[0][1]]
+    if len(ranked) + len(surrender_ranked) < n:
+        raise ValueError(f"Need {n} complete 1v1 replays")
+    return [file_path for _, file_path in (ranked + surrender_ranked)[:n]]
+
+
+def _format_amount(value, signed=False):
+    if isinstance(value, float) and value.is_integer():
+        value = int(value)
+    text = f"{value:g}" if isinstance(value, float) else str(value)
+    return f"+{text}" if signed and value > 0 else text
+
+
+def _format_unit_values(values, *, absolute_order=False, signed=False):
+    nonzero = [(uid, value) for uid, value in values.items() if value]
+    if absolute_order:
+        nonzero.sort(key=lambda item: (-abs(item[1]), unit_report_label(item[0]), str(item[0])))
+    else:
+        nonzero.sort(key=lambda item: (-item[1], unit_report_label(item[0]), str(item[0])))
+    return "、".join(f"{unit_report_label(uid)} {_format_amount(value, signed)}" for uid, value in nonzero) or "无"
 
 
 def write_markdown(results, path):
-    lines = ["# 3 个对局投入资源解析报告", "",
-             "> 自动生成。普通单位默认费用与科技基础价均来自 reference_code/unit_cost_source.json。",
-             "> 科技局内结算价 = 基础价 + 200 × 同兵种此前已生效科技数；相邻快照差为最终事实，最后快照为撤销感知的低置信度回退。", ""]
-    for i, rep in enumerate(results, 1):
-        lines += [f"## 对局 {i}：{Path(rep['file']).name}", ""]
-        for p in rep["players"]:
-            lines += [f"### 玩家：{p['name']}", "",
-                      "| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |",
-                      "|---:|---:|---:|---:|:---:|:---|---:|"]
-            for rd in p["rounds"]:
-                lines.append(f"| {rd['round']} | {rd['supply_remaining']} | {rd['econ_spent'] if rd['econ_spent'] is not None else '—'} | {rd['known_total']} | {'是' if rd['has_unknown_cost'] else '否'} | {rd['economy_confidence']} | {rd['cumulative_known_total']} |")
-            lines += ["", "**动作明细：**", ""]
-            for rd in p["rounds"]:
-                bits = []
-                for a in rd["actions"]:
-                    title = a["unit"] + ("/" + a["tech"] if a["type"] == "tech" else "")
-                    bits.append(f"{a['type']} {title} ({a['cost'] if a['cost'] is not None else '未知'}；{a['cost_basis']})")
-                lines.append(f"- R{rd['round']}：{'；'.join(bits) or '无经济动作'}")
-                if rd["reinforcements"]:
-                    lines.append("  - 免费增援/非购买新实例：" + "、".join(x["unit"] for x in rd["reinforcements"]))
-                if rd["unknown_cost_actions"]:
-                    lines.append("  - 未知费用动作已保留在原始兵种统计，未计入 known_total。")
-            lines += ["", f"已知累计投入：{p['final_known_total']}。未知 ID 预留槽：{json.dumps(rep['unknown_unit_slots'], ensure_ascii=False)}", ""]
+    lines = ["# 5 个对局兵种净投资复查报告", "",
+             "> 自动生成。兵种投入计解锁、购买、开局配置、免费增援、升级、科技和出售退款；塔、装置等其他消费不计入。",
+             "> 回合 1 的初始 3 个 100 费单位和 2 个 200 费单位作为开局配置投资计入（通常为 700），但不计入该回合 supply 实际花费。",
+             "> 免费新增单位按成本目录的单位原价记入兵种总投入（特殊/未知单位才退回实例 SellSupply），但不记 supply 消费；随后出售会抵销其单位价值，避免把累计兵种投入误报为负数。",
+             "> 新单位优先使用回放 SellSupply；末回合无后继快照时购买费用回退到费用表并标记低置信度。出售退款按出售前 SellSupply 记为负投资。", ""]
+    for match_index, report in enumerate(results, 1):
+        lines += [f"## 对局 {match_index}：{Path(report['file']).name}", ""]
+        victory = report["victory"]
+        if victory["winner_player_index"] is None:
+            lines.append(f"- 对局结果：{victory['victory_type']}（胜者未定）")
+        else:
+            lines.append(f"- 对局结果：{victory['victory_type']}；胜者：{victory['winner_name']}；决定回合：{victory.get('decisive_round', '—')}")
+        lines.append("")
+        result_by_round = {result["round"]: result for result in report["round_results"]}
+        player_rounds = [{round_data["round"]: round_data for round_data in player["rounds"]}
+                         for player in report["players"]]
+        common_rounds = sorted(set(player_rounds[0]) & set(player_rounds[1])) if len(player_rounds) == 2 else []
+        for round_no in (round_no for round_no in common_rounds if round_no >= 1):
+            lines += [f"### 回合 {round_no}", ""]
+            for player, rounds in zip(report["players"], player_rounds):
+                round_data = rounds[round_no]
+                text = (f"- 玩家 {player['player_index'] + 1} {player['name']}：本回合 "
+                        f"{_format_unit_values(round_data['o_by_unit'], absolute_order=True, signed=True)}"
+                        f"｜当前总投入 {_format_unit_values(round_data['cumulative_o_by_unit'])}"
+                        f"｜对对手扣血 {round_data.get('damage_dealt_to_opponent', 0)}")
+                if any(action.get("initial_loadout") for action in round_data["actions"]):
+                    text += "｜含开局五单位"
+                notes = []
+                if round_data["economy_confidence"] != "snapshot":
+                    notes.append("低置信度末回合回退")
+                if round_data["has_unknown_cost"]:
+                    notes.append(f"未知费用动作 {len(round_data['unknown_cost_actions'])} 项")
+                if notes:
+                    text += "｜" + "；".join(notes)
+                lines.append(text)
+            result = result_by_round.get(round_no)
+            if result and result["winner_player_index"] is not None:
+                lines.append(f"- 本回合胜者：{result['winner_name']}（{result['source']}）")
+            else:
+                lines.append("- 本回合胜者：null（回放未记录可确认结果）")
+            damage = next((item for item in report["round_damage"] if item["round"] == round_no), None)
+            if damage and damage["winner_player_index"] is not None:
+                lines.append(f"- 核心扣血：{damage['winner_name']} 对对手造成 {damage['damage_dealt'][damage['winner_player_index']]} 点（{damage['source']}）")
+            lines.append("")
+        lines += ["### 最终兵种净投资", ""]
+        for player in report["players"]:
+            lines.append(f"- 玩家 {player['player_index'] + 1} {player['name']}："
+                         f"{_format_unit_values(player['final_o_by_unit'])}")
+        lines += ["", f"未知 ID 预留槽：{json.dumps(report['unknown_unit_slots'], ensure_ascii=False)}", ""]
     Path(path).write_text("\n".join(lines), encoding="utf-8")
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--replay-dir", default="local_data/humen_replay")
-    ap.add_argument("--out-json", default="reference_code/parse_3_matches.json")
-    ap.add_argument("--out-md", default="information/parse_3_matches_report.md")
-    ap.add_argument("--num", type=int, default=3)
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--replay-dir", default="local_data/humen_replay")
+    parser.add_argument("--out-json", default="reference_code/parse_5_matches.json")
+    parser.add_argument("--out-md", default="information/parse_5_matches_report.md")
+    parser.add_argument("--num", type=int, default=5)
+    parser.add_argument("--require-surrender", action="store_true", default=True)
+    parser.add_argument("--no-require-surrender", action="store_false", dest="require_surrender")
+    args = parser.parse_args()
     replay_dir = ROOT / args.replay_dir
-    samples = select_samples(replay_dir, args.num)
-    roots = [ET.fromstring(extract_xml(f)) for f in samples]
+    samples = select_samples(replay_dir, args.num, require_surrender=args.require_surrender)
+    roots = [ET.fromstring(extract_xml(file_path)) for file_path in samples]
     slots = slot_mapping(roots)
     matches = [parse_root(root, file_path, slots) for root, file_path in zip(roots, samples)]
-    output = {"meta": {"catalog": str(CATALOG_PATH.relative_to(ROOT)), "unknown_unit_slots": slots}, "matches": matches}
+    output = {"meta": {"catalog": str(CATALOG_PATH.relative_to(ROOT)), "unknown_unit_slots": slots,
+                       "sample_strategy": "longest_non_surrender_plus_longest_surrender"
+                       if args.require_surrender else "longest_complete_1v1"}, "matches": matches}
     (ROOT / args.out_json).write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     write_markdown(matches, ROOT / args.out_md)
     print(f"wrote {args.out_json} and {args.out_md}")
