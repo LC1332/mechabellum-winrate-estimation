@@ -1,459 +1,273 @@
 # 3 个对局投入资源解析报告
 
-> 自动生成，对应 README TODO #1：尝试解析 3 个对局的数据，打印双方各回合投入资源，供 owner 确认解析是否正确（干什么 / 花了多少钱）。
+> 自动生成。普通单位默认费用与科技基础价均来自 reference_code/unit_cost_source.json。
+> 科技局内结算价 = 基础价 + 200 × 同兵种此前已生效科技数；相邻快照差为最终事实，最后快照为撤销感知的低置信度回退。
 
-## 一、成本模型与方法
+## 对局 1：2207_20260801--134267483_[TiNaAch]VS[[TUFF] Mathismight].grbr
 
-- **解锁费用 / 首购基础价**：来自回放内 `NewUnitData.SellSupply` 的「首次出现值」（数据驱动，按游戏版本准确；SellSupply 随兵种固定、不随等级变化）。
-- **兵种等级费用**：来自 `UNIT_LEVEL_COST` 表，默认每级 `50`（⚠️ 待 owner 确认具体数值；SellSupply 已证实不随升级变化，故等级费用**无法**从数据推导）。
-- **总科技费用**：来自 `TECH_COST` 表，默认 `50`（⚠️ 待 owner 确认）。
-- **解锁费用（`PAD_UnlockUnit`）**：当前设为 `0`（⚠️ 待 owner 确认是否应等于首购基础价）。
-- **交叉校验**：利用每回合剩余 supply 反推「实际花费」=`上一轮剩余 + 每回合增量 - 本轮剩余`，与上面推导成本对比（差值列）。**仅当回合序列连续时可靠**（样本均已筛选为连续回合）。
-- **新兵种预留**：解析对未知兵种 ID 也照常记录，不报错（README 要求预留 10 维）。
+### 玩家：TiNaAch
 
-## 二、逐回合明细（含交叉校验）
-
-### 对局 1：`2207_20260725--134225731_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr`
-
-- 模式：`VS_1_1`
-
-#### 玩家：你是蓬莱花仙
-
-| 回合 | 剩余supply | 实际花费(反推) | 推导花费 | 差值 | 累计O |
-|-----:|-----:|-----:|-----:|-----:|-----:|
-| 0 | 0 | — | 0 |  | 0 |
-| 1 | 0 | 200 | 200 | 0 | 200 |
-| 2 | 50 | 150 | 400 | -250 | 600 |
-| 3 | 100 | 150 | 400 | -250 | 1000 |
-| 4 | 0 | 300 | 500 | -200 | 1500 |
-| 5 | 0 | 200 | 750 | -550 | 2250 |
-| 6 | 0 | 200 | 800 | -600 | 3050 |
-| 7 | 0 | 200 | 850 | -650 | 3900 |
-| 8 | 50 | 150 | 600 | -450 | 4500 |
-| 9 | 0 | 250 | 650 | -400 | 5150 |
-| 10 | 0 | 200 | 950 | -750 | 6100 |
-| 11 | 0 | 200 | 1300 | -1100 | 7400 |
-| 12 | 0 | 200 | 950 | -750 | 8350 |
-| 13 | 0 | 200 | 1000 | -800 | 9350 |
+| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |
+|---:|---:|---:|---:|:---:|:---|---:|
+| 0 | 0 | 200 | 0 | 否 | snapshot | 0 |
+| 1 | 0 | 400 | 200 | 否 | snapshot | 200 |
+| 2 | 0 | 550 | 300 | 否 | snapshot | 500 |
+| 3 | 50 | 850 | 850.0 | 否 | snapshot | 1350.0 |
+| 4 | 0 | 950 | 750.0 | 否 | snapshot | 2100.0 |
+| 5 | 50 | 1200 | 550.0 | 否 | snapshot | 2650.0 |
+| 6 | 50 | 1400 | 1250.0 | 否 | snapshot | 3900.0 |
+| 7 | 50 | 1650 | 1200.0 | 否 | snapshot | 5100.0 |
+| 8 | 0 | 1800 | 800.0 | 否 | snapshot | 5900.0 |
+| 9 | 0 | 1950 | 1350.0 | 否 | snapshot | 7250.0 |
+| 10 | 50 | 2200 | 1800.0 | 否 | snapshot | 9050.0 |
+| 11 | 50 | 2450 | 1250.0 | 否 | snapshot | 10300.0 |
+| 12 | 0 | 2550 | 1800.0 | 否 | snapshot | 12100.0 |
+| 13 | 50 | — | 1450.0 | 是 | action_fallback_last_snapshot | 13550.0 |
 
 **动作明细：**
 
-- R0（推导 0）：
-（无经济动作）
-- R1（推导 200）：
-解锁爬虫(crawler)(0)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：未知兵种(31), 未知兵种(31), 未知兵种(31), 大锤(sledgehammer), 大锤(sledgehammer)
-- R2（推导 400）：
-解锁野马(mustang)(0)；购买野马(mustang)(200)；购买未知兵种(31)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：爬虫(crawler)
-- R3（推导 400）：
-解锁毒牙(fang)(0)；购买毒牙(fang)(100)；科技未知兵种(31)/未知科技(10231)(50)；购买未知兵种(31)(100)；购买未知兵种(31)(100)；升级大锤(sledgehammer)Lv0→Lv1(50)
-  ｜ 增援(免费)：野马(mustang), 爬虫(crawler)
-- R4（推导 500）：
-购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；科技未知兵种(31)/未知科技(631)(50)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；解锁钢球(steel ball)(0)；购买未知兵种(31)(100)
-  ｜ 增援(免费)：火獾(fire badger), 毒牙(fang), 未知兵种(31)
-- R5（推导 750）：
-升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；解锁剑齿虎(sabertooth)(0)；购买未知兵种(31)(100)；购买火獾(fire badger)(200)；购买未知兵种(31)(100)；购买未知兵种(31)(100)；科技未知兵种(31)/未知科技(123101)(50)；购买未知兵种(31)(100)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler)
-- R6（推导 800）：
-购买爬虫(crawler)(100)；购买野马(mustang)(200)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv1→Lv2(50)；升级未知兵种(31)Lv1→Lv2(50)；升级未知兵种(31)Lv0→Lv1(50)；科技野马(mustang)/Range enhancement(50)；购买野马(mustang)(200)；解锁狼蛛(tarantula)(0)；升级野马(mustang)Lv0→Lv1(50)
-  ｜ 增援(免费)：未知兵种(31), 未知兵种(31), 未知兵种(31)
-- R7（推导 850）：
-升级野马(mustang)Lv0→Lv1(50)；升级野马(mustang)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv1→Lv2(50)；升级未知兵种(31)Lv0→Lv1(50)；购买野马(mustang)(200)；购买野马(mustang)(200)；购买野马(mustang)(200)；解锁猎犬(hound)(0)
-  ｜ 增援(免费)：爬虫(crawler)
-- R8（推导 600）：
-升级野马(mustang)Lv0→Lv1(50)；升级野马(mustang)Lv0→Lv1(50)；科技野马(mustang)/Aerial specialization(50)；购买野马(mustang)(200)；购买爬虫(crawler)(100)；升级未知兵种(31)Lv1→Lv2(50)；购买未知兵种(31)(100)
-  ｜ 增援(免费)：黄蜂(wasp), 黄蜂(wasp), 野马(mustang), 野马(mustang)
-- R9（推导 650）：
-升级野马(mustang)Lv0→Lv1(50)；升级野马(mustang)Lv1→Lv2(50)；升级野马(mustang)Lv1→Lv2(50)；升级野马(mustang)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv1→Lv2(50)；购买未知兵种(31)(100)；购买未知兵种(31)(100)；购买未知兵种(31)(100)；科技爬虫(crawler)/Loose formation(50)
-  ｜ 增援(免费)：野马(mustang), 爬虫(crawler)
-- R10（推导 950）：
-购买爬虫(crawler)(100)；升级未知兵种(31)Lv2→Lv3(50)；升级未知兵种(31)Lv2→Lv3(50)；升级未知兵种(31)Lv1→Lv2(50)；升级未知兵种(31)Lv0→Lv1(50)；购买爬虫(crawler)(100)；科技堡垒(fortress)/Anti air barrage(50)；购买堡垒(fortress)(400)；升级野马(mustang)Lv1→Lv2(50)；升级野马(mustang)Lv0→Lv1(50)
-  ｜ 增援(免费)：未知兵种(31), 未知兵种(31), 未知兵种(31)
-- R11（推导 1300）：
-升级未知兵种(31)Lv2→Lv3(50)；升级未知兵种(31)Lv2→Lv3(50)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv2→Lv3(50)；升级未知兵种(31)Lv1→Lv2(50)；升级未知兵种(31)Lv0→Lv1(50)；升级堡垒(fortress)Lv0→Lv1(50)；购买猎犬(hound)(50)；科技猎犬(hound)/Fire extinguisher(50)；购买堡垒(fortress)(400)；购买堡垒(fortress)(400)；升级野马(mustang)Lv1→Lv2(50)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler), 堡垒(fortress)
-- R12（推导 950）：
-科技幽灵(wraith)/Degeneration beam(50)；升级堡垒(fortress)Lv0→Lv1(50)；升级未知兵种(31)Lv3→Lv4(50)；升级未知兵种(31)Lv2→Lv3(50)；购买爬虫(crawler)(100)；升级野马(mustang)Lv2→Lv3(50)；升级野马(mustang)Lv2→Lv3(50)；升级野马(mustang)Lv2→Lv3(50)；购买黄蜂(wasp)(200)；科技黄蜂(wasp)/Energy shield(50)；购买黄蜂(wasp)(200)；升级黄蜂(wasp)Lv1→Lv2(50)
-  ｜ 增援(免费)：猎犬(hound), 堡垒(fortress), 堡垒(fortress)
-- R13（推导 1000）：
-升级未知兵种(31)Lv1→Lv2(50)；升级未知兵种(31)Lv3→Lv4(50)；升级未知兵种(31)Lv2→Lv3(50)；升级野马(mustang)Lv1→Lv2(50)；升级野马(mustang)Lv1→Lv2(50)；购买火獾(fire badger)(200)；科技堡垒(fortress)/Range enhancement(50)；购买堡垒(fortress)(400)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：幽灵(wraith), 幽灵(wraith), 黄蜂(wasp), 黄蜂(wasp)
+- R0：unlock 长弓(marksman) (0；catalog_default)；unlock 狼蛛(tarantula) (0；catalog_default)
+  - 免费增援/非购买新实例：长弓(marksman)、长弓(marksman)、长弓(marksman)、狼蛛(tarantula)、狼蛛(tarantula)
+- R1：unlock 爬虫(crawler) (0；catalog_default)；unlock 剑齿虎(sabertooth) (0；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R2：unlock 尖牙(fang) (0；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R3：unlock 恶灵(wraith) (50；catalog_default)；unlock 狂蝎(scorpion) (50；catalog_default)；buy 狂蝎(scorpion) (300；replay_sell_supply)；buy 狂蝎(scorpion) (300；replay_sell_supply)；buy 尖牙(fang) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：恶灵(wraith)
+- R4：unlock 野马(mustang) (0；catalog_default)；tech 狼蛛(tarantula)/高爆弹药(High explosive ammo) (300；catalog_base_plus_tech_surcharge)；buy 狼蛛(tarantula) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)
+- R5：unlock 铁锤(sledgehammer) (0；catalog_default)；buy 狂蝎(scorpion) (300；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)
+- R6：unlock 台风(typhoon) (50；catalog_default)；buy 狂蝎(scorpion) (300；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 狼蛛(tarantula) (200；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：台风(typhoon)
+- R7：unlock 火獾(fire badger) (0；catalog_default)；tech 狂蝎(scorpion)/射程强化(Range enhancement) (300；catalog_base_plus_tech_surcharge)；tech 狼蛛(tarantula)/射程强化(Range enhancement) (500；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)
+- R8：buy 狼蛛(tarantula) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)
+- R9：unlock 先知(farseer) (50；catalog_default)；tech 爬虫(crawler)/潜地行动(Subterranean blitz) (350；catalog_base_plus_tech_surcharge)；tech 先知(farseer)/光子投射(Photon emission) (400；catalog_base_plus_tech_surcharge)；buy 狼蛛(tarantula) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：先知(farseer)、先知(farseer)、先知(farseer)
+- R10：unlock 弧光(arclight) (0；catalog_default)；tech 狼蛛(tarantula)/机械狂暴(Mechanical rage) (800；catalog_base_plus_tech_surcharge)；buy 狂蝎(scorpion) (300；replay_sell_supply)；buy 狂蝎(scorpion) (300；replay_sell_supply)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)
+- R11：unlock 魔眼(void eye) (0；catalog_default)；tech 长弓(marksman)/电磁弹(Electromagnetic shot) (250；catalog_base_plus_tech_surcharge)；buy 狂蝎(scorpion) (300；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)
+- R12：tech 先知(farseer)/搜索雷达(Scanning radar) (400；catalog_base_plus_tech_surcharge)；buy 先知(farseer) (300；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 先知(farseer) (150.0；replay_sell_supply_half)；level 先知(farseer) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：恶灵(wraith)
+- R13：level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 狂蝎(scorpion) (150.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 狼蛛(tarantula) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；tech 狂蝎(scorpion)/双发(Doubleshot) (300；catalog_base_plus_tech_surcharge)；buy 长弓(marksman) (未知；unknown_buy_without_sellsupply)；buy 狼蛛(tarantula) (未知；unknown_buy_without_sellsupply)；buy 狂蝎(scorpion) (未知；unknown_buy_without_sellsupply)；level 先知(farseer) (150.0；replay_sell_supply_half)；unlock 钢球(steel ball) (0；catalog_default)
+  - 未知费用动作已保留在原始兵种统计，未计入 known_total。
 
-**按兵种累计 O（Top10）**：未知兵种(31)=2850，野马(mustang)=2350，堡垒(fortress)=1800，爬虫(crawler)=1150，黄蜂(wasp)=500，火獾(fire badger)=400，毒牙(fang)=100，猎犬(hound)=100，大锤(sledgehammer)=50，幽灵(wraith)=50
+已知累计投入：13550.0。未知 ID 预留槽：{"slots": {}, "overflow": []}
 
-**小结**：推导累计 O = 9350；实际花费(反推)累计 = 2600；比值 ≈ 3.60（>1 表示推导偏高，疑似增援单位被误计为购买）。
+### 玩家：[TUFF] Mathismight
 
-#### 玩家：哈宝哈宝蛤不思饱Habsburg
-
-| 回合 | 剩余supply | 实际花费(反推) | 推导花费 | 差值 | 累计O |
-|-----:|-----:|-----:|-----:|-----:|-----:|
-| 0 | 0 | — | 0 |  | 0 |
-| 1 | 0 | 200 | 200 | 0 | 200 |
-| 2 | 0 | 200 | 300 | -100 | 500 |
-| 3 | 50 | 150 | 350 | -200 | 850 |
-| 4 | 0 | 250 | 800 | -550 | 1650 |
-| 5 | 0 | 200 | 500 | -300 | 2150 |
-| 6 | 50 | 150 | 550 | -400 | 2700 |
-| 7 | 0 | 250 | 750 | -500 | 3450 |
-| 8 | 0 | 200 | 850 | -650 | 4300 |
-| 9 | 0 | 200 | 850 | -650 | 5150 |
-| 10 | 0 | 200 | 450 | -250 | 5600 |
-| 11 | 0 | 200 | 1450 | -1250 | 7050 |
-| 12 | 0 | 200 | 1250 | -1050 | 8300 |
-| 13 | 0 | 200 | 850 | -650 | 9150 |
+| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |
+|---:|---:|---:|---:|:---:|:---|---:|
+| 0 | 0 | 200 | 0 | 否 | snapshot | 0 |
+| 1 | 0 | 400 | 250 | 否 | snapshot | 250 |
+| 2 | 0 | 600 | 400 | 否 | snapshot | 650 |
+| 3 | 0 | 750 | 450.0 | 否 | snapshot | 1100.0 |
+| 4 | 50 | 1050 | 800.0 | 否 | snapshot | 1900.0 |
+| 5 | 0 | 1200 | 600.0 | 否 | snapshot | 2500.0 |
+| 6 | 0 | 1300 | 1200.0 | 否 | snapshot | 3700.0 |
+| 7 | 100 | 1700 | 1050.0 | 否 | snapshot | 4750.0 |
+| 8 | 0 | 1800 | 1400.0 | 否 | snapshot | 6150.0 |
+| 9 | 0 | 2000 | 1450.0 | 否 | snapshot | 7600.0 |
+| 10 | 0 | 2200 | 1350.0 | 否 | snapshot | 8950.0 |
+| 11 | 0 | 2350 | 1400.0 | 否 | snapshot | 10350.0 |
+| 12 | 50 | 2600 | 1800.0 | 否 | snapshot | 12150.0 |
+| 13 | 50 | — | 1550.0 | 是 | action_fallback_last_snapshot | 13700.0 |
 
 **动作明细：**
 
-- R0（推导 0）：
-（无经济动作）
-- R1（推导 200）：
-解锁爬虫(crawler)(0)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：未知兵种(31), 未知兵种(31), 未知兵种(31), 狼蛛(tarantula), 狼蛛(tarantula)
-- R2（推导 300）：
-解锁毒牙(fang)(0)；购买毒牙(fang)(100)；购买爬虫(crawler)(100)；购买毒牙(fang)(100)
-  ｜ 增援(免费)：爬虫(crawler)
-- R3（推导 350）：
-科技狼蛛(tarantula)/Range enhancement(50)；购买狼蛛(tarantula)(200)；购买爬虫(crawler)(100)；解锁野马(mustang)(0)
-  ｜ 增援(免费)：神射手(marksmen), 毒牙(fang), 毒牙(fang)
-- R4（推导 800）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；升级未知兵种(31)Lv0→Lv1(50)；购买毒牙(fang)(100)；购买毒牙(fang)(100)；购买狼蛛(tarantula)(200)；购买狼蛛(tarantula)(200)；解锁剑齿虎(sabertooth)(0)；升级未知兵种(31)Lv0→Lv1(50)
-  ｜ 增援(免费)：火獾(fire badger), 爬虫(crawler)
-- R5（推导 500）：
-解锁钢球(steel ball)(0)；解锁凤凰(phoenix)(0)；升级狼蛛(tarantula)Lv0→Lv1(50)；购买凤凰(phoenix)(150)；购买凤凰(phoenix)(150)；购买凤凰(phoenix)(150)
-  ｜ 增援(免费)：毒牙(fang), 狼蛛(tarantula), 狼蛛(tarantula)
-- R6（推导 550）：
-升级凤凰(phoenix)Lv0→Lv1(50)；科技凤凰(phoenix)/Range enhancement(50)；购买凤凰(phoenix)(150)；购买凤凰(phoenix)(150)；购买凤凰(phoenix)(150)；解锁大锤(sledgehammer)(0)
-- R7（推导 750）：
-购买爬虫(crawler)(100)；升级凤凰(phoenix)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；升级狼蛛(tarantula)Lv0→Lv1(50)；购买爬虫(crawler)(100)；升级狼蛛(tarantula)Lv0→Lv1(50)；科技狼蛛(tarantula)/High explosive ammo(50)；解锁钢球(steel ball)(0)
-  ｜ 增援(免费)：凤凰(phoenix), 凤凰(phoenix), 凤凰(phoenix)
-- R8（推导 850）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv1→Lv2(50)；升级狼蛛(tarantula)Lv0→Lv1(50)；购买狼蛛(tarantula)(200)；购买野马(mustang)(200)；购买野马(mustang)(200)；升级凤凰(phoenix)Lv0→Lv1(50)；科技野马(mustang)/Range enhancement(50)；解锁猎犬(hound)(0)
-  ｜ 增援(免费)：蝎子(scorpion), 爬虫(crawler), 爬虫(crawler), 爬虫(crawler)
-- R9（推导 850）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；科技爬虫(crawler)/Subterranean blitz(50)；购买爬虫(crawler)(100)；购买狼蛛(tarantula)(200)；购买狼蛛(tarantula)(200)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；升级凤凰(phoenix)Lv1→Lv2(50)；解锁弧光(arclight)(0)
-  ｜ 增援(免费)：野马(mustang), 野马(mustang)
-- R10（推导 450）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；科技未知兵种(2002)/未知科技(1022002)(50)；科技狼蛛(tarantula)/Armor enhancement(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；解锁未知兵种(30)(0)
-  ｜ 增援(免费)：狼蛛(tarantula)
-- R11（推导 1450）：
-购买爬虫(crawler)(100)；升级未知兵种(2002)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv1→Lv2(50)；购买未知兵种(2002)(800)；科技凤凰(phoenix)/Electromagnetic shot(50)；升级野马(mustang)Lv0→Lv1(50)；升级野马(mustang)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：爬虫(crawler)
-- R12（推导 1250）：
-科技大锤(sledgehammer)/Armor enhancement(50)；升级未知兵种(2002)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv1→Lv2(50)；购买未知兵种(2002)(800)；升级狼蛛(tarantula)Lv2→Lv3(50)；购买爬虫(crawler)(100)；升级未知兵种(2002)Lv0→Lv1(50)；购买爬虫(crawler)(100)
-- R13（推导 850）：
-升级野马(mustang)Lv1→Lv2(50)；升级野马(mustang)Lv1→Lv2(50)；升级未知兵种(2002)Lv0→Lv1(50)；购买狼蛛(tarantula)(200)；购买狼蛛(tarantula)(200)；升级狼蛛(tarantula)Lv2→Lv3(50)；购买野马(mustang)(200)；升级凤凰(phoenix)Lv1→Lv2(50)
-  ｜ 增援(免费)：大锤(sledgehammer), 大锤(sledgehammer), 大锤(sledgehammer), 未知兵种(2002), 爬虫(crawler), 爬虫(crawler)
+- R0：unlock 火獾(fire badger) (0；catalog_default)；unlock 魔眼(void eye) (0；catalog_default)
+  - 免费增援/非购买新实例：魔眼(void eye)、魔眼(void eye)、魔眼(void eye)、火獾(fire badger)、火獾(fire badger)
+- R1：unlock 爬虫(crawler) (0；catalog_default)；unlock 犀牛(rhino) (50；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R2：unlock 长弓(marksman) (0；catalog_default)；tech 魔眼(void eye)/蓄能攻击(Charged Shot) (100；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 长弓(marksman) (100；replay_sell_supply)
+- R3：unlock 恶灵(wraith) (50；catalog_default)；buy 魔眼(void eye) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：恶灵(wraith)
+- R4：tech 火獾(fire badger)/射程强化(Range enhancement) (300；catalog_base_plus_tech_surcharge)；buy 火獾(fire badger) (200；replay_sell_supply)；buy 火獾(fire badger) (200；replay_sell_supply)；level 火獾(fire badger) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：犀牛(rhino)
+- R5：buy 火獾(fire badger) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)
+- R6：unlock 凤凰(phoenix) (50；catalog_default)；tech 火獾(fire badger)/高温火焰(Scorching fire) (500；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：凤凰(phoenix)
+- R7：tech 爬虫(crawler)/潜地行动(Subterranean blitz) (350；catalog_base_plus_tech_surcharge)；buy 火獾(fire badger) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 长弓(marksman) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)
+- R8：tech 凤凰(phoenix)/量子重组(Quantum reassembly) (150；catalog_base_plus_tech_surcharge)；tech 魔眼(void eye)/射程强化(Range Enhancement) (500；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+- R9：unlock 先知(farseer) (50；catalog_default)；tech 先知(farseer)/光子投射(Photon emission) (400；catalog_base_plus_tech_surcharge)；buy 火獾(fire badger) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：先知(farseer)、先知(farseer)
+- R10：tech 魔眼(void eye)/电磁装甲(Electromagnetic Armor) (700；catalog_base_plus_tech_surcharge)；buy 火獾(fire badger) (200；replay_sell_supply)；buy 魔眼(void eye) (100；replay_sell_supply)；buy 魔眼(void eye) (100；replay_sell_supply)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)
+- R11：unlock 尖牙(fang) (0；catalog_default)；tech 火獾(fire badger)/引燃(Ignite) (500；catalog_base_plus_tech_surcharge)；buy 尖牙(fang) (100；replay_sell_supply)；buy 尖牙(fang) (100；replay_sell_supply)；buy 火獾(fire badger) (200；replay_sell_supply)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)
+- R12：unlock 兵蜂(wasp) (50；catalog_default)；unlock 钢球(steel ball) (0；catalog_default)；tech 凤凰(phoenix)/射程强化(Range enhancement) (500；catalog_base_plus_tech_surcharge)；tech 钢球(steel ball)/射程强化(Range enhancement) (300；catalog_base_plus_tech_surcharge)；tech 钢球(steel ball)/滚动充能(Kinetic Charge) (350；catalog_base_plus_tech_surcharge)；buy 兵蜂(wasp) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：钢球(steel ball)、钢球(steel ball)
+- R13：level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 火獾(fire badger) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；level 魔眼(void eye) (50.0；replay_sell_supply_half)；tech 凤凰(phoenix)/电磁弹(Electromagnetic shot) (600；catalog_base_plus_tech_surcharge)；buy 凤凰(phoenix) (未知；unknown_buy_without_sellsupply)；level 爬虫(crawler) (50.0；replay_sell_supply_half)；level 钢球(steel ball) (100.0；replay_sell_supply_half)；buy 兵蜂(wasp) (未知；unknown_buy_without_sellsupply)
+  - 未知费用动作已保留在原始兵种统计，未计入 known_total。
 
-**按兵种累计 O（Top10）**：狼蛛(tarantula)=2450，爬虫(crawler)=1950，未知兵种(2002)=1850，凤凰(phoenix)=1450，野马(mustang)=850，毒牙(fang)=400，未知兵种(31)=150，大锤(sledgehammer)=50，剑齿虎(sabertooth)=0，钢球(steel ball)=0
+已知累计投入：13700.0。未知 ID 预留槽：{"slots": {}, "overflow": []}
 
-**小结**：推导累计 O = 9150；实际花费(反推)累计 = 2600；比值 ≈ 3.52（>1 表示推导偏高，疑似增援单位被误计为购买）。
+## 对局 2：2207_20260730--268473826_[Straußenjunge]VS[涅槃].grbr
 
-### 对局 2：`2207_20260729--134245856_[juliensam23]VS[my98765431].grbr`
+### 玩家：Straußenjunge
 
-- 模式：`VS_1_1`
-
-#### 玩家：juliensam23
-
-| 回合 | 剩余supply | 实际花费(反推) | 推导花费 | 差值 | 累计O |
-|-----:|-----:|-----:|-----:|-----:|-----:|
-| 0 | 0 | — | 0 |  | 0 |
-| 1 | 0 | 200 | 200 | 0 | 200 |
-| 2 | 0 | 200 | 400 | -200 | 600 |
-| 3 | 0 | 200 | 600 | -400 | 1200 |
-| 4 | 0 | 200 | 600 | -400 | 1800 |
-| 5 | 0 | 200 | 450 | -250 | 2250 |
-| 6 | 350 | -150 | 1050 | -1200 | 3300 |
-| 7 | 0 | 550 | 950 | -400 | 4250 |
-| 8 | 0 | 200 | 1250 | -1050 | 5500 |
-| 9 | 0 | 200 | 950 | -750 | 6450 |
-| 10 | 0 | 200 | 700 | -500 | 7150 |
-| 11 | 0 | 200 | 2050 | -1850 | 9200 |
-| 12 | 0 | 200 | 900 | -700 | 10100 |
-| 13 | 0 | 200 | 700 | -500 | 10800 |
+| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |
+|---:|---:|---:|---:|:---:|:---|---:|
+| 0 | 0 | 200 | 0 | 否 | snapshot | 0 |
+| 1 | 0 | 400 | 250.0 | 否 | snapshot | 250.0 |
+| 2 | 0 | 600 | 450 | 否 | snapshot | 700.0 |
+| 3 | 0 | 750 | 300 | 否 | snapshot | 1000.0 |
+| 4 | 50 | 1050 | 500.0 | 否 | snapshot | 1500.0 |
+| 5 | 0 | 1200 | 750 | 否 | snapshot | 2250.0 |
+| 6 | 0 | 1400 | 450.0 | 否 | snapshot | 2700.0 |
+| 7 | 0 | 1300 | 550.0 | 否 | snapshot | 3250.0 |
+| 8 | 300 | 2050 | 1025.0 | 否 | snapshot | 4275.0 |
+| 9 | 50 | 2050 | 525.0 | 否 | snapshot | 4800.0 |
+| 10 | 0 | 2100 | 1550.0 | 否 | snapshot | 6350.0 |
+| 11 | 100 | 2400 | 1425.0 | 否 | snapshot | 7775.0 |
+| 12 | 100 | 2700 | 2075.0 | 否 | snapshot | 9850.0 |
+| 13 | 0 | — | 1375.0 | 是 | action_fallback_last_snapshot | 11225.0 |
 
 **动作明细：**
 
-- R0（推导 0）：
-（无经济动作）
-- R1（推导 200）：
-解锁爬虫(crawler)(0)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：未知兵种(30), 未知兵种(30), 未知兵种(30), 火獾(fire badger), 火獾(fire badger)
-- R2（推导 400）：
-解锁大锤(sledgehammer)(0)；购买大锤(sledgehammer)(200)；购买大锤(sledgehammer)(200)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler)
-- R3（推导 600）：
-解锁野马(mustang)(0)；购买野马(mustang)(200)；解锁野马(mustang)(0)；购买野马(mustang)(200)；购买野马(mustang)(200)
-  ｜ 增援(免费)：大锤(sledgehammer), 大锤(sledgehammer)
-- R4（推导 600）：
-购买野马(mustang)(200)；购买大锤(sledgehammer)(200)；购买大锤(sledgehammer)(200)
-  ｜ 增援(免费)：幻影射线(phantom ray), 野马(mustang)
-- R5（推导 450）：
-升级大锤(sledgehammer)Lv0→Lv1(50)；购买幻影射线(phantom ray)(200)；购买幻影射线(phantom ray)(200)
-  ｜ 增援(免费)：野马(mustang), 大锤(sledgehammer), 大锤(sledgehammer)
-- R6（推导 1050）：
-解锁战争工厂(warfactory)(0)；购买战争工厂(warfactory)(800)；科技战争工厂(warfactory)/Range enhancement(50)；购买大锤(sledgehammer)(200)
-  ｜ 增援(免费)：幻影射线(phantom ray), 幻影射线(phantom ray)
-- R7（推导 950）：
-购买战争工厂(warfactory)(800)；科技战争工厂(warfactory)/Launcher overload(50)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：大锤(sledgehammer)
-- R8（推导 1250）：
-科技战争工厂(warfactory)/High explosive ammo(50)；购买战争工厂(warfactory)(800)；科技大锤(sledgehammer)/Field maintenance(50)；购买大锤(sledgehammer)(200)；购买爬虫(crawler)(100)；升级野马(mustang)Lv1→Lv2(50)
-- R9（推导 950）：
-购买战争工厂(warfactory)(800)；科技战争工厂(warfactory)/Sledgehammer production(50)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：大锤(sledgehammer)
-- R10（推导 700）：
-科技野马(mustang)/Aerial specialization(50)；升级野马(mustang)Lv1→Lv2(50)；购买野马(mustang)(200)；购买野马(mustang)(200)；购买野马(mustang)(200)
-  ｜ 增援(免费)：战争工厂(warfactory), 爬虫(crawler)
-- R11（推导 2050）：
-升级野马(mustang)Lv1→Lv2(50)；购买战争工厂(warfactory)(800)；购买战争工厂(warfactory)(800)；购买大锤(sledgehammer)(200)；购买大锤(sledgehammer)(200)
-  ｜ 增援(免费)：野马(mustang), 野马(mustang), 野马(mustang)
-- R12（推导 900）：
-升级野马(mustang)Lv1→Lv2(50)；升级野马(mustang)Lv2→Lv3(50)；科技野马(mustang)/Armor piercing bullets(50)；科技野马(mustang)/Missile interceptor(50)；购买野马(mustang)(200)；购买野马(mustang)(200)；购买野马(mustang)(200)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：战争工厂(warfactory), 战争工厂(warfactory), 大锤(sledgehammer), 大锤(sledgehammer)
-- R13（推导 700）：
-升级野马(mustang)Lv2→Lv3(50)；科技野马(mustang)/Range enhancement(50)；购买野马(mustang)(200)；购买野马(mustang)(200)；购买野马(mustang)(200)
-  ｜ 增援(免费)：爬虫(crawler)
+- R0：unlock 猎犬(hound) (0；catalog_default)；unlock 野马(mustang) (0；catalog_default)
+  - 免费增援/非购买新实例：猎犬(hound)、猎犬(hound)、猎犬(hound)、野马(mustang)、野马(mustang)
+- R1：unlock 爬虫(crawler) (0；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)
+- R2：unlock 兵蜂(wasp) (50；catalog_default)；unlock 尖牙(fang) (0；catalog_default)；buy 兵蜂(wasp) (200；replay_sell_supply)；buy 猎犬(hound) (100；replay_sell_supply)；buy 猎犬(hound) (100；replay_sell_supply)
+  - 免费增援/非购买新实例：兵蜂(wasp)
+- R3：unlock 魔眼(void eye) (0；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 猎犬(hound) (100；replay_sell_supply)；buy 猎犬(hound) (100；replay_sell_supply)
+- R4：unlock 铁锤(sledgehammer) (0；catalog_default)；tech 猎犬(hound)/射程强化(Range Enhancement) (300；catalog_base_plus_tech_surcharge)；buy 猎犬(hound) (50；replay_sell_supply)；buy 爬虫(crawler) (50；replay_sell_supply)；level 野马(mustang) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：猎犬(hound)
+- R5：unlock 长弓(marksman) (0；catalog_default)；tech 猎犬(hound)/枪膛增压(Chamber Compression) (500；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (50；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)
+- R6：unlock 钢球(steel ball) (0；catalog_default)；buy 爬虫(crawler) (50；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：猎犬(hound)
+- R7：unlock 先知(farseer) (50；catalog_default)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：先知(farseer)、先知(farseer)
+- R8：tech 先知(farseer)/防空专精(Aerial specialization) (200；catalog_base_plus_tech_surcharge)；tech 先知(farseer)/导弹拦截(Missile interceptor) (400；catalog_base_plus_tech_surcharge)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 先知(farseer) (150.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)
+- R9：unlock 狼蛛(tarantula) (0；catalog_default)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 先知(farseer) (150.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)
+- R10：unlock 火獾(fire badger) (0；catalog_default)；tech 先知(farseer)/搜索雷达(Scanning radar) (600；catalog_base_plus_tech_surcharge)；tech 猎犬(hound)/机械狂暴(Mechanical Rage) (700；catalog_base_plus_tech_surcharge)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)
+- R11：tech 猎犬(hound)/燃烧弹(Incendiary Bomb) (850；catalog_base_plus_tech_surcharge)；buy 先知(farseer) (250；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)
+- R12：unlock 深渊(abyss) (350；catalog_default)；tech 深渊(abyss)/纵扫(Vertical Sweep) (350；catalog_base_plus_tech_surcharge)；buy 深渊(abyss) (800；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；buy 猎犬(hound) (50；replay_sell_supply)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (50.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 先知(farseer) (150.0；replay_sell_supply_half)
+- R13：level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；level 猎犬(hound) (25.0；replay_sell_supply_half)；buy 深渊(abyss) (未知；unknown_buy_without_sellsupply)；buy 深渊(abyss) (未知；unknown_buy_without_sellsupply)；tech 深渊(abyss)/射程强化(Range Enhancement) (700；catalog_base_plus_tech_surcharge)；tech 深渊(abyss)/裂解(Disintegration) (550；catalog_base_plus_tech_surcharge)；level 未知兵种(None) (未知；unknown_upgrade_without_sellsupply)；buy 铁锤(sledgehammer) (未知；unknown_buy_without_sellsupply)
+  - 未知费用动作已保留在原始兵种统计，未计入 known_total。
 
-**按兵种累计 O（Top10）**：战争工厂(warfactory)=5000，野马(mustang)=3100，大锤(sledgehammer)=1700，爬虫(crawler)=600，幻影射线(phantom ray)=400
+已知累计投入：11225.0。未知 ID 预留槽：{"slots": {}, "overflow": []}
 
-**小结**：推导累计 O = 10800；实际花费(反推)累计 = 2600；比值 ≈ 4.15（>1 表示推导偏高，疑似增援单位被误计为购买）。
+### 玩家：涅槃
 
-#### 玩家：my98765431
-
-| 回合 | 剩余supply | 实际花费(反推) | 推导花费 | 差值 | 累计O |
-|-----:|-----:|-----:|-----:|-----:|-----:|
-| 0 | 0 | — | 0 |  | 0 |
-| 1 | 0 | 200 | 200 | 0 | 200 |
-| 2 | 0 | 200 | 400 | -200 | 600 |
-| 3 | 0 | 200 | 550 | -350 | 1150 |
-| 4 | 50 | 150 | 400 | -250 | 1550 |
-| 5 | 0 | 250 | 1000 | -750 | 2550 |
-| 6 | 0 | 200 | 400 | -200 | 2950 |
-| 7 | 0 | 200 | 350 | -150 | 3300 |
-| 8 | 0 | 200 | 750 | -550 | 4050 |
-| 9 | 0 | 200 | 500 | -300 | 4550 |
-| 10 | 0 | 200 | 850 | -650 | 5400 |
-| 11 | 0 | 200 | 1800 | -1600 | 7200 |
-| 12 | 0 | 200 | 1900 | -1700 | 9100 |
-| 13 | 0 | 200 | 2450 | -2250 | 11550 |
+| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |
+|---:|---:|---:|---:|:---:|:---|---:|
+| 0 | 0 | 200 | 0 | 否 | snapshot | 0 |
+| 1 | 0 | 400 | 200 | 否 | snapshot | 200 |
+| 2 | 0 | 600 | 300 | 否 | snapshot | 500 |
+| 3 | 0 | 750 | 500.0 | 否 | snapshot | 1000.0 |
+| 4 | 50 | 1050 | 700.0 | 否 | snapshot | 1700.0 |
+| 5 | 0 | 1200 | 1050.0 | 否 | snapshot | 2750.0 |
+| 6 | 0 | 1400 | 850.0 | 否 | snapshot | 3600.0 |
+| 7 | 0 | 1600 | 700.0 | 否 | snapshot | 4300.0 |
+| 8 | 0 | 1800 | 600.0 | 否 | snapshot | 4900.0 |
+| 9 | 0 | 2000 | 1100.0 | 否 | snapshot | 6000.0 |
+| 10 | 0 | 2200 | 1850.0 | 否 | snapshot | 7850.0 |
+| 11 | 0 | 2400 | 1350.0 | 否 | snapshot | 9200.0 |
+| 12 | 0 | 2600 | 1500.0 | 否 | snapshot | 10700.0 |
+| 13 | 0 | — | 2000.0 | 是 | action_fallback_last_snapshot | 12700.0 |
 
 **动作明细：**
 
-- R0（推导 0）：
-（无经济动作）
-- R1（推导 200）：
-购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：爬虫(crawler), 狼蛛(tarantula), 狼蛛(tarantula)
-- R2（推导 400）：
-解锁凤凰(phoenix)(0)；购买凤凰(phoenix)(200)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-- R3（推导 550）：
-升级凤凰(phoenix)Lv0→Lv1(50)；购买台风(typhoon)(300)；购买凤凰(phoenix)(200)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler)
-- R4（推导 400）：
-购买爬虫(crawler)(100)；购买凤凰(phoenix)(200)；科技凤凰(phoenix)/Launcher overload(50)；科技台风(typhoon)/Aerial specialization(50)
-  ｜ 增援(免费)：毒牙(fang), 毒牙(fang), 毒牙(fang), 台风(typhoon)
-- R5（推导 1000）：
-升级台风(typhoon)Lv0→Lv1(50)；升级凤凰(phoenix)Lv1→Lv2(50)；购买凤凰(phoenix)(200)；购买狼蛛(tarantula)(200)；购买台风(typhoon)(300)；购买凤凰(phoenix)(200)
-  ｜ 增援(免费)：爬虫(crawler)
-- R6（推导 400）：
-购买凤凰(phoenix)(200)；科技凤凰(phoenix)/Range enhancement(50)；升级台风(typhoon)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)
-  ｜ 增援(免费)：台风(typhoon), 凤凰(phoenix)
-- R7（推导 350）：
-升级台风(typhoon)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；购买爬虫(crawler)(100)；科技台风(typhoon)/Energy shield(50)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：蝎子(scorpion), 凤凰(phoenix)
-- R8（推导 750）：
-升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv0→Lv1(50)；购买凤凰(phoenix)(200)；购买凤凰(phoenix)(200)；购买凤凰(phoenix)(200)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler)
-- R9（推导 500）：
-升级台风(typhoon)Lv1→Lv2(50)；升级台风(typhoon)Lv1→Lv2(50)；购买爬虫(crawler)(100)；科技台风(typhoon)/Energy shield(50)；购买爬虫(crawler)(100)；科技凤凰(phoenix)/Energy shield(50)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：剑齿虎(sabertooth), 凤凰(phoenix), 凤凰(phoenix), 凤凰(phoenix)
-- R10（推导 850）：
-升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv2→Lv3(50)；升级凤凰(phoenix)Lv0→Lv1(50)；升级凤凰(phoenix)Lv1→Lv2(50)；升级台风(typhoon)Lv1→Lv2(50)；购买凤凰(phoenix)(200)；购买凤凰(phoenix)(200)；购买凤凰(phoenix)(200)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler), 爬虫(crawler)
-- R11（推导 1800）：
-升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv2→Lv3(50)；升级凤凰(phoenix)Lv2→Lv3(50)；解锁深渊(abyss)(0)；购买深渊(abyss)(800)；购买深渊(abyss)(800)；科技深渊(abyss)/Swarm missiles(50)
-  ｜ 增援(免费)：凤凰(phoenix), 凤凰(phoenix), 凤凰(phoenix)
-- R12（推导 1900）：
-升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv1→Lv2(50)；科技凤凰(phoenix)/Quantum reassembly(50)；购买深渊(abyss)(800)；购买深渊(abyss)(800)；购买爬虫(crawler)(100)
-- R13（推导 2450）：
-科技深渊(abyss)/Disintegration(50)；购买深渊(abyss)(800)；购买深渊(abyss)(800)；购买深渊(abyss)(800)
-  ｜ 增援(免费)：爬虫(crawler)
+- R0：unlock 弧光(arclight) (0；catalog_default)；unlock 剑齿虎(sabertooth) (0；catalog_default)
+  - 免费增援/非购买新实例：弧光(arclight)、弧光(arclight)、弧光(arclight)、剑齿虎(sabertooth)、剑齿虎(sabertooth)
+- R1：unlock 爬虫(crawler) (0；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R2：unlock 长弓(marksman) (0；catalog_default)；unlock 尖牙(fang) (0；catalog_default)；buy 弧光(arclight) (100；replay_sell_supply)；buy 弧光(arclight) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+  - 免费增援/非购买新实例：长弓(marksman)
+- R3：unlock 野马(mustang) (0；catalog_default)；buy 野马(mustang) (200；replay_sell_supply)；buy 野马(mustang) (200；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+- R4：unlock 猎犬(hound) (0；catalog_default)；tech 弧光(arclight)/射程强化(Range enhancement) (300；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 野马(mustang) (200；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+- R5：unlock 魔眼(void eye) (0；catalog_default)；tech 弧光(arclight)/精英射手(Elite marksman) (600；catalog_base_plus_tech_surcharge)；buy 尖牙(fang) (100；replay_sell_supply)；buy 尖牙(fang) (100；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 剑齿虎(sabertooth) (100.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+- R6：unlock 磁暴(vortex) (0；catalog_default)；tech 野马(mustang)/射程强化(Range enhancement) (300；catalog_base_plus_tech_surcharge)；buy 野马(mustang) (200；replay_sell_supply)；buy 弧光(arclight) (100；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)
+- R7：unlock 铁锤(sledgehammer) (0；catalog_default)；unlock 鬼鳐(phantom ray) (50；catalog_default)；tech 剑齿虎(sabertooth)/战地维修(Field Maintenance) (200；catalog_base_plus_tech_surcharge)；buy 剑齿虎(sabertooth) (200；replay_sell_supply)；buy 剑齿虎(sabertooth) (200；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：鬼鳐(phantom ray)、鬼鳐(phantom ray)
+- R8：unlock 钢球(steel ball) (0；catalog_default)；buy 剑齿虎(sabertooth) (200；replay_sell_supply)；buy 剑齿虎(sabertooth) (200；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+- R9：unlock 火獾(fire badger) (0；catalog_default)；tech 剑齿虎(sabertooth)/野战工事(Field Fortifications) (400；catalog_base_plus_tech_surcharge)；buy 尖牙(fang) (100；replay_sell_supply)；buy 尖牙(fang) (100；replay_sell_supply)；buy 尖牙(fang) (100；replay_sell_supply)；level 剑齿虎(sabertooth) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)
+- R10：unlock 战争工厂(war factory) (350；catalog_default)；unlock 狼蛛(tarantula) (0；catalog_default)；tech 战争工厂(war factory)/射程强化(Range enhancement) (500；catalog_base_plus_tech_surcharge)；buy 战争工厂(war factory) (800；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：战争工厂(war factory)
+- R11：buy 战争工厂(war factory) (800；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 战争工厂(war factory) (400.0；replay_sell_supply_half)
+- R12：tech 尖牙(fang)/随身护盾(Portable shield) (500；catalog_base_plus_tech_surcharge)；buy 战争工厂(war factory) (800；replay_sell_supply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)
+- R13：tech 犀牛(rhino)/旋风斩(Whirlwind) (150；catalog_base_plus_tech_surcharge)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (100.0；replay_sell_supply_half)；tech 野马(mustang)/防空专精(Aerial specialization) (500；catalog_base_plus_tech_surcharge)；level 战争工厂(war factory) (400.0；replay_sell_supply_half)；level 战争工厂(war factory) (400.0；replay_sell_supply_half)；buy 尖牙(fang) (未知；unknown_buy_without_sellsupply)；buy 尖牙(fang) (未知；unknown_buy_without_sellsupply)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；level 弧光(arclight) (50.0；replay_sell_supply_half)；buy 尖牙(fang) (未知；unknown_buy_without_sellsupply)
+  - 未知费用动作已保留在原始兵种统计，未计入 known_total。
 
-**按兵种累计 O（Top10）**：深渊(abyss)=5700，凤凰(phoenix)=3500，爬虫(crawler)=1100，台风(typhoon)=1050，狼蛛(tarantula)=200
+已知累计投入：12700.0。未知 ID 预留槽：{"slots": {}, "overflow": []}
 
-**小结**：推导累计 O = 11550；实际花费(反推)累计 = 2600；比值 ≈ 4.44（>1 表示推导偏高，疑似增援单位被误计为购买）。
+## 对局 3：2207_20260729--134245856_[juliensam23]VS[my98765431].grbr
 
-### 对局 3：`2207_20260801--134267483_[TiNaAch]VS[[TUFF] Mathismight].grbr`
+### 玩家：juliensam23
 
-- 模式：`VS_1_1`
-
-#### 玩家：TiNaAch
-
-| 回合 | 剩余supply | 实际花费(反推) | 推导花费 | 差值 | 累计O |
-|-----:|-----:|-----:|-----:|-----:|-----:|
-| 0 | 0 | — | 0 |  | 0 |
-| 1 | 0 | 200 | 400 | -200 | 400 |
-| 2 | 0 | 200 | 300 | -100 | 700 |
-| 3 | 50 | 150 | 750 | -600 | 1450 |
-| 4 | 0 | 250 | 500 | -250 | 1950 |
-| 5 | 50 | 150 | 750 | -600 | 2700 |
-| 6 | 50 | 200 | 850 | -650 | 3550 |
-| 7 | 50 | 200 | 500 | -300 | 4050 |
-| 8 | 0 | 250 | 650 | -400 | 4700 |
-| 9 | 0 | 200 | 650 | -450 | 5350 |
-| 10 | 50 | 150 | 850 | -700 | 6200 |
-| 11 | 50 | 200 | 800 | -600 | 7000 |
-| 12 | 0 | 250 | 950 | -700 | 7950 |
-| 13 | 50 | 150 | 1250 | -1100 | 9200 |
+| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |
+|---:|---:|---:|---:|:---:|:---|---:|
+| 0 | 0 | 200 | 0 | 否 | snapshot | 0 |
+| 1 | 0 | 400 | 200 | 否 | snapshot | 200 |
+| 2 | 0 | 600 | 400 | 否 | snapshot | 600 |
+| 3 | 0 | 800 | 450 | 否 | snapshot | 1050 |
+| 4 | 0 | 1000 | 450 | 否 | snapshot | 1500 |
+| 5 | 0 | 850 | 400.0 | 否 | snapshot | 1900.0 |
+| 6 | 350 | 1750 | 2000 | 否 | snapshot | 3900.0 |
+| 7 | 0 | 1600 | 1350 | 否 | snapshot | 5250.0 |
+| 8 | 0 | 1800 | 2250.0 | 否 | snapshot | 7500.0 |
+| 9 | 0 | 2000 | 1850 | 否 | snapshot | 9350.0 |
+| 10 | 0 | 2200 | 850.0 | 否 | snapshot | 10200.0 |
+| 11 | 0 | 2400 | 1975.0 | 否 | snapshot | 12175.0 |
+| 12 | 0 | 2600 | 1775.0 | 否 | snapshot | 13950.0 |
+| 13 | 0 | — | 1000.0 | 是 | action_fallback_last_snapshot | 14950.0 |
 
 **动作明细：**
 
-- R0（推导 0）：
-（无经济动作）
-- R1（推导 400）：
-购买狼蛛(tarantula)(200)；解锁爬虫(crawler)(0)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：神射手(marksmen), 神射手(marksmen), 神射手(marksmen), 狼蛛(tarantula)
-- R2（推导 300）：
-购买爬虫(crawler)(100)；解锁毒牙(fang)(0)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-- R3（推导 750）：
-升级神射手(marksmen)Lv0→Lv1(50)；解锁蝎子(scorpion)(0)；购买蝎子(scorpion)(300)；购买蝎子(scorpion)(300)；购买毒牙(fang)(100)
-  ｜ 增援(免费)：爬虫(crawler), 爬虫(crawler), 爬虫(crawler)
-- R4（推导 500）：
-购买狼蛛(tarantula)(200)；科技狼蛛(tarantula)/High explosive ammo(50)；购买爬虫(crawler)(100)；解锁野马(mustang)(0)；升级神射手(marksmen)Lv0→Lv1(50)；升级神射手(marksmen)Lv0→Lv1(50)；升级神射手(marksmen)Lv0→Lv1(50)
-  ｜ 增援(免费)：幽灵(wraith), 蝎子(scorpion), 蝎子(scorpion), 毒牙(fang)
-- R5（推导 750）：
-升级神射手(marksmen)Lv0→Lv1(50)；购买狼蛛(tarantula)(200)；购买蝎子(scorpion)(300)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；解锁大锤(sledgehammer)(0)
-- R6（推导 850）：
-购买蝎子(scorpion)(300)；升级狼蛛(tarantula)Lv0→Lv1(50)；购买爬虫(crawler)(100)；升级蝎子(scorpion)Lv0→Lv1(50)；升级蝎子(scorpion)Lv0→Lv1(50)；升级蝎子(scorpion)Lv0→Lv1(50)；购买狼蛛(tarantula)(200)；升级神射手(marksmen)Lv1→Lv2(50)
-  ｜ 增援(免费)：爬虫(crawler)
-- R7（推导 500）：
-科技狼蛛(tarantula)/Range enhancement(50)；科技蝎子(scorpion)/Range enhancement(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；解锁火獾(fire badger)(0)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)
-  ｜ 增援(免费)：台风(typhoon), 蝎子(scorpion), 狼蛛(tarantula)
-- R8（推导 650）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；购买狼蛛(tarantula)(200)；升级爬虫(crawler)Lv0→Lv1(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；升级蝎子(scorpion)Lv1→Lv2(50)；升级神射手(marksmen)Lv2→Lv3(50)；升级神射手(marksmen)Lv2→Lv3(50)
-  ｜ 增援(免费)：爬虫(crawler)
-- R9（推导 650）：
-升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；科技先知(farseer)/Photon emission(50)；升级神射手(marksmen)Lv2→Lv3(50)；科技爬虫(crawler)/Subterranean blitz(50)；购买狼蛛(tarantula)(200)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-- R10（推导 850）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；购买蝎子(scorpion)(300)；升级蝎子(scorpion)Lv1→Lv2(50)；购买蝎子(scorpion)(300)；科技狼蛛(tarantula)/Mechanical rage(50)；解锁弧光(arclight)(0)
-  ｜ 增援(免费)：先知(farseer), 先知(farseer), 先知(farseer), 狼蛛(tarantula), 爬虫(crawler), 爬虫(crawler)
-- R11（推导 800）：
-升级狼蛛(tarantula)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv1→Lv2(50)；科技神射手(marksmen)/Electromagnetic shot(50)；升级蝎子(scorpion)Lv1→Lv2(50)；升级蝎子(scorpion)Lv2→Lv3(50)；科技蝎子(scorpion)/Field maintenance(50)；购买蝎子(scorpion)(300)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；解锁未知兵种(30)(0)
-  ｜ 增援(免费)：蝎子(scorpion)
-- R12（推导 950）：
-购买先知(farseer)(300)；科技先知(farseer)/Scanning radar(50)；升级蝎子(scorpion)Lv2→Lv3(50)；升级蝎子(scorpion)Lv0→Lv1(50)；升级蝎子(scorpion)Lv0→Lv1(50)；升级神射手(marksmen)Lv3→Lv4(50)；升级神射手(marksmen)Lv3→Lv4(50)；升级神射手(marksmen)Lv3→Lv4(50)；升级先知(farseer)Lv0→Lv1(50)；升级先知(farseer)Lv0→Lv1(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：蝎子(scorpion)
-- R13（推导 1250）：
-升级蝎子(scorpion)Lv0→Lv1(50)；升级蝎子(scorpion)Lv2→Lv3(50)；升级蝎子(scorpion)Lv3→Lv4(50)；升级神射手(marksmen)Lv3→Lv4(50)；升级狼蛛(tarantula)Lv0→Lv1(50)；升级狼蛛(tarantula)Lv1→Lv2(50)；升级狼蛛(tarantula)Lv1→Lv2(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；科技蝎子(scorpion)/Doubleshot(50)；购买神射手(marksmen)(100)；购买狼蛛(tarantula)(200)；购买蝎子(scorpion)(300)；升级先知(farseer)Lv0→Lv1(50)；解锁钢球(steel ball)(0)
-  ｜ 增援(免费)：幽灵(wraith), 先知(farseer), 爬虫(crawler), 爬虫(crawler)
+- R0：unlock 火獾(fire badger) (0；catalog_default)；unlock 魔眼(void eye) (0；catalog_default)
+  - 免费增援/非购买新实例：魔眼(void eye)、魔眼(void eye)、魔眼(void eye)、火獾(fire badger)、火獾(fire badger)
+- R1：unlock 爬虫(crawler) (0；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R2：unlock 铁锤(sledgehammer) (0；catalog_default)；buy 铁锤(sledgehammer) (200；replay_sell_supply)；buy 铁锤(sledgehammer) (200；replay_sell_supply)
+- R3：unlock 鬼鳐(phantom ray) (50；catalog_default)；unlock 野马(mustang) (0；catalog_default)；buy 野马(mustang) (200；replay_sell_supply)；buy 野马(mustang) (200；replay_sell_supply)
+  - 免费增援/非购买新实例：鬼鳐(phantom ray)
+- R4：buy 野马(mustang) (150；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)
+- R5：buy 鬼鳐(phantom ray) (150；replay_sell_supply)；buy 鬼鳐(phantom ray) (150；replay_sell_supply)；level 铁锤(sledgehammer) (100.0；replay_sell_supply_half)
+- R6：unlock 战争工厂(war factory) (350；catalog_default)；unlock 火神(vulcan) (200；catalog_default)；tech 战争工厂(war factory)/射程强化(Range enhancement) (500；catalog_base_plus_tech_surcharge)；buy 战争工厂(war factory) (800；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)
+- R7：tech 战争工厂(war factory)/发射器过载(Launcher overload) (500；catalog_base_plus_tech_surcharge)；buy 战争工厂(war factory) (800；replay_sell_supply)；buy 爬虫(crawler) (50；replay_sell_supply)
+- R8：unlock 霸主(overlord) (200；catalog_default)；tech 铁锤(sledgehammer)/战地维修(Field maintenance) (200；catalog_base_plus_tech_surcharge)；tech 战争工厂(war factory)/高爆弹药(High explosive ammo) (750；catalog_base_plus_tech_surcharge)；buy 战争工厂(war factory) (800；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)；buy 爬虫(crawler) (50；replay_sell_supply)；level 野马(mustang) (100.0；replay_sell_supply_half)
+- R9：tech 战争工厂(war factory)/铁锤制造(Sledgehammer Production) (1000；catalog_base_plus_tech_surcharge)；buy 战争工厂(war factory) (800；replay_sell_supply)；buy 爬虫(crawler) (50；replay_sell_supply)
+- R10：tech 野马(mustang)/防空专精(Aerial specialization) (300；catalog_base_plus_tech_surcharge)；buy 野马(mustang) (150；replay_sell_supply)；buy 野马(mustang) (150；replay_sell_supply)；buy 野马(mustang) (150；replay_sell_supply)；level 野马(mustang) (100.0；replay_sell_supply_half)
+- R11：buy 战争工厂(war factory) (800；replay_sell_supply)；buy 战争工厂(war factory) (800；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)；buy 铁锤(sledgehammer) (150；replay_sell_supply)；level 野马(mustang) (75.0；replay_sell_supply_half)
+- R12：tech 野马(mustang)/穿甲弹(Armor piercing bullets) (500；catalog_base_plus_tech_surcharge)；tech 野马(mustang)/导弹拦截(Missile interceptor) (600；catalog_base_plus_tech_surcharge)；buy 野马(mustang) (150；replay_sell_supply)；buy 野马(mustang) (150；replay_sell_supply)；buy 野马(mustang) (150；replay_sell_supply)；buy 爬虫(crawler) (50；replay_sell_supply)；level 野马(mustang) (100.0；replay_sell_supply_half)；level 野马(mustang) (75.0；replay_sell_supply_half)
+- R13：level 野马(mustang) (100.0；replay_sell_supply_half)；tech 野马(mustang)/射程强化(Range enhancement) (900；catalog_base_plus_tech_surcharge)；buy 野马(mustang) (未知；unknown_buy_without_sellsupply)；buy 野马(mustang) (未知；unknown_buy_without_sellsupply)；buy 野马(mustang) (未知；unknown_buy_without_sellsupply)
+  - 未知费用动作已保留在原始兵种统计，未计入 known_total。
 
-**按兵种累计 O（Top10）**：蝎子(scorpion)=3200，爬虫(crawler)=2550，狼蛛(tarantula)=2000，神射手(marksmen)=800，先知(farseer)=550，毒牙(fang)=100，野马(mustang)=0，大锤(sledgehammer)=0，火獾(fire badger)=0，弧光(arclight)=0
+已知累计投入：14950.0。未知 ID 预留槽：{"slots": {}, "overflow": []}
 
-**小结**：推导累计 O = 9200；实际花费(反推)累计 = 2550；比值 ≈ 3.61（>1 表示推导偏高，疑似增援单位被误计为购买）。
+### 玩家：my98765431
 
-#### 玩家：[TUFF] Mathismight
-
-| 回合 | 剩余supply | 实际花费(反推) | 推导花费 | 差值 | 累计O |
-|-----:|-----:|-----:|-----:|-----:|-----:|
-| 0 | 0 | — | 0 |  | 0 |
-| 1 | 0 | 200 | 200 | 0 | 200 |
-| 2 | 0 | 200 | 350 | -150 | 550 |
-| 3 | 0 | 200 | 800 | -600 | 1350 |
-| 4 | 50 | 150 | 500 | -350 | 1850 |
-| 5 | 0 | 250 | 1000 | -750 | 2850 |
-| 6 | 0 | 200 | 600 | -400 | 3450 |
-| 7 | 100 | 100 | 850 | -750 | 4300 |
-| 8 | 0 | 300 | 700 | -400 | 5000 |
-| 9 | 0 | 200 | 1050 | -850 | 6050 |
-| 10 | 0 | 200 | 700 | -500 | 6750 |
-| 11 | 0 | 200 | 850 | -650 | 7600 |
-| 12 | 50 | 150 | 600 | -450 | 8200 |
-| 13 | 50 | 200 | 1050 | -850 | 9250 |
+| 回合 | 剩余 supply | 实际花费 | 已知投入 | 未知费用 | 置信度 | 累计已知投入 |
+|---:|---:|---:|---:|:---:|:---|---:|
+| 0 | 0 | 200 | 0 | 否 | snapshot | 0 |
+| 1 | 0 | 400 | 250 | 否 | snapshot | 250 |
+| 2 | 0 | 600 | 450 | 否 | snapshot | 700 |
+| 3 | 0 | 750 | 600.0 | 否 | snapshot | 1300.0 |
+| 4 | 50 | 1050 | 700 | 否 | snapshot | 2000.0 |
+| 5 | 0 | 1200 | 550.0 | 否 | snapshot | 2550.0 |
+| 6 | 0 | 1400 | 1100.0 | 否 | snapshot | 3650.0 |
+| 7 | 0 | 1600 | 850.0 | 否 | snapshot | 4500.0 |
+| 8 | 0 | 1800 | 900.0 | 否 | snapshot | 5400.0 |
+| 9 | 0 | 2000 | 1900.0 | 否 | snapshot | 7300.0 |
+| 10 | 0 | 2200 | 1150.0 | 否 | snapshot | 8450.0 |
+| 11 | 0 | 2400 | 2750.0 | 否 | snapshot | 11200.0 |
+| 12 | 0 | 2600 | 1950.0 | 否 | snapshot | 13150.0 |
+| 13 | 0 | — | 550 | 是 | action_fallback_last_snapshot | 13700.0 |
 
 **动作明细：**
 
-- R0（推导 0）：
-（无经济动作）
-- R1（推导 200）：
-解锁爬虫(crawler)(0)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：未知兵种(30), 未知兵种(30), 未知兵种(30), 火獾(fire badger), 火獾(fire badger)
-- R2（推导 350）：
-购买爬虫(crawler)(100)；解锁神射手(marksmen)(0)；购买爬虫(crawler)(100)；购买神射手(marksmen)(100)；科技未知兵种(30)/未知科技(10930)(50)
-- R3（推导 800）：
-升级未知兵种(30)Lv0→Lv1(50)；升级未知兵种(30)Lv0→Lv1(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；购买犀牛(rhino)(200)；购买未知兵种(30)(100)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：神射手(marksmen)
-- R4（推导 500）：
-升级火獾(fire badger)Lv0→Lv1(50)；科技火獾(fire badger)/Range enhancement(50)；购买火獾(fire badger)(200)；购买火獾(fire badger)(200)
-  ｜ 增援(免费)：幽灵(wraith), 未知兵种(30), 爬虫(crawler), 爬虫(crawler)
-- R5（推导 1000）：
-升级未知兵种(30)Lv0→Lv1(50)；升级未知兵种(30)Lv0→Lv1(50)；科技火獾(fire badger)/Scorching fire(50)；升级神射手(marksmen)Lv0→Lv1(50)；购买火獾(fire badger)(200)；购买爬虫(crawler)(100)；升级神射手(marksmen)Lv0→Lv1(50)；购买火獾(fire badger)(200)；升级爬虫(crawler)Lv0→Lv1(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：犀牛(rhino)
-- R6（推导 600）：
-升级火獾(fire badger)Lv1→Lv2(50)；升级火獾(fire badger)Lv0→Lv1(50)；科技火獾(fire badger)/Scorching fire(50)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)；升级未知兵种(30)Lv1→Lv2(50)；购买凤凰(phoenix)(200)
-  ｜ 增援(免费)：火獾(fire badger)
-- R7（推导 850）：
-科技爬虫(crawler)/Subterranean blitz(50)；升级神射手(marksmen)Lv1→Lv2(50)；升级火獾(fire badger)Lv0→Lv1(50)；升级火獾(fire badger)Lv0→Lv1(50)；购买火獾(fire badger)(200)；购买犀牛(rhino)(200)；购买爬虫(crawler)(100)；升级爬虫(crawler)Lv0→Lv1(50)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：凤凰(phoenix), 凤凰(phoenix)
-- R8（推导 700）：
-科技凤凰(phoenix)/Quantum reassembly(50)；升级火獾(fire badger)Lv2→Lv3(50)；升级火獾(fire badger)Lv0→Lv1(50)；升级凤凰(phoenix)Lv0→Lv1(50)；购买爬虫(crawler)(100)；科技未知兵种(30)/未知科技(10230)(50)；购买凤凰(phoenix)(200)；购买爬虫(crawler)(100)；升级爬虫(crawler)Lv1→Lv2(50)
-  ｜ 增援(免费)：火獾(fire badger)
-- R9（推导 1050）：
-科技先知(farseer)/Photon emission(50)；升级火獾(fire badger)Lv1→Lv2(50)；升级火獾(fire badger)Lv0→Lv1(50)；升级凤凰(phoenix)Lv3→Lv4(50)；升级凤凰(phoenix)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级未知兵种(30)Lv1→Lv2(50)；升级未知兵种(30)Lv1→Lv2(50)；购买火獾(fire badger)(200)；购买犀牛(rhino)(200)；购买爬虫(crawler)(100)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：凤凰(phoenix)
-- R10（推导 700）：
-科技未知兵种(30)/未知科技(180430)(50)；升级未知兵种(30)Lv1→Lv2(50)；升级未知兵种(30)Lv2→Lv3(50)；升级火獾(fire badger)Lv3→Lv4(50)；升级爬虫(crawler)Lv0→Lv1(50)；购买火獾(fire badger)(200)；购买未知兵种(30)(100)；购买未知兵种(30)(100)；升级爬虫(crawler)Lv0→Lv1(50)
-  ｜ 增援(免费)：先知(farseer), 先知(farseer), 爬虫(crawler), 爬虫(crawler)
-- R11（推导 850）：
-升级凤凰(phoenix)Lv4→Lv5(50)；升级凤凰(phoenix)Lv1→Lv2(50)；升级未知兵种(30)Lv0→Lv1(50)；升级未知兵种(30)Lv2→Lv3(50)；升级未知兵种(30)Lv2→Lv3(50)；升级未知兵种(30)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；升级爬虫(crawler)Lv0→Lv1(50)；科技火獾(fire badger)/Ignite(50)；解锁毒牙(fang)(0)；购买毒牙(fang)(100)；购买毒牙(fang)(100)；购买火獾(fire badger)(200)
-  ｜ 增援(免费)：未知兵种(30), 未知兵种(30)
-- R12（推导 600）：
-科技钢球(steel ball)/Range enhancement(50)；科技钢球(steel ball)/Kinetic Charge(50)；升级火獾(fire badger)Lv0→Lv1(50)；升级火獾(fire badger)Lv1→Lv2(50)；升级火獾(fire badger)Lv1→Lv2(50)；科技凤凰(phoenix)/Range enhancement(50)；解锁黄蜂(wasp)(0)；购买黄蜂(wasp)(200)；购买爬虫(crawler)(100)
-  ｜ 增援(免费)：毒牙(fang), 毒牙(fang), 火獾(fire badger)
-- R13（推导 1050）：
-升级火獾(fire badger)Lv4→Lv5(50)；升级火獾(fire badger)Lv1→Lv2(50)；升级火獾(fire badger)Lv1→Lv2(50)；升级火獾(fire badger)Lv1→Lv2(50)；升级凤凰(phoenix)Lv1→Lv2(50)；升级凤凰(phoenix)Lv2→Lv3(50)；升级未知兵种(30)Lv3→Lv4(50)；升级未知兵种(30)Lv3→Lv4(50)；升级未知兵种(30)Lv2→Lv3(50)；升级未知兵种(30)Lv2→Lv3(50)；科技凤凰(phoenix)/Electromagnetic shot(50)；购买凤凰(phoenix)(200)；升级爬虫(crawler)Lv0→Lv1(50)；升级钢球(steel ball)Lv0→Lv1(50)；购买黄蜂(wasp)(200)
-  ｜ 增援(免费)：钢球(steel ball), 钢球(steel ball), 爬虫(crawler)
+- R0：unlock 爬虫(crawler) (0；catalog_default)；unlock 狼蛛(tarantula) (0；catalog_default)
+  - 免费增援/非购买新实例：爬虫(crawler)、爬虫(crawler)、爬虫(crawler)、狼蛛(tarantula)、狼蛛(tarantula)
+- R1：unlock 台风(typhoon) (50；catalog_default)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R2：unlock 凤凰(phoenix) (50；catalog_default)；buy 凤凰(phoenix) (200；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)
+- R3：unlock 尖牙(fang) (0；catalog_default)；buy 台风(typhoon) (300；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：尖牙(fang)、尖牙(fang)、尖牙(fang)
+- R4：tech 凤凰(phoenix)/发射器过载(Launcher overload) (200；catalog_base_plus_tech_surcharge)；tech 台风(typhoon)/残骸引爆(Wreckage Detonation) (200；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)
+  - 免费增援/非购买新实例：台风(typhoon)
+- R5：buy 台风(typhoon) (300；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 台风(typhoon) (150.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：凤凰(phoenix)、凤凰(phoenix)
+- R6：unlock 狂蝎(scorpion) (50；catalog_default)；tech 凤凰(phoenix)/射程强化(Range enhancement) (500；catalog_base_plus_tech_surcharge)；buy 凤凰(phoenix) (200；replay_sell_supply)；level 台风(typhoon) (150.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：狂蝎(scorpion)
+- R7：tech 台风(typhoon)/反应装甲(Reactive Armor) (400；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 台风(typhoon) (150.0；replay_sell_supply_half)
+- R8：unlock 剑齿虎(sabertooth) (0；catalog_default)；buy 凤凰(phoenix) (200；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：剑齿虎(sabertooth)
+- R9：tech 凤凰(phoenix)/能量护盾(Energy shield) (600；catalog_base_plus_tech_surcharge)；tech 台风(typhoon)/射程强化(Range Enhancement) (700；catalog_base_plus_tech_surcharge)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 台风(typhoon) (150.0；replay_sell_supply_half)；level 台风(typhoon) (150.0；replay_sell_supply_half)
+- R10：buy 凤凰(phoenix) (200；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；buy 凤凰(phoenix) (200；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 台风(typhoon) (150.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+- R11：unlock 深渊(abyss) (350；catalog_default)；tech 深渊(abyss)/蜂群导弹(Swarm missiles) (500；catalog_base_plus_tech_surcharge)；buy 深渊(abyss) (800；replay_sell_supply)；buy 深渊(abyss) (800；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+- R12：tech 凤凰(phoenix)/量子重组(Quantum reassembly) (750；catalog_base_plus_tech_surcharge)；buy 深渊(abyss) (800；replay_sell_supply)；buy 爬虫(crawler) (100；replay_sell_supply)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)；level 凤凰(phoenix) (100.0；replay_sell_supply_half)
+  - 免费增援/非购买新实例：深渊(abyss)
+- R13：tech 深渊(abyss)/裂解(Disintegration) (550；catalog_base_plus_tech_surcharge)；buy 深渊(abyss) (未知；unknown_buy_without_sellsupply)；buy 深渊(abyss) (未知；unknown_buy_without_sellsupply)；buy 深渊(abyss) (未知；unknown_buy_without_sellsupply)
+  - 未知费用动作已保留在原始兵种统计，未计入 known_total。
 
-**按兵种累计 O（Top10）**：火獾(fire badger)=2650，爬虫(crawler)=2550，未知兵种(30)=1300，凤凰(phoenix)=1100，犀牛(rhino)=600，黄蜂(wasp)=400，神射手(marksmen)=250，毒牙(fang)=200，钢球(steel ball)=150，先知(farseer)=50
-
-**小结**：推导累计 O = 9250；实际花费(反推)累计 = 2550；比值 ≈ 3.63（>1 表示推导偏高，疑似增援单位被误计为购买）。
-
-## 三、需 owner 确认的开放问题
-
-1. **增援单位是否误计为购买**：多局从 R2 起「推导花费」显著高于「实际花费(反推)」（差值为负且递增），主因是 unit 31（phantom ray 类）等单位既出现在 `PAD_BuyUnit` 又出现在免费增援列表。请确认增援单位的判定规则（是否免费、是否应排除计费）。
-
-确认 增援花费也要算在单位花费中
-另外回合0的时候（ 注意游戏开局只会提供3个100和2个200 的兵种）的花费也要计算
-
-2. **科技费用数值**：`TECH_COST` 默认 50、个别 100，是否准确？
-
-科技花费是严重错误的
-并且同一个兵种升级第i个科技的时候会额外花费(i-1)*200
-
-这里可能还是要通过金钱的前后去计算。
-
-3. **兵种等级费用**：`UNIT_LEVEL_COST` 默认每级 50，是否准确？不同兵种/等级是否不同？
-
-每级升级费用 是兵种原始购买费用的一半
-
-4. **解锁费用**：`PAD_UnlockUnit` 当前计费 0，是否应等于首购基础价？
-
-解锁费用也是每个兵种不同的
-比如暴雨目前最新版本是50
-犀牛也是50
-但是更贵的单位往往解锁费用会更贵
-
-这里可能还是要看log里面有没有前后金钱差来进行判断是最准的
-
-5. **兵种中文名**：本数据集回放来自较新版本，部分兵种 ID（如 31、2002）超出既有 `UNIT_LOOKUP`（1–29），显示为「未知兵种(ID)」。成本计算不受影响（基础价来自数据驱动 SellSupply）；中文名需按当前版本补全。
-
-你可以看看 reference_code/mechabellum_stats.py 有没有对应的中文名
-你可以维护一个
-
-如果找不到 可以显示为 未知兵种ID
-
-## 四、产出文件
-
-- 解析脚本：`reference_code/parse_match_investment.py`
-- 结构化 JSON：`reference_code/parse_3_matches.json`（后续「批量解析」的种子）
-- 本报告：`information/parse_3_matches_report.md`
+已知累计投入：13700.0。未知 ID 预留槽：{"slots": {}, "overflow": []}

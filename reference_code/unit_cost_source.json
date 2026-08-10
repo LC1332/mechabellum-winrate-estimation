@@ -1,0 +1,2400 @@
+{
+  "meta": {
+    "snapshot_date": "2026-08-10",
+    "wiki_url": "https://wiki.mbxmas.com/zh/units/",
+    "human_source": "information/human_verify_unlock_fee.md",
+    "schema_version": 1,
+    "technology_price_rule": "base_cost + 200 * prior_effective_technologies_for_same_unit",
+    "notes": "Base unit fields use the human verification table when present; technologies use the Chinese Wiki snapshot."
+  },
+  "reserved_unknown_unit_slots": 10,
+  "units": {
+    "1": {
+      "unit_id": 1,
+      "name_cn": "堡垒",
+      "name_en": "fortress",
+      "unlock_cost": 200,
+      "base_buy_cost": 400,
+      "upgrade_cost_per_level": 200,
+      "technologies": [
+        {
+          "tech_id": 701,
+          "name_cn": "双发",
+          "name_en": "Doubleshot",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1001,
+          "name_cn": "保护屏障",
+          "name_en": "Barrier",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1105,
+          "name_cn": "防空弹幕",
+          "name_en": "Anti air barrage",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1201,
+          "name_cn": "尖牙制造",
+          "name_en": "Fang production",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3001,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10201,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10301,
+          "name_cn": "发射器过载",
+          "name_en": "Launcher overload",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10401,
+          "name_cn": "实心弹",
+          "name_en": "Solid shot",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10801,
+          "name_cn": "精英射手",
+          "name_en": "Elite marksman",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 110201,
+          "name_cn": "火箭拳",
+          "name_en": "Rocket punch",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/fortress/"
+    },
+    "2": {
+      "unit_id": 2,
+      "name_cn": "长弓",
+      "name_en": "marksman",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 702,
+          "name_cn": "双发",
+          "name_en": "Doubleshot",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1202,
+          "name_cn": "射击小队",
+          "name_en": "Shooting squad",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1802,
+          "name_cn": "电磁弹",
+          "name_en": "Electromagnetic shot",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3202,
+          "name_cn": "防空专精",
+          "name_en": "Aerial Specialisation",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10102,
+          "name_cn": "突击模式",
+          "name_en": "Assault mode",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10202,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10402,
+          "name_cn": "快速弹夹",
+          "name_en": "Quick reload",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10802,
+          "name_cn": "精英射手",
+          "name_en": "Elite marksman",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/marksman/"
+    },
+    "3": {
+      "unit_id": 3,
+      "name_cn": "火神",
+      "name_en": "vulcan",
+      "unlock_cost": 200,
+      "base_buy_cost": 400,
+      "upgrade_cost_per_level": 200,
+      "technologies": [
+        {
+          "tech_id": 1103,
+          "name_cn": "燃烧弹",
+          "name_en": "Incendiary bomb",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1203,
+          "name_cn": "最佳搭档",
+          "name_en": "Best partner",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3003,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10203,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10603,
+          "name_cn": "高温火焰",
+          "name_en": "Scorching fire",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11010,
+          "name_cn": "黏油弹",
+          "name_en": "Sticky oil bomb",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180203,
+          "name_cn": "引燃",
+          "name_en": "Ignite",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/vulcan/"
+    },
+    "4": {
+      "unit_id": 4,
+      "name_cn": "熔点",
+      "name_en": "melting point",
+      "unlock_cost": 200,
+      "base_buy_cost": 400,
+      "upgrade_cost_per_level": 200,
+      "technologies": [
+        {
+          "tech_id": 304,
+          "name_cn": "能量汲取",
+          "name_en": "Energy absorption",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1106,
+          "name_cn": "电磁弹幕",
+          "name_en": "Electromagnetic barrage",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1107,
+          "name_cn": "能量散射",
+          "name_en": "Energy diffraction",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1204,
+          "name_cn": "爬虫制造",
+          "name_en": "Crawler Production",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3004,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10204,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/melting-point/"
+    },
+    "5": {
+      "unit_id": 5,
+      "name_cn": "犀牛",
+      "name_en": "rhino",
+      "unlock_cost": 50,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 905,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1109,
+          "name_cn": "旋风斩",
+          "name_en": "Whirlwind",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 2305,
+          "name_cn": "残骸利用",
+          "name_en": "Wreckage recycling",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 2505,
+          "name_cn": "动力装甲",
+          "name_en": "Power armor",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 2805,
+          "name_cn": "最后一击",
+          "name_en": "Final blitz",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3005,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10505,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical rage",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180305,
+          "name_cn": "光子涂层",
+          "name_en": "Photon coating",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180805,
+          "name_cn": "战斗进化",
+          "name_en": "Combat Evolvement",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/rhino/"
+    },
+    "6": {
+      "unit_id": 6,
+      "name_cn": "兵蜂",
+      "name_en": "wasp",
+      "unlock_cost": 50,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 206,
+          "name_cn": "能量护盾",
+          "name_en": "Energy shield",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 406,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 506,
+          "name_cn": "对地专精",
+          "name_en": "Ground specialization",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1606,
+          "name_cn": "高速引擎",
+          "name_en": "Jump drive",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1806,
+          "name_cn": "电磁弹",
+          "name_en": "Electromagnetic shot",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3206,
+          "name_cn": "防空专精",
+          "name_en": "Aerial specialization",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10206,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10606,
+          "name_cn": "穿甲弹",
+          "name_en": "Armor piercing bullets",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10806,
+          "name_cn": "精英射手",
+          "name_en": "Elite marksman",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180206,
+          "name_cn": "引燃",
+          "name_en": "Ignite",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/wasp/"
+    },
+    "7": {
+      "unit_id": 7,
+      "name_cn": "野马",
+      "name_en": "mustang",
+      "unlock_cost": 0,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 407,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 50,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3207,
+          "name_cn": "防空专精",
+          "name_en": "Aerial specialization",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3307,
+          "name_cn": "导弹拦截",
+          "name_en": "Missile interceptor",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4607,
+          "name_cn": "斩杀弹",
+          "name_en": "Execution Rounds",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10207,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10607,
+          "name_cn": "穿甲弹",
+          "name_en": "Armor piercing bullets",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/mustang/"
+    },
+    "8": {
+      "unit_id": 8,
+      "name_cn": "钢球",
+      "name_en": "steel ball",
+      "unlock_cost": 0,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 308,
+          "name_cn": "能量汲取",
+          "name_en": "Energy absorption",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 608,
+          "name_cn": "伤害分摊",
+          "name_en": "Damage sharing",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1308,
+          "name_cn": "机械分裂",
+          "name_en": "Mechanical division",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 2408,
+          "name_cn": "重装锁定",
+          "name_en": "Fortified target lock",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3008,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10208,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180808,
+          "name_cn": "滚动充能",
+          "name_en": "Kinetic Charge",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/steel-ball/"
+    },
+    "9": {
+      "unit_id": 9,
+      "name_cn": "尖牙",
+      "name_en": "fang",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 209,
+          "name_cn": "随身护盾",
+          "name_en": "Portable shield",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3109,
+          "name_cn": "榴弹发射器",
+          "name_en": "Grenade Launcher",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10209,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10509,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical rage",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10609,
+          "name_cn": "穿甲弹",
+          "name_en": "Armor piercing bullets",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180209,
+          "name_cn": "引燃",
+          "name_en": "Ignite",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/fang/"
+    },
+    "10": {
+      "unit_id": 10,
+      "name_cn": "爬虫",
+      "name_en": "crawler",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 2610,
+          "name_cn": "潜地行动",
+          "name_en": "Subterranean blitz",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 2710,
+          "name_cn": "酸性爆炸",
+          "name_en": "Acidic explosion",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3510,
+          "name_cn": "松散队列",
+          "name_en": "Loose formation",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10510,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical rage",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10710,
+          "name_cn": "冲击钻头",
+          "name_en": "Impact Drill",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180110,
+          "name_cn": "复制",
+          "name_en": "Replicate",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/crawler/"
+    },
+    "11": {
+      "unit_id": 11,
+      "name_cn": "霸主",
+      "name_en": "overlord",
+      "unlock_cost": 200,
+      "base_buy_cost": 500,
+      "upgrade_cost_per_level": 250,
+      "technologies": [
+        {
+          "tech_id": 411,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 911,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1108,
+          "name_cn": "舰炮",
+          "name_en": "Overlord artillery",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1211,
+          "name_cn": "母舰",
+          "name_en": "Mothership",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1611,
+          "name_cn": "高速引擎",
+          "name_en": "Jump drive",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3011,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10211,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10311,
+          "name_cn": "发射器过载",
+          "name_en": "Launcher overload",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180311,
+          "name_cn": "光子投射",
+          "name_en": "Photon emission",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/overlord/"
+    },
+    "12": {
+      "unit_id": 12,
+      "name_cn": "暴雨",
+      "name_en": "stormcaller",
+      "unlock_cost": 50,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 412,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 812,
+          "name_cn": "燃烧弹",
+          "name_en": "Incendiary bomb",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1812,
+          "name_cn": "电磁爆炸",
+          "name_en": "Electromagnetic explosion",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10212,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10312,
+          "name_cn": "发射器过载",
+          "name_en": "Launcher overload",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10912,
+          "name_cn": "破甲弹",
+          "name_en": "High-explosive Anti-tank Shell",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/stormcaller/"
+    },
+    "13": {
+      "unit_id": 13,
+      "name_cn": "铁锤",
+      "name_en": "sledgehammer",
+      "unlock_cost": 0,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 613,
+          "name_cn": "伤害分摊",
+          "name_en": "Damage sharing",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 913,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1813,
+          "name_cn": "电磁弹",
+          "name_en": "Electromagnetic shot",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3013,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10213,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10513,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical rage",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10613,
+          "name_cn": "穿甲弹",
+          "name_en": "Armor piercing bullets",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/sledgehammer/"
+    },
+    "14": {
+      "unit_id": 14,
+      "name_cn": "骇客",
+      "name_en": "hacker",
+      "unlock_cost": 50,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 1014,
+          "name_cn": "保护屏障",
+          "name_en": "Barrier",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1714,
+          "name_cn": "强化控制",
+          "name_en": "Enhanced control",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1814,
+          "name_cn": "电磁干扰",
+          "name_en": "Electromagnetic interference",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10214,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11014,
+          "name_cn": "多重控制",
+          "name_en": "Multi control",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/hacker/"
+    },
+    "15": {
+      "unit_id": 15,
+      "name_cn": "弧光",
+      "name_en": "arclight",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 1815,
+          "name_cn": "电磁弹",
+          "name_en": "Electromagnetic shot",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3015,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3115,
+          "name_cn": "防空弹药",
+          "name_en": "Anti aircraft ammunition",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4515,
+          "name_cn": "震荡波",
+          "name_en": "Shockwave",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10215,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10815,
+          "name_cn": "精英射手",
+          "name_en": "Elite marksman",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10915,
+          "name_cn": "蓄能攻击",
+          "name_en": "Charged shot",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/arclight/"
+    },
+    "16": {
+      "unit_id": 16,
+      "name_cn": "凤凰",
+      "name_en": "phoenix",
+      "unlock_cost": 50,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 216,
+          "name_cn": "能量护盾",
+          "name_en": "Energy shield",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1616,
+          "name_cn": "高速引擎",
+          "name_en": "Jump drive",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1816,
+          "name_cn": "电磁弹",
+          "name_en": "Electromagnetic shot",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 2916,
+          "name_cn": "量子重组",
+          "name_en": "Quantum reassembly",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10216,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10316,
+          "name_cn": "发射器过载",
+          "name_en": "Launcher overload",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10816,
+          "name_cn": "精英射手",
+          "name_en": "Elite marksman",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10916,
+          "name_cn": "蓄能攻击",
+          "name_en": "Charged shot",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/phoenix/"
+    },
+    "17": {
+      "unit_id": 17,
+      "name_cn": "战争工厂",
+      "name_en": "war factory",
+      "unlock_cost": 350,
+      "base_buy_cost": 800,
+      "upgrade_cost_per_level": 400,
+      "technologies": [
+        {
+          "tech_id": 417,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3017,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3317,
+          "name_cn": "导弹拦截",
+          "name_en": "Missile interceptor",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10217,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10317,
+          "name_cn": "发射器过载",
+          "name_en": "Launcher overload",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 12017,
+          "name_cn": "凤凰制造",
+          "name_en": "Phoenix Production",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 12117,
+          "name_cn": "钢球制造",
+          "name_en": "Steel Ball Production",
+          "base_cost": 450,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 12217,
+          "name_cn": "铁锤制造",
+          "name_en": "Sledgehammer Production",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180317,
+          "name_cn": "光子涂层",
+          "name_en": "Photon coating",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/war-factory/"
+    },
+    "18": {
+      "unit_id": 18,
+      "name_cn": "恶灵",
+      "name_en": "wraith",
+      "unlock_cost": 50,
+      "base_buy_cost": 300,
+      "upgrade_cost_per_level": 150,
+      "technologies": [
+        {
+          "tech_id": 418,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 918,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3018,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4418,
+          "name_cn": "地面巡航",
+          "name_en": "Land Cruiser",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10218,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 110181,
+          "name_cn": "浮游炮阵",
+          "name_en": "Floating artillery array",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180418,
+          "name_cn": "退化光束",
+          "name_en": "Degeneration beam",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/wraith/"
+    },
+    "19": {
+      "unit_id": 19,
+      "name_cn": "狂蝎",
+      "name_en": "scorpion",
+      "unlock_cost": 50,
+      "base_buy_cost": 300,
+      "upgrade_cost_per_level": 150,
+      "technologies": [
+        {
+          "tech_id": 719,
+          "name_cn": "双发",
+          "name_en": "Doubleshot",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 919,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3019,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10019,
+          "name_cn": "攻城模式",
+          "name_en": "Siege mode",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10219,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10419,
+          "name_cn": "收束射击",
+          "name_en": "Focused Fire",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180519,
+          "name_cn": "酸性攻击",
+          "name_en": "Acid attack",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/scorpion/"
+    },
+    "20": {
+      "unit_id": 20,
+      "name_cn": "火獾",
+      "name_en": "fire badger",
+      "unlock_cost": 0,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 820,
+          "name_cn": "液态火",
+          "name_en": "Napalm",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 920,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10220,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10620,
+          "name_cn": "高温火焰",
+          "name_en": "Scorching fire",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11020,
+          "name_cn": "逆火",
+          "name_en": "Backfire",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180220,
+          "name_cn": "引燃",
+          "name_en": "Ignite",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180620,
+          "name_cn": "引燃",
+          "name_en": "Ignite",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/fire-badger/"
+    },
+    "21": {
+      "unit_id": 21,
+      "name_cn": "剑齿虎",
+      "name_en": "sabertooth",
+      "unlock_cost": 0,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 721,
+          "name_cn": "双发",
+          "name_en": "Doubleshot",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3321,
+          "name_cn": "导弹拦截",
+          "name_en": "Missile interceptor",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4721,
+          "name_cn": "野战工事",
+          "name_en": "Field Fortifications",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10221,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10321,
+          "name_cn": "战地维修",
+          "name_en": "Field Maintenance",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 110211,
+          "name_cn": "副炮",
+          "name_en": "Secondary Armament",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/sabertooth/"
+    },
+    "22": {
+      "unit_id": 22,
+      "name_cn": "台风",
+      "name_en": "typhoon",
+      "unlock_cost": 50,
+      "base_buy_cost": 300,
+      "upgrade_cost_per_level": 150,
+      "technologies": [
+        {
+          "tech_id": 2922,
+          "name_cn": "反应装甲",
+          "name_en": "Reactive Armor",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        },
+        {
+          "tech_id": 4722,
+          "name_cn": "防空标记",
+          "name_en": "Anti-Air Mark",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        },
+        {
+          "tech_id": 5122,
+          "name_cn": "战地重组",
+          "name_en": "Battlefield Reassembly",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        },
+        {
+          "tech_id": 5222,
+          "name_cn": "维修阵列",
+          "name_en": "Maintenance Array",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        },
+        {
+          "tech_id": 5322,
+          "name_cn": "残骸引爆",
+          "name_en": "Wreckage Detonation",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        },
+        {
+          "tech_id": 10222,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        },
+        {
+          "tech_id": 1102022,
+          "name_cn": "野战工事",
+          "name_en": "Field Fortifications",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "medium"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/typhoon/"
+    },
+    "23": {
+      "unit_id": 23,
+      "name_cn": "沙虫",
+      "name_en": "sandworm",
+      "unlock_cost": 200,
+      "base_buy_cost": 400,
+      "upgrade_cost_per_level": 200,
+      "technologies": [
+        {
+          "tech_id": 923,
+          "name_cn": "潜地维修",
+          "name_en": "Burrow maintenance",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3023,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3123,
+          "name_cn": "对空",
+          "name_en": "Anti aerial",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3623,
+          "name_cn": "复制",
+          "name_en": "Replicate",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3723,
+          "name_cn": "沙暴",
+          "name_en": "Sandstorm",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3823,
+          "name_cn": "突袭",
+          "name_en": "Strike",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10523,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical rage",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 13023,
+          "name_cn": "机械分裂",
+          "name_en": "Mechanical division",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/sandworm/"
+    },
+    "24": {
+      "unit_id": 24,
+      "name_cn": "狼蛛",
+      "name_en": "tarantula",
+      "unlock_cost": 0,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 424,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 924,
+          "name_cn": "战地维修",
+          "name_en": "Field maintenance",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3024,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3124,
+          "name_cn": "防空弹药",
+          "name_en": "Anti aircraft ammunition",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10224,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10524,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical rage",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10624,
+          "name_cn": "穿甲弹",
+          "name_en": "Armor piercing bullets",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11024,
+          "name_cn": "蜘蛛雷",
+          "name_en": "Spider mine",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/tarantula/"
+    },
+    "25": {
+      "unit_id": 25,
+      "name_cn": "鬼鳐",
+      "name_en": "phantom ray",
+      "unlock_cost": 50,
+      "base_buy_cost": 200,
+      "upgrade_cost_per_level": 100,
+      "technologies": [
+        {
+          "tech_id": 225,
+          "name_cn": "能量护盾",
+          "name_en": "Energy shield",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 425,
+          "name_cn": "高爆弹药",
+          "name_en": "High explosive ammo",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 725,
+          "name_cn": "全弹发射",
+          "name_en": "Burst mode",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3025,
+          "name_cn": "装甲强化",
+          "name_en": "Armor enhancement",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3225,
+          "name_cn": "对地锁定",
+          "name_en": "Ground Targeting",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3925,
+          "name_cn": "隐形",
+          "name_en": "Stealth cloak",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10225,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11025,
+          "name_cn": "黏油弹",
+          "name_en": "Sticky oil bomb",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/phantom-ray/"
+    },
+    "26": {
+      "unit_id": 26,
+      "name_cn": "先知",
+      "name_en": "farseer",
+      "unlock_cost": 50,
+      "base_buy_cost": 300,
+      "upgrade_cost_per_level": 150,
+      "technologies": [
+        {
+          "tech_id": 726,
+          "name_cn": "全弹发射",
+          "name_en": "Full Barrage",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1826,
+          "name_cn": "电磁爆炸",
+          "name_en": "Electromagnetic explosion",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3226,
+          "name_cn": "防空专精",
+          "name_en": "Aerial specialization",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 3326,
+          "name_cn": "导弹拦截",
+          "name_en": "Missile interceptor",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10226,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180326,
+          "name_cn": "光子投射",
+          "name_en": "Photon emission",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180526,
+          "name_cn": "搜索雷达",
+          "name_en": "Scanning radar",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/farseer/"
+    },
+    "27": {
+      "unit_id": 27,
+      "name_cn": "雷霆",
+      "name_en": "raiden",
+      "unlock_cost": 200,
+      "base_buy_cost": 400,
+      "upgrade_cost_per_level": 200,
+      "technologies": [
+        {
+          "tech_id": 227,
+          "name_cn": "能量护盾",
+          "name_en": "Energy shield",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1827,
+          "name_cn": "电磁弹",
+          "name_en": "Electromagnetic Shot",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4027,
+          "name_cn": "连锁",
+          "name_en": "Chain",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4127,
+          "name_cn": "电离",
+          "name_en": "Ionization",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10227,
+          "name_cn": "射程强化",
+          "name_en": "Range enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 110271,
+          "name_cn": "分叉",
+          "name_en": "Fork",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/raiden/"
+    },
+    "28": {
+      "unit_id": 28,
+      "name_cn": "猎犬",
+      "name_en": "hound",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 3028,
+          "name_cn": "机械狂暴",
+          "name_en": "Mechanical Rage",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4228,
+          "name_cn": "消防装置",
+          "name_en": "Fire Extinguisher",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10228,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10528,
+          "name_cn": "消防装置",
+          "name_en": "Fire Extinguisher",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11028,
+          "name_cn": "燃烧弹",
+          "name_en": "Incendiary Bomb",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180828,
+          "name_cn": "枪膛增压",
+          "name_en": "Chamber Compression",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/hound/"
+    },
+    "29": {
+      "unit_id": 29,
+      "name_cn": "深渊",
+      "name_en": "abyss",
+      "unlock_cost": 350,
+      "base_buy_cost": 800,
+      "upgrade_cost_per_level": 400,
+      "technologies": [
+        {
+          "tech_id": 2329,
+          "name_cn": "残骸利用",
+          "name_en": "Wreckage Recycling",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4329,
+          "name_cn": "纵扫",
+          "name_en": "Vertical Sweep",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10229,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11029,
+          "name_cn": "裂解",
+          "name_en": "Disintegration",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 12029,
+          "name_cn": "暗黑伙伴",
+          "name_en": "Dark companion",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 110291,
+          "name_cn": "蜂群导弹",
+          "name_en": "Swarm missiles",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180329,
+          "name_cn": "光子涂层",
+          "name_en": "Photon Coating",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/air/abyss/"
+    },
+    "30": {
+      "unit_id": 30,
+      "name_cn": "魔眼",
+      "name_en": "void eye",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 230,
+          "name_cn": "能量护盾",
+          "name_en": "Energy Shield",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 330,
+          "name_cn": "能量汲取",
+          "name_en": "Energy Absorption",
+          "base_cost": 50,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4430,
+          "name_cn": "飞行模式",
+          "name_en": "Aerial Mode",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10230,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10930,
+          "name_cn": "蓄能攻击",
+          "name_en": "Charged Shot",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180430,
+          "name_cn": "电磁装甲",
+          "name_en": "Electromagnetic Armor",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180530,
+          "name_cn": "压制射击",
+          "name_en": "Suppression Shots",
+          "base_cost": 100,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/void-eye/"
+    },
+    "31": {
+      "unit_id": 31,
+      "name_cn": "磁暴",
+      "name_en": "vortex",
+      "unlock_cost": 0,
+      "base_buy_cost": 100,
+      "upgrade_cost_per_level": 50,
+      "technologies": [
+        {
+          "tech_id": 631,
+          "name_cn": "并网",
+          "name_en": "Grid Integration",
+          "base_cost": 200,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 931,
+          "name_cn": "战地维修",
+          "name_en": "Field Maintenance",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 4531,
+          "name_cn": "储能护盾",
+          "name_en": "Accumulator Shield",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 10231,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 123101,
+          "name_cn": "移动电站",
+          "name_en": "Mobile Power Station",
+          "base_cost": 250,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 180931,
+          "name_cn": "电磁云",
+          "name_en": "Electromagnetic Cloud",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 493101,
+          "name_cn": "应急装甲",
+          "name_en": "Emergency Armor",
+          "base_cost": 150,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 503101,
+          "name_cn": "电磁双生",
+          "name_en": "Electromagnetic Twin",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "human_verify_unlock_fee+wiki",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/vortex/"
+    },
+    "2001": {
+      "unit_id": 2001,
+      "name_cn": "丧钟",
+      "name_en": "death knell",
+      "unlock_cost": 350,
+      "base_buy_cost": 800,
+      "upgrade_cost_per_level": 400,
+      "technologies": [
+        {
+          "tech_id": 1102001,
+          "name_cn": "能量散射",
+          "name_en": "Energy Diffraction",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1022001,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1202001,
+          "name_cn": "钢球制造",
+          "name_en": "Steel Ball Production",
+          "base_cost": 450,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 102001,
+          "name_cn": "保护屏障",
+          "name_en": "Barrier",
+          "base_cost": 700,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 32001,
+          "name_cn": "能量汲取",
+          "name_en": "Energy Absorption",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11020012,
+          "name_cn": "电磁轰炸",
+          "name_en": "Electromagnetic Barrage",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "wiki_2026-08-10",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/death-knell/"
+    },
+    "2002": {
+      "unit_id": 2002,
+      "name_cn": "泰山",
+      "name_en": "mountain",
+      "unlock_cost": 350,
+      "base_buy_cost": 800,
+      "upgrade_cost_per_level": 400,
+      "technologies": [
+        {
+          "tech_id": 72002,
+          "name_cn": "饱和打击",
+          "name_en": "Saturation Bombardment",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 302002,
+          "name_cn": "巨山装甲",
+          "name_en": "Mountain Plating",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 312002,
+          "name_cn": "防空弹药",
+          "name_en": "Anti-Aircraft Ammunition",
+          "base_cost": 300,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1022002,
+          "name_cn": "射程强化",
+          "name_en": "Range Enhancement",
+          "base_cost": 500,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 1032002,
+          "name_cn": "增程炮弹",
+          "name_en": "Extended Range Ammo",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11020021,
+          "name_cn": "炮射火箭",
+          "name_en": "Gun-launched Missile",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 11020022,
+          "name_cn": "烟雾弹",
+          "name_en": "Smoke Bomb",
+          "base_cost": 350,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        },
+        {
+          "tech_id": 18032002,
+          "name_cn": "光子循环",
+          "name_en": "Photon Loop",
+          "base_cost": 400,
+          "source": "wiki_2026-08-10",
+          "confidence": "high"
+        }
+      ],
+      "source": "wiki_2026-08-10",
+      "confidence": "high",
+      "special_unit": false,
+      "wiki_url": "https://wiki.mbxmas.com/zh/units/ground/mountain/"
+    },
+    "4001": {
+      "unit_id": 4001,
+      "name_cn": "实验丧钟/特殊单位",
+      "name_en": "experimental death knell (special)",
+      "unlock_cost": null,
+      "base_buy_cost": null,
+      "upgrade_cost_per_level": null,
+      "technologies": [],
+      "source": "replay_only",
+      "confidence": "unknown",
+      "special_unit": true,
+      "wiki_url": null
+    }
+  }
+}

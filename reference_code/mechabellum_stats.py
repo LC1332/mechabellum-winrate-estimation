@@ -209,6 +209,48 @@ TECH_CN = {
     "Land Cruiser": "陆地巡洋舰", "Overload ammo": "过载弹药", "Anti aerial": "防空",
 }
 
+# Current Mainland names and post-1.9 IDs.  The cost parser itself reads
+# unit_cost_source.json; these aliases keep the older win-rate parser's display
+# names in sync with the checked reference table.
+UNIT_LOOKUP.update({
+    30: "void eye", 31: "vortex", 2001: "death knell", 2002: "mountain",
+    4001: "experimental death knell (special)",
+})
+UNIT_CN.update({
+    "marksmen": "长弓", "wasp": "兵蜂", "fang": "尖牙",
+    "stormcaller": "暴雨", "sledgehammer": "铁锤", "hacker": "骇客",
+    "wraith": "恶灵", "scorpion": "狂蝎", "phantom ray": "鬼鳐",
+    "raiden": "雷霆", "void eye": "魔眼", "vortex": "磁暴",
+    "death knell": "丧钟", "mountain": "泰山",
+    "experimental death knell (special)": "实验丧钟/特殊单位",
+})
+TECH_LOOKUP.update({
+    230: "Energy shield", 330: "Energy absorption", 4430: "Aerial mode",
+    10230: "Range enhancement", 10930: "Charged shot",
+    180430: "Electromagnetic armor", 180530: "Suppression shots",
+    631: "Grid integration", 931: "Field maintenance", 4531: "Accumulator shield",
+    10231: "Range enhancement", 123101: "Mobile power station",
+    180931: "Electromagnetic cloud", 493101: "Emergency armor",
+    503101: "Electromagnetic twin",
+    1102001: "Energy diffraction", 1022001: "Range enhancement",
+    1202001: "Steel ball production", 102001: "Barrier",
+    32001: "Energy absorption", 11020012: "Electromagnetic barrage",
+    72002: "Saturation bombardment", 302002: "Mountain plating",
+    312002: "Anti-aircraft ammunition", 1022002: "Range enhancement",
+    1032002: "Extended range ammo", 11020021: "Gun-launched missile",
+    11020022: "Smoke bomb", 18032002: "Photon loop",
+})
+TECH_CN.update({
+    "Aerial mode": "飞行模式", "Electromagnetic armor": "电磁装甲",
+    "Suppression shots": "压制射击", "Grid integration": "并网",
+    "Accumulator shield": "储能护盾", "Mobile power station": "移动电站",
+    "Electromagnetic cloud": "电磁云", "Emergency armor": "应急装甲",
+    "Electromagnetic twin": "电磁双生", "Saturation bombardment": "饱和打击",
+    "Mountain plating": "巨山装甲", "Anti-aircraft ammunition": "防空弹药",
+    "Extended range ammo": "增程炮弹", "Gun-launched missile": "炮射火箭",
+    "Smoke bomb": "烟雾弹", "Photon loop": "光子循环",
+})
+
 XSI_NS = "{http://www.w3.org/2001/XMLSchema-instance}type"
 
 REPLAY_DIR = Path(r"E:\SteamLibrary\steamapps\common\Mechabellum\ProjectDatas\Replay")
