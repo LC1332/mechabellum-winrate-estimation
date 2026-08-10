@@ -5,7 +5,7 @@ Machine learning estimate mechabellum's winrate.
 
 ## TODO
 
-- [ ] 尝试解析3个对局的数据，打印两个玩家在各个回合投入的资源和owner确认是否解析正确
+- [ ] 尝试解析3个对局的数据，打印两个玩家在各个回合投入的资源和owner确认是否解析正确 （干什么 花了多少钱）
 - [ ] 批量解析所有数据 形成结构化存储
 - [ ] 预留10%数据作为测试数据，训练一个2层的transformer
 - [ ] 搭建demo，可以随机选取测试集的对局形成体验
@@ -58,6 +58,14 @@ Q(o_A,t ; O_A,t-1 ; O_B,t-1 )
 Q_groundtruth_t = r_t + beta r_t+1 + beta^2 r_t+2 ... 
 
 beta先取0.5 之后可以在一个 yaml里面进行整体配置
+
+## 回放数据
+
+在local_data/humen_replay中
+
+格式解析可以参考 reference_code/mechabellum_stats.py
+或者参考 information/mechabellum_replay_format.md
+
 
 ## 新兵种预留
 
