@@ -20,8 +20,9 @@ Machine learning estimate mechabellum's winrate.
     - 赢了的玩家对没赢玩家造成的扣血 以及对方原始的总血量
 - [x] 确定归一化常数
     - 在18个回合的对局上，我想知道 每回合的投入，以及总投入的 robust均值（去掉首尾各3%）、方差(防止奇异值方差至少为100) 以及多少数据落在了3 sigma之外，帮我画两个盒图来进行展示(jpg形式)等我确认之后 均值就作为transformer的输入
-- [ ] 预留10%数据作为测试数据，训练一个2/3层的transformer
-    - 2，3，4层都尝试看看 看看哪个更好
+- [x] 预留10%数据作为测试数据，训练一个2/3/4层的transformer
+    - Q、V 各完成 2、3、4 层 × 3 seed 的 18 次 CUDA 实验；Q 选 3 层，V 选 2 层
+    - 固定切分、模型、散点图与完整指标见 `information/transformer_v1_report.md`
     - 注意有Q和V两种方式 Q是t时刻只能看到我自己策略的，V是t时刻能看到双方策略的
 - [ ] 搭建demo，可以随机选取测试集的对局形成体验
 - [ ] 制作一个更好的前端
@@ -46,6 +47,64 @@ Machine learning estimate mechabellum's winrate.
 （因为大家会拿增援什么的 会偏高一些） 总体也是可以接受的。
 
 ## transformer训练
+
+### Transformer v1 结果与复现
+
+本次使用固定的 train/validation/test = 770/96/96 局切分；重复回放副本保留在同一集合，避免泄漏。完整实验结果在 `information/transformer_v1_report.md`：Q-value 最终选择 3 层，测试 RMSE 为 107.121；V-function 最终选择 2 层，测试 RMSE 为 106.034。两者均略优于按回合训练集均值的 RMSE 108.106 基线。
+
+模型与测试散点图：
+
+- `models/transformer_v1/q_best.pt`、`models/transformer_v1/v_best.pt`
+- `artifacts/transformer_v1/q_gt_vs_pred_test.jpg`、`artifacts/transformer_v1/v_gt_vs_pred_test.jpg`
+- `artifacts/transformer_v1/split_v1.json`（后续 demo 必须复用）
+
+复现命令（优先 CUDA，自动回退 CPU）：
+
+```bash
+/www/wensi/robot/.env/venvs/lerobot-libero/bin/python \
+  reference_code/train_transformer.py sweep --device auto
+```
+
+可单独生成切分、运行一个实验、恢复训练或评估 checkpoint：
+
+```bash
+python reference_code/train_transformer.py make-split
+python reference_code/train_transformer.py run --task q --depth 3 --seed 20260810 --resume artifacts/transformer_v1/runs/q_depth3_seed20260810/last.pt
+python reference_code/train_transformer.py evaluate --checkpoint models/transformer_v1/q_best.pt --split test
+```
+
+当前 dense v1 的 933 局末战结果不可知，按既定口径终局贡献为 0；29 局投降按 ±200 记录。正常可确认回合为 ±100，折扣因子为 0.5。
+
+### Transformer v2：累计扣血终局修正
+
+v2 不修改 dense v1，而是从 1v1 的 `winner_damage` 推导终局：112 行中恰有一方累计扣血达到最大血量，在首次越线回合改记 ±1000，并截断后续 152 个回合；2 个双方越线 1v1 和全部 2v2 保持未知。独立报告与审计清单在 `information/transformer_v2_damage_terminal_report.md` 和 `artifacts/transformer_v2_damage_terminal/terminal_inference_audit.json`。
+
+在相同的修正标签上，v2 双视角模型没有整体超过 v1 checkpoint（Q 191.767 vs 191.361，V 192.210 vs 190.709 RMSE），但新增终局子集误差略降。关闭反转的 side0-only 对照具有更高的预测反对称误差，支持当前双视角反转实现。运行：
+
+```bash
+/www/wensi/robot/.env/venvs/lerobot-libero/bin/python \
+  reference_code/train_transformer_v2.py sweep --device auto
+```
+
+### Logistic v1：兵种克制消融
+
+Logistic v1 复用 Transformer v1 的固定 770/96/96 局切分，同时比较双方阵容主效应（86 维）、兵种两两交互（1849 维）和二者组合（1935 维），分别预测单回合胜负与 beta=0.3 累计 reward。完整结果见 `information/logistic_v1_report.md`。
+
+单回合胜负的 interaction 模型测试 AUC 为 0.590（相对随机的 cluster-bootstrap 95% CI 为 `[+0.042, +0.137]`）；累计 reward 的 combined 模型软交叉熵为 0.6860，但映射回 reward 的 RMSE 改善不显著。兵种交互相对阵容主效应的增益同样未达到显著。
+
+完整运行：
+
+```bash
+python3 reference_code/train_logistic.py run --config configs/logistic_v1.yaml
+```
+
+受限环境可先分别训练和 bootstrap，再自动生成相同报告：
+
+```bash
+python3 reference_code/train_logistic.py train --task round_winner --feature interaction
+python3 reference_code/train_logistic.py bootstrap --task round_winner --feature interaction
+python3 reference_code/train_logistic.py evaluate --model models/logistic_v1/round_winner_interaction.joblib --split test
+```
 
 训练两个独立transformer
 

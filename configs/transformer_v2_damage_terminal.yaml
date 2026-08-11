@@ -1,0 +1,26 @@
+dataset_npz: data/mechabellum_dense_v1.npz
+dataset_json: data/mechabellum_dense_v1.json
+source_split: artifacts/transformer_v1/split_v1.json
+output_dir: artifacts/transformer_v2_damage_terminal
+model_dir: models/transformer_v2_damage_terminal
+report_path: information/transformer_v2_damage_terminal_report.md
+beta: 0.5
+reward:
+  battle: 100.0
+  surrender: 200.0
+  terminal: 1000.0
+model:
+  d_model: 64
+  nhead: 4
+  dim_feedforward: 128
+  dropout: 0.1
+training:
+  batch_size: 64
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  max_epochs: 300
+  early_stopping_patience: 30
+  gradient_clip_norm: 1.0
+  target_scale: 100.0
+seeds: [20260810, 20260811, 20260812]
+depths: [2, 3, 4]

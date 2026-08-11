@@ -1,0 +1,13 @@
+dataset_npz: data/mechabellum_dense_v1.npz
+dataset_json: data/mechabellum_dense_v1.json
+source_split: artifacts/transformer_v1/split_v1.json
+output_dir: artifacts/logistic_v1
+model_dir: models/logistic_v1
+report_path: information/logistic_v1_report.md
+beta: 0.3
+reward: 100.0
+regularization_c: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+max_iter: 10000
+tol: 1.0e-6
+bootstrap_replicates: 5000
+bootstrap_seed: 20260810
