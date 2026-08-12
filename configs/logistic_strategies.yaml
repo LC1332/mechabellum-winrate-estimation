@@ -1,0 +1,21 @@
+dataset_npz: data/mechabellum_dense_v1.npz
+dataset_json: data/mechabellum_dense_v1.json
+replay_dir: local_data/humen_replay
+output_dir: artifacts/logistic_strategy
+model_dir: models/logistic_strategy
+report_path: information/logistic_strategy_report.md
+strategy_dataset_npz: data/logistic_strategy_v1.npz
+strategy_dataset_json: data/logistic_strategy_v1.json
+split_path: artifacts/logistic_strategy/split_v1.json
+regularization_c: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+spatial_half_distance: [150.0, 300.0, 600.0]
+probe_points: [[-300.0, 0.0], [0.0, 0.0], [300.0, 0.0]]
+selection_fraction: 0.70
+test_fraction: 0.10
+selection_folds: 5
+split_seed: 20260812
+model_seed: 20260812
+max_iter: 800
+tol: 1.0e-5
+bootstrap_replicates: 1000
+bootstrap_seed: 20260812

@@ -1,0 +1,5179 @@
+{
+  "schema_version": 1,
+  "source_dense_schema": 1,
+  "axes": {
+    "matches": 962,
+    "rounds": 18,
+    "sides": 2,
+    "units": 43,
+    "probes": 3
+  },
+  "probe_points": [
+    [
+      -300.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      300.0,
+      0.0
+    ]
+  ],
+  "half_distances": [
+    150.0,
+    300.0,
+    600.0
+  ],
+  "unit_axis": [
+    {
+      "index": 0,
+      "unit_id": 1,
+      "name_cn": "堡垒",
+      "name_en": "fortress"
+    },
+    {
+      "index": 1,
+      "unit_id": 2,
+      "name_cn": "长弓",
+      "name_en": "marksman"
+    },
+    {
+      "index": 2,
+      "unit_id": 3,
+      "name_cn": "火神",
+      "name_en": "vulcan"
+    },
+    {
+      "index": 3,
+      "unit_id": 4,
+      "name_cn": "熔点",
+      "name_en": "melting point"
+    },
+    {
+      "index": 4,
+      "unit_id": 5,
+      "name_cn": "犀牛",
+      "name_en": "rhino"
+    },
+    {
+      "index": 5,
+      "unit_id": 6,
+      "name_cn": "兵蜂",
+      "name_en": "wasp"
+    },
+    {
+      "index": 6,
+      "unit_id": 7,
+      "name_cn": "野马",
+      "name_en": "mustang"
+    },
+    {
+      "index": 7,
+      "unit_id": 8,
+      "name_cn": "钢球",
+      "name_en": "steel ball"
+    },
+    {
+      "index": 8,
+      "unit_id": 9,
+      "name_cn": "尖牙",
+      "name_en": "fang"
+    },
+    {
+      "index": 9,
+      "unit_id": 10,
+      "name_cn": "爬虫",
+      "name_en": "crawler"
+    },
+    {
+      "index": 10,
+      "unit_id": 11,
+      "name_cn": "霸主",
+      "name_en": "overlord"
+    },
+    {
+      "index": 11,
+      "unit_id": 12,
+      "name_cn": "暴雨",
+      "name_en": "stormcaller"
+    },
+    {
+      "index": 12,
+      "unit_id": 13,
+      "name_cn": "铁锤",
+      "name_en": "sledgehammer"
+    },
+    {
+      "index": 13,
+      "unit_id": 14,
+      "name_cn": "骇客",
+      "name_en": "hacker"
+    },
+    {
+      "index": 14,
+      "unit_id": 15,
+      "name_cn": "弧光",
+      "name_en": "arclight"
+    },
+    {
+      "index": 15,
+      "unit_id": 16,
+      "name_cn": "凤凰",
+      "name_en": "phoenix"
+    },
+    {
+      "index": 16,
+      "unit_id": 17,
+      "name_cn": "战争工厂",
+      "name_en": "war factory"
+    },
+    {
+      "index": 17,
+      "unit_id": 18,
+      "name_cn": "恶灵",
+      "name_en": "wraith"
+    },
+    {
+      "index": 18,
+      "unit_id": 19,
+      "name_cn": "狂蝎",
+      "name_en": "scorpion"
+    },
+    {
+      "index": 19,
+      "unit_id": 20,
+      "name_cn": "火獾",
+      "name_en": "fire badger"
+    },
+    {
+      "index": 20,
+      "unit_id": 21,
+      "name_cn": "剑齿虎",
+      "name_en": "sabertooth"
+    },
+    {
+      "index": 21,
+      "unit_id": 22,
+      "name_cn": "台风",
+      "name_en": "typhoon"
+    },
+    {
+      "index": 22,
+      "unit_id": 23,
+      "name_cn": "沙虫",
+      "name_en": "sandworm"
+    },
+    {
+      "index": 23,
+      "unit_id": 24,
+      "name_cn": "狼蛛",
+      "name_en": "tarantula"
+    },
+    {
+      "index": 24,
+      "unit_id": 25,
+      "name_cn": "鬼鳐",
+      "name_en": "phantom ray"
+    },
+    {
+      "index": 25,
+      "unit_id": 26,
+      "name_cn": "先知",
+      "name_en": "farseer"
+    },
+    {
+      "index": 26,
+      "unit_id": 27,
+      "name_cn": "雷霆",
+      "name_en": "raiden"
+    },
+    {
+      "index": 27,
+      "unit_id": 28,
+      "name_cn": "猎犬",
+      "name_en": "hound"
+    },
+    {
+      "index": 28,
+      "unit_id": 29,
+      "name_cn": "深渊",
+      "name_en": "abyss"
+    },
+    {
+      "index": 29,
+      "unit_id": 30,
+      "name_cn": "魔眼",
+      "name_en": "void eye"
+    },
+    {
+      "index": 30,
+      "unit_id": 31,
+      "name_cn": "磁暴",
+      "name_en": "vortex"
+    },
+    {
+      "index": 31,
+      "unit_id": 2001,
+      "name_cn": "丧钟",
+      "name_en": "death knell"
+    },
+    {
+      "index": 32,
+      "unit_id": 2002,
+      "name_cn": "泰山",
+      "name_en": "mountain"
+    },
+    {
+      "index": 33,
+      "reserved_slot": "unknown_unit_slot_0",
+      "unit_id": 4001
+    },
+    {
+      "index": 34,
+      "reserved_slot": "unknown_unit_slot_1",
+      "unit_id": null
+    },
+    {
+      "index": 35,
+      "reserved_slot": "unknown_unit_slot_2",
+      "unit_id": null
+    },
+    {
+      "index": 36,
+      "reserved_slot": "unknown_unit_slot_3",
+      "unit_id": null
+    },
+    {
+      "index": 37,
+      "reserved_slot": "unknown_unit_slot_4",
+      "unit_id": null
+    },
+    {
+      "index": 38,
+      "reserved_slot": "unknown_unit_slot_5",
+      "unit_id": null
+    },
+    {
+      "index": 39,
+      "reserved_slot": "unknown_unit_slot_6",
+      "unit_id": null
+    },
+    {
+      "index": 40,
+      "reserved_slot": "unknown_unit_slot_7",
+      "unit_id": null
+    },
+    {
+      "index": 41,
+      "reserved_slot": "unknown_unit_slot_8",
+      "unit_id": null
+    },
+    {
+      "index": 42,
+      "reserved_slot": "unknown_unit_slot_9",
+      "unit_id": null
+    }
+  ],
+  "arrays": {
+    "investment_cumulative": {
+      "dtype": "float32",
+      "shape": [
+        962,
+        18,
+        2,
+        43
+      ]
+    },
+    "spatial_value": {
+      "dtype": "float32",
+      "shape": [
+        3,
+        962,
+        18,
+        2,
+        3,
+        43
+      ]
+    },
+    "buff_delta": {
+      "dtype": "float32",
+      "shape": [
+        962,
+        18,
+        2,
+        2
+      ]
+    },
+    "round_mask": {
+      "dtype": "bool",
+      "shape": [
+        962,
+        18
+      ]
+    },
+    "round_winner": {
+      "dtype": "int8",
+      "shape": [
+        962,
+        18
+      ]
+    },
+    "spatial_valid": {
+      "dtype": "bool",
+      "shape": [
+        962,
+        18,
+        2
+      ]
+    },
+    "round_valid": {
+      "dtype": "bool",
+      "shape": [
+        962,
+        18
+      ]
+    },
+    "round_count": {
+      "dtype": "uint8",
+      "shape": [
+        962
+      ]
+    },
+    "match_mode": {
+      "dtype": "uint8",
+      "shape": [
+        962
+      ]
+    }
+  },
+  "matches": [
+    {
+      "row_index": 0,
+      "file": "2119_20260710--134225895_[Angel`御魔]VS[my98765431].grbr",
+      "group": "2119_20260710--134225895_[Angel`御魔]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 1,
+      "file": "2119_20260710--201333200_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260710--201333200_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 2,
+      "file": "2119_20260710--201333267_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260710--201333267_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 3,
+      "file": "2119_20260710--201333722_[Mark二]VS[3077481602].grbr",
+      "group": "2119_20260710--201333722_[Mark二]VS[3077481602].grbr"
+    },
+    {
+      "row_index": 4,
+      "file": "2119_20260710--201334000_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334000_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 5,
+      "file": "2119_20260710--201334120_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334120_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 6,
+      "file": "2119_20260710--201334223_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334223_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 7,
+      "file": "2119_20260710--201334383_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334383_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 8,
+      "file": "2119_20260710--201334388_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334388_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 9,
+      "file": "2119_20260710--201334443_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334443_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 10,
+      "file": "2119_20260710--201334560_[宇宙霸主ultra Pro]VS[Mark二].grbr",
+      "group": "2119_20260710--201334560_[宇宙霸主ultra Pro]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 11,
+      "file": "2119_20260710--268442254_[my98765431]VS[John Chen].grbr",
+      "group": "2119_20260710--268442254_[my98765431]VS[John Chen].grbr"
+    },
+    {
+      "row_index": 12,
+      "file": "2119_20260710--268443115_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260710--268443115_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 13,
+      "file": "2119_20260710--268443230_[TiNaAch]VS[BunGrume].grbr",
+      "group": "2119_20260710--268443230_[TiNaAch]VS[BunGrume].grbr"
+    },
+    {
+      "row_index": 14,
+      "file": "2119_20260710--268443310_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260710--268443310_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 15,
+      "file": "2119_20260710--268443395_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260710--268443395_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 16,
+      "file": "2119_20260710--268443512_[my98765431]VS[Angel`御魔].grbr",
+      "group": "2119_20260710--268443512_[my98765431]VS[Angel`御魔].grbr"
+    },
+    {
+      "row_index": 17,
+      "file": "2119_20260710--268443529_[my98765431]VS[Angel`御魔].grbr",
+      "group": "2119_20260710--268443529_[my98765431]VS[Angel`御魔].grbr"
+    },
+    {
+      "row_index": 18,
+      "file": "2119_20260710--268443564_[TiNaAch]VS[Shca0ut].grbr",
+      "group": "2119_20260710--268443564_[TiNaAch]VS[Shca0ut].grbr"
+    },
+    {
+      "row_index": 19,
+      "file": "2119_20260710--268443861_[TiNaAch]VS[Shca0ut].grbr",
+      "group": "2119_20260710--268443861_[TiNaAch]VS[Shca0ut].grbr"
+    },
+    {
+      "row_index": 20,
+      "file": "2119_20260710--67116028_[Агневий]VS[Mark二].grbr",
+      "group": "2119_20260710--67116028_[Агневий]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 21,
+      "file": "2119_20260710--67117405_[白]VS[my98765431].grbr",
+      "group": "2119_20260710--67117405_[白]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 22,
+      "file": "2119_20260711--134230119_[猫头人]VS[my98765431].grbr",
+      "group": "2119_20260711--134230119_[猫头人]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 23,
+      "file": "2119_20260711--134230167_[猫头人]VS[my98765431].grbr",
+      "group": "2119_20260711--134230167_[猫头人]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 24,
+      "file": "2119_20260711--134232480_[自己思甜兄弟忆苦忆苦]VS[偷吃贡品].grbr",
+      "group": "2119_20260711--134232480_[自己思甜兄弟忆苦忆苦]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 25,
+      "file": "2119_20260711--134232946_[自己思甜兄弟忆苦忆苦]VS[哈宝哈宝蛤不思饱Habsburg].grbr",
+      "group": "2119_20260711--134232946_[自己思甜兄弟忆苦忆苦]VS[哈宝哈宝蛤不思饱Habsburg].grbr"
+    },
+    {
+      "row_index": 26,
+      "file": "2119_20260711--134233496_[NTAGT]VS[Xxlaomamjj].grbr",
+      "group": "2119_20260711--134233496_[NTAGT]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 27,
+      "file": "2119_20260711--201335350_[Mark二]VS[wOOt].grbr",
+      "group": "2119_20260711--201335350_[Mark二]VS[wOOt].grbr"
+    },
+    {
+      "row_index": 28,
+      "file": "2119_20260711--201335618_[Mark二]VS[闪电幽魂水野爱].grbr",
+      "group": "2119_20260711--201335618_[Mark二]VS[闪电幽魂水野爱].grbr"
+    },
+    {
+      "row_index": 29,
+      "file": "2119_20260711--201335716_[Mark二]VS[笨蔬菜].grbr",
+      "group": "2119_20260711--201335716_[Mark二]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 30,
+      "file": "2119_20260711--201335790_[Mark二]VS[笨蔬菜].grbr",
+      "group": "2119_20260711--201335790_[Mark二]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 31,
+      "file": "2119_20260711--201335899_[Mark二]VS[glassbåten].grbr",
+      "group": "2119_20260711--201335899_[Mark二]VS[glassbåten].grbr"
+    },
+    {
+      "row_index": 32,
+      "file": "2119_20260711--201338824_[Casual gamer]VS[my98765431].grbr",
+      "group": "2119_20260711--201338824_[Casual gamer]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 33,
+      "file": "2119_20260711--201342309_[my98765431]VS[Cucumber Benepact].grbr",
+      "group": "2119_20260711--201342309_[my98765431]VS[Cucumber Benepact].grbr"
+    },
+    {
+      "row_index": 34,
+      "file": "2119_20260711--201342552_[糖葫芦]VS[NTAGT].grbr",
+      "group": "2119_20260711--201342552_[糖葫芦]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 35,
+      "file": "2119_20260711--268444104_[白]VS[猫头人].grbr",
+      "group": "2119_20260711--268444104_[白]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 36,
+      "file": "2119_20260711--268444153_[TiNaAch]VS[笨蔬菜].grbr",
+      "group": "2119_20260711--268444153_[TiNaAch]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 37,
+      "file": "2119_20260711--268444204_[TK-685]VS[猫头人].grbr",
+      "group": "2119_20260711--268444204_[TK-685]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 38,
+      "file": "2119_20260711--268444305_[TiNaAch]VS[Azure~].grbr",
+      "group": "2119_20260711--268444305_[TiNaAch]VS[Azure~].grbr"
+    },
+    {
+      "row_index": 39,
+      "file": "2119_20260711--268450943_[大西瓜]VS[偷吃贡品].grbr",
+      "group": "2119_20260711--268450943_[大西瓜]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 40,
+      "file": "2119_20260711--67120928_[[TUFF]  Wumple Doodle]VS[my98765431].grbr",
+      "group": "2119_20260711--67120928_[[TUFF]  Wumple Doodle]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 41,
+      "file": "2119_20260711--67120975_[my98765431]VS[3131977215].grbr",
+      "group": "2119_20260711--67120975_[my98765431]VS[3131977215].grbr"
+    },
+    {
+      "row_index": 42,
+      "file": "2119_20260711--67121031_[my98765431]VS[leaf].grbr",
+      "group": "2119_20260711--67121031_[my98765431]VS[leaf].grbr"
+    },
+    {
+      "row_index": 43,
+      "file": "2119_20260711--67121259_[my98765431]VS[何].grbr",
+      "group": "2119_20260711--67121259_[my98765431]VS[何].grbr"
+    },
+    {
+      "row_index": 44,
+      "file": "2119_20260711--67121330_[my98765431]VS[饿了会吃饭].grbr",
+      "group": "2119_20260711--67121330_[my98765431]VS[饿了会吃饭].grbr"
+    },
+    {
+      "row_index": 45,
+      "file": "2119_20260711--67124634_[Skillless One]VS[NTAGT].grbr",
+      "group": "2119_20260711--67124634_[Skillless One]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 46,
+      "file": "2119_20260712--134233832_[Sir Pounce]VS[my98765431].grbr",
+      "group": "2119_20260712--134233832_[Sir Pounce]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 47,
+      "file": "2119_20260712--134233975_[NTAGT]VS[Xxlaomamjj].grbr",
+      "group": "2119_20260712--134233975_[NTAGT]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 48,
+      "file": "2119_20260712--134234888_[SINANJU]VS[Gryning].grbr",
+      "group": "2119_20260712--134234888_[SINANJU]VS[Gryning].grbr"
+    },
+    {
+      "row_index": 49,
+      "file": "2119_20260712--134237176_[xl Joseph lx]VS[哈哈哈花熊].grbr",
+      "group": "2119_20260712--134237176_[xl Joseph lx]VS[哈哈哈花熊].grbr"
+    },
+    {
+      "row_index": 50,
+      "file": "2119_20260712--134237600_[594677973]VS[my98765431].grbr",
+      "group": "2119_20260712--134237600_[594677973]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 51,
+      "file": "2119_20260712--134237780_[斑羚]VS[my98765431].grbr",
+      "group": "2119_20260712--134237780_[斑羚]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 52,
+      "file": "2119_20260712--134237847_[my98765431]VS[OC].grbr",
+      "group": "2119_20260712--134237847_[my98765431]VS[OC].grbr"
+    },
+    {
+      "row_index": 53,
+      "file": "2119_20260712--134239814_[NTAGT]VS[Mark二].grbr",
+      "group": "2119_20260712--134239814_[NTAGT]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 54,
+      "file": "2119_20260712--134239851_[魔法少女西琳琳]VS[my98765431].grbr",
+      "group": "2119_20260712--134239851_[魔法少女西琳琳]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 55,
+      "file": "2119_20260712--134239982_[Xxlaomamjj]VS[NTAGT].grbr",
+      "group": "2119_20260712--134239982_[Xxlaomamjj]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 56,
+      "file": "2119_20260712--134239995_[魔法少女西琳琳]VS[my98765431].grbr",
+      "group": "2119_20260712--134239995_[魔法少女西琳琳]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 57,
+      "file": "2119_20260712--134240141_[笨蔬菜]VS[流影].grbr",
+      "group": "2119_20260712--134240141_[笨蔬菜]VS[流影].grbr"
+    },
+    {
+      "row_index": 58,
+      "file": "2119_20260712--134240305_[2055853227]VS[Mark二].grbr",
+      "group": "2119_20260712--134240305_[2055853227]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 59,
+      "file": "2119_20260712--134240476_[NTAGT]VS[流影].grbr",
+      "group": "2119_20260712--134240476_[NTAGT]VS[流影].grbr"
+    },
+    {
+      "row_index": 60,
+      "file": "2119_20260712--134240477_[Chaox6]VS[吾心吾行澄如明镜].grbr",
+      "group": "2119_20260712--134240477_[Chaox6]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 61,
+      "file": "2119_20260712--134240523_[谈笑风生07]VS[吾心吾行澄如明镜].grbr",
+      "group": "2119_20260712--134240523_[谈笑风生07]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 62,
+      "file": "2119_20260712--134240646_[吾心吾行澄如明镜]VS[Deafbabe].grbr",
+      "group": "2119_20260712--134240646_[吾心吾行澄如明镜]VS[Deafbabe].grbr"
+    },
+    {
+      "row_index": 63,
+      "file": "2119_20260712--134241042_[NTAGT]VS[[TUFF] Mathismight].grbr",
+      "group": "2119_20260712--134241042_[NTAGT]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 64,
+      "file": "2119_20260712--134241189_[NTAGT]VS[糖葫芦].grbr",
+      "group": "2119_20260712--134241189_[NTAGT]VS[糖葫芦].grbr"
+    },
+    {
+      "row_index": 65,
+      "file": "2119_20260712--201342765_[余殷昊]VS[my98765431].grbr",
+      "group": "2119_20260712--201342765_[余殷昊]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 66,
+      "file": "2119_20260712--201343759_[Ankilon]VS[Urgestein].grbr",
+      "group": "2119_20260712--201343759_[Ankilon]VS[Urgestein].grbr"
+    },
+    {
+      "row_index": 67,
+      "file": "2119_20260712--201345948_[Shim]VS[Frieren].grbr",
+      "group": "2119_20260712--201345948_[Shim]VS[Frieren].grbr"
+    },
+    {
+      "row_index": 68,
+      "file": "2119_20260712--201348126_[法国赌神刘华强]VS[my98765431].grbr",
+      "group": "2119_20260712--201348126_[法国赌神刘华强]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 69,
+      "file": "2119_20260712--268451842_[NTAGT]VS[[TUFF] Spade].grbr",
+      "group": "2119_20260712--268451842_[NTAGT]VS[[TUFF] Spade].grbr"
+    },
+    {
+      "row_index": 70,
+      "file": "2119_20260712--268451995_[NTAGT]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2119_20260712--268451995_[NTAGT]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 71,
+      "file": "2119_20260712--268452219_[NTAGT]VS[VoidInsanity].grbr",
+      "group": "2119_20260712--268452219_[NTAGT]VS[VoidInsanity].grbr"
+    },
+    {
+      "row_index": 72,
+      "file": "2119_20260712--268455805_[[TUFF] Mathismight]VS[NTAGT].grbr",
+      "group": "2119_20260712--268455805_[[TUFF] Mathismight]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 73,
+      "file": "2119_20260712--268457171_[雷霆超人，睁开眼睛]VS[my98765431].grbr",
+      "group": "2119_20260712--268457171_[雷霆超人，睁开眼睛]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 74,
+      "file": "2119_20260712--268457403_[K9 ASH]VS[LEONIDES].grbr",
+      "group": "2119_20260712--268457403_[K9 ASH]VS[LEONIDES].grbr"
+    },
+    {
+      "row_index": 75,
+      "file": "2119_20260712--268457693_[糖葫芦]VS[Mark二].grbr",
+      "group": "2119_20260712--268457693_[糖葫芦]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 76,
+      "file": "2119_20260712--67128283_[御坂美琴天下第一]VS[老匪_GODOG].grbr",
+      "group": "2119_20260712--67128283_[御坂美琴天下第一]VS[老匪_GODOG].grbr"
+    },
+    {
+      "row_index": 77,
+      "file": "2119_20260712--67128717_[cysgoder]VS[my98765431].grbr",
+      "group": "2119_20260712--67128717_[cysgoder]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 78,
+      "file": "2119_20260713--134241658_[NTAGT]VS[糖葫芦].grbr",
+      "group": "2119_20260713--134241658_[NTAGT]VS[糖葫芦].grbr"
+    },
+    {
+      "row_index": 79,
+      "file": "2119_20260713--134241897_[NTAGT]VS[二阶唐Cirno].grbr",
+      "group": "2119_20260713--134241897_[NTAGT]VS[二阶唐Cirno].grbr"
+    },
+    {
+      "row_index": 80,
+      "file": "2119_20260713--134241918_[NTAGT]VS[二阶唐Cirno].grbr",
+      "group": "2119_20260713--134241918_[NTAGT]VS[二阶唐Cirno].grbr"
+    },
+    {
+      "row_index": 81,
+      "file": "2119_20260713--134242047_[NTAGT]VS[二阶唐Cirno].grbr",
+      "group": "2119_20260713--134242047_[NTAGT]VS[二阶唐Cirno].grbr"
+    },
+    {
+      "row_index": 82,
+      "file": "2119_20260713--134242259_[NTAGT]VS[二阶唐Cirno].grbr",
+      "group": "2119_20260713--134242259_[NTAGT]VS[二阶唐Cirno].grbr"
+    },
+    {
+      "row_index": 83,
+      "file": "2119_20260713--134242397_[NTAGT]VS[二阶唐Cirno].grbr",
+      "group": "2119_20260713--134242397_[NTAGT]VS[二阶唐Cirno].grbr"
+    },
+    {
+      "row_index": 84,
+      "file": "2119_20260713--134245537_[TiNaAch]VS[1156136367].grbr",
+      "group": "2119_20260713--134245537_[TiNaAch]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 85,
+      "file": "2119_20260713--134245599_[TiNaAch]VS[北命].grbr",
+      "group": "2119_20260713--134245599_[TiNaAch]VS[北命].grbr"
+    },
+    {
+      "row_index": 86,
+      "file": "2119_20260713--134245696_[TiNaAch]VS[🐙Noname🐙].grbr",
+      "group": "2119_20260713--134245696_[TiNaAch]VS[🐙Noname🐙].grbr"
+    },
+    {
+      "row_index": 87,
+      "file": "2119_20260713--134245795_[若安]VS[TiNaAch].grbr",
+      "group": "2119_20260713--134245795_[若安]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 88,
+      "file": "2119_20260713--134247370_[TiNaAch]VS[Forgotten Arbiter].grbr",
+      "group": "2119_20260713--134247370_[TiNaAch]VS[Forgotten Arbiter].grbr"
+    },
+    {
+      "row_index": 89,
+      "file": "2119_20260713--134247516_[TiNaAch]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2119_20260713--134247516_[TiNaAch]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 90,
+      "file": "2119_20260713--201355927_[狂乱君]VS[TiNaAch].grbr",
+      "group": "2119_20260713--201355927_[狂乱君]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 91,
+      "file": "2119_20260713--268458985_[糖葫芦]VS[NTAGT].grbr",
+      "group": "2119_20260713--268458985_[糖葫芦]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 92,
+      "file": "2119_20260713--268459011_[糖葫芦]VS[NTAGT].grbr",
+      "group": "2119_20260713--268459011_[糖葫芦]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 93,
+      "file": "2119_20260713--268459120_[糖葫芦]VS[NTAGT].grbr",
+      "group": "2119_20260713--268459120_[糖葫芦]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 94,
+      "file": "2119_20260713--268459291_[糖葫芦]VS[NTAGT].grbr",
+      "group": "2119_20260713--268459291_[糖葫芦]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 95,
+      "file": "2119_20260713--268459395_[[TUFF] Sparty]VS[NTAGT].grbr",
+      "group": "2119_20260713--268459395_[[TUFF] Sparty]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 96,
+      "file": "2119_20260713--268464403_[你是蓬莱花仙]VS[Legion].grbr",
+      "group": "2119_20260713--268464403_[你是蓬莱花仙]VS[Legion].grbr"
+    },
+    {
+      "row_index": 97,
+      "file": "2119_20260713--67132744_[Earihi]VS[XBlackDarknesX].grbr",
+      "group": "2119_20260713--67132744_[Earihi]VS[XBlackDarknesX].grbr"
+    },
+    {
+      "row_index": 98,
+      "file": "2119_20260714--134254058_[[SUFF]Eliminati]VS[TiNaAch].grbr",
+      "group": "2119_20260714--134254058_[[SUFF]Eliminati]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 99,
+      "file": "2119_20260714--268465357_[大菠萝]VS[TiNaAch].grbr",
+      "group": "2119_20260714--268465357_[大菠萝]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 100,
+      "file": "2119_20260714--268465458_[大菠萝]VS[TiNaAch].grbr",
+      "group": "2119_20260714--268465458_[大菠萝]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 101,
+      "file": "2119_20260714--268465730_[大菠萝]VS[TiNaAch].grbr",
+      "group": "2119_20260714--268465730_[大菠萝]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 102,
+      "file": "2119_20260714--268471952_[TiNaAch]VS[Dzemp].grbr",
+      "group": "2119_20260714--268471952_[TiNaAch]VS[Dzemp].grbr"
+    },
+    {
+      "row_index": 103,
+      "file": "2119_20260714--67143889_[吾心吾行澄如明镜]VS[Pantsuman].grbr",
+      "group": "2119_20260714--67143889_[吾心吾行澄如明镜]VS[Pantsuman].grbr"
+    },
+    {
+      "row_index": 104,
+      "file": "2119_20260714--67144036_[吾心吾行澄如明镜]VS[笨蔬菜].grbr",
+      "group": "2119_20260714--67144036_[吾心吾行澄如明镜]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 105,
+      "file": "2119_20260714--67144140_[Tza]VS[吾心吾行澄如明镜].grbr",
+      "group": "2119_20260714--67144140_[Tza]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 106,
+      "file": "2119_20260714--67144234_[吾心吾行澄如明镜]VS[飞行雪绒].grbr",
+      "group": "2119_20260714--67144234_[吾心吾行澄如明镜]VS[飞行雪绒].grbr"
+    },
+    {
+      "row_index": 107,
+      "file": "2119_20260715--134254978_[御坂美琴天下第一]VS[Raulu73].grbr",
+      "group": "2119_20260715--134254978_[御坂美琴天下第一]VS[Raulu73].grbr"
+    },
+    {
+      "row_index": 108,
+      "file": "2119_20260715--134255050_[御坂美琴天下第一]VS[Homeboy].grbr",
+      "group": "2119_20260715--134255050_[御坂美琴天下第一]VS[Homeboy].grbr"
+    },
+    {
+      "row_index": 109,
+      "file": "2119_20260715--134255350_[Silver]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260715--134255350_[Silver]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 110,
+      "file": "2119_20260715--134256807_[御坂美琴天下第一]VS[p!dgey].grbr",
+      "group": "2119_20260715--134256807_[御坂美琴天下第一]VS[p!dgey].grbr"
+    },
+    {
+      "row_index": 111,
+      "file": "2119_20260715--134257104_[御坂美琴天下第一]VS[zorki].grbr",
+      "group": "2119_20260715--134257104_[御坂美琴天下第一]VS[zorki].grbr"
+    },
+    {
+      "row_index": 112,
+      "file": "2119_20260715--134257206_[御坂美琴天下第一]VS[Byzantium].grbr",
+      "group": "2119_20260715--134257206_[御坂美琴天下第一]VS[Byzantium].grbr"
+    },
+    {
+      "row_index": 113,
+      "file": "2119_20260715--134257254_[御坂美琴天下第一]VS[Domtavus   凸(¬‿¬)凸].grbr",
+      "group": "2119_20260715--134257254_[御坂美琴天下第一]VS[Domtavus   凸(¬‿¬)凸].grbr"
+    },
+    {
+      "row_index": 114,
+      "file": "2119_20260715--134258435_[my98765431]VS[baal].grbr",
+      "group": "2119_20260715--134258435_[my98765431]VS[baal].grbr"
+    },
+    {
+      "row_index": 115,
+      "file": "2119_20260715--134259367_[VoidInsanity]VS[吾心吾行澄如明镜].grbr",
+      "group": "2119_20260715--134259367_[VoidInsanity]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 116,
+      "file": "2119_20260715--201362824_[[TUFF] Mathismight]VS[TiNaAch].grbr",
+      "group": "2119_20260715--201362824_[[TUFF] Mathismight]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 117,
+      "file": "2119_20260715--201365363_[Fishy]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260715--201365363_[Fishy]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 118,
+      "file": "2119_20260715--201367417_[吾心吾行澄如明镜]VS[Carryboi].grbr",
+      "group": "2119_20260715--201367417_[吾心吾行澄如明镜]VS[Carryboi].grbr"
+    },
+    {
+      "row_index": 119,
+      "file": "2119_20260715--201367540_[吾心吾行澄如明镜]VS[Tachi].grbr",
+      "group": "2119_20260715--201367540_[吾心吾行澄如明镜]VS[Tachi].grbr"
+    },
+    {
+      "row_index": 120,
+      "file": "2119_20260715--201367624_[吾心吾行澄如明镜]VS[亚辛105].grbr",
+      "group": "2119_20260715--201367624_[吾心吾行澄如明镜]VS[亚辛105].grbr"
+    },
+    {
+      "row_index": 121,
+      "file": "2119_20260715--268472101_[TiNaAch]VS[[TUFF] Mathismight].grbr",
+      "group": "2119_20260715--268472101_[TiNaAch]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 122,
+      "file": "2119_20260715--268472376_[TiNaAch]VS[谁没点小情绪].grbr",
+      "group": "2119_20260715--268472376_[TiNaAch]VS[谁没点小情绪].grbr"
+    },
+    {
+      "row_index": 123,
+      "file": "2119_20260715--268472505_[Dimlas]VS[TiNaAch].grbr",
+      "group": "2119_20260715--268472505_[Dimlas]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 124,
+      "file": "2119_20260715--268472626_[TiNaAch]VS[[TUFF] Mathismight].grbr",
+      "group": "2119_20260715--268472626_[TiNaAch]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 125,
+      "file": "2119_20260715--268472869_[TiNaAch]VS[甜甜喵喵小饼干].grbr",
+      "group": "2119_20260715--268472869_[TiNaAch]VS[甜甜喵喵小饼干].grbr"
+    },
+    {
+      "row_index": 126,
+      "file": "2119_20260715--268472928_[Dewinner]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260715--268472928_[Dewinner]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 127,
+      "file": "2119_20260715--67145562_[Skorpion2811]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260715--67145562_[Skorpion2811]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 128,
+      "file": "2119_20260715--67145836_[花椰菜]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260715--67145836_[花椰菜]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 129,
+      "file": "2119_20260716--134261256_[NTAGT]VS[偷吃贡品].grbr",
+      "group": "2119_20260716--134261256_[NTAGT]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 130,
+      "file": "2119_20260716--134261521_[大菠萝]VS[NTAGT].grbr",
+      "group": "2119_20260716--134261521_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 131,
+      "file": "2119_20260716--134261670_[大菠萝]VS[NTAGT].grbr",
+      "group": "2119_20260716--134261670_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 132,
+      "file": "2119_20260716--134262984_[Sy]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260716--134262984_[Sy]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 133,
+      "file": "2119_20260716--134263148_[skylurklin]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260716--134263148_[skylurklin]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 134,
+      "file": "2119_20260716--201371199_[Bastien]VS[御坂美琴天下第一].grbr",
+      "group": "2119_20260716--201371199_[Bastien]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 135,
+      "file": "2119_20260716--201371290_[御坂美琴天下第一]VS[DevMbuilds].grbr",
+      "group": "2119_20260716--201371290_[御坂美琴天下第一]VS[DevMbuilds].grbr"
+    },
+    {
+      "row_index": 136,
+      "file": "2119_20260716--201371405_[御坂美琴天下第一]VS[RATJARR].grbr",
+      "group": "2119_20260716--201371405_[御坂美琴天下第一]VS[RATJARR].grbr"
+    },
+    {
+      "row_index": 137,
+      "file": "2119_20260716--201372436_[1667092506]VS[my98765431].grbr",
+      "group": "2119_20260716--201372436_[1667092506]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 138,
+      "file": "2119_20260716--268481561_[my98765431]VS[时三].grbr",
+      "group": "2119_20260716--268481561_[my98765431]VS[时三].grbr"
+    },
+    {
+      "row_index": 139,
+      "file": "2119_20260716--268481624_[my98765431]VS[annota].grbr",
+      "group": "2119_20260716--268481624_[my98765431]VS[annota].grbr"
+    },
+    {
+      "row_index": 140,
+      "file": "2119_20260716--268481679_[annota]VS[my98765431].grbr",
+      "group": "2119_20260716--268481679_[annota]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 141,
+      "file": "2119_20260716--268482216_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260716--268482216_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 142,
+      "file": "2119_20260716--268482279_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260716--268482279_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 143,
+      "file": "2119_20260716--268482337_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260716--268482337_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 144,
+      "file": "2119_20260716--268482390_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260716--268482390_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 145,
+      "file": "2119_20260716--268482459_[my98765431]VS[猫头人].grbr",
+      "group": "2119_20260716--268482459_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 146,
+      "file": "2119_20260716--67154587_[银牌悍匪来福]VS[哈吉弓].grbr",
+      "group": "2119_20260716--67154587_[银牌悍匪来福]VS[哈吉弓].grbr"
+    },
+    {
+      "row_index": 147,
+      "file": "2203_20260716--201375095_[TiNaAch]VS[Dillo].grbr",
+      "group": "2203_20260716--201375095_[TiNaAch]VS[Dillo].grbr"
+    },
+    {
+      "row_index": 148,
+      "file": "2203_20260716--268484140_[你是蓬莱花仙]VS[谈笑风生07].grbr",
+      "group": "2203_20260716--268484140_[你是蓬莱花仙]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 149,
+      "file": "2203_20260717--134267687_[Steelsane]VS[TiNaAch].grbr",
+      "group": "2203_20260717--134267687_[Steelsane]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 150,
+      "file": "2203_20260717--134268113_[Alpaka]VS[TiNaAch].grbr",
+      "group": "2203_20260717--134268113_[Alpaka]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 151,
+      "file": "2203_20260717--134271636_[KSP-lapizz]VS[TiNaAch].grbr",
+      "group": "2203_20260717--134271636_[KSP-lapizz]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 152,
+      "file": "2203_20260717--134273127_[n_sacco]VS[你是蓬莱花仙].grbr",
+      "group": "2203_20260717--134273127_[n_sacco]VS[你是蓬莱花仙].grbr"
+    },
+    {
+      "row_index": 153,
+      "file": "2203_20260717--201375239_[TiNaAch]VS[Steelsane].grbr",
+      "group": "2203_20260717--201375239_[TiNaAch]VS[Steelsane].grbr"
+    },
+    {
+      "row_index": 154,
+      "file": "2203_20260717--201375387_[TiNaAch]VS[[TUFF] Mathismight].grbr",
+      "group": "2203_20260717--201375387_[TiNaAch]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 155,
+      "file": "2203_20260717--201375613_[TiNaAch]VS[Skillless One].grbr",
+      "group": "2203_20260717--201375613_[TiNaAch]VS[Skillless One].grbr"
+    },
+    {
+      "row_index": 156,
+      "file": "2203_20260717--201376112_[TiNaAch]VS[nightflash].grbr",
+      "group": "2203_20260717--201376112_[TiNaAch]VS[nightflash].grbr"
+    },
+    {
+      "row_index": 157,
+      "file": "2203_20260717--201376289_[TiNaAch]VS[[TUFF] Sparty].grbr",
+      "group": "2203_20260717--201376289_[TiNaAch]VS[[TUFF] Sparty].grbr"
+    },
+    {
+      "row_index": 158,
+      "file": "2203_20260717--201377307_[Charly]VS[御坂美琴天下第一].grbr",
+      "group": "2203_20260717--201377307_[Charly]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 159,
+      "file": "2203_20260717--201380334_[狂乱君]VS[TiNaAch].grbr",
+      "group": "2203_20260717--201380334_[狂乱君]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 160,
+      "file": "2203_20260717--201380837_[狂乱君]VS[TiNaAch].grbr",
+      "group": "2203_20260717--201380837_[狂乱君]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 161,
+      "file": "2203_20260717--201381066_[TiNaAch]VS[Spyrfyr].grbr",
+      "group": "2203_20260717--201381066_[TiNaAch]VS[Spyrfyr].grbr"
+    },
+    {
+      "row_index": 162,
+      "file": "2203_20260717--268484985_[你是蓬莱花仙]VS[TiNaAch].grbr",
+      "group": "2203_20260717--268484985_[你是蓬莱花仙]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 163,
+      "file": "2203_20260717--268488837_[TiNaAch]VS[3077481602].grbr",
+      "group": "2203_20260717--268488837_[TiNaAch]VS[3077481602].grbr"
+    },
+    {
+      "row_index": 164,
+      "file": "2203_20260717--268488897_[TiNaAch]VS[3077481602].grbr",
+      "group": "2203_20260717--268488897_[TiNaAch]VS[3077481602].grbr"
+    },
+    {
+      "row_index": 165,
+      "file": "2203_20260717--268488998_[TiNaAch]VS[[AUFF]Shadoff].grbr",
+      "group": "2203_20260717--268488998_[TiNaAch]VS[[AUFF]Shadoff].grbr"
+    },
+    {
+      "row_index": 166,
+      "file": "2203_20260717--268489113_[1156136367]VS[TiNaAch].grbr",
+      "group": "2203_20260717--268489113_[1156136367]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 167,
+      "file": "2203_20260717--268489275_[TiNaAch]VS[Steelsane].grbr",
+      "group": "2203_20260717--268489275_[TiNaAch]VS[Steelsane].grbr"
+    },
+    {
+      "row_index": 168,
+      "file": "2203_20260717--268489531_[TiNaAch]VS[1369550926].grbr",
+      "group": "2203_20260717--268489531_[TiNaAch]VS[1369550926].grbr"
+    },
+    {
+      "row_index": 169,
+      "file": "2203_20260717--268489763_[TiNaAch]VS[weqfgy].grbr",
+      "group": "2203_20260717--268489763_[TiNaAch]VS[weqfgy].grbr"
+    },
+    {
+      "row_index": 170,
+      "file": "2203_20260717--268489876_[TiNaAch]VS[固障祭启人].grbr",
+      "group": "2203_20260717--268489876_[TiNaAch]VS[固障祭启人].grbr"
+    },
+    {
+      "row_index": 171,
+      "file": "2203_20260717--67157919_[[BORK] 0dyssey]VS[TiNaAch].grbr",
+      "group": "2203_20260717--67157919_[[BORK] 0dyssey]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 172,
+      "file": "2203_20260717--67159270_[御坂美琴天下第一]VS[Tiamas].grbr",
+      "group": "2203_20260717--67159270_[御坂美琴天下第一]VS[Tiamas].grbr"
+    },
+    {
+      "row_index": 173,
+      "file": "2203_20260717--67159381_[御坂美琴天下第一]VS[KuzGUNcuK1.].grbr",
+      "group": "2203_20260717--67159381_[御坂美琴天下第一]VS[KuzGUNcuK1.].grbr"
+    },
+    {
+      "row_index": 174,
+      "file": "2203_20260717--67162577_[weqfgy]VS[TiNaAch].grbr",
+      "group": "2203_20260717--67162577_[weqfgy]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 175,
+      "file": "2203_20260717--67163163_[TiNaAch]VS[repmaster7].grbr",
+      "group": "2203_20260717--67163163_[TiNaAch]VS[repmaster7].grbr"
+    },
+    {
+      "row_index": 176,
+      "file": "2203_20260717--67163283_[你是蓬莱花仙]VS[TiNaAch].grbr",
+      "group": "2203_20260717--67163283_[你是蓬莱花仙]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 177,
+      "file": "2203_20260718--134273340_[沐晨风]VS[TiNaAch].grbr",
+      "group": "2203_20260718--134273340_[沐晨风]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 178,
+      "file": "2203_20260718--134273519_[沐晨风]VS[TiNaAch].grbr",
+      "group": "2203_20260718--134273519_[沐晨风]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 179,
+      "file": "2203_20260718--134276092_[Jimmy Platinum]VS[御坂美琴天下第一].grbr",
+      "group": "2203_20260718--134276092_[Jimmy Platinum]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 180,
+      "file": "2203_20260718--134278009_[[TUFF] Mathismight]VS[TiNaAch].grbr",
+      "group": "2203_20260718--134278009_[[TUFF] Mathismight]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 181,
+      "file": "2203_20260718--201383276_[[BORK] 0dyssey]VS[TiNaAch].grbr",
+      "group": "2203_20260718--201383276_[[BORK] 0dyssey]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 182,
+      "file": "2203_20260718--201386700_[TiNaAch]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2203_20260718--201386700_[TiNaAch]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 183,
+      "file": "2203_20260718--201386834_[TiNaAch]VS[Xxlaomamjj].grbr",
+      "group": "2203_20260718--201386834_[TiNaAch]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 184,
+      "file": "2203_20260718--201386965_[TiNaAch]VS[KSP-lapizz].grbr",
+      "group": "2203_20260718--201386965_[TiNaAch]VS[KSP-lapizz].grbr"
+    },
+    {
+      "row_index": 185,
+      "file": "2203_20260718--201387468_[TiNaAch]VS[Scion].grbr",
+      "group": "2203_20260718--201387468_[TiNaAch]VS[Scion].grbr"
+    },
+    {
+      "row_index": 186,
+      "file": "2203_20260718--201387672_[亚辛105]VS[TiNaAch].grbr",
+      "group": "2203_20260718--201387672_[亚辛105]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 187,
+      "file": "2203_20260718--201387949_[TiNaAch]VS[BunGrume].grbr",
+      "group": "2203_20260718--201387949_[TiNaAch]VS[BunGrume].grbr"
+    },
+    {
+      "row_index": 188,
+      "file": "2203_20260718--268491410_[[TUFF] Mathismight]VS[TiNaAch].grbr",
+      "group": "2203_20260718--268491410_[[TUFF] Mathismight]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 189,
+      "file": "2203_20260718--268491928_[[TUFF] Hero Ajax]VS[TiNaAch].grbr",
+      "group": "2203_20260718--268491928_[[TUFF] Hero Ajax]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 190,
+      "file": "2203_20260718--268496541_[老元元]VS[TiNaAch].grbr",
+      "group": "2203_20260718--268496541_[老元元]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 191,
+      "file": "2203_20260718--67164058_[TiNaAch]VS[Cyinst].grbr",
+      "group": "2203_20260718--67164058_[TiNaAch]VS[Cyinst].grbr"
+    },
+    {
+      "row_index": 192,
+      "file": "2203_20260718--67164540_[TiNaAch]VS[[TUFF] Mathismight].grbr",
+      "group": "2203_20260718--67164540_[TiNaAch]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 193,
+      "file": "2203_20260718--67164858_[TiNaAch]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2203_20260718--67164858_[TiNaAch]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 194,
+      "file": "2203_20260718--67170068_[单真]VS[TiNaAch].grbr",
+      "group": "2203_20260718--67170068_[单真]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 195,
+      "file": "2203_20260718--67170250_[单真]VS[TiNaAch].grbr",
+      "group": "2203_20260718--67170250_[单真]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 196,
+      "file": "2203_20260719--134280828_[B站鲨鱼菜鸟]VS[TiNaAch].grbr",
+      "group": "2203_20260719--134280828_[B站鲨鱼菜鸟]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 197,
+      "file": "2203_20260719--134281177_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr",
+      "group": "2203_20260719--134281177_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 198,
+      "file": "2203_20260719--134287249_[NTAGT]VS[单真].grbr",
+      "group": "2203_20260719--134287249_[NTAGT]VS[单真].grbr"
+    },
+    {
+      "row_index": 199,
+      "file": "2203_20260719--201389357_[亚辛105]VS[TiNaAch].grbr",
+      "group": "2203_20260719--201389357_[亚辛105]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 200,
+      "file": "2203_20260719--268498023_[偷吃贡品]VS[TiNaAch].grbr",
+      "group": "2203_20260719--268498023_[偷吃贡品]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 201,
+      "file": "2203_20260719--268498119_[偷吃贡品]VS[TiNaAch].grbr",
+      "group": "2203_20260719--268498119_[偷吃贡品]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 202,
+      "file": "2203_20260719--268503333_[NTAGT]VS[偷吃贡品].grbr",
+      "group": "2203_20260719--268503333_[NTAGT]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 203,
+      "file": "2203_20260719--268503451_[NTAGT]VS[偷吃贡品].grbr",
+      "group": "2203_20260719--268503451_[NTAGT]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 204,
+      "file": "2203_20260719--67171409_[TiNaAch]VS[亚辛105].grbr",
+      "group": "2203_20260719--67171409_[TiNaAch]VS[亚辛105].grbr"
+    },
+    {
+      "row_index": 205,
+      "file": "2203_20260719--67171556_[TiNaAch]VS[糖葫芦].grbr",
+      "group": "2203_20260719--67171556_[TiNaAch]VS[糖葫芦].grbr"
+    },
+    {
+      "row_index": 206,
+      "file": "2203_20260719--67176782_[Legion]VS[偷吃贡品].grbr",
+      "group": "2203_20260719--67176782_[Legion]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 207,
+      "file": "2203_20260719--67177298_[哈吉弓]VS[偷吃贡品].grbr",
+      "group": "2203_20260719--67177298_[哈吉弓]VS[偷吃贡品].grbr"
+    },
+    {
+      "row_index": 208,
+      "file": "2203_20260720--134287563_[NTAGT]VS[糖某人].grbr",
+      "group": "2203_20260720--134287563_[NTAGT]VS[糖某人].grbr"
+    },
+    {
+      "row_index": 209,
+      "file": "2203_20260720--134291932_[my98765431]VS[猫头人].grbr",
+      "group": "2203_20260720--134291932_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 210,
+      "file": "2203_20260720--134291997_[my98765431]VS[猫头人].grbr",
+      "group": "2203_20260720--134291997_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 211,
+      "file": "2203_20260720--134292058_[my98765431]VS[猫头人].grbr",
+      "group": "2203_20260720--134292058_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 212,
+      "file": "2203_20260720--134292112_[my98765431]VS[猫头人].grbr",
+      "group": "2203_20260720--134292112_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 213,
+      "file": "2203_20260720--201396086_[NTAGT]VS[大菠萝].grbr",
+      "group": "2203_20260720--201396086_[NTAGT]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 214,
+      "file": "2203_20260720--201401192_[TiNaAch]VS[Mahatma Gundhi].grbr",
+      "group": "2203_20260720--201401192_[TiNaAch]VS[Mahatma Gundhi].grbr"
+    },
+    {
+      "row_index": 215,
+      "file": "2203_20260720--201401498_[TiNaAch]VS[Spoon!].grbr",
+      "group": "2203_20260720--201401498_[TiNaAch]VS[Spoon!].grbr"
+    },
+    {
+      "row_index": 216,
+      "file": "2203_20260720--201401634_[TiNaAch]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2203_20260720--201401634_[TiNaAch]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 217,
+      "file": "2203_20260720--268505709_[核力量]VS[NTAGT].grbr",
+      "group": "2203_20260720--268505709_[核力量]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 218,
+      "file": "2203_20260720--268505957_[大菠萝]VS[NTAGT].grbr",
+      "group": "2203_20260720--268505957_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 219,
+      "file": "2203_20260720--268506056_[大菠萝]VS[NTAGT].grbr",
+      "group": "2203_20260720--268506056_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 220,
+      "file": "2203_20260720--268508190_[吾心吾行澄如明镜]VS[Grapeshot].grbr",
+      "group": "2203_20260720--268508190_[吾心吾行澄如明镜]VS[Grapeshot].grbr"
+    },
+    {
+      "row_index": 221,
+      "file": "2203_20260720--268508232_[吾心吾行澄如明镜]VS[[SUFF]Eliminati].grbr",
+      "group": "2203_20260720--268508232_[吾心吾行澄如明镜]VS[[SUFF]Eliminati].grbr"
+    },
+    {
+      "row_index": 222,
+      "file": "2203_20260720--268508279_[吾心吾行澄如明镜]VS[[SUFF]Eliminati].grbr",
+      "group": "2203_20260720--268508279_[吾心吾行澄如明镜]VS[[SUFF]Eliminati].grbr"
+    },
+    {
+      "row_index": 223,
+      "file": "2203_20260720--268508425_[吾心吾行澄如明镜]VS[ggglhf].grbr",
+      "group": "2203_20260720--268508425_[吾心吾行澄如明镜]VS[ggglhf].grbr"
+    },
+    {
+      "row_index": 224,
+      "file": "2203_20260720--67178375_[Grapeshot]VS[谈笑风生07].grbr",
+      "group": "2203_20260720--67178375_[Grapeshot]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 225,
+      "file": "2203_20260721--134296725_[Cortez]VS[吾心吾行澄如明镜].grbr",
+      "group": "2203_20260721--134296725_[Cortez]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 226,
+      "file": "2203_20260721--134297442_[Yukihiro]VS[白血夜].grbr",
+      "group": "2203_20260721--134297442_[Yukihiro]VS[白血夜].grbr"
+    },
+    {
+      "row_index": 227,
+      "file": "2203_20260721--201404720_[]VS[吾心吾行澄如明镜].grbr",
+      "group": "2203_20260721--201404720_[]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 228,
+      "file": "2203_20260721--201405472_[2191257866]VS[Werter].grbr",
+      "group": "2203_20260721--201405472_[2191257866]VS[Werter].grbr"
+    },
+    {
+      "row_index": 229,
+      "file": "2203_20260721--268513949_[LL]VS[吾心吾行澄如明镜].grbr",
+      "group": "2203_20260721--268513949_[LL]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 230,
+      "file": "2203_20260721--67185589_[[TUFF] Mathismight]VS[1久6].grbr",
+      "group": "2203_20260721--67185589_[[TUFF] Mathismight]VS[1久6].grbr"
+    },
+    {
+      "row_index": 231,
+      "file": "2203_20260721--67186917_[ken14730]VS[吾心吾行澄如明镜].grbr",
+      "group": "2203_20260721--67186917_[ken14730]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 232,
+      "file": "2203_20260721--67187588_[糕手]VS[御坂美琴天下第一].grbr",
+      "group": "2203_20260721--67187588_[糕手]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 233,
+      "file": "2207_20260721--134298186_[御坂美琴天下第一]VS[Exospheric].grbr",
+      "group": "2207_20260721--134298186_[御坂美琴天下第一]VS[Exospheric].grbr"
+    },
+    {
+      "row_index": 234,
+      "file": "2207_20260721--134298428_[御坂美琴天下第一]VS[峥丶].grbr",
+      "group": "2207_20260721--134298428_[御坂美琴天下第一]VS[峥丶].grbr"
+    },
+    {
+      "row_index": 235,
+      "file": "2207_20260721--134298571_[御坂美琴天下第一]VS[owenr].grbr",
+      "group": "2207_20260721--134298571_[御坂美琴天下第一]VS[owenr].grbr"
+    },
+    {
+      "row_index": 236,
+      "file": "2207_20260721--134298632_[御坂美琴天下第一]VS[grisholq].grbr",
+      "group": "2207_20260721--134298632_[御坂美琴天下第一]VS[grisholq].grbr"
+    },
+    {
+      "row_index": 237,
+      "file": "2207_20260721--134298752_[B站鲨鱼菜鸟]VS[Xxlaomamjj].grbr",
+      "group": "2207_20260721--134298752_[B站鲨鱼菜鸟]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 238,
+      "file": "2207_20260721--134298847_[影病病原体]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260721--134298847_[影病病原体]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 239,
+      "file": "2207_20260721--134298920_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260721--134298920_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 240,
+      "file": "2207_20260721--134299201_[若安]VS[ThisSpaceIsForRent].grbr",
+      "group": "2207_20260721--134299201_[若安]VS[ThisSpaceIsForRent].grbr"
+    },
+    {
+      "row_index": 241,
+      "file": "2207_20260721--134299315_[Apokalipsis]VS[若安].grbr",
+      "group": "2207_20260721--134299315_[Apokalipsis]VS[若安].grbr"
+    },
+    {
+      "row_index": 242,
+      "file": "2207_20260721--134299343_[青山见我应如是]VS[kono团长da].grbr",
+      "group": "2207_20260721--134299343_[青山见我应如是]VS[kono团长da].grbr"
+    },
+    {
+      "row_index": 243,
+      "file": "2207_20260721--134299405_[若安]VS[Horrible Will].grbr",
+      "group": "2207_20260721--134299405_[若安]VS[Horrible Will].grbr"
+    },
+    {
+      "row_index": 244,
+      "file": "2207_20260721--134299556_[青山见我应如是]VS[若安].grbr",
+      "group": "2207_20260721--134299556_[青山见我应如是]VS[若安].grbr"
+    },
+    {
+      "row_index": 245,
+      "file": "2207_20260721--134299669_[若安]VS[青山见我应如是].grbr",
+      "group": "2207_20260721--134299669_[若安]VS[青山见我应如是].grbr"
+    },
+    {
+      "row_index": 246,
+      "file": "2207_20260721--268515573_[小萝卜]VS[若安].grbr",
+      "group": "2207_20260721--268515573_[小萝卜]VS[若安].grbr"
+    },
+    {
+      "row_index": 247,
+      "file": "2207_20260721--268515634_[Gok]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260721--268515634_[Gok]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 248,
+      "file": "2207_20260721--268515813_[Exospheric]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260721--268515813_[Exospheric]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 249,
+      "file": "2207_20260721--268516550_[ThisSpaceIsForRent]VS[若安].grbr",
+      "group": "2207_20260721--268516550_[ThisSpaceIsForRent]VS[若安].grbr"
+    },
+    {
+      "row_index": 250,
+      "file": "2207_20260721--67188287_[]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260721--67188287_[]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 251,
+      "file": "2207_20260721--67188735_[Phan晓鸦]VS[树与灯皇].grbr",
+      "group": "2207_20260721--67188735_[Phan晓鸦]VS[树与灯皇].grbr"
+    },
+    {
+      "row_index": 252,
+      "file": "2207_20260721--67188858_[Phan晓鸦]VS[metwaste].grbr",
+      "group": "2207_20260721--67188858_[Phan晓鸦]VS[metwaste].grbr"
+    },
+    {
+      "row_index": 253,
+      "file": "2207_20260721--67188948_[匪兽弝涒]VS[Phan晓鸦].grbr",
+      "group": "2207_20260721--67188948_[匪兽弝涒]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 254,
+      "file": "2207_20260721--67189039_[Phan晓鸦]VS[Casper].grbr",
+      "group": "2207_20260721--67189039_[Phan晓鸦]VS[Casper].grbr"
+    },
+    {
+      "row_index": 255,
+      "file": "2207_20260722--134300057_[青山见我应如是]VS[若安].grbr",
+      "group": "2207_20260722--134300057_[青山见我应如是]VS[若安].grbr"
+    },
+    {
+      "row_index": 256,
+      "file": "2207_20260722--134302411_[[BORK] Irelia]VS[B站指挥官教官].grbr",
+      "group": "2207_20260722--134302411_[[BORK] Irelia]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 257,
+      "file": "2207_20260722--134302729_[吾心吾行澄如明镜]VS[Cielmer].grbr",
+      "group": "2207_20260722--134302729_[吾心吾行澄如明镜]VS[Cielmer].grbr"
+    },
+    {
+      "row_index": 258,
+      "file": "2207_20260722--134302803_[吾心吾行澄如明镜]VS[vitashou].grbr",
+      "group": "2207_20260722--134302803_[吾心吾行澄如明镜]VS[vitashou].grbr"
+    },
+    {
+      "row_index": 259,
+      "file": "2207_20260722--134304749_[76561198345240505]VS[Phan晓鸦].grbr",
+      "group": "2207_20260722--134304749_[76561198345240505]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 260,
+      "file": "2207_20260722--201410396_[吾心吾行澄如明镜]VS[[TUFF] Deadeagle].grbr",
+      "group": "2207_20260722--201410396_[吾心吾行澄如明镜]VS[[TUFF] Deadeagle].grbr"
+    },
+    {
+      "row_index": 261,
+      "file": "2207_20260722--201410485_[吾心吾行澄如明镜]VS[[TUFF] Deadeagle].grbr",
+      "group": "2207_20260722--201410485_[吾心吾行澄如明镜]VS[[TUFF] Deadeagle].grbr"
+    },
+    {
+      "row_index": 262,
+      "file": "2207_20260722--201411430_[Neon Black]VS[Fragile & Complicated].grbr",
+      "group": "2207_20260722--201411430_[Neon Black]VS[Fragile & Complicated].grbr"
+    },
+    {
+      "row_index": 263,
+      "file": "2207_20260722--201411612_[空空空]VS[孚林].grbr",
+      "group": "2207_20260722--201411612_[空空空]VS[孚林].grbr"
+    },
+    {
+      "row_index": 264,
+      "file": "2207_20260722--201413841_[Cyinst]VS[TiNaAch].grbr",
+      "group": "2207_20260722--201413841_[Cyinst]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 265,
+      "file": "2207_20260722--201414034_[AST Z.  Shionxavy Bot]VS[若安].grbr",
+      "group": "2207_20260722--201414034_[AST Z.  Shionxavy Bot]VS[若安].grbr"
+    },
+    {
+      "row_index": 266,
+      "file": "2207_20260722--201414199_[B站鲨鱼菜鸟]VS[TiNaAch].grbr",
+      "group": "2207_20260722--201414199_[B站鲨鱼菜鸟]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 267,
+      "file": "2207_20260722--268518251_[Angry Wombat]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260722--268518251_[Angry Wombat]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 268,
+      "file": "2207_20260722--268519390_[[TUFF] Wumple Doodle]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260722--268519390_[[TUFF] Wumple Doodle]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 269,
+      "file": "2207_20260722--268519654_[[TUFF] Sparty]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260722--268519654_[[TUFF] Sparty]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 270,
+      "file": "2207_20260722--268520712_[Mööp.]VS[无限晴空城].grbr",
+      "group": "2207_20260722--268520712_[Mööp.]VS[无限晴空城].grbr"
+    },
+    {
+      "row_index": 271,
+      "file": "2207_20260722--268520841_[cbrbn]VS[孚林].grbr",
+      "group": "2207_20260722--268520841_[cbrbn]VS[孚林].grbr"
+    },
+    {
+      "row_index": 272,
+      "file": "2207_20260722--268522110_[若安]VS[Mahatma Gundhi].grbr",
+      "group": "2207_20260722--268522110_[若安]VS[Mahatma Gundhi].grbr"
+    },
+    {
+      "row_index": 273,
+      "file": "2207_20260722--268522118_[sinbiziumu]VS[wnulll].grbr",
+      "group": "2207_20260722--268522118_[sinbiziumu]VS[wnulll].grbr"
+    },
+    {
+      "row_index": 274,
+      "file": "2207_20260722--268522182_[若安]VS[[SUFF] Chemtrails].grbr",
+      "group": "2207_20260722--268522182_[若安]VS[[SUFF] Chemtrails].grbr"
+    },
+    {
+      "row_index": 275,
+      "file": "2207_20260722--268522290_[若安]VS[cobaltwhite].grbr",
+      "group": "2207_20260722--268522290_[若安]VS[cobaltwhite].grbr"
+    },
+    {
+      "row_index": 276,
+      "file": "2207_20260722--268522360_[若安]VS[爱吃辣的仙人].grbr",
+      "group": "2207_20260722--268522360_[若安]VS[爱吃辣的仙人].grbr"
+    },
+    {
+      "row_index": 277,
+      "file": "2207_20260722--268522479_[若安]VS[glassbåten].grbr",
+      "group": "2207_20260722--268522479_[若安]VS[glassbåten].grbr"
+    },
+    {
+      "row_index": 278,
+      "file": "2207_20260722--268522585_[若安]VS[DE普_SEEK].grbr",
+      "group": "2207_20260722--268522585_[若安]VS[DE普_SEEK].grbr"
+    },
+    {
+      "row_index": 279,
+      "file": "2207_20260722--268522693_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260722--268522693_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 280,
+      "file": "2207_20260722--268522789_[若安]VS[大西瓜].grbr",
+      "group": "2207_20260722--268522789_[若安]VS[大西瓜].grbr"
+    },
+    {
+      "row_index": 281,
+      "file": "2207_20260722--268522935_[KSP-lapizz]VS[若安].grbr",
+      "group": "2207_20260722--268522935_[KSP-lapizz]VS[若安].grbr"
+    },
+    {
+      "row_index": 282,
+      "file": "2207_20260722--268523033_[若安]VS[大西瓜].grbr",
+      "group": "2207_20260722--268523033_[若安]VS[大西瓜].grbr"
+    },
+    {
+      "row_index": 283,
+      "file": "2207_20260722--268523195_[若安]VS[AST Z.  Shionxavy Bot].grbr",
+      "group": "2207_20260722--268523195_[若安]VS[AST Z.  Shionxavy Bot].grbr"
+    },
+    {
+      "row_index": 284,
+      "file": "2207_20260722--67190678_[吾心吾行澄如明镜]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260722--67190678_[吾心吾行澄如明镜]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 285,
+      "file": "2207_20260722--67190801_[吾心吾行澄如明镜]VS[hossine.138111].grbr",
+      "group": "2207_20260722--67190801_[吾心吾行澄如明镜]VS[hossine.138111].grbr"
+    },
+    {
+      "row_index": 286,
+      "file": "2207_20260722--67191140_[吾心吾行澄如明镜]VS[[BUFF]DiscountTomHardy].grbr",
+      "group": "2207_20260722--67191140_[吾心吾行澄如明镜]VS[[BUFF]DiscountTomHardy].grbr"
+    },
+    {
+      "row_index": 287,
+      "file": "2207_20260722--67191311_[吾心吾行澄如明镜]VS[Stunter].grbr",
+      "group": "2207_20260722--67191311_[吾心吾行澄如明镜]VS[Stunter].grbr"
+    },
+    {
+      "row_index": 288,
+      "file": "2207_20260722--67191514_[吾心吾行澄如明镜]VS[cast].grbr",
+      "group": "2207_20260722--67191514_[吾心吾行澄如明镜]VS[cast].grbr"
+    },
+    {
+      "row_index": 289,
+      "file": "2207_20260722--67191631_[吾心吾行澄如明镜]VS[Ragin'].grbr",
+      "group": "2207_20260722--67191631_[吾心吾行澄如明镜]VS[Ragin'].grbr"
+    },
+    {
+      "row_index": 290,
+      "file": "2207_20260722--67191813_[吾心吾行澄如明镜]VS[达飞文].grbr",
+      "group": "2207_20260722--67191813_[吾心吾行澄如明镜]VS[达飞文].grbr"
+    },
+    {
+      "row_index": 291,
+      "file": "2207_20260722--67191915_[吾心吾行澄如明镜]VS[ryderlive].grbr",
+      "group": "2207_20260722--67191915_[吾心吾行澄如明镜]VS[ryderlive].grbr"
+    },
+    {
+      "row_index": 292,
+      "file": "2207_20260722--67191975_[吾心吾行澄如明镜]VS[Wilbur].grbr",
+      "group": "2207_20260722--67191975_[吾心吾行澄如明镜]VS[Wilbur].grbr"
+    },
+    {
+      "row_index": 293,
+      "file": "2207_20260722--67193252_[NANSIFAN]VS[Midnight Coffee].grbr",
+      "group": "2207_20260722--67193252_[NANSIFAN]VS[Midnight Coffee].grbr"
+    },
+    {
+      "row_index": 294,
+      "file": "2207_20260722--67193492_[孚林]VS[Beef--Supreme].grbr",
+      "group": "2207_20260722--67193492_[孚林]VS[Beef--Supreme].grbr"
+    },
+    {
+      "row_index": 295,
+      "file": "2207_20260722--67194835_[Phan晓鸦]VS[radoslav].grbr",
+      "group": "2207_20260722--67194835_[Phan晓鸦]VS[radoslav].grbr"
+    },
+    {
+      "row_index": 296,
+      "file": "2207_20260722--67195008_[Phan晓鸦]VS[Zeheron].grbr",
+      "group": "2207_20260722--67195008_[Phan晓鸦]VS[Zeheron].grbr"
+    },
+    {
+      "row_index": 297,
+      "file": "2207_20260722--67195105_[Phan晓鸦]VS[秘制烤卤蛋].grbr",
+      "group": "2207_20260722--67195105_[Phan晓鸦]VS[秘制烤卤蛋].grbr"
+    },
+    {
+      "row_index": 298,
+      "file": "2207_20260722--67195240_[Phan晓鸦]VS[temlost].grbr",
+      "group": "2207_20260722--67195240_[Phan晓鸦]VS[temlost].grbr"
+    },
+    {
+      "row_index": 299,
+      "file": "2207_20260722--67195319_[Phan晓鸦]VS[metwaste].grbr",
+      "group": "2207_20260722--67195319_[Phan晓鸦]VS[metwaste].grbr"
+    },
+    {
+      "row_index": 300,
+      "file": "2207_20260723--134310609_[Phan晓鸦]VS[4$2].grbr",
+      "group": "2207_20260723--134310609_[Phan晓鸦]VS[4$2].grbr"
+    },
+    {
+      "row_index": 301,
+      "file": "2207_20260723--134310704_[Phan晓鸦]VS[AiharaYuzu].grbr",
+      "group": "2207_20260723--134310704_[Phan晓鸦]VS[AiharaYuzu].grbr"
+    },
+    {
+      "row_index": 302,
+      "file": "2207_20260723--268526023_[吾心吾行澄如明镜]VS[ken14730].grbr",
+      "group": "2207_20260723--268526023_[吾心吾行澄如明镜]VS[ken14730].grbr"
+    },
+    {
+      "row_index": 303,
+      "file": "2207_20260723--268528996_[4Cer]VS[Choco cream frap].grbr",
+      "group": "2207_20260723--268528996_[4Cer]VS[Choco cream frap].grbr"
+    },
+    {
+      "row_index": 304,
+      "file": "2207_20260723--268529124_[若安]VS[Este].grbr",
+      "group": "2207_20260723--268529124_[若安]VS[Este].grbr"
+    },
+    {
+      "row_index": 305,
+      "file": "2207_20260723--67196062_[TiNaAch]VS[AST Z.  Shionxavy Bot].grbr",
+      "group": "2207_20260723--67196062_[TiNaAch]VS[AST Z.  Shionxavy Bot].grbr"
+    },
+    {
+      "row_index": 306,
+      "file": "2207_20260723--67196241_[wOOt]VS[TiNaAch].grbr",
+      "group": "2207_20260723--67196241_[wOOt]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 307,
+      "file": "2207_20260723--67198531_[[BORK] oddz]VS[B站指挥官教官].grbr",
+      "group": "2207_20260723--67198531_[[BORK] oddz]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 308,
+      "file": "2207_20260724--134219297_[Piglet]VS[Phan晓鸦].grbr",
+      "group": "2207_20260724--134219297_[Piglet]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 309,
+      "file": "2207_20260724--134219364_[nagumo]VS[my98765431].grbr",
+      "group": "2207_20260724--134219364_[nagumo]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 310,
+      "file": "2207_20260724--134219527_[甜甜喵喵小饼干]VS[若安].grbr",
+      "group": "2207_20260724--134219527_[甜甜喵喵小饼干]VS[若安].grbr"
+    },
+    {
+      "row_index": 311,
+      "file": "2207_20260724--134219981_[若安]VS[神秘菠萝男].grbr",
+      "group": "2207_20260724--134219981_[若安]VS[神秘菠萝男].grbr"
+    },
+    {
+      "row_index": 312,
+      "file": "2207_20260724--134312310_[erwinhe33]VS[Geiler_Knueppel.].grbr",
+      "group": "2207_20260724--134312310_[erwinhe33]VS[Geiler_Knueppel.].grbr"
+    },
+    {
+      "row_index": 313,
+      "file": "2207_20260724--134315430_[谈笑风生07]VS[Daiwa Scarlet].grbr",
+      "group": "2207_20260724--134315430_[谈笑风生07]VS[Daiwa Scarlet].grbr"
+    },
+    {
+      "row_index": 314,
+      "file": "2207_20260724--201420697_[谈笑风生07]VS[青山见我应如是].grbr",
+      "group": "2207_20260724--201420697_[谈笑风生07]VS[青山见我应如是].grbr"
+    },
+    {
+      "row_index": 315,
+      "file": "2207_20260724--268436620_[my98765431]VS[魔法少女西琳琳].grbr",
+      "group": "2207_20260724--268436620_[my98765431]VS[魔法少女西琳琳].grbr"
+    },
+    {
+      "row_index": 316,
+      "file": "2207_20260724--268436634_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--268436634_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 317,
+      "file": "2207_20260724--268436705_[流影]VS[1久6].grbr",
+      "group": "2207_20260724--268436705_[流影]VS[1久6].grbr"
+    },
+    {
+      "row_index": 318,
+      "file": "2207_20260724--268436725_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--268436725_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 319,
+      "file": "2207_20260724--268436769_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--268436769_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 320,
+      "file": "2207_20260724--268436822_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--268436822_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 321,
+      "file": "2207_20260724--268436978_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--268436978_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 322,
+      "file": "2207_20260724--268437218_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--268437218_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 323,
+      "file": "2207_20260724--268437770_[SirParr]VS[Phan晓鸦].grbr",
+      "group": "2207_20260724--268437770_[SirParr]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 324,
+      "file": "2207_20260724--268529889_[Xarku]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260724--268529889_[Xarku]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 325,
+      "file": "2207_20260724--268530046_[吾心吾行澄如明镜]VS[Clutch☆Kid☆Kieron].grbr",
+      "group": "2207_20260724--268530046_[吾心吾行澄如明镜]VS[Clutch☆Kid☆Kieron].grbr"
+    },
+    {
+      "row_index": 326,
+      "file": "2207_20260724--268530298_[吾心吾行澄如明镜]VS[LangolierxD].grbr",
+      "group": "2207_20260724--268530298_[吾心吾行澄如明镜]VS[LangolierxD].grbr"
+    },
+    {
+      "row_index": 327,
+      "file": "2207_20260724--268530621_[吾心吾行澄如明镜]VS[PANPIANO].grbr",
+      "group": "2207_20260724--268530621_[吾心吾行澄如明镜]VS[PANPIANO].grbr"
+    },
+    {
+      "row_index": 328,
+      "file": "2207_20260724--268532888_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr",
+      "group": "2207_20260724--268532888_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 329,
+      "file": "2207_20260724--268532918_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr",
+      "group": "2207_20260724--268532918_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 330,
+      "file": "2207_20260724--67109862_[魔法少女西琳琳]VS[白].grbr",
+      "group": "2207_20260724--67109862_[魔法少女西琳琳]VS[白].grbr"
+    },
+    {
+      "row_index": 331,
+      "file": "2207_20260724--67110512_[DE普_SEEK]VS[Phan晓鸦].grbr",
+      "group": "2207_20260724--67110512_[DE普_SEEK]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 332,
+      "file": "2207_20260724--67110611_[Phan晓鸦]VS[KinKaviKrey].grbr",
+      "group": "2207_20260724--67110611_[Phan晓鸦]VS[KinKaviKrey].grbr"
+    },
+    {
+      "row_index": 333,
+      "file": "2207_20260724--67110631_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260724--67110631_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 334,
+      "file": "2207_20260724--67110719_[Phan晓鸦]VS[Matze].grbr",
+      "group": "2207_20260724--67110719_[Phan晓鸦]VS[Matze].grbr"
+    },
+    {
+      "row_index": 335,
+      "file": "2207_20260724--67110792_[Phan晓鸦]VS[Koopy].grbr",
+      "group": "2207_20260724--67110792_[Phan晓鸦]VS[Koopy].grbr"
+    },
+    {
+      "row_index": 336,
+      "file": "2207_20260724--67110899_[Phan晓鸦]VS[frank guo].grbr",
+      "group": "2207_20260724--67110899_[Phan晓鸦]VS[frank guo].grbr"
+    },
+    {
+      "row_index": 337,
+      "file": "2207_20260724--67201786_[青山见我应如是]VS[谈笑风生07].grbr",
+      "group": "2207_20260724--67201786_[青山见我应如是]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 338,
+      "file": "2207_20260724--67201848_[青山见我应如是]VS[谈笑风生07].grbr",
+      "group": "2207_20260724--67201848_[青山见我应如是]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 339,
+      "file": "2207_20260724--67201931_[TiNaAch]VS[大菠萝].grbr",
+      "group": "2207_20260724--67201931_[TiNaAch]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 340,
+      "file": "2207_20260724--67201956_[青山见我应如是]VS[谈笑风生07].grbr",
+      "group": "2207_20260724--67201956_[青山见我应如是]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 341,
+      "file": "2207_20260724--67202194_[Mahatma Gundhi]VS[TiNaAch].grbr",
+      "group": "2207_20260724--67202194_[Mahatma Gundhi]VS[TiNaAch].grbr"
+    },
+    {
+      "row_index": 342,
+      "file": "2207_20260724--67202537_[[SUFF]Eliminati]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260724--67202537_[[SUFF]Eliminati]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 343,
+      "file": "2207_20260724--67202834_[CULTRoxas]VS[吾心吾行澄如明镜].grbr",
+      "group": "2207_20260724--67202834_[CULTRoxas]VS[吾心吾行澄如明镜].grbr"
+    },
+    {
+      "row_index": 344,
+      "file": "2207_20260724--67204570_[吾心吾行澄如明镜]VS[WiSeMan].grbr",
+      "group": "2207_20260724--67204570_[吾心吾行澄如明镜]VS[WiSeMan].grbr"
+    },
+    {
+      "row_index": 345,
+      "file": "2207_20260724--67204776_[AndrewtheBanker]VS[孚林].grbr",
+      "group": "2207_20260724--67204776_[AndrewtheBanker]VS[孚林].grbr"
+    },
+    {
+      "row_index": 346,
+      "file": "2207_20260725--134222735_[B站指挥官教官]VS[The_Mancinist].grbr",
+      "group": "2207_20260725--134222735_[B站指挥官教官]VS[The_Mancinist].grbr"
+    },
+    {
+      "row_index": 347,
+      "file": "2207_20260725--134222805_[B站指挥官教官]VS[v.veek].grbr",
+      "group": "2207_20260725--134222805_[B站指挥官教官]VS[v.veek].grbr"
+    },
+    {
+      "row_index": 348,
+      "file": "2207_20260725--134222871_[B站指挥官教官]VS[4$2].grbr",
+      "group": "2207_20260725--134222871_[B站指挥官教官]VS[4$2].grbr"
+    },
+    {
+      "row_index": 349,
+      "file": "2207_20260725--134222939_[B站指挥官教官]VS[Reaper Duck].grbr",
+      "group": "2207_20260725--134222939_[B站指挥官教官]VS[Reaper Duck].grbr"
+    },
+    {
+      "row_index": 350,
+      "file": "2207_20260725--134225420_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260725--134225420_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 351,
+      "file": "2207_20260725--134225558_[哈宝哈宝蛤不思饱Habsburg]VS[IsaaX].grbr",
+      "group": "2207_20260725--134225558_[哈宝哈宝蛤不思饱Habsburg]VS[IsaaX].grbr"
+    },
+    {
+      "row_index": 352,
+      "file": "2207_20260725--134225731_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr",
+      "group": "2207_20260725--134225731_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr"
+    },
+    {
+      "row_index": 353,
+      "file": "2207_20260725--134225904_[[TUFF] Mathismight]VS[IsaaX].grbr",
+      "group": "2207_20260725--134225904_[[TUFF] Mathismight]VS[IsaaX].grbr"
+    },
+    {
+      "row_index": 354,
+      "file": "2207_20260725--134226047_[[TUFF] Mathismight]VS[IsaaX].grbr",
+      "group": "2207_20260725--134226047_[[TUFF] Mathismight]VS[IsaaX].grbr"
+    },
+    {
+      "row_index": 355,
+      "file": "2207_20260725--134226194_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260725--134226194_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 356,
+      "file": "2207_20260725--134226289_[Faceshooter]VS[my98765431].grbr",
+      "group": "2207_20260725--134226289_[Faceshooter]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 357,
+      "file": "2207_20260725--134226300_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260725--134226300_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 358,
+      "file": "2207_20260725--134226414_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260725--134226414_[你是蓬莱花仙]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 359,
+      "file": "2207_20260725--134226561_[哈宝哈宝蛤不思饱Habsburg]VS[你是蓬莱花仙].grbr",
+      "group": "2207_20260725--134226561_[哈宝哈宝蛤不思饱Habsburg]VS[你是蓬莱花仙].grbr"
+    },
+    {
+      "row_index": 360,
+      "file": "2207_20260725--201328991_[TiNaAch]VS[大菠萝].grbr",
+      "group": "2207_20260725--201328991_[TiNaAch]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 361,
+      "file": "2207_20260725--201329398_[TiNaAch]VS[沐晨风].grbr",
+      "group": "2207_20260725--201329398_[TiNaAch]VS[沐晨风].grbr"
+    },
+    {
+      "row_index": 362,
+      "file": "2207_20260725--201329699_[1久6]VS[老元元].grbr",
+      "group": "2207_20260725--201329699_[1久6]VS[老元元].grbr"
+    },
+    {
+      "row_index": 363,
+      "file": "2207_20260725--201333345_[TelestoMyBesto]VS[谈笑风生07].grbr",
+      "group": "2207_20260725--201333345_[TelestoMyBesto]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 364,
+      "file": "2207_20260725--201334038_[Choco cream frap]VS[EpicFail].grbr",
+      "group": "2207_20260725--201334038_[Choco cream frap]VS[EpicFail].grbr"
+    },
+    {
+      "row_index": 365,
+      "file": "2207_20260725--201335253_[Earihi]VS[Geckogod5].grbr",
+      "group": "2207_20260725--201335253_[Earihi]VS[Geckogod5].grbr"
+    },
+    {
+      "row_index": 366,
+      "file": "2207_20260725--201335477_[你干啥呀赵玉田儿]VS[JDub].grbr",
+      "group": "2207_20260725--201335477_[你干啥呀赵玉田儿]VS[JDub].grbr"
+    },
+    {
+      "row_index": 367,
+      "file": "2207_20260725--268442282_[谈笑风生07]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260725--268442282_[谈笑风生07]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 368,
+      "file": "2207_20260725--268442422_[谈笑风生07]VS[法国赌神刘华强].grbr",
+      "group": "2207_20260725--268442422_[谈笑风生07]VS[法国赌神刘华强].grbr"
+    },
+    {
+      "row_index": 369,
+      "file": "2207_20260725--268443374_[minogame]VS[先锋小队].grbr",
+      "group": "2207_20260725--268443374_[minogame]VS[先锋小队].grbr"
+    },
+    {
+      "row_index": 370,
+      "file": "2207_20260725--268444325_[OysterKing]VS[LTG].grbr",
+      "group": "2207_20260725--268444325_[OysterKing]VS[LTG].grbr"
+    },
+    {
+      "row_index": 371,
+      "file": "2207_20260725--67115069_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260725--67115069_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 372,
+      "file": "2207_20260725--67116357_[Mapleria]VS[三口一瓶大雪碧，一口一根巧乐兹].grbr",
+      "group": "2207_20260725--67116357_[Mapleria]VS[三口一瓶大雪碧，一口一根巧乐兹].grbr"
+    },
+    {
+      "row_index": 373,
+      "file": "2207_20260725--67116698_[卡爆斯基]VS[White Lion].grbr",
+      "group": "2207_20260725--67116698_[卡爆斯基]VS[White Lion].grbr"
+    },
+    {
+      "row_index": 374,
+      "file": "2207_20260725--67117367_[若安]VS[洛琪希_今天吃什么].grbr",
+      "group": "2207_20260725--67117367_[若安]VS[洛琪希_今天吃什么].grbr"
+    },
+    {
+      "row_index": 375,
+      "file": "2207_20260725--67117526_[若安]VS[LL].grbr",
+      "group": "2207_20260725--67117526_[若安]VS[LL].grbr"
+    },
+    {
+      "row_index": 376,
+      "file": "2207_20260726--134226714_[哈宝哈宝蛤不思饱Habsburg]VS[你是蓬莱花仙].grbr",
+      "group": "2207_20260726--134226714_[哈宝哈宝蛤不思饱Habsburg]VS[你是蓬莱花仙].grbr"
+    },
+    {
+      "row_index": 377,
+      "file": "2207_20260726--134226818_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr",
+      "group": "2207_20260726--134226818_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr"
+    },
+    {
+      "row_index": 378,
+      "file": "2207_20260726--134226908_[Squeezer]VS[JDub].grbr",
+      "group": "2207_20260726--134226908_[Squeezer]VS[JDub].grbr"
+    },
+    {
+      "row_index": 379,
+      "file": "2207_20260726--134232345_[YYKR]VS[my98765431].grbr",
+      "group": "2207_20260726--134232345_[YYKR]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 380,
+      "file": "2207_20260726--134232911_[B站鲨鱼菜鸟]VS[笨蔬菜].grbr",
+      "group": "2207_20260726--134232911_[B站鲨鱼菜鸟]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 381,
+      "file": "2207_20260726--134233028_[B站鲨鱼菜鸟]VS[若安].grbr",
+      "group": "2207_20260726--134233028_[B站鲨鱼菜鸟]VS[若安].grbr"
+    },
+    {
+      "row_index": 382,
+      "file": "2207_20260726--134233128_[B站鲨鱼菜鸟]VS[若安].grbr",
+      "group": "2207_20260726--134233128_[B站鲨鱼菜鸟]VS[若安].grbr"
+    },
+    {
+      "row_index": 383,
+      "file": "2207_20260726--134233443_[Chaoming]VS[my98765431].grbr",
+      "group": "2207_20260726--134233443_[Chaoming]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 384,
+      "file": "2207_20260726--201339090_[笨蔬菜]VS[狂乱君].grbr",
+      "group": "2207_20260726--201339090_[笨蔬菜]VS[狂乱君].grbr"
+    },
+    {
+      "row_index": 385,
+      "file": "2207_20260726--201339117_[涅槃]VS[Cielmer].grbr",
+      "group": "2207_20260726--201339117_[涅槃]VS[Cielmer].grbr"
+    },
+    {
+      "row_index": 386,
+      "file": "2207_20260726--201339161_[狂乱君]VS[笨蔬菜].grbr",
+      "group": "2207_20260726--201339161_[狂乱君]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 387,
+      "file": "2207_20260726--201339179_[涅槃]VS[original].grbr",
+      "group": "2207_20260726--201339179_[涅槃]VS[original].grbr"
+    },
+    {
+      "row_index": 388,
+      "file": "2207_20260726--201339255_[涅槃]VS[流年碎影].grbr",
+      "group": "2207_20260726--201339255_[涅槃]VS[流年碎影].grbr"
+    },
+    {
+      "row_index": 389,
+      "file": "2207_20260726--201339256_[笨蔬菜]VS[1156136367].grbr",
+      "group": "2207_20260726--201339256_[笨蔬菜]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 390,
+      "file": "2207_20260726--201339303_[Choco cream frap]VS[Sloe Driver].grbr",
+      "group": "2207_20260726--201339303_[Choco cream frap]VS[Sloe Driver].grbr"
+    },
+    {
+      "row_index": 391,
+      "file": "2207_20260726--201339324_[笨蔬菜]VS[cobaltwhite].grbr",
+      "group": "2207_20260726--201339324_[笨蔬菜]VS[cobaltwhite].grbr"
+    },
+    {
+      "row_index": 392,
+      "file": "2207_20260726--201339380_[雅木茶（汝可识的此阵）]VS[Choco cream frap].grbr",
+      "group": "2207_20260726--201339380_[雅木茶（汝可识的此阵）]VS[Choco cream frap].grbr"
+    },
+    {
+      "row_index": 393,
+      "file": "2207_20260726--201339413_[涅槃]VS[头好痒，要长黄毛了].grbr",
+      "group": "2207_20260726--201339413_[涅槃]VS[头好痒，要长黄毛了].grbr"
+    },
+    {
+      "row_index": 394,
+      "file": "2207_20260726--201339415_[cobaltwhite]VS[笨蔬菜].grbr",
+      "group": "2207_20260726--201339415_[cobaltwhite]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 395,
+      "file": "2207_20260726--201339512_[笨蔬菜]VS[银牌悍匪来福].grbr",
+      "group": "2207_20260726--201339512_[笨蔬菜]VS[银牌悍匪来福].grbr"
+    },
+    {
+      "row_index": 396,
+      "file": "2207_20260726--201339613_[笨蔬菜]VS[洞庭仙山但生橘].grbr",
+      "group": "2207_20260726--201339613_[笨蔬菜]VS[洞庭仙山但生橘].grbr"
+    },
+    {
+      "row_index": 397,
+      "file": "2207_20260726--201341517_[STiX]VS[Choco cream frap].grbr",
+      "group": "2207_20260726--201341517_[STiX]VS[Choco cream frap].grbr"
+    },
+    {
+      "row_index": 398,
+      "file": "2207_20260726--201341531_[若安]VS[笨蔬菜].grbr",
+      "group": "2207_20260726--201341531_[若安]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 399,
+      "file": "2207_20260726--201341625_[daItchy84]VS[Choco cream frap].grbr",
+      "group": "2207_20260726--201341625_[daItchy84]VS[Choco cream frap].grbr"
+    },
+    {
+      "row_index": 400,
+      "file": "2207_20260726--201341664_[若安]VS[Xxlaomamjj].grbr",
+      "group": "2207_20260726--201341664_[若安]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 401,
+      "file": "2207_20260726--201341772_[-NR- Sir Limbo]VS[Choco cream frap].grbr",
+      "group": "2207_20260726--201341772_[-NR- Sir Limbo]VS[Choco cream frap].grbr"
+    },
+    {
+      "row_index": 402,
+      "file": "2207_20260726--201341841_[笨蔬菜]VS[RanSOm nOtE].grbr",
+      "group": "2207_20260726--201341841_[笨蔬菜]VS[RanSOm nOtE].grbr"
+    },
+    {
+      "row_index": 403,
+      "file": "2207_20260726--201341881_[Korkular]VS[Choco cream frap].grbr",
+      "group": "2207_20260726--201341881_[Korkular]VS[Choco cream frap].grbr"
+    },
+    {
+      "row_index": 404,
+      "file": "2207_20260726--201341991_[18217101125]VS[笨蔬菜].grbr",
+      "group": "2207_20260726--201341991_[18217101125]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 405,
+      "file": "2207_20260726--201342058_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260726--201342058_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 406,
+      "file": "2207_20260726--201342160_[笨蔬菜]VS[ludwig_van].grbr",
+      "group": "2207_20260726--201342160_[笨蔬菜]VS[ludwig_van].grbr"
+    },
+    {
+      "row_index": 407,
+      "file": "2207_20260726--201342195_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260726--201342195_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 408,
+      "file": "2207_20260726--268444621_[JDub]VS[依然永远不死].grbr",
+      "group": "2207_20260726--268444621_[JDub]VS[依然永远不死].grbr"
+    },
+    {
+      "row_index": 409,
+      "file": "2207_20260726--268448401_[Nataraja]VS[涅槃].grbr",
+      "group": "2207_20260726--268448401_[Nataraja]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 410,
+      "file": "2207_20260726--268450581_[1米8的长腿辉]VS[1706553653].grbr",
+      "group": "2207_20260726--268450581_[1米8的长腿辉]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 411,
+      "file": "2207_20260726--268450609_[Gnome]VS[1706553653].grbr",
+      "group": "2207_20260726--268450609_[Gnome]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 412,
+      "file": "2207_20260726--67122954_[my98765431]VS[Tarvin].grbr",
+      "group": "2207_20260726--67122954_[my98765431]VS[Tarvin].grbr"
+    },
+    {
+      "row_index": 413,
+      "file": "2207_20260726--67124207_[三口一瓶大雪碧，一口一根巧乐兹]VS[杨华].grbr",
+      "group": "2207_20260726--67124207_[三口一瓶大雪碧，一口一根巧乐兹]VS[杨华].grbr"
+    },
+    {
+      "row_index": 414,
+      "file": "2207_20260726--67124273_[719531405]VS[笨蔬菜].grbr",
+      "group": "2207_20260726--67124273_[719531405]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 415,
+      "file": "2207_20260727--134233694_[B站鲨鱼菜鸟]VS[若安].grbr",
+      "group": "2207_20260727--134233694_[B站鲨鱼菜鸟]VS[若安].grbr"
+    },
+    {
+      "row_index": 416,
+      "file": "2207_20260727--134233816_[B站鲨鱼菜鸟]VS[若安].grbr",
+      "group": "2207_20260727--134233816_[B站鲨鱼菜鸟]VS[若安].grbr"
+    },
+    {
+      "row_index": 417,
+      "file": "2207_20260727--134234533_[Tensler]VS[涅槃].grbr",
+      "group": "2207_20260727--134234533_[Tensler]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 418,
+      "file": "2207_20260727--134236583_[孚林]VS[秦心].grbr",
+      "group": "2207_20260727--134236583_[孚林]VS[秦心].grbr"
+    },
+    {
+      "row_index": 419,
+      "file": "2207_20260727--134236659_[孚林]VS[Crusher].grbr",
+      "group": "2207_20260727--134236659_[孚林]VS[Crusher].grbr"
+    },
+    {
+      "row_index": 420,
+      "file": "2207_20260727--134236736_[The_Cuttlefish]VS[my98765431].grbr",
+      "group": "2207_20260727--134236736_[The_Cuttlefish]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 421,
+      "file": "2207_20260727--134237106_[1706553653]VS[Wade D].grbr",
+      "group": "2207_20260727--134237106_[1706553653]VS[Wade D].grbr"
+    },
+    {
+      "row_index": 422,
+      "file": "2207_20260727--134237140_[1706553653]VS[Camilo.Y].grbr",
+      "group": "2207_20260727--134237140_[1706553653]VS[Camilo.Y].grbr"
+    },
+    {
+      "row_index": 423,
+      "file": "2207_20260727--134237216_[1706553653]VS[爱门~].grbr",
+      "group": "2207_20260727--134237216_[1706553653]VS[爱门~].grbr"
+    },
+    {
+      "row_index": 424,
+      "file": "2207_20260727--134237218_[]VS[my98765431].grbr",
+      "group": "2207_20260727--134237218_[]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 425,
+      "file": "2207_20260727--134237639_[konstantinliebers]VS[1706553653].grbr",
+      "group": "2207_20260727--134237639_[konstantinliebers]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 426,
+      "file": "2207_20260727--134237929_[my98765431]VS[空气].grbr",
+      "group": "2207_20260727--134237929_[my98765431]VS[空气].grbr"
+    },
+    {
+      "row_index": 427,
+      "file": "2207_20260727--134237972_[my98765431]VS[空气].grbr",
+      "group": "2207_20260727--134237972_[my98765431]VS[空气].grbr"
+    },
+    {
+      "row_index": 428,
+      "file": "2207_20260727--134238061_[空气]VS[my98765431].grbr",
+      "group": "2207_20260727--134238061_[空气]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 429,
+      "file": "2207_20260727--134238167_[CrazyCreek]VS[涅槃].grbr",
+      "group": "2207_20260727--134238167_[CrazyCreek]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 430,
+      "file": "2207_20260727--134238272_[涅槃]VS[Pantsuman].grbr",
+      "group": "2207_20260727--134238272_[涅槃]VS[Pantsuman].grbr"
+    },
+    {
+      "row_index": 431,
+      "file": "2207_20260727--134238336_[Steelsane]VS[涅槃].grbr",
+      "group": "2207_20260727--134238336_[Steelsane]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 432,
+      "file": "2207_20260727--134238421_[秦心]VS[Phan晓鸦].grbr",
+      "group": "2207_20260727--134238421_[秦心]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 433,
+      "file": "2207_20260727--134238653_[Phan晓鸦]VS[iceice].grbr",
+      "group": "2207_20260727--134238653_[Phan晓鸦]VS[iceice].grbr"
+    },
+    {
+      "row_index": 434,
+      "file": "2207_20260727--134238859_[Phan晓鸦]VS[e.hawk].grbr",
+      "group": "2207_20260727--134238859_[Phan晓鸦]VS[e.hawk].grbr"
+    },
+    {
+      "row_index": 435,
+      "file": "2207_20260727--134238904_[大西瓜🍉]VS[NTAGT].grbr",
+      "group": "2207_20260727--134238904_[大西瓜🍉]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 436,
+      "file": "2207_20260727--134239092_[Phan晓鸦]VS[FlammenwerferOnkel].grbr",
+      "group": "2207_20260727--134239092_[Phan晓鸦]VS[FlammenwerferOnkel].grbr"
+    },
+    {
+      "row_index": 437,
+      "file": "2207_20260727--134239380_[NTAGT]VS[洛琪希_今天吃什么].grbr",
+      "group": "2207_20260727--134239380_[NTAGT]VS[洛琪希_今天吃什么].grbr"
+    },
+    {
+      "row_index": 438,
+      "file": "2207_20260727--134239484_[[TUFF] Mathismight]VS[若安].grbr",
+      "group": "2207_20260727--134239484_[[TUFF] Mathismight]VS[若安].grbr"
+    },
+    {
+      "row_index": 439,
+      "file": "2207_20260727--134239521_[NTAGT]VS[洛琪希_今天吃什么].grbr",
+      "group": "2207_20260727--134239521_[NTAGT]VS[洛琪希_今天吃什么].grbr"
+    },
+    {
+      "row_index": 440,
+      "file": "2207_20260727--201342390_[若安]VS[antimyon].grbr",
+      "group": "2207_20260727--201342390_[若安]VS[antimyon].grbr"
+    },
+    {
+      "row_index": 441,
+      "file": "2207_20260727--201344953_[1706553653]VS[gatyapin1203].grbr",
+      "group": "2207_20260727--201344953_[1706553653]VS[gatyapin1203].grbr"
+    },
+    {
+      "row_index": 442,
+      "file": "2207_20260727--201345026_[1706553653]VS[有本事来甲弹对抗！].grbr",
+      "group": "2207_20260727--201345026_[1706553653]VS[有本事来甲弹对抗！].grbr"
+    },
+    {
+      "row_index": 443,
+      "file": "2207_20260727--201345436_[1706553653]VS[Dorrian].grbr",
+      "group": "2207_20260727--201345436_[1706553653]VS[Dorrian].grbr"
+    },
+    {
+      "row_index": 444,
+      "file": "2207_20260727--201346165_[Crusher]VS[涅槃].grbr",
+      "group": "2207_20260727--201346165_[Crusher]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 445,
+      "file": "2207_20260727--201346206_[StaleDoughnuts]VS[1706553653].grbr",
+      "group": "2207_20260727--201346206_[StaleDoughnuts]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 446,
+      "file": "2207_20260727--201346208_[获野千寻]VS[涅槃].grbr",
+      "group": "2207_20260727--201346208_[获野千寻]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 447,
+      "file": "2207_20260727--201346265_[Crusher]VS[涅槃].grbr",
+      "group": "2207_20260727--201346265_[Crusher]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 448,
+      "file": "2207_20260727--201346520_[Tensler]VS[1706553653].grbr",
+      "group": "2207_20260727--201346520_[Tensler]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 449,
+      "file": "2207_20260727--201346733_[burned]VS[涅槃].grbr",
+      "group": "2207_20260727--201346733_[burned]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 450,
+      "file": "2207_20260727--201347440_[Aldrak]VS[Phan晓鸦].grbr",
+      "group": "2207_20260727--201347440_[Aldrak]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 451,
+      "file": "2207_20260727--201347623_[my98765431]VS[Angel`御魔].grbr",
+      "group": "2207_20260727--201347623_[my98765431]VS[Angel`御魔].grbr"
+    },
+    {
+      "row_index": 452,
+      "file": "2207_20260727--201347726_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260727--201347726_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 453,
+      "file": "2207_20260727--201347737_[Stones141]VS[chrissnake].grbr",
+      "group": "2207_20260727--201347737_[Stones141]VS[chrissnake].grbr"
+    },
+    {
+      "row_index": 454,
+      "file": "2207_20260727--201347778_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260727--201347778_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 455,
+      "file": "2207_20260727--201347832_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260727--201347832_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 456,
+      "file": "2207_20260727--201347909_[my98765431]VS[猫头人].grbr",
+      "group": "2207_20260727--201347909_[my98765431]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 457,
+      "file": "2207_20260727--201348145_[消逝即永恒]VS[Hermann the German].grbr",
+      "group": "2207_20260727--201348145_[消逝即永恒]VS[Hermann the German].grbr"
+    },
+    {
+      "row_index": 458,
+      "file": "2207_20260727--268452710_[Krelious]VS[涅槃].grbr",
+      "group": "2207_20260727--268452710_[Krelious]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 459,
+      "file": "2207_20260727--268454227_[کhotgunکnake]VS[1706553653].grbr",
+      "group": "2207_20260727--268454227_[کhotgunکnake]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 460,
+      "file": "2207_20260727--268454814_[my98765431]VS[Raize].grbr",
+      "group": "2207_20260727--268454814_[my98765431]VS[Raize].grbr"
+    },
+    {
+      "row_index": 461,
+      "file": "2207_20260727--268454906_[波西米亚闹事酒鬼]VS[my98765431].grbr",
+      "group": "2207_20260727--268454906_[波西米亚闹事酒鬼]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 462,
+      "file": "2207_20260727--268454976_[my98765431]VS[纳须弥于芥子].grbr",
+      "group": "2207_20260727--268454976_[my98765431]VS[纳须弥于芥子].grbr"
+    },
+    {
+      "row_index": 463,
+      "file": "2207_20260727--268455017_[Crusher]VS[孚林].grbr",
+      "group": "2207_20260727--268455017_[Crusher]VS[孚林].grbr"
+    },
+    {
+      "row_index": 464,
+      "file": "2207_20260727--268455114_[Chet Manley]VS[my98765431].grbr",
+      "group": "2207_20260727--268455114_[Chet Manley]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 465,
+      "file": "2207_20260727--268455252_[涅槃]VS[Manaka].grbr",
+      "group": "2207_20260727--268455252_[涅槃]VS[Manaka].grbr"
+    },
+    {
+      "row_index": 466,
+      "file": "2207_20260727--268455367_[my98765431]VS[Manaka].grbr",
+      "group": "2207_20260727--268455367_[my98765431]VS[Manaka].grbr"
+    },
+    {
+      "row_index": 467,
+      "file": "2207_20260727--268455375_[涅槃]VS[zhaojie_qinhuanju].grbr",
+      "group": "2207_20260727--268455375_[涅槃]VS[zhaojie_qinhuanju].grbr"
+    },
+    {
+      "row_index": 468,
+      "file": "2207_20260727--268455384_[windnora]VS[跳伞给我，包到].grbr",
+      "group": "2207_20260727--268455384_[windnora]VS[跳伞给我，包到].grbr"
+    },
+    {
+      "row_index": 469,
+      "file": "2207_20260727--268455438_[Tumtururum]VS[孚林].grbr",
+      "group": "2207_20260727--268455438_[Tumtururum]VS[孚林].grbr"
+    },
+    {
+      "row_index": 470,
+      "file": "2207_20260727--268455598_[my98765431]VS[valahddin].grbr",
+      "group": "2207_20260727--268455598_[my98765431]VS[valahddin].grbr"
+    },
+    {
+      "row_index": 471,
+      "file": "2207_20260727--268455849_[my98765431]VS[纳格兰的天空].grbr",
+      "group": "2207_20260727--268455849_[my98765431]VS[纳格兰的天空].grbr"
+    },
+    {
+      "row_index": 472,
+      "file": "2207_20260727--268456047_[孚林]VS[].grbr",
+      "group": "2207_20260727--268456047_[孚林]VS[].grbr"
+    },
+    {
+      "row_index": 473,
+      "file": "2207_20260727--268456888_[25561968]VS[菜中菜老登零—院长].grbr",
+      "group": "2207_20260727--268456888_[25561968]VS[菜中菜老登零—院长].grbr"
+    },
+    {
+      "row_index": 474,
+      "file": "2207_20260727--268457006_[若安]VS[少年郎].grbr",
+      "group": "2207_20260727--268457006_[若安]VS[少年郎].grbr"
+    },
+    {
+      "row_index": 475,
+      "file": "2207_20260727--268457086_[若安]VS[Leonhard Oiler].grbr",
+      "group": "2207_20260727--268457086_[若安]VS[Leonhard Oiler].grbr"
+    },
+    {
+      "row_index": 476,
+      "file": "2207_20260727--268457213_[若安]VS[Leonhard Oiler].grbr",
+      "group": "2207_20260727--268457213_[若安]VS[Leonhard Oiler].grbr"
+    },
+    {
+      "row_index": 477,
+      "file": "2207_20260727--268457221_[NakGwanLon]VS[Phan晓鸦].grbr",
+      "group": "2207_20260727--268457221_[NakGwanLon]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 478,
+      "file": "2207_20260727--268457265_[ArturMc]VS[NTAGT].grbr",
+      "group": "2207_20260727--268457265_[ArturMc]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 479,
+      "file": "2207_20260727--268457306_[若安]VS[Dzemp].grbr",
+      "group": "2207_20260727--268457306_[若安]VS[Dzemp].grbr"
+    },
+    {
+      "row_index": 480,
+      "file": "2207_20260727--268457403_[若安]VS[大西瓜].grbr",
+      "group": "2207_20260727--268457403_[若安]VS[大西瓜].grbr"
+    },
+    {
+      "row_index": 481,
+      "file": "2207_20260727--268457424_[笨蔬菜]VS[Apotekariy].grbr",
+      "group": "2207_20260727--268457424_[笨蔬菜]VS[Apotekariy].grbr"
+    },
+    {
+      "row_index": 482,
+      "file": "2207_20260727--268457511_[Senti]VS[消逝即永恒].grbr",
+      "group": "2207_20260727--268457511_[Senti]VS[消逝即永恒].grbr"
+    },
+    {
+      "row_index": 483,
+      "file": "2207_20260727--268457568_[若安]VS[Dzemp].grbr",
+      "group": "2207_20260727--268457568_[若安]VS[Dzemp].grbr"
+    },
+    {
+      "row_index": 484,
+      "file": "2207_20260727--67124515_[闪电幽魂水野爱]VS[my98765431].grbr",
+      "group": "2207_20260727--67124515_[闪电幽魂水野爱]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 485,
+      "file": "2207_20260727--67125224_[1706553653]VS[WuselWaldo].grbr",
+      "group": "2207_20260727--67125224_[1706553653]VS[WuselWaldo].grbr"
+    },
+    {
+      "row_index": 486,
+      "file": "2207_20260727--67127785_[Virlors]VS[my98765431].grbr",
+      "group": "2207_20260727--67127785_[Virlors]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 487,
+      "file": "2207_20260727--67127884_[Cielmer]VS[涅槃].grbr",
+      "group": "2207_20260727--67127884_[Cielmer]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 488,
+      "file": "2207_20260727--67127996_[Roxas II]VS[涅槃].grbr",
+      "group": "2207_20260727--67127996_[Roxas II]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 489,
+      "file": "2207_20260727--67128030_[VenoMStalinGraD]VS[涅槃].grbr",
+      "group": "2207_20260727--67128030_[VenoMStalinGraD]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 490,
+      "file": "2207_20260727--67128272_[userG35ElvJzXC]VS[涅槃].grbr",
+      "group": "2207_20260727--67128272_[userG35ElvJzXC]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 491,
+      "file": "2207_20260727--67128301_[6KilleR]VS[my98765431].grbr",
+      "group": "2207_20260727--67128301_[6KilleR]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 492,
+      "file": "2207_20260727--67128332_[Maximix]VS[my98765431].grbr",
+      "group": "2207_20260727--67128332_[Maximix]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 493,
+      "file": "2207_20260727--67128714_[涅槃]VS[ArturMc].grbr",
+      "group": "2207_20260727--67128714_[涅槃]VS[ArturMc].grbr"
+    },
+    {
+      "row_index": 494,
+      "file": "2207_20260727--67129267_[废儿嘞]VS[Phan晓鸦].grbr",
+      "group": "2207_20260727--67129267_[废儿嘞]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 495,
+      "file": "2207_20260727--67129504_[fiddler]VS[Phan晓鸦].grbr",
+      "group": "2207_20260727--67129504_[fiddler]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 496,
+      "file": "2207_20260727--67129681_[滕老斜]VS[elhard].grbr",
+      "group": "2207_20260727--67129681_[滕老斜]VS[elhard].grbr"
+    },
+    {
+      "row_index": 497,
+      "file": "2207_20260727--67129744_[Jarr0d]VS[ray].grbr",
+      "group": "2207_20260727--67129744_[Jarr0d]VS[ray].grbr"
+    },
+    {
+      "row_index": 498,
+      "file": "2207_20260727--67130013_[Ligne Maginot]VS[Phan晓鸦].grbr",
+      "group": "2207_20260727--67130013_[Ligne Maginot]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 499,
+      "file": "2207_20260727--67130158_[B站鲨鱼菜鸟]VS[笨蔬菜].grbr",
+      "group": "2207_20260727--67130158_[B站鲨鱼菜鸟]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 500,
+      "file": "2207_20260728--134239666_[NTAGT]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260728--134239666_[NTAGT]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 501,
+      "file": "2207_20260728--134242120_[Mindzeye8]VS[1706553653].grbr",
+      "group": "2207_20260728--134242120_[Mindzeye8]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 502,
+      "file": "2207_20260728--134242472_[Tachi]VS[涅槃].grbr",
+      "group": "2207_20260728--134242472_[Tachi]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 503,
+      "file": "2207_20260728--134242523_[Tachi]VS[涅槃].grbr",
+      "group": "2207_20260728--134242523_[Tachi]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 504,
+      "file": "2207_20260728--134243175_[谁没点小情绪]VS[涅槃].grbr",
+      "group": "2207_20260728--134243175_[谁没点小情绪]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 505,
+      "file": "2207_20260728--134243383_[Тетоnka]VS[涅槃].grbr",
+      "group": "2207_20260728--134243383_[Тетоnka]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 506,
+      "file": "2207_20260728--134243752_[永和的风]VS[亚莎神选伦巴].grbr",
+      "group": "2207_20260728--134243752_[永和的风]VS[亚莎神选伦巴].grbr"
+    },
+    {
+      "row_index": 507,
+      "file": "2207_20260728--134244934_[谈笑风生07]VS[Moondroid].grbr",
+      "group": "2207_20260728--134244934_[谈笑风生07]VS[Moondroid].grbr"
+    },
+    {
+      "row_index": 508,
+      "file": "2207_20260728--134245121_[谈笑风生07]VS[盐津夏].grbr",
+      "group": "2207_20260728--134245121_[谈笑风生07]VS[盐津夏].grbr"
+    },
+    {
+      "row_index": 509,
+      "file": "2207_20260728--134245130_[my98765431]VS[小黑].grbr",
+      "group": "2207_20260728--134245130_[my98765431]VS[小黑].grbr"
+    },
+    {
+      "row_index": 510,
+      "file": "2207_20260728--134245224_[my98765431]VS[].grbr",
+      "group": "2207_20260728--134245224_[my98765431]VS[].grbr"
+    },
+    {
+      "row_index": 511,
+      "file": "2207_20260728--134245253_[谈笑风生07]VS[盐津夏].grbr",
+      "group": "2207_20260728--134245253_[谈笑风生07]VS[盐津夏].grbr"
+    },
+    {
+      "row_index": 512,
+      "file": "2207_20260728--134245303_[my98765431]VS[[BORK] Abel].grbr",
+      "group": "2207_20260728--134245303_[my98765431]VS[[BORK] Abel].grbr"
+    },
+    {
+      "row_index": 513,
+      "file": "2207_20260728--201351386_[ppppppppppppppj]VS[涅槃].grbr",
+      "group": "2207_20260728--201351386_[ppppppppppppppj]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 514,
+      "file": "2207_20260728--201352365_[哈吉弓]VS[NTAGT].grbr",
+      "group": "2207_20260728--201352365_[哈吉弓]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 515,
+      "file": "2207_20260728--201352654_[Quack]VS[duliangyin].grbr",
+      "group": "2207_20260728--201352654_[Quack]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 516,
+      "file": "2207_20260728--201352786_[duliangyin]VS[Pooty].grbr",
+      "group": "2207_20260728--201352786_[duliangyin]VS[Pooty].grbr"
+    },
+    {
+      "row_index": 517,
+      "file": "2207_20260728--201353032_[duliangyin]VS[Gias].grbr",
+      "group": "2207_20260728--201353032_[duliangyin]VS[Gias].grbr"
+    },
+    {
+      "row_index": 518,
+      "file": "2207_20260728--201353819_[WhiteLikeBlack]VS[Phan晓鸦].grbr",
+      "group": "2207_20260728--201353819_[WhiteLikeBlack]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 519,
+      "file": "2207_20260728--201353927_[笨蔬菜]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260728--201353927_[笨蔬菜]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 520,
+      "file": "2207_20260728--201354370_[孚林]VS[meow].grbr",
+      "group": "2207_20260728--201354370_[孚林]VS[meow].grbr"
+    },
+    {
+      "row_index": 521,
+      "file": "2207_20260728--201354582_[wezal]VS[my98765431].grbr",
+      "group": "2207_20260728--201354582_[wezal]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 522,
+      "file": "2207_20260728--201354619_[EpicFail]VS[Reimu].grbr",
+      "group": "2207_20260728--201354619_[EpicFail]VS[Reimu].grbr"
+    },
+    {
+      "row_index": 523,
+      "file": "2207_20260728--268457781_[若安]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260728--268457781_[若安]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 524,
+      "file": "2207_20260728--268460305_[JollyJester]VS[1706553653].grbr",
+      "group": "2207_20260728--268460305_[JollyJester]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 525,
+      "file": "2207_20260728--268460369_[AFRIKA]VS[1706553653].grbr",
+      "group": "2207_20260728--268460369_[AFRIKA]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 526,
+      "file": "2207_20260728--268460475_[canipetyourdog2]VS[1706553653].grbr",
+      "group": "2207_20260728--268460475_[canipetyourdog2]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 527,
+      "file": "2207_20260728--268460526_[YANGz]VS[1706553653].grbr",
+      "group": "2207_20260728--268460526_[YANGz]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 528,
+      "file": "2207_20260728--268460609_[GoKRS]VS[1706553653].grbr",
+      "group": "2207_20260728--268460609_[GoKRS]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 529,
+      "file": "2207_20260728--268460869_[老元元]VS[涅槃].grbr",
+      "group": "2207_20260728--268460869_[老元元]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 530,
+      "file": "2207_20260728--268461210_[1706553653]VS[Anas].grbr",
+      "group": "2207_20260728--268461210_[1706553653]VS[Anas].grbr"
+    },
+    {
+      "row_index": 531,
+      "file": "2207_20260728--268461475_[涅槃]VS[Wilbur].grbr",
+      "group": "2207_20260728--268461475_[涅槃]VS[Wilbur].grbr"
+    },
+    {
+      "row_index": 532,
+      "file": "2207_20260728--268461529_[涅槃]VS[波西米亚闹事酒鬼].grbr",
+      "group": "2207_20260728--268461529_[涅槃]VS[波西米亚闹事酒鬼].grbr"
+    },
+    {
+      "row_index": 533,
+      "file": "2207_20260728--268461600_[Kimj]VS[涅槃].grbr",
+      "group": "2207_20260728--268461600_[Kimj]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 534,
+      "file": "2207_20260728--268461622_[1706553653]VS[Ploum].grbr",
+      "group": "2207_20260728--268461622_[1706553653]VS[Ploum].grbr"
+    },
+    {
+      "row_index": 535,
+      "file": "2207_20260728--268461686_[狂乱君]VS[NTAGT].grbr",
+      "group": "2207_20260728--268461686_[狂乱君]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 536,
+      "file": "2207_20260728--268461704_[涅槃]VS[fiddler].grbr",
+      "group": "2207_20260728--268461704_[涅槃]VS[fiddler].grbr"
+    },
+    {
+      "row_index": 537,
+      "file": "2207_20260728--268461776_[涅槃]VS[核力量].grbr",
+      "group": "2207_20260728--268461776_[涅槃]VS[核力量].grbr"
+    },
+    {
+      "row_index": 538,
+      "file": "2207_20260728--268461942_[秘制烤卤蛋]VS[1706553653].grbr",
+      "group": "2207_20260728--268461942_[秘制烤卤蛋]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 539,
+      "file": "2207_20260728--268463079_[RASH]VS[Phan晓鸦].grbr",
+      "group": "2207_20260728--268463079_[RASH]VS[Phan晓鸦].grbr"
+    },
+    {
+      "row_index": 540,
+      "file": "2207_20260728--268463443_[Xxlaomamjj]VS[若安].grbr",
+      "group": "2207_20260728--268463443_[Xxlaomamjj]VS[若安].grbr"
+    },
+    {
+      "row_index": 541,
+      "file": "2207_20260728--268463593_[Xxlaomamjj]VS[若安].grbr",
+      "group": "2207_20260728--268463593_[Xxlaomamjj]VS[若安].grbr"
+    },
+    {
+      "row_index": 542,
+      "file": "2207_20260728--268463644_[Reimu]VS[sunlight_hao].grbr",
+      "group": "2207_20260728--268463644_[Reimu]VS[sunlight_hao].grbr"
+    },
+    {
+      "row_index": 543,
+      "file": "2207_20260728--67134787_[RATTENFlCKER]VS[duliangyin].grbr",
+      "group": "2207_20260728--67134787_[RATTENFlCKER]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 544,
+      "file": "2207_20260728--67135061_[taskmaster-]VS[NonaKoi].grbr",
+      "group": "2207_20260728--67135061_[taskmaster-]VS[NonaKoi].grbr"
+    },
+    {
+      "row_index": 545,
+      "file": "2207_20260728--67135306_[zzyylpzzm]VS[Neutrino].grbr",
+      "group": "2207_20260728--67135306_[zzyylpzzm]VS[Neutrino].grbr"
+    },
+    {
+      "row_index": 546,
+      "file": "2207_20260728--67135348_[Phan晓鸦]VS[Not Today].grbr",
+      "group": "2207_20260728--67135348_[Phan晓鸦]VS[Not Today].grbr"
+    },
+    {
+      "row_index": 547,
+      "file": "2207_20260728--67135532_[Phan晓鸦]VS[billy].grbr",
+      "group": "2207_20260728--67135532_[Phan晓鸦]VS[billy].grbr"
+    },
+    {
+      "row_index": 548,
+      "file": "2207_20260728--67135674_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260728--67135674_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 549,
+      "file": "2207_20260728--67135890_[Phan晓鸦]VS[Lobotomite].grbr",
+      "group": "2207_20260728--67135890_[Phan晓鸦]VS[Lobotomite].grbr"
+    },
+    {
+      "row_index": 550,
+      "file": "2207_20260728--67135906_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260728--67135906_[若安]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 551,
+      "file": "2207_20260728--67135990_[Phan晓鸦]VS[8237905].grbr",
+      "group": "2207_20260728--67135990_[Phan晓鸦]VS[8237905].grbr"
+    },
+    {
+      "row_index": 552,
+      "file": "2207_20260728--67136014_[若安]VS[谈笑风生07](1).grbr",
+      "group": "2207_20260728--67136014_[若安]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 553,
+      "file": "2207_20260728--67136014_[若安]VS[谈笑风生07].grbr",
+      "group": "2207_20260728--67136014_[若安]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 554,
+      "file": "2207_20260728--67136252_[若安]VS[Xxlaomamjj].grbr",
+      "group": "2207_20260728--67136252_[若安]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 555,
+      "file": "2207_20260728--67136397_[若安]VS[Xxlaomamjj].grbr",
+      "group": "2207_20260728--67136397_[若安]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 556,
+      "file": "2207_20260729--134245856_[juliensam23]VS[my98765431].grbr",
+      "group": "2207_20260729--134245856_[juliensam23]VS[my98765431].grbr"
+    },
+    {
+      "row_index": 557,
+      "file": "2207_20260729--134246155_[MMR SANTA]VS[Mark二].grbr",
+      "group": "2207_20260729--134246155_[MMR SANTA]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 558,
+      "file": "2207_20260729--134246295_[[TUFF] Mathismight]VS[Mark二].grbr",
+      "group": "2207_20260729--134246295_[[TUFF] Mathismight]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 559,
+      "file": "2207_20260729--134246434_[Mark二]VS[Ragin'].grbr",
+      "group": "2207_20260729--134246434_[Mark二]VS[Ragin'].grbr"
+    },
+    {
+      "row_index": 560,
+      "file": "2207_20260729--134246985_[1久6]VS[nightflash].grbr",
+      "group": "2207_20260729--134246985_[1久6]VS[nightflash].grbr"
+    },
+    {
+      "row_index": 561,
+      "file": "2207_20260729--134248804_[[Park09]CULTUFFANCLUB]VS[B站指挥官教官].grbr",
+      "group": "2207_20260729--134248804_[[Park09]CULTUFFANCLUB]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 562,
+      "file": "2207_20260729--134249431_[Yrutan]VS[duliangyin].grbr",
+      "group": "2207_20260729--134249431_[Yrutan]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 563,
+      "file": "2207_20260729--134249709_[涅槃]VS[freitag].grbr",
+      "group": "2207_20260729--134249709_[涅槃]VS[freitag].grbr"
+    },
+    {
+      "row_index": 564,
+      "file": "2207_20260729--134249818_[涅槃]VS[Reignandpals].grbr",
+      "group": "2207_20260729--134249818_[涅槃]VS[Reignandpals].grbr"
+    },
+    {
+      "row_index": 565,
+      "file": "2207_20260729--134249876_[涅槃]VS[IAintYourBroBrah].grbr",
+      "group": "2207_20260729--134249876_[涅槃]VS[IAintYourBroBrah].grbr"
+    },
+    {
+      "row_index": 566,
+      "file": "2207_20260729--134250062_[Stan Pauly]VS[涅槃].grbr",
+      "group": "2207_20260729--134250062_[Stan Pauly]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 567,
+      "file": "2207_20260729--134250802_[NTAGT]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260729--134250802_[NTAGT]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 568,
+      "file": "2207_20260729--134251187_[NTAGT]VS[TelestoMyBesto].grbr",
+      "group": "2207_20260729--134251187_[NTAGT]VS[TelestoMyBesto].grbr"
+    },
+    {
+      "row_index": 569,
+      "file": "2207_20260729--201357712_[18217101125]VS[B站指挥官教官].grbr",
+      "group": "2207_20260729--201357712_[18217101125]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 570,
+      "file": "2207_20260729--201357900_[涅槃]VS[Dr.Seldon].grbr",
+      "group": "2207_20260729--201357900_[涅槃]VS[Dr.Seldon].grbr"
+    },
+    {
+      "row_index": 571,
+      "file": "2207_20260729--201358407_[devsnspa]VS[花生eyjObo1].grbr",
+      "group": "2207_20260729--201358407_[devsnspa]VS[花生eyjObo1].grbr"
+    },
+    {
+      "row_index": 572,
+      "file": "2207_20260729--201358464_[devsnspa]VS[花生eyjObo1].grbr",
+      "group": "2207_20260729--201358464_[devsnspa]VS[花生eyjObo1].grbr"
+    },
+    {
+      "row_index": 573,
+      "file": "2207_20260729--201358674_[shurga]VS[duliangyin].grbr",
+      "group": "2207_20260729--201358674_[shurga]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 574,
+      "file": "2207_20260729--201358800_[Scrubor]VS[duliangyin].grbr",
+      "group": "2207_20260729--201358800_[Scrubor]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 575,
+      "file": "2207_20260729--201359923_[Dzemp]VS[若安].grbr",
+      "group": "2207_20260729--201359923_[Dzemp]VS[若安].grbr"
+    },
+    {
+      "row_index": 576,
+      "file": "2207_20260729--201360004_[Leonhard Oiler]VS[若安].grbr",
+      "group": "2207_20260729--201360004_[Leonhard Oiler]VS[若安].grbr"
+    },
+    {
+      "row_index": 577,
+      "file": "2207_20260729--201360372_[Dzemp]VS[若安].grbr",
+      "group": "2207_20260729--201360372_[Dzemp]VS[若安].grbr"
+    },
+    {
+      "row_index": 578,
+      "file": "2207_20260729--268464036_[Xxlaomamjj]VS[谈笑风生07].grbr",
+      "group": "2207_20260729--268464036_[Xxlaomamjj]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 579,
+      "file": "2207_20260729--268465333_[Mark二]VS[餓漢].grbr",
+      "group": "2207_20260729--268465333_[Mark二]VS[餓漢].grbr"
+    },
+    {
+      "row_index": 580,
+      "file": "2207_20260729--268466822_[duliangyin]VS[Faux Pas].grbr",
+      "group": "2207_20260729--268466822_[duliangyin]VS[Faux Pas].grbr"
+    },
+    {
+      "row_index": 581,
+      "file": "2207_20260729--268466872_[HanzoKenshiRon]VS[duliangyin].grbr",
+      "group": "2207_20260729--268466872_[HanzoKenshiRon]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 582,
+      "file": "2207_20260729--268466918_[Taco]VS[B站指挥官教官].grbr",
+      "group": "2207_20260729--268466918_[Taco]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 583,
+      "file": "2207_20260729--268466933_[duliangyin]VS[Slayer].grbr",
+      "group": "2207_20260729--268466933_[duliangyin]VS[Slayer].grbr"
+    },
+    {
+      "row_index": 584,
+      "file": "2207_20260729--268466967_[B站指挥官教官]VS[[TUFF] Deadeagle].grbr",
+      "group": "2207_20260729--268466967_[B站指挥官教官]VS[[TUFF] Deadeagle].grbr"
+    },
+    {
+      "row_index": 585,
+      "file": "2207_20260729--268466992_[糕手]VS[涅槃].grbr",
+      "group": "2207_20260729--268466992_[糕手]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 586,
+      "file": "2207_20260729--268467462_[禽大兽]VS[我还以为减速带呢].grbr",
+      "group": "2207_20260729--268467462_[禽大兽]VS[我还以为减速带呢].grbr"
+    },
+    {
+      "row_index": 587,
+      "file": "2207_20260729--268467987_[秦心]VS[涅槃].grbr",
+      "group": "2207_20260729--268467987_[秦心]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 588,
+      "file": "2207_20260729--268468227_[大菠萝]VS[涅槃].grbr",
+      "group": "2207_20260729--268468227_[大菠萝]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 589,
+      "file": "2207_20260729--268468365_[大菠萝]VS[NTAGT].grbr",
+      "group": "2207_20260729--268468365_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 590,
+      "file": "2207_20260729--268468871_[若安]VS[Xxlaomamjj].grbr",
+      "group": "2207_20260729--268468871_[若安]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 591,
+      "file": "2207_20260729--268469289_[若安]VS[NTAGT].grbr",
+      "group": "2207_20260729--268469289_[若安]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 592,
+      "file": "2207_20260729--268469416_[若安]VS[固障祭启人].grbr",
+      "group": "2207_20260729--268469416_[若安]VS[固障祭启人].grbr"
+    },
+    {
+      "row_index": 593,
+      "file": "2207_20260729--268469495_[[TUFF] Mathismight]VS[Mark二].grbr",
+      "group": "2207_20260729--268469495_[[TUFF] Mathismight]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 594,
+      "file": "2207_20260729--67136596_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr",
+      "group": "2207_20260729--67136596_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 595,
+      "file": "2207_20260729--67137101_[大菠萝]VS[NTAGT].grbr",
+      "group": "2207_20260729--67137101_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 596,
+      "file": "2207_20260729--67137256_[大菠萝]VS[NTAGT].grbr",
+      "group": "2207_20260729--67137256_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 597,
+      "file": "2207_20260729--67140298_[Mahatma Gundhi]VS[NTAGT].grbr",
+      "group": "2207_20260729--67140298_[Mahatma Gundhi]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 598,
+      "file": "2207_20260729--67140420_[NTAGT]VS[Horrible Will].grbr",
+      "group": "2207_20260729--67140420_[NTAGT]VS[Horrible Will].grbr"
+    },
+    {
+      "row_index": 599,
+      "file": "2207_20260729--67140537_[Xxlaomamjj]VS[NTAGT].grbr",
+      "group": "2207_20260729--67140537_[Xxlaomamjj]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 600,
+      "file": "2207_20260729--67140594_[NTAGT]VS[badman].grbr",
+      "group": "2207_20260729--67140594_[NTAGT]VS[badman].grbr"
+    },
+    {
+      "row_index": 601,
+      "file": "2207_20260729--67140686_[NTAGT]VS[银牌悍匪来福].grbr",
+      "group": "2207_20260729--67140686_[NTAGT]VS[银牌悍匪来福].grbr"
+    },
+    {
+      "row_index": 602,
+      "file": "2207_20260729--67140718_[FlammenwerferOnkel]VS[涅槃].grbr",
+      "group": "2207_20260729--67140718_[FlammenwerferOnkel]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 603,
+      "file": "2207_20260729--67140776_[NTAGT]VS[Lance Hardwood].grbr",
+      "group": "2207_20260729--67140776_[NTAGT]VS[Lance Hardwood].grbr"
+    },
+    {
+      "row_index": 604,
+      "file": "2207_20260729--67140864_[NTAGT]VS[大菠萝].grbr",
+      "group": "2207_20260729--67140864_[NTAGT]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 605,
+      "file": "2207_20260729--67141310_[Xxlaomamjj]VS[若安].grbr",
+      "group": "2207_20260729--67141310_[Xxlaomamjj]VS[若安].grbr"
+    },
+    {
+      "row_index": 606,
+      "file": "2207_20260729--67141496_[Xxlaomamjj]VS[若安].grbr",
+      "group": "2207_20260729--67141496_[Xxlaomamjj]VS[若安].grbr"
+    },
+    {
+      "row_index": 607,
+      "file": "2207_20260729--67142101_[zzyylpzzm]VS[大毛熊666].grbr",
+      "group": "2207_20260729--67142101_[zzyylpzzm]VS[大毛熊666].grbr"
+    },
+    {
+      "row_index": 608,
+      "file": "2207_20260730--134251561_[NTAGT]VS[oo大帝独断万古前无古人后无来者].grbr",
+      "group": "2207_20260730--134251561_[NTAGT]VS[oo大帝独断万古前无古人后无来者].grbr"
+    },
+    {
+      "row_index": 609,
+      "file": "2207_20260730--134251838_[NTAGT]VS[Cyinst].grbr",
+      "group": "2207_20260730--134251838_[NTAGT]VS[Cyinst].grbr"
+    },
+    {
+      "row_index": 610,
+      "file": "2207_20260730--134251936_[NTAGT]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260730--134251936_[NTAGT]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 611,
+      "file": "2207_20260730--134254695_[Xxlaomamjj]VS[Mark二].grbr",
+      "group": "2207_20260730--134254695_[Xxlaomamjj]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 612,
+      "file": "2207_20260730--134255363_[oolly]VS[涅槃].grbr",
+      "group": "2207_20260730--134255363_[oolly]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 613,
+      "file": "2207_20260730--134255415_[Drath]VS[涅槃].grbr",
+      "group": "2207_20260730--134255415_[Drath]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 614,
+      "file": "2207_20260730--134255634_[Leonhard Oiler]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260730--134255634_[Leonhard Oiler]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 615,
+      "file": "2207_20260730--134255785_[Dzemp]VS[NTAGT].grbr",
+      "group": "2207_20260730--134255785_[Dzemp]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 616,
+      "file": "2207_20260730--134255823_[Mark二]VS[[SUFF] Chemtrails].grbr",
+      "group": "2207_20260730--134255823_[Mark二]VS[[SUFF] Chemtrails].grbr"
+    },
+    {
+      "row_index": 617,
+      "file": "2207_20260730--134255907_[Leonhard Oiler]VS[NTAGT].grbr",
+      "group": "2207_20260730--134255907_[Leonhard Oiler]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 618,
+      "file": "2207_20260730--134256024_[Mark二]VS[1156136367].grbr",
+      "group": "2207_20260730--134256024_[Mark二]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 619,
+      "file": "2207_20260730--134256062_[antimyon]VS[涅槃].grbr",
+      "group": "2207_20260730--134256062_[antimyon]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 620,
+      "file": "2207_20260730--134256077_[oo大帝独断万古前无古人后无来者]VS[NTAGT].grbr",
+      "group": "2207_20260730--134256077_[oo大帝独断万古前无古人后无来者]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 621,
+      "file": "2207_20260730--134256146_[Mark二]VS[Spoon!].grbr",
+      "group": "2207_20260730--134256146_[Mark二]VS[Spoon!].grbr"
+    },
+    {
+      "row_index": 622,
+      "file": "2207_20260730--134256330_[[BORK] oddz]VS[涅槃].grbr",
+      "group": "2207_20260730--134256330_[[BORK] oddz]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 623,
+      "file": "2207_20260730--134256546_[Mark二]VS[飞翔的阳光].grbr",
+      "group": "2207_20260730--134256546_[Mark二]VS[飞翔的阳光].grbr"
+    },
+    {
+      "row_index": 624,
+      "file": "2207_20260730--134256677_[Mark二]VS[Chris].grbr",
+      "group": "2207_20260730--134256677_[Mark二]VS[Chris].grbr"
+    },
+    {
+      "row_index": 625,
+      "file": "2207_20260730--134256745_[小萝卜]VS[Mark二].grbr",
+      "group": "2207_20260730--134256745_[小萝卜]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 626,
+      "file": "2207_20260730--134256976_[Mark二]VS[亚辛105].grbr",
+      "group": "2207_20260730--134256976_[Mark二]VS[亚辛105].grbr"
+    },
+    {
+      "row_index": 627,
+      "file": "2207_20260730--201360539_[6251845272150]VS[NTAGT].grbr",
+      "group": "2207_20260730--201360539_[6251845272150]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 628,
+      "file": "2207_20260730--201360886_[Mark二]VS[Darksid].grbr",
+      "group": "2207_20260730--201360886_[Mark二]VS[Darksid].grbr"
+    },
+    {
+      "row_index": 629,
+      "file": "2207_20260730--201361049_[Mark二]VS[Mahatma Gundhi].grbr",
+      "group": "2207_20260730--201361049_[Mark二]VS[Mahatma Gundhi].grbr"
+    },
+    {
+      "row_index": 630,
+      "file": "2207_20260730--201364919_[Gaz]VS[孚林].grbr",
+      "group": "2207_20260730--201364919_[Gaz]VS[孚林].grbr"
+    },
+    {
+      "row_index": 631,
+      "file": "2207_20260730--201365353_[NTAGT]VS[1156136367].grbr",
+      "group": "2207_20260730--201365353_[NTAGT]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 632,
+      "file": "2207_20260730--201365657_[若安]VS[飞翔的阳光].grbr",
+      "group": "2207_20260730--201365657_[若安]VS[飞翔的阳光].grbr"
+    },
+    {
+      "row_index": 633,
+      "file": "2207_20260730--201365765_[若安]VS[NTAGT].grbr",
+      "group": "2207_20260730--201365765_[若安]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 634,
+      "file": "2207_20260730--201365885_[若安]VS[jinboom].grbr",
+      "group": "2207_20260730--201365885_[若安]VS[jinboom].grbr"
+    },
+    {
+      "row_index": 635,
+      "file": "2207_20260730--201366119_[大菠萝]VS[Mark二].grbr",
+      "group": "2207_20260730--201366119_[大菠萝]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 636,
+      "file": "2207_20260730--201366233_[沐晨风]VS[若安].grbr",
+      "group": "2207_20260730--201366233_[沐晨风]VS[若安].grbr"
+    },
+    {
+      "row_index": 637,
+      "file": "2207_20260730--201366334_[沐晨风]VS[若安].grbr",
+      "group": "2207_20260730--201366334_[沐晨风]VS[若安].grbr"
+    },
+    {
+      "row_index": 638,
+      "file": "2207_20260730--268469776_[Mark二]VS[cobaltwhite].grbr",
+      "group": "2207_20260730--268469776_[Mark二]VS[cobaltwhite].grbr"
+    },
+    {
+      "row_index": 639,
+      "file": "2207_20260730--268471797_[Mark二]VS[[SUFF] Chemtrails].grbr",
+      "group": "2207_20260730--268471797_[Mark二]VS[[SUFF] Chemtrails].grbr"
+    },
+    {
+      "row_index": 640,
+      "file": "2207_20260730--268472907_[Seaki]VS[Mesquite Economy].grbr",
+      "group": "2207_20260730--268472907_[Seaki]VS[Mesquite Economy].grbr"
+    },
+    {
+      "row_index": 641,
+      "file": "2207_20260730--268472934_[Xxlaomamjj]VS[Mark二].grbr",
+      "group": "2207_20260730--268472934_[Xxlaomamjj]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 642,
+      "file": "2207_20260730--268472956_[花生eyjObo1]VS[1113517986].grbr",
+      "group": "2207_20260730--268472956_[花生eyjObo1]VS[1113517986].grbr"
+    },
+    {
+      "row_index": 643,
+      "file": "2207_20260730--268472985_[B站鲨鱼菜鸟]VS[糕手].grbr",
+      "group": "2207_20260730--268472985_[B站鲨鱼菜鸟]VS[糕手].grbr"
+    },
+    {
+      "row_index": 644,
+      "file": "2207_20260730--268473014_[花生eyjObo1]VS[卡爆斯基].grbr",
+      "group": "2207_20260730--268473014_[花生eyjObo1]VS[卡爆斯基].grbr"
+    },
+    {
+      "row_index": 645,
+      "file": "2207_20260730--268473046_[B站鲨鱼菜鸟]VS[粽子].grbr",
+      "group": "2207_20260730--268473046_[B站鲨鱼菜鸟]VS[粽子].grbr"
+    },
+    {
+      "row_index": 646,
+      "file": "2207_20260730--268473151_[B站鲨鱼菜鸟]VS[阿牛要牛牛].grbr",
+      "group": "2207_20260730--268473151_[B站鲨鱼菜鸟]VS[阿牛要牛牛].grbr"
+    },
+    {
+      "row_index": 647,
+      "file": "2207_20260730--268473234_[B站鲨鱼菜鸟]VS[1156136367].grbr",
+      "group": "2207_20260730--268473234_[B站鲨鱼菜鸟]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 648,
+      "file": "2207_20260730--268473826_[Straußenjunge]VS[涅槃].grbr",
+      "group": "2207_20260730--268473826_[Straußenjunge]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 649,
+      "file": "2207_20260730--268474288_[[SUFF] Chemtrails]VS[Mark二].grbr",
+      "group": "2207_20260730--268474288_[[SUFF] Chemtrails]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 650,
+      "file": "2207_20260730--268474335_[涅槃]VS[nekro].grbr",
+      "group": "2207_20260730--268474335_[涅槃]VS[nekro].grbr"
+    },
+    {
+      "row_index": 651,
+      "file": "2207_20260730--268474628_[涅槃]VS[Highelder].grbr",
+      "group": "2207_20260730--268474628_[涅槃]VS[Highelder].grbr"
+    },
+    {
+      "row_index": 652,
+      "file": "2207_20260730--268474870_[B站鲨鱼菜鸟]VS[火锅好吃].grbr",
+      "group": "2207_20260730--268474870_[B站鲨鱼菜鸟]VS[火锅好吃].grbr"
+    },
+    {
+      "row_index": 653,
+      "file": "2207_20260730--268474966_[火锅好吃]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260730--268474966_[火锅好吃]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 654,
+      "file": "2207_20260730--268475042_[B站鲨鱼菜鸟]VS[火锅好吃].grbr",
+      "group": "2207_20260730--268475042_[B站鲨鱼菜鸟]VS[火锅好吃].grbr"
+    },
+    {
+      "row_index": 655,
+      "file": "2207_20260730--67142149_[zummko]VS[Mark二].grbr",
+      "group": "2207_20260730--67142149_[zummko]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 656,
+      "file": "2207_20260730--67142400_[oo大帝独断万古前无古人后无来者]VS[NTAGT].grbr",
+      "group": "2207_20260730--67142400_[oo大帝独断万古前无古人后无来者]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 657,
+      "file": "2207_20260730--67144109_[oolly]VS[Mark二].grbr",
+      "group": "2207_20260730--67144109_[oolly]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 658,
+      "file": "2207_20260730--67145144_[SINANJU]VS[沙沙寨压寨夫人].grbr",
+      "group": "2207_20260730--67145144_[SINANJU]VS[沙沙寨压寨夫人].grbr"
+    },
+    {
+      "row_index": 659,
+      "file": "2207_20260730--67146082_[1706553653]VS[宽普京 Wide-Put In].grbr",
+      "group": "2207_20260730--67146082_[1706553653]VS[宽普京 Wide-Put In].grbr"
+    },
+    {
+      "row_index": 660,
+      "file": "2207_20260730--67146141_[B站鲨鱼菜鸟]VS[guesswhosback].grbr",
+      "group": "2207_20260730--67146141_[B站鲨鱼菜鸟]VS[guesswhosback].grbr"
+    },
+    {
+      "row_index": 661,
+      "file": "2207_20260730--67146193_[B站鲨鱼菜鸟]VS[richfong].grbr",
+      "group": "2207_20260730--67146193_[B站鲨鱼菜鸟]VS[richfong].grbr"
+    },
+    {
+      "row_index": 662,
+      "file": "2207_20260730--67146197_[Effective]VS[duliangyin].grbr",
+      "group": "2207_20260730--67146197_[Effective]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 663,
+      "file": "2207_20260730--67146265_[duliangyin]VS[Arpsm].grbr",
+      "group": "2207_20260730--67146265_[duliangyin]VS[Arpsm].grbr"
+    },
+    {
+      "row_index": 664,
+      "file": "2207_20260730--67147564_[若安]VS[NTAGT].grbr",
+      "group": "2207_20260730--67147564_[若安]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 665,
+      "file": "2207_20260731--134257340_[MMR SANTA]VS[Mark二].grbr",
+      "group": "2207_20260731--134257340_[MMR SANTA]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 666,
+      "file": "2207_20260731--134257490_[Mark二]VS[Ragin'].grbr",
+      "group": "2207_20260731--134257490_[Mark二]VS[Ragin'].grbr"
+    },
+    {
+      "row_index": 667,
+      "file": "2207_20260731--134257512_[魚版]VS[NTAGT].grbr",
+      "group": "2207_20260731--134257512_[魚版]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 668,
+      "file": "2207_20260731--134257616_[[TUFF] Kepals]VS[NTAGT].grbr",
+      "group": "2207_20260731--134257616_[[TUFF] Kepals]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 669,
+      "file": "2207_20260731--134257799_[Mark二]VS[[BORK] oddz].grbr",
+      "group": "2207_20260731--134257799_[Mark二]VS[[BORK] oddz].grbr"
+    },
+    {
+      "row_index": 670,
+      "file": "2207_20260731--134258087_[Mahatma Gundhi]VS[NTAGT].grbr",
+      "group": "2207_20260731--134258087_[Mahatma Gundhi]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 671,
+      "file": "2207_20260731--134260370_[涅槃]VS[VoidInsanity].grbr",
+      "group": "2207_20260731--134260370_[涅槃]VS[VoidInsanity].grbr"
+    },
+    {
+      "row_index": 672,
+      "file": "2207_20260731--134260861_[-]VS[].grbr",
+      "group": "2207_20260731--134260861_[-]VS[].grbr"
+    },
+    {
+      "row_index": 673,
+      "file": "2207_20260731--134261083_[duliangyin]VS[November].grbr",
+      "group": "2207_20260731--134261083_[duliangyin]VS[November].grbr"
+    },
+    {
+      "row_index": 674,
+      "file": "2207_20260731--134261313_[anchialas]VS[HD Süßsauer].grbr",
+      "group": "2207_20260731--134261313_[anchialas]VS[HD Süßsauer].grbr"
+    },
+    {
+      "row_index": 675,
+      "file": "2207_20260731--134261412_[菜中菜老登零—院长]VS[奥巴牛].grbr",
+      "group": "2207_20260731--134261412_[菜中菜老登零—院长]VS[奥巴牛].grbr"
+    },
+    {
+      "row_index": 676,
+      "file": "2207_20260731--134261726_[涅槃]VS[ハッカドール3号].grbr",
+      "group": "2207_20260731--134261726_[涅槃]VS[ハッカドール3号].grbr"
+    },
+    {
+      "row_index": 677,
+      "file": "2207_20260731--134261891_[涅槃]VS[TheWeakestLink].grbr",
+      "group": "2207_20260731--134261891_[涅槃]VS[TheWeakestLink].grbr"
+    },
+    {
+      "row_index": 678,
+      "file": "2207_20260731--134262143_[若安]VS[belief].grbr",
+      "group": "2207_20260731--134262143_[若安]VS[belief].grbr"
+    },
+    {
+      "row_index": 679,
+      "file": "2207_20260731--134262195_[银牌悍匪来福]VS[Mark二].grbr",
+      "group": "2207_20260731--134262195_[银牌悍匪来福]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 680,
+      "file": "2207_20260731--134262224_[若安]VS[Leonhard Oiler].grbr",
+      "group": "2207_20260731--134262224_[若安]VS[Leonhard Oiler].grbr"
+    },
+    {
+      "row_index": 681,
+      "file": "2207_20260731--134262377_[Mark二]VS[Tachi].grbr",
+      "group": "2207_20260731--134262377_[Mark二]VS[Tachi].grbr"
+    },
+    {
+      "row_index": 682,
+      "file": "2207_20260731--134262444_[若安]VS[Leonhard Oiler].grbr",
+      "group": "2207_20260731--134262444_[若安]VS[Leonhard Oiler].grbr"
+    },
+    {
+      "row_index": 683,
+      "file": "2207_20260731--134262473_[NTAGT]VS[Washed up].grbr",
+      "group": "2207_20260731--134262473_[NTAGT]VS[Washed up].grbr"
+    },
+    {
+      "row_index": 684,
+      "file": "2207_20260731--134262655_[NTAGT]VS[大菠萝].grbr",
+      "group": "2207_20260731--134262655_[NTAGT]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 685,
+      "file": "2207_20260731--134262872_[洛琪希_今天吃什么]VS[NTAGT].grbr",
+      "group": "2207_20260731--134262872_[洛琪希_今天吃什么]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 686,
+      "file": "2207_20260731--201367072_[Alpaka]VS[NTAGT].grbr",
+      "group": "2207_20260731--201367072_[Alpaka]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 687,
+      "file": "2207_20260731--201367178_[Alpaka]VS[NTAGT].grbr",
+      "group": "2207_20260731--201367178_[Alpaka]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 688,
+      "file": "2207_20260731--201369423_[鈅穎諷翹願]VS[duliangyin].grbr",
+      "group": "2207_20260731--201369423_[鈅穎諷翹願]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 689,
+      "file": "2207_20260731--201369479_[ONEBADCADDI]VS[duliangyin].grbr",
+      "group": "2207_20260731--201369479_[ONEBADCADDI]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 690,
+      "file": "2207_20260731--201369849_[狂乱君]VS[涅槃].grbr",
+      "group": "2207_20260731--201369849_[狂乱君]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 691,
+      "file": "2207_20260731--201370081_[涅槃]VS[1706553653].grbr",
+      "group": "2207_20260731--201370081_[涅槃]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 692,
+      "file": "2207_20260731--201370171_[涅槃]VS[Cucumber Benepact].grbr",
+      "group": "2207_20260731--201370171_[涅槃]VS[Cucumber Benepact].grbr"
+    },
+    {
+      "row_index": 693,
+      "file": "2207_20260731--201370220_[涅槃]VS[killercall].grbr",
+      "group": "2207_20260731--201370220_[涅槃]VS[killercall].grbr"
+    },
+    {
+      "row_index": 694,
+      "file": "2207_20260731--201371629_[大菠萝]VS[若安].grbr",
+      "group": "2207_20260731--201371629_[大菠萝]VS[若安].grbr"
+    },
+    {
+      "row_index": 695,
+      "file": "2207_20260731--201371779_[银牌悍匪来福]VS[笨蔬菜].grbr",
+      "group": "2207_20260731--201371779_[银牌悍匪来福]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 696,
+      "file": "2207_20260731--201371885_[狂乱君]VS[笨蔬菜].grbr",
+      "group": "2207_20260731--201371885_[狂乱君]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 697,
+      "file": "2207_20260731--201372241_[大菠萝]VS[若安].grbr",
+      "group": "2207_20260731--201372241_[大菠萝]VS[若安].grbr"
+    },
+    {
+      "row_index": 698,
+      "file": "2207_20260731--268476471_[Mark二]VS[1久6].grbr",
+      "group": "2207_20260731--268476471_[Mark二]VS[1久6].grbr"
+    },
+    {
+      "row_index": 699,
+      "file": "2207_20260731--268478710_[花生eyjObo1]VS[a710712b].grbr",
+      "group": "2207_20260731--268478710_[花生eyjObo1]VS[a710712b].grbr"
+    },
+    {
+      "row_index": 700,
+      "file": "2207_20260731--268479166_[法国赌神刘华强]VS[1706553653].grbr",
+      "group": "2207_20260731--268479166_[法国赌神刘华强]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 701,
+      "file": "2207_20260731--268479194_[[Park09]CULTUFFANCLUB]VS[Hildegard].grbr",
+      "group": "2207_20260731--268479194_[[Park09]CULTUFFANCLUB]VS[Hildegard].grbr"
+    },
+    {
+      "row_index": 702,
+      "file": "2207_20260731--268479278_[IsaaX]VS[涅槃].grbr",
+      "group": "2207_20260731--268479278_[IsaaX]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 703,
+      "file": "2207_20260731--268479326_[fry]VS[duliangyin].grbr",
+      "group": "2207_20260731--268479326_[fry]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 704,
+      "file": "2207_20260731--268479397_[Guten Tag]VS[Mark二].grbr",
+      "group": "2207_20260731--268479397_[Guten Tag]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 705,
+      "file": "2207_20260731--268479604_[d9d9]VS[涅槃].grbr",
+      "group": "2207_20260731--268479604_[d9d9]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 706,
+      "file": "2207_20260731--268479608_[IsaaX]VS[Mark二].grbr",
+      "group": "2207_20260731--268479608_[IsaaX]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 707,
+      "file": "2207_20260731--268479674_[路神大大]VS[Mark二].grbr",
+      "group": "2207_20260731--268479674_[路神大大]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 708,
+      "file": "2207_20260731--268479747_[Brockengespenst]VS[Mark二].grbr",
+      "group": "2207_20260731--268479747_[Brockengespenst]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 709,
+      "file": "2207_20260731--268481301_[[TUFF] Marshmello]VS[谈笑风生07].grbr",
+      "group": "2207_20260731--268481301_[[TUFF] Marshmello]VS[谈笑风生07].grbr"
+    },
+    {
+      "row_index": 710,
+      "file": "2207_20260731--67147924_[NTAGT]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260731--67147924_[NTAGT]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 711,
+      "file": "2207_20260731--67148017_[NTAGT]VS[沐晨风].grbr",
+      "group": "2207_20260731--67148017_[NTAGT]VS[沐晨风].grbr"
+    },
+    {
+      "row_index": 712,
+      "file": "2207_20260731--67148380_[Четкий нуб]VS[Mark二].grbr",
+      "group": "2207_20260731--67148380_[Четкий нуб]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 713,
+      "file": "2207_20260731--67148981_[NTAGT]VS[MrCivilised].grbr",
+      "group": "2207_20260731--67148981_[NTAGT]VS[MrCivilised].grbr"
+    },
+    {
+      "row_index": 714,
+      "file": "2207_20260731--67150588_[]VS[1706553653].grbr",
+      "group": "2207_20260731--67150588_[]VS[1706553653].grbr"
+    },
+    {
+      "row_index": 715,
+      "file": "2207_20260731--67151064_[Spaghetti]VS[不讲武德].grbr",
+      "group": "2207_20260731--67151064_[Spaghetti]VS[不讲武德].grbr"
+    },
+    {
+      "row_index": 716,
+      "file": "2207_20260731--67151113_[]VS[门线孤勇者].grbr",
+      "group": "2207_20260731--67151113_[]VS[门线孤勇者].grbr"
+    },
+    {
+      "row_index": 717,
+      "file": "2207_20260731--67151173_[正在输入中]VS[].grbr",
+      "group": "2207_20260731--67151173_[正在输入中]VS[].grbr"
+    },
+    {
+      "row_index": 718,
+      "file": "2207_20260731--67151213_[Tripceratops]VS[].grbr",
+      "group": "2207_20260731--67151213_[Tripceratops]VS[].grbr"
+    },
+    {
+      "row_index": 719,
+      "file": "2207_20260731--67151294_[Mirage]VS[涅槃].grbr",
+      "group": "2207_20260731--67151294_[Mirage]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 720,
+      "file": "2207_20260731--67151414_[]VS[RivRuskende].grbr",
+      "group": "2207_20260731--67151414_[]VS[RivRuskende].grbr"
+    },
+    {
+      "row_index": 721,
+      "file": "2207_20260731--67151455_[]VS[路神大大].grbr",
+      "group": "2207_20260731--67151455_[]VS[路神大大].grbr"
+    },
+    {
+      "row_index": 722,
+      "file": "2207_20260731--67151538_[Tumtururum]VS[].grbr",
+      "group": "2207_20260731--67151538_[Tumtururum]VS[].grbr"
+    },
+    {
+      "row_index": 723,
+      "file": "2207_20260731--67151613_[]VS[erconu].grbr",
+      "group": "2207_20260731--67151613_[]VS[erconu].grbr"
+    },
+    {
+      "row_index": 724,
+      "file": "2207_20260731--67151709_[Mark二]VS[狂乱君].grbr",
+      "group": "2207_20260731--67151709_[Mark二]VS[狂乱君].grbr"
+    },
+    {
+      "row_index": 725,
+      "file": "2207_20260731--67151732_[Anubis]VS[Xiaodaokuaidi].grbr",
+      "group": "2207_20260731--67151732_[Anubis]VS[Xiaodaokuaidi].grbr"
+    },
+    {
+      "row_index": 726,
+      "file": "2207_20260731--67151778_[Mark二]VS[Guten Tag].grbr",
+      "group": "2207_20260731--67151778_[Mark二]VS[Guten Tag].grbr"
+    },
+    {
+      "row_index": 727,
+      "file": "2207_20260731--67151837_[飞翔的阳光]VS[1156136367].grbr",
+      "group": "2207_20260731--67151837_[飞翔的阳光]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 728,
+      "file": "2207_20260731--67151839_[Kpi]VS[duliangyin].grbr",
+      "group": "2207_20260731--67151839_[Kpi]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 729,
+      "file": "2207_20260731--67151907_[Mark二]VS[BunGrume].grbr",
+      "group": "2207_20260731--67151907_[Mark二]VS[BunGrume].grbr"
+    },
+    {
+      "row_index": 730,
+      "file": "2207_20260731--67153167_[oolly]VS[笨蔬菜].grbr",
+      "group": "2207_20260731--67153167_[oolly]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 731,
+      "file": "2207_20260731--67153461_[笨蔬菜]VS[狂乱君].grbr",
+      "group": "2207_20260731--67153461_[笨蔬菜]VS[狂乱君].grbr"
+    },
+    {
+      "row_index": 732,
+      "file": "2207_20260801--134263009_[谈笑风生07]VS[大菠萝].grbr",
+      "group": "2207_20260801--134263009_[谈笑风生07]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 733,
+      "file": "2207_20260801--134263081_[bado]VS[Mark二].grbr",
+      "group": "2207_20260801--134263081_[bado]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 734,
+      "file": "2207_20260801--134263189_[NTAGT]VS[AST Z.  Shionxavy Bot].grbr",
+      "group": "2207_20260801--134263189_[NTAGT]VS[AST Z.  Shionxavy Bot].grbr"
+    },
+    {
+      "row_index": 735,
+      "file": "2207_20260801--134263319_[谈笑风生07]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260801--134263319_[谈笑风生07]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 736,
+      "file": "2207_20260801--134263690_[NTAGT]VS[lixinhong365].grbr",
+      "group": "2207_20260801--134263690_[NTAGT]VS[lixinhong365].grbr"
+    },
+    {
+      "row_index": 737,
+      "file": "2207_20260801--134263766_[Mark二]VS[[TUFF] Spade].grbr",
+      "group": "2207_20260801--134263766_[Mark二]VS[[TUFF] Spade].grbr"
+    },
+    {
+      "row_index": 738,
+      "file": "2207_20260801--134263796_[NTAGT]VS[Corvus].grbr",
+      "group": "2207_20260801--134263796_[NTAGT]VS[Corvus].grbr"
+    },
+    {
+      "row_index": 739,
+      "file": "2207_20260801--134263885_[Mark二]VS[guesswhosback].grbr",
+      "group": "2207_20260801--134263885_[Mark二]VS[guesswhosback].grbr"
+    },
+    {
+      "row_index": 740,
+      "file": "2207_20260801--134265891_[Harvey James]VS[duliangyin].grbr",
+      "group": "2207_20260801--134265891_[Harvey James]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 741,
+      "file": "2207_20260801--134266774_[笨蔬菜]VS[userG35ElvJzXC].grbr",
+      "group": "2207_20260801--134266774_[笨蔬菜]VS[userG35ElvJzXC].grbr"
+    },
+    {
+      "row_index": 742,
+      "file": "2207_20260801--134266816_[笨蔬菜]VS[2019586760].grbr",
+      "group": "2207_20260801--134266816_[笨蔬菜]VS[2019586760].grbr"
+    },
+    {
+      "row_index": 743,
+      "file": "2207_20260801--134266985_[笨蔬菜]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260801--134266985_[笨蔬菜]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 744,
+      "file": "2207_20260801--134267119_[TiNaAch]VS[].grbr",
+      "group": "2207_20260801--134267119_[TiNaAch]VS[].grbr"
+    },
+    {
+      "row_index": 745,
+      "file": "2207_20260801--134267483_[TiNaAch]VS[[TUFF] Mathismight].grbr",
+      "group": "2207_20260801--134267483_[TiNaAch]VS[[TUFF] Mathismight].grbr"
+    },
+    {
+      "row_index": 746,
+      "file": "2207_20260801--134268409_[0..o]VS[Ladiczek].grbr",
+      "group": "2207_20260801--134268409_[0..o]VS[Ladiczek].grbr"
+    },
+    {
+      "row_index": 747,
+      "file": "2207_20260801--134268579_[涅槃]VS[Spiegel].grbr",
+      "group": "2207_20260801--134268579_[涅槃]VS[Spiegel].grbr"
+    },
+    {
+      "row_index": 748,
+      "file": "2207_20260801--134268663_[涅槃]VS[Scoo].grbr",
+      "group": "2207_20260801--134268663_[涅槃]VS[Scoo].grbr"
+    },
+    {
+      "row_index": 749,
+      "file": "2207_20260801--134268802_[Spiegel]VS[涅槃].grbr",
+      "group": "2207_20260801--134268802_[Spiegel]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 750,
+      "file": "2207_20260801--134268943_[涅槃]VS[Pantsuman].grbr",
+      "group": "2207_20260801--134268943_[涅槃]VS[Pantsuman].grbr"
+    },
+    {
+      "row_index": 751,
+      "file": "2207_20260801--134269042_[NTAGT]VS[大菠萝].grbr",
+      "group": "2207_20260801--134269042_[NTAGT]VS[大菠萝].grbr"
+    },
+    {
+      "row_index": 752,
+      "file": "2207_20260801--134269308_[NTAGT]VS[跳跳者].grbr",
+      "group": "2207_20260801--134269308_[NTAGT]VS[跳跳者].grbr"
+    },
+    {
+      "row_index": 753,
+      "file": "2207_20260801--134269432_[大菠萝]VS[NTAGT].grbr",
+      "group": "2207_20260801--134269432_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 754,
+      "file": "2207_20260801--201372402_[Leonhard Oiler]VS[若安].grbr",
+      "group": "2207_20260801--201372402_[Leonhard Oiler]VS[若安].grbr"
+    },
+    {
+      "row_index": 755,
+      "file": "2207_20260801--201372611_[大菠萝]VS[NTAGT].grbr",
+      "group": "2207_20260801--201372611_[大菠萝]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 756,
+      "file": "2207_20260801--201372863_[wOOt]VS[NTAGT].grbr",
+      "group": "2207_20260801--201372863_[wOOt]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 757,
+      "file": "2207_20260801--201373223_[[TUFF] Mathismight]VS[NTAGT].grbr",
+      "group": "2207_20260801--201373223_[[TUFF] Mathismight]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 758,
+      "file": "2207_20260801--201375306_[老元元]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--201375306_[老元元]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 759,
+      "file": "2207_20260801--201375396_[老元元]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--201375396_[老元元]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 760,
+      "file": "2207_20260801--201375451_[笨蔬菜]VS[老元元].grbr",
+      "group": "2207_20260801--201375451_[笨蔬菜]VS[老元元].grbr"
+    },
+    {
+      "row_index": 761,
+      "file": "2207_20260801--201375518_[笨蔬菜]VS[[TUFF] Marshmello].grbr",
+      "group": "2207_20260801--201375518_[笨蔬菜]VS[[TUFF] Marshmello].grbr"
+    },
+    {
+      "row_index": 762,
+      "file": "2207_20260801--201375599_[笨蔬菜]VS[Thumper].grbr",
+      "group": "2207_20260801--201375599_[笨蔬菜]VS[Thumper].grbr"
+    },
+    {
+      "row_index": 763,
+      "file": "2207_20260801--201375633_[笨蔬菜]VS[Hikikomori].grbr",
+      "group": "2207_20260801--201375633_[笨蔬菜]VS[Hikikomori].grbr"
+    },
+    {
+      "row_index": 764,
+      "file": "2207_20260801--201375710_[笨蔬菜]VS[Otacon].grbr",
+      "group": "2207_20260801--201375710_[笨蔬菜]VS[Otacon].grbr"
+    },
+    {
+      "row_index": 765,
+      "file": "2207_20260801--201375758_[笨蔬菜]VS[1156136367].grbr",
+      "group": "2207_20260801--201375758_[笨蔬菜]VS[1156136367].grbr"
+    },
+    {
+      "row_index": 766,
+      "file": "2207_20260801--201375773_[涅槃]VS[Corvus].grbr",
+      "group": "2207_20260801--201375773_[涅槃]VS[Corvus].grbr"
+    },
+    {
+      "row_index": 767,
+      "file": "2207_20260801--201375945_[Rat Salat]VS[汐洛].grbr",
+      "group": "2207_20260801--201375945_[Rat Salat]VS[汐洛].grbr"
+    },
+    {
+      "row_index": 768,
+      "file": "2207_20260801--201376125_[小菠萝之友]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--201376125_[小菠萝之友]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 769,
+      "file": "2207_20260801--201376214_[糖葫芦]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--201376214_[糖葫芦]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 770,
+      "file": "2207_20260801--201378273_[每天都有好心情]VS[涅槃].grbr",
+      "group": "2207_20260801--201378273_[每天都有好心情]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 771,
+      "file": "2207_20260801--268484120_[duliangyin]VS[Nix].grbr",
+      "group": "2207_20260801--268484120_[duliangyin]VS[Nix].grbr"
+    },
+    {
+      "row_index": 772,
+      "file": "2207_20260801--268484188_[duliangyin]VS[Xzar2k0].grbr",
+      "group": "2207_20260801--268484188_[duliangyin]VS[Xzar2k0].grbr"
+    },
+    {
+      "row_index": 773,
+      "file": "2207_20260801--268484763_[HanzoKenshiRon]VS[汐洛].grbr",
+      "group": "2207_20260801--268484763_[HanzoKenshiRon]VS[汐洛].grbr"
+    },
+    {
+      "row_index": 774,
+      "file": "2207_20260801--268484883_[涅槃]VS[userG35ElvJzXC].grbr",
+      "group": "2207_20260801--268484883_[涅槃]VS[userG35ElvJzXC].grbr"
+    },
+    {
+      "row_index": 775,
+      "file": "2207_20260801--268484918_[涅槃]VS[userG35ElvJzXC].grbr",
+      "group": "2207_20260801--268484918_[涅槃]VS[userG35ElvJzXC].grbr"
+    },
+    {
+      "row_index": 776,
+      "file": "2207_20260801--268485055_[涅槃]VS[lixinhong365].grbr",
+      "group": "2207_20260801--268485055_[涅槃]VS[lixinhong365].grbr"
+    },
+    {
+      "row_index": 777,
+      "file": "2207_20260801--268485120_[北命]VS[涅槃].grbr",
+      "group": "2207_20260801--268485120_[北命]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 778,
+      "file": "2207_20260801--268485179_[[TUFF] Mathismight]VS[涅槃].grbr",
+      "group": "2207_20260801--268485179_[[TUFF] Mathismight]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 779,
+      "file": "2207_20260801--268485239_[jokerius1]VS[涅槃].grbr",
+      "group": "2207_20260801--268485239_[jokerius1]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 780,
+      "file": "2207_20260801--268485287_[涅槃]VS[jokerius1].grbr",
+      "group": "2207_20260801--268485287_[涅槃]VS[jokerius1].grbr"
+    },
+    {
+      "row_index": 781,
+      "file": "2207_20260801--67153944_[[TUFF] Merles tagelicht]VS[Mark二].grbr",
+      "group": "2207_20260801--67153944_[[TUFF] Merles tagelicht]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 782,
+      "file": "2207_20260801--67156085_[DerKozmonaut]VS[duliangyin].grbr",
+      "group": "2207_20260801--67156085_[DerKozmonaut]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 783,
+      "file": "2207_20260801--67156157_[DerKozmonaut]VS[duliangyin].grbr",
+      "group": "2207_20260801--67156157_[DerKozmonaut]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 784,
+      "file": "2207_20260801--67157170_[NANBEIHAO]VS[duliangyin].grbr",
+      "group": "2207_20260801--67157170_[NANBEIHAO]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 785,
+      "file": "2207_20260801--67157418_[lixinhong365]VS[涅槃].grbr",
+      "group": "2207_20260801--67157418_[lixinhong365]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 786,
+      "file": "2207_20260801--67157734_[sinbiziumu]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--67157734_[sinbiziumu]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 787,
+      "file": "2207_20260801--67159307_[Dolmant v2.0]VS[涅槃].grbr",
+      "group": "2207_20260801--67159307_[Dolmant v2.0]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 788,
+      "file": "2207_20260801--67159853_[笨蔬菜]VS[双月].grbr",
+      "group": "2207_20260801--67159853_[笨蔬菜]VS[双月].grbr"
+    },
+    {
+      "row_index": 789,
+      "file": "2207_20260801--67159963_[双月]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--67159963_[双月]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 790,
+      "file": "2207_20260801--67159993_[Dillo]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260801--67159993_[Dillo]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 791,
+      "file": "2207_20260801--67160074_[双月]VS[笨蔬菜].grbr",
+      "group": "2207_20260801--67160074_[双月]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 792,
+      "file": "2207_20260801--67160204_[笨蔬菜]VS[Dillo].grbr",
+      "group": "2207_20260801--67160204_[笨蔬菜]VS[Dillo].grbr"
+    },
+    {
+      "row_index": 793,
+      "file": "2207_20260802--134271807_[B站鲨鱼菜鸟]VS[Senakin].grbr",
+      "group": "2207_20260802--134271807_[B站鲨鱼菜鸟]VS[Senakin].grbr"
+    },
+    {
+      "row_index": 794,
+      "file": "2207_20260802--134271865_[B站鲨鱼菜鸟]VS[[AUFF]Shadoff].grbr",
+      "group": "2207_20260802--134271865_[B站鲨鱼菜鸟]VS[[AUFF]Shadoff].grbr"
+    },
+    {
+      "row_index": 795,
+      "file": "2207_20260802--134272713_[Xxlaomamjj]VS[涅槃].grbr",
+      "group": "2207_20260802--134272713_[Xxlaomamjj]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 796,
+      "file": "2207_20260802--134272772_[Djinn]VS[涅槃].grbr",
+      "group": "2207_20260802--134272772_[Djinn]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 797,
+      "file": "2207_20260802--134273225_[B站指挥官教官]VS[erconu].grbr",
+      "group": "2207_20260802--134273225_[B站指挥官教官]VS[erconu].grbr"
+    },
+    {
+      "row_index": 798,
+      "file": "2207_20260802--134273279_[B站指挥官教官]VS[木眠季].grbr",
+      "group": "2207_20260802--134273279_[B站指挥官教官]VS[木眠季].grbr"
+    },
+    {
+      "row_index": 799,
+      "file": "2207_20260802--134273448_[B站指挥官教官]VS[lixinhong365].grbr",
+      "group": "2207_20260802--134273448_[B站指挥官教官]VS[lixinhong365].grbr"
+    },
+    {
+      "row_index": 800,
+      "file": "2207_20260802--134273608_[LTG]VS[duliangyin].grbr",
+      "group": "2207_20260802--134273608_[LTG]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 801,
+      "file": "2207_20260802--134273661_[Frag'Stealer!]VS[duliangyin].grbr",
+      "group": "2207_20260802--134273661_[Frag'Stealer!]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 802,
+      "file": "2207_20260802--134273718_[老元元]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--134273718_[老元元]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 803,
+      "file": "2207_20260802--134274214_[B站指挥官教官]VS[[TUFF] Sunni].grbr",
+      "group": "2207_20260802--134274214_[B站指挥官教官]VS[[TUFF] Sunni].grbr"
+    },
+    {
+      "row_index": 804,
+      "file": "2207_20260802--134274419_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "group": "2207_20260802--134274419_[B站指挥官教官]VS[菜中菜老登零—院长].grbr"
+    },
+    {
+      "row_index": 805,
+      "file": "2207_20260802--134274990_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "group": "2207_20260802--134274990_[B站指挥官教官]VS[菜中菜老登零—院长].grbr"
+    },
+    {
+      "row_index": 806,
+      "file": "2207_20260802--134275246_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "group": "2207_20260802--134275246_[B站指挥官教官]VS[菜中菜老登零—院长].grbr"
+    },
+    {
+      "row_index": 807,
+      "file": "2207_20260802--134275419_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "group": "2207_20260802--134275419_[B站指挥官教官]VS[菜中菜老登零—院长].grbr"
+    },
+    {
+      "row_index": 808,
+      "file": "2207_20260802--134275615_[iorik]VS[无聊].grbr",
+      "group": "2207_20260802--134275615_[iorik]VS[无聊].grbr"
+    },
+    {
+      "row_index": 809,
+      "file": "2207_20260802--134275626_[若安]VS[Mark二].grbr",
+      "group": "2207_20260802--134275626_[若安]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 810,
+      "file": "2207_20260802--134275878_[[TUFF] Mathismight]VS[Mark二].grbr",
+      "group": "2207_20260802--134275878_[[TUFF] Mathismight]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 811,
+      "file": "2207_20260802--1613_[Legion]VS[Xxlaomamjj].grbr",
+      "group": "2207_20260802--1613_[Legion]VS[Xxlaomamjj].grbr"
+    },
+    {
+      "row_index": 812,
+      "file": "2207_20260802--1644_[2055853227]VS[2371573448].grbr",
+      "group": "2207_20260802--1644_[2055853227]VS[2371573448].grbr"
+    },
+    {
+      "row_index": 813,
+      "file": "2207_20260802--201381402_[Dzemp]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--201381402_[Dzemp]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 814,
+      "file": "2207_20260802--201382379_[Punisher ICON_HAPPINESS_1]VS[涅槃].grbr",
+      "group": "2207_20260802--201382379_[Punisher ICON_HAPPINESS_1]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 815,
+      "file": "2207_20260802--201382536_[Anonymism]VS[不让].grbr",
+      "group": "2207_20260802--201382536_[Anonymism]VS[不让].grbr"
+    },
+    {
+      "row_index": 816,
+      "file": "2207_20260802--201382612_[Vampiroiul]VS[duliangyin].grbr",
+      "group": "2207_20260802--201382612_[Vampiroiul]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 817,
+      "file": "2207_20260802--201383828_[Pantsuman]VS[老元元].grbr",
+      "group": "2207_20260802--201383828_[Pantsuman]VS[老元元].grbr"
+    },
+    {
+      "row_index": 818,
+      "file": "2207_20260802--201384046_[MY4AI]VS[ep 异教].grbr",
+      "group": "2207_20260802--201384046_[MY4AI]VS[ep 异教].grbr"
+    },
+    {
+      "row_index": 819,
+      "file": "2207_20260802--201384449_[Lubsda]VS[b站踩鸟杀鱼].grbr",
+      "group": "2207_20260802--201384449_[Lubsda]VS[b站踩鸟杀鱼].grbr"
+    },
+    {
+      "row_index": 820,
+      "file": "2207_20260802--201384489_[Mark二]VS[Nexlol].grbr",
+      "group": "2207_20260802--201384489_[Mark二]VS[Nexlol].grbr"
+    },
+    {
+      "row_index": 821,
+      "file": "2207_20260802--201384595_[Mark二]VS[jimwt9].grbr",
+      "group": "2207_20260802--201384595_[Mark二]VS[jimwt9].grbr"
+    },
+    {
+      "row_index": 822,
+      "file": "2207_20260802--201384658_[Dendra]VS[The Sand Witch].grbr",
+      "group": "2207_20260802--201384658_[Dendra]VS[The Sand Witch].grbr"
+    },
+    {
+      "row_index": 823,
+      "file": "2207_20260802--201385061_[Mark二]VS[JP].grbr",
+      "group": "2207_20260802--201385061_[Mark二]VS[JP].grbr"
+    },
+    {
+      "row_index": 824,
+      "file": "2207_20260802--201385495_[Mark二]VS[BewareOfThePhog].grbr",
+      "group": "2207_20260802--201385495_[Mark二]VS[BewareOfThePhog].grbr"
+    },
+    {
+      "row_index": 825,
+      "file": "2207_20260802--268490482_[cobaltwhite]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--268490482_[cobaltwhite]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 826,
+      "file": "2207_20260802--268491017_[Lord Alistair Sniffenphartz]VS[duliangyin].grbr",
+      "group": "2207_20260802--268491017_[Lord Alistair Sniffenphartz]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 827,
+      "file": "2207_20260802--268491126_[WHI-1942-10151]VS[duliangyin].grbr",
+      "group": "2207_20260802--268491126_[WHI-1942-10151]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 828,
+      "file": "2207_20260802--268491262_[Tair]VS[duliangyin].grbr",
+      "group": "2207_20260802--268491262_[Tair]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 829,
+      "file": "2207_20260802--268491350_[duliangyin]VS[Greeny].grbr",
+      "group": "2207_20260802--268491350_[duliangyin]VS[Greeny].grbr"
+    },
+    {
+      "row_index": 830,
+      "file": "2207_20260802--268491406_[没你好果汁吃]VS[Abortion_Tickles].grbr",
+      "group": "2207_20260802--268491406_[没你好果汁吃]VS[Abortion_Tickles].grbr"
+    },
+    {
+      "row_index": 831,
+      "file": "2207_20260802--268494022_[双月]VS[cast].grbr",
+      "group": "2207_20260802--268494022_[双月]VS[cast].grbr"
+    },
+    {
+      "row_index": 832,
+      "file": "2207_20260802--268494189_[elRAKAMAKAFON]VS[Mark二].grbr",
+      "group": "2207_20260802--268494189_[elRAKAMAKAFON]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 833,
+      "file": "2207_20260802--67160277_[涅槃]VS[wnulll].grbr",
+      "group": "2207_20260802--67160277_[涅槃]VS[wnulll].grbr"
+    },
+    {
+      "row_index": 834,
+      "file": "2207_20260802--67160377_[涅槃]VS[DE普_SEEK].grbr",
+      "group": "2207_20260802--67160377_[涅槃]VS[DE普_SEEK].grbr"
+    },
+    {
+      "row_index": 835,
+      "file": "2207_20260802--67160460_[Este]VS[涅槃].grbr",
+      "group": "2207_20260802--67160460_[Este]VS[涅槃].grbr"
+    },
+    {
+      "row_index": 836,
+      "file": "2207_20260802--67160524_[涅槃]VS[Cucumber Benepact].grbr",
+      "group": "2207_20260802--67160524_[涅槃]VS[Cucumber Benepact].grbr"
+    },
+    {
+      "row_index": 837,
+      "file": "2207_20260802--67162785_[Dzemp]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--67162785_[Dzemp]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 838,
+      "file": "2207_20260802--67163358_[木实]VS[duliangyin].grbr",
+      "group": "2207_20260802--67163358_[木实]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 839,
+      "file": "2207_20260802--67163402_[钟表声]VS[duliangyin].grbr",
+      "group": "2207_20260802--67163402_[钟表声]VS[duliangyin].grbr"
+    },
+    {
+      "row_index": 840,
+      "file": "2207_20260802--67163422_[涅槃]VS[飞翔的阳光].grbr",
+      "group": "2207_20260802--67163422_[涅槃]VS[飞翔的阳光].grbr"
+    },
+    {
+      "row_index": 841,
+      "file": "2207_20260802--67163584_[涅槃]VS[小白狮].grbr",
+      "group": "2207_20260802--67163584_[涅槃]VS[小白狮].grbr"
+    },
+    {
+      "row_index": 842,
+      "file": "2207_20260802--67163964_[B站鲨鱼菜鸟]VS[Gemma].grbr",
+      "group": "2207_20260802--67163964_[B站鲨鱼菜鸟]VS[Gemma].grbr"
+    },
+    {
+      "row_index": 843,
+      "file": "2207_20260802--67164162_[Carnufex]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--67164162_[Carnufex]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 844,
+      "file": "2207_20260802--67164349_[Decay]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--67164349_[Decay]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 845,
+      "file": "2207_20260802--67164437_[duliangyin]VS[Felding].grbr",
+      "group": "2207_20260802--67164437_[duliangyin]VS[Felding].grbr"
+    },
+    {
+      "row_index": 846,
+      "file": "2207_20260802--67164550_[[TUFF] Mathismight]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260802--67164550_[[TUFF] Mathismight]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 847,
+      "file": "2207_20260802--67164687_[duliangyin]VS[白白。小胖熊].grbr",
+      "group": "2207_20260802--67164687_[duliangyin]VS[白白。小胖熊].grbr"
+    },
+    {
+      "row_index": 848,
+      "file": "2207_20260802--67164787_[duliangyin]VS[77lobo77].grbr",
+      "group": "2207_20260802--67164787_[duliangyin]VS[77lobo77].grbr"
+    },
+    {
+      "row_index": 849,
+      "file": "2207_20260802--67165029_[Dzemp]VS[Mark二].grbr",
+      "group": "2207_20260802--67165029_[Dzemp]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 850,
+      "file": "2207_20260802--67165941_[Hydragrum -CdE-]VS[Mark二].grbr",
+      "group": "2207_20260802--67165941_[Hydragrum -CdE-]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 851,
+      "file": "2207_20260803--134276867_[can]VS[Mark二].grbr",
+      "group": "2207_20260803--134276867_[can]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 852,
+      "file": "2207_20260803--134280698_[嘉文]VS[HolyNeko].grbr",
+      "group": "2207_20260803--134280698_[嘉文]VS[HolyNeko].grbr"
+    },
+    {
+      "row_index": 853,
+      "file": "2207_20260803--134280855_[Ash]VS[Marco ausm Wald].grbr",
+      "group": "2207_20260803--134280855_[Ash]VS[Marco ausm Wald].grbr"
+    },
+    {
+      "row_index": 854,
+      "file": "2207_20260803--134280940_[B站鲨鱼菜鸟]VS[Mark二].grbr",
+      "group": "2207_20260803--134280940_[B站鲨鱼菜鸟]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 855,
+      "file": "2207_20260803--134281145_[zero]VS[Mark二].grbr",
+      "group": "2207_20260803--134281145_[zero]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 856,
+      "file": "2207_20260803--201385590_[Mark二]VS[elRAKAMAKAFON].grbr",
+      "group": "2207_20260803--201385590_[Mark二]VS[elRAKAMAKAFON].grbr"
+    },
+    {
+      "row_index": 857,
+      "file": "2207_20260803--201385710_[Mark二]VS[can].grbr",
+      "group": "2207_20260803--201385710_[Mark二]VS[can].grbr"
+    },
+    {
+      "row_index": 858,
+      "file": "2207_20260803--201389425_[Meew]VS[].grbr",
+      "group": "2207_20260803--201389425_[Meew]VS[].grbr"
+    },
+    {
+      "row_index": 859,
+      "file": "2207_20260803--201389715_[Meew]VS[morloxx].grbr",
+      "group": "2207_20260803--201389715_[Meew]VS[morloxx].grbr"
+    },
+    {
+      "row_index": 860,
+      "file": "2207_20260803--201389790_[p站智慧官叫馆]VS[B站指挥官教官].grbr",
+      "group": "2207_20260803--201389790_[p站智慧官叫馆]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 861,
+      "file": "2207_20260803--201389837_[morloxx]VS[一袋米要扛几楼].grbr",
+      "group": "2207_20260803--201389837_[morloxx]VS[一袋米要扛几楼].grbr"
+    },
+    {
+      "row_index": 862,
+      "file": "2207_20260803--201390269_[eus Rapthor]VS[BLACK迷].grbr",
+      "group": "2207_20260803--201390269_[eus Rapthor]VS[BLACK迷].grbr"
+    },
+    {
+      "row_index": 863,
+      "file": "2207_20260803--268494718_[NTAGT]VS[Cyinst].grbr",
+      "group": "2207_20260803--268494718_[NTAGT]VS[Cyinst].grbr"
+    },
+    {
+      "row_index": 864,
+      "file": "2207_20260803--268498013_[Mark二]VS[阿比].grbr",
+      "group": "2207_20260803--268498013_[Mark二]VS[阿比].grbr"
+    },
+    {
+      "row_index": 865,
+      "file": "2207_20260803--268498364_[B站指挥官教官]VS[B站鲨鱼菜鸟].grbr",
+      "group": "2207_20260803--268498364_[B站指挥官教官]VS[B站鲨鱼菜鸟].grbr"
+    },
+    {
+      "row_index": 866,
+      "file": "2207_20260803--268498484_[铭华]VS[超级地球是头猪].grbr",
+      "group": "2207_20260803--268498484_[铭华]VS[超级地球是头猪].grbr"
+    },
+    {
+      "row_index": 867,
+      "file": "2207_20260803--268498546_[铭华]VS[超级地球是头猪].grbr",
+      "group": "2207_20260803--268498546_[铭华]VS[超级地球是头猪].grbr"
+    },
+    {
+      "row_index": 868,
+      "file": "2207_20260803--268498632_[铭华]VS[超级地球是头猪].grbr",
+      "group": "2207_20260803--268498632_[铭华]VS[超级地球是头猪].grbr"
+    },
+    {
+      "row_index": 869,
+      "file": "2207_20260803--268499054_[Timbo Slice]VS[Ash].grbr",
+      "group": "2207_20260803--268499054_[Timbo Slice]VS[Ash].grbr"
+    },
+    {
+      "row_index": 870,
+      "file": "2207_20260803--268499153_[ScionofSorcery7]VS[eus Rapthor].grbr",
+      "group": "2207_20260803--268499153_[ScionofSorcery7]VS[eus Rapthor].grbr"
+    },
+    {
+      "row_index": 871,
+      "file": "2207_20260803--268499278_[Wuz]VS[crazy lama].grbr",
+      "group": "2207_20260803--268499278_[Wuz]VS[crazy lama].grbr"
+    },
+    {
+      "row_index": 872,
+      "file": "2207_20260803--67167375_[Mark二]VS[JP].grbr",
+      "group": "2207_20260803--67167375_[Mark二]VS[JP].grbr"
+    },
+    {
+      "row_index": 873,
+      "file": "2207_20260803--67167944_[Mark二]VS[Right_Nippy].grbr",
+      "group": "2207_20260803--67167944_[Mark二]VS[Right_Nippy].grbr"
+    },
+    {
+      "row_index": 874,
+      "file": "2207_20260803--67171173_[Firedragon363]VS[우중다향].grbr",
+      "group": "2207_20260803--67171173_[Firedragon363]VS[우중다향].grbr"
+    },
+    {
+      "row_index": 875,
+      "file": "2207_20260803--67171277_[Death_Stapler]VS[ShadedTheFaded].grbr",
+      "group": "2207_20260803--67171277_[Death_Stapler]VS[ShadedTheFaded].grbr"
+    },
+    {
+      "row_index": 876,
+      "file": "2207_20260803--67171877_[Mark二]VS[oolly].grbr",
+      "group": "2207_20260803--67171877_[Mark二]VS[oolly].grbr"
+    },
+    {
+      "row_index": 877,
+      "file": "2207_20260804--134282255_[Mark二]VS[tifo].grbr",
+      "group": "2207_20260804--134282255_[Mark二]VS[tifo].grbr"
+    },
+    {
+      "row_index": 878,
+      "file": "2207_20260804--134282360_[Mark二]VS[[SCEY] scey].grbr",
+      "group": "2207_20260804--134282360_[Mark二]VS[[SCEY] scey].grbr"
+    },
+    {
+      "row_index": 879,
+      "file": "2207_20260804--134282370_[Xxlaomamjj]VS[NTAGT].grbr",
+      "group": "2207_20260804--134282370_[Xxlaomamjj]VS[NTAGT].grbr"
+    },
+    {
+      "row_index": 880,
+      "file": "2207_20260804--134283678_[elRAKAMAKAFON]VS[Mark二].grbr",
+      "group": "2207_20260804--134283678_[elRAKAMAKAFON]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 881,
+      "file": "2207_20260804--134284639_[Mark二]VS[DocMorais].grbr",
+      "group": "2207_20260804--134284639_[Mark二]VS[DocMorais].grbr"
+    },
+    {
+      "row_index": 882,
+      "file": "2207_20260804--134284680_[Mark二]VS[cobaltwhite].grbr",
+      "group": "2207_20260804--134284680_[Mark二]VS[cobaltwhite].grbr"
+    },
+    {
+      "row_index": 883,
+      "file": "2207_20260804--134284751_[Mark二]VS[[TUFF] Ego].grbr",
+      "group": "2207_20260804--134284751_[Mark二]VS[[TUFF] Ego].grbr"
+    },
+    {
+      "row_index": 884,
+      "file": "2207_20260804--134284831_[Mark二]VS[[TUFF] Sunni].grbr",
+      "group": "2207_20260804--134284831_[Mark二]VS[[TUFF] Sunni].grbr"
+    },
+    {
+      "row_index": 885,
+      "file": "2207_20260804--134286524_[Mark二]VS[PANPIANO].grbr",
+      "group": "2207_20260804--134286524_[Mark二]VS[PANPIANO].grbr"
+    },
+    {
+      "row_index": 886,
+      "file": "2207_20260804--134286737_[Mark二]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260804--134286737_[Mark二]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 887,
+      "file": "2207_20260804--134286737_[Mark二]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--134286737_[Mark二]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 888,
+      "file": "2207_20260804--134287032_[3150716230]VS[Reimu].grbr",
+      "group": "2207_20260804--134287032_[3150716230]VS[Reimu].grbr"
+    },
+    {
+      "row_index": 889,
+      "file": "2207_20260804--134287077_[御坂美琴天下第一]VS[Last Resort].grbr",
+      "group": "2207_20260804--134287077_[御坂美琴天下第一]VS[Last Resort].grbr"
+    },
+    {
+      "row_index": 890,
+      "file": "2207_20260804--134287168_[御坂美琴天下第一]VS[derberzerker].grbr",
+      "group": "2207_20260804--134287168_[御坂美琴天下第一]VS[derberzerker].grbr"
+    },
+    {
+      "row_index": 891,
+      "file": "2207_20260804--134287481_[御坂美琴天下第一]VS[Gotcha33].grbr",
+      "group": "2207_20260804--134287481_[御坂美琴天下第一]VS[Gotcha33].grbr"
+    },
+    {
+      "row_index": 892,
+      "file": "2207_20260804--134287555_[御坂美琴天下第一]VS[flyguy].grbr",
+      "group": "2207_20260804--134287555_[御坂美琴天下第一]VS[flyguy].grbr"
+    },
+    {
+      "row_index": 893,
+      "file": "2207_20260804--201392462_[Spyrfyr]VS[Mark二].grbr",
+      "group": "2207_20260804--201392462_[Spyrfyr]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 894,
+      "file": "2207_20260804--201394482_[[EBK] Boatface Killa]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--201394482_[[EBK] Boatface Killa]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 895,
+      "file": "2207_20260804--201394623_[Unix]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--201394623_[Unix]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 896,
+      "file": "2207_20260804--201394680_[Punisher ICON_HAPPINESS_1]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--201394680_[Punisher ICON_HAPPINESS_1]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 897,
+      "file": "2207_20260804--201396150_[PANPIANO]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260804--201396150_[PANPIANO]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 898,
+      "file": "2207_20260804--201396150_[PANPIANO]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--201396150_[PANPIANO]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 899,
+      "file": "2207_20260804--201396435_[Fleshpocket]VS[Reimu].grbr",
+      "group": "2207_20260804--201396435_[Fleshpocket]VS[Reimu].grbr"
+    },
+    {
+      "row_index": 900,
+      "file": "2207_20260804--268500608_[lgwgchj]VS[Mark二].grbr",
+      "group": "2207_20260804--268500608_[lgwgchj]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 901,
+      "file": "2207_20260804--268501514_[[TUFF] Ego]VS[Mark二].grbr",
+      "group": "2207_20260804--268501514_[[TUFF] Ego]VS[Mark二].grbr"
+    },
+    {
+      "row_index": 902,
+      "file": "2207_20260804--268503285_[Voleros]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--268503285_[Voleros]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 903,
+      "file": "2207_20260804--268503386_[终归还是差点]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--268503386_[终归还是差点]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 904,
+      "file": "2207_20260804--268503553_[B站指挥官教官]VS[bisu].grbr",
+      "group": "2207_20260804--268503553_[B站指挥官教官]VS[bisu].grbr"
+    },
+    {
+      "row_index": 905,
+      "file": "2207_20260804--268503607_[B站指挥官教官]VS[Chet Manley].grbr",
+      "group": "2207_20260804--268503607_[B站指挥官教官]VS[Chet Manley].grbr"
+    },
+    {
+      "row_index": 906,
+      "file": "2207_20260804--268505212_[Matze]VS[Reimu].grbr",
+      "group": "2207_20260804--268505212_[Matze]VS[Reimu].grbr"
+    },
+    {
+      "row_index": 907,
+      "file": "2207_20260804--268505546_[Harvey James]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260804--268505546_[Harvey James]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 908,
+      "file": "2207_20260804--268505823_[flyguy]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260804--268505823_[flyguy]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 909,
+      "file": "2207_20260804--67177459_[B站指挥官教官]VS[Gok](1).grbr",
+      "group": "2207_20260804--67177459_[B站指挥官教官]VS[Gok].grbr"
+    },
+    {
+      "row_index": 910,
+      "file": "2207_20260804--67177459_[B站指挥官教官]VS[Gok].grbr",
+      "group": "2207_20260804--67177459_[B站指挥官教官]VS[Gok].grbr"
+    },
+    {
+      "row_index": 911,
+      "file": "2207_20260804--67177516_[云霄]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260804--67177516_[云霄]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 912,
+      "file": "2207_20260804--67177516_[云霄]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--67177516_[云霄]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 913,
+      "file": "2207_20260804--67177520_[9771701]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260804--67177520_[9771701]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 914,
+      "file": "2207_20260804--67177702_[Reimu]VS[guesswhosback].grbr",
+      "group": "2207_20260804--67177702_[Reimu]VS[guesswhosback].grbr"
+    },
+    {
+      "row_index": 915,
+      "file": "2207_20260804--67177746_[Reimu]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260804--67177746_[Reimu]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 916,
+      "file": "2207_20260804--67177783_[Hydragrum -CdE-]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260804--67177783_[Hydragrum -CdE-]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 917,
+      "file": "2207_20260804--67177783_[Hydragrum -CdE-]VS[B站指挥官教官].grbr",
+      "group": "2207_20260804--67177783_[Hydragrum -CdE-]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 918,
+      "file": "2207_20260804--67177880_[Gotcha33]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260804--67177880_[Gotcha33]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 919,
+      "file": "2207_20260804--67178174_[LuckyLucker]VS[御坂美琴天下第一].grbr",
+      "group": "2207_20260804--67178174_[LuckyLucker]VS[御坂美琴天下第一].grbr"
+    },
+    {
+      "row_index": 920,
+      "file": "2207_20260805--134292428_[[SUFF] Chemtrails]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260805--134292428_[[SUFF] Chemtrails]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 921,
+      "file": "2207_20260805--134292428_[[SUFF] Chemtrails]VS[B站指挥官教官].grbr",
+      "group": "2207_20260805--134292428_[[SUFF] Chemtrails]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 922,
+      "file": "2207_20260805--134292860_[喵喵拳]VS[笨蔬菜].grbr",
+      "group": "2207_20260805--134292860_[喵喵拳]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 923,
+      "file": "2207_20260805--134293155_[喵喵拳]VS[笨蔬菜].grbr",
+      "group": "2207_20260805--134293155_[喵喵拳]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 924,
+      "file": "2207_20260805--1833_[B站指挥官教官]VS[[RG] s_a_u_r_o_n](1).grbr",
+      "group": "2207_20260805--1833_[B站指挥官教官]VS[[RG] s_a_u_r_o_n].grbr"
+    },
+    {
+      "row_index": 925,
+      "file": "2207_20260805--1833_[B站指挥官教官]VS[[RG] s_a_u_r_o_n].grbr",
+      "group": "2207_20260805--1833_[B站指挥官教官]VS[[RG] s_a_u_r_o_n].grbr"
+    },
+    {
+      "row_index": 926,
+      "file": "2207_20260805--201401231_[B站指挥官教官]VS[weiseguy](1).grbr",
+      "group": "2207_20260805--201401231_[B站指挥官教官]VS[weiseguy].grbr"
+    },
+    {
+      "row_index": 927,
+      "file": "2207_20260805--201401231_[B站指挥官教官]VS[weiseguy].grbr",
+      "group": "2207_20260805--201401231_[B站指挥官教官]VS[weiseguy].grbr"
+    },
+    {
+      "row_index": 928,
+      "file": "2207_20260805--201401299_[B站指挥官教官]VS[wuQuea](1).grbr",
+      "group": "2207_20260805--201401299_[B站指挥官教官]VS[wuQuea].grbr"
+    },
+    {
+      "row_index": 929,
+      "file": "2207_20260805--201401299_[B站指挥官教官]VS[wuQuea].grbr",
+      "group": "2207_20260805--201401299_[B站指挥官教官]VS[wuQuea].grbr"
+    },
+    {
+      "row_index": 930,
+      "file": "2207_20260805--201401397_[B站指挥官教官]VS[老元元](1).grbr",
+      "group": "2207_20260805--201401397_[B站指挥官教官]VS[老元元].grbr"
+    },
+    {
+      "row_index": 931,
+      "file": "2207_20260805--201401397_[B站指挥官教官]VS[老元元].grbr",
+      "group": "2207_20260805--201401397_[B站指挥官教官]VS[老元元].grbr"
+    },
+    {
+      "row_index": 932,
+      "file": "2207_20260805--201401441_[B站指挥官教官]VS[Navarro](1).grbr",
+      "group": "2207_20260805--201401441_[B站指挥官教官]VS[Navarro].grbr"
+    },
+    {
+      "row_index": 933,
+      "file": "2207_20260805--201401441_[B站指挥官教官]VS[Navarro].grbr",
+      "group": "2207_20260805--201401441_[B站指挥官教官]VS[Navarro].grbr"
+    },
+    {
+      "row_index": 934,
+      "file": "2207_20260805--201401567_[B站指挥官教官]VS[猫头人](1).grbr",
+      "group": "2207_20260805--201401567_[B站指挥官教官]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 935,
+      "file": "2207_20260805--201401567_[B站指挥官教官]VS[猫头人].grbr",
+      "group": "2207_20260805--201401567_[B站指挥官教官]VS[猫头人].grbr"
+    },
+    {
+      "row_index": 936,
+      "file": "2207_20260805--201401623_[deu08103]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260805--201401623_[deu08103]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 937,
+      "file": "2207_20260805--201401623_[deu08103]VS[B站指挥官教官].grbr",
+      "group": "2207_20260805--201401623_[deu08103]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 938,
+      "file": "2207_20260805--201401864_[B站指挥官教官]VS[Galneryus](1).grbr",
+      "group": "2207_20260805--201401864_[B站指挥官教官]VS[Galneryus].grbr"
+    },
+    {
+      "row_index": 939,
+      "file": "2207_20260805--201401864_[B站指挥官教官]VS[Galneryus].grbr",
+      "group": "2207_20260805--201401864_[B站指挥官教官]VS[Galneryus].grbr"
+    },
+    {
+      "row_index": 940,
+      "file": "2207_20260805--201402021_[B站指挥官教官]VS[valahddin](1).grbr",
+      "group": "2207_20260805--201402021_[B站指挥官教官]VS[valahddin].grbr"
+    },
+    {
+      "row_index": 941,
+      "file": "2207_20260805--201402021_[B站指挥官教官]VS[valahddin].grbr",
+      "group": "2207_20260805--201402021_[B站指挥官教官]VS[valahddin].grbr"
+    },
+    {
+      "row_index": 942,
+      "file": "2207_20260805--201402090_[valahddin]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260805--201402090_[valahddin]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 943,
+      "file": "2207_20260805--201402090_[valahddin]VS[B站指挥官教官].grbr",
+      "group": "2207_20260805--201402090_[valahddin]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 944,
+      "file": "2207_20260805--201402494_[rnfmabj]VS[笨蔬菜].grbr",
+      "group": "2207_20260805--201402494_[rnfmabj]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 945,
+      "file": "2207_20260805--268510272_[sinwa]VS[宇宙第一美少女濑名花](1).grbr",
+      "group": "2207_20260805--268510272_[sinwa]VS[宇宙第一美少女濑名花].grbr"
+    },
+    {
+      "row_index": 946,
+      "file": "2207_20260805--268510272_[sinwa]VS[宇宙第一美少女濑名花].grbr",
+      "group": "2207_20260805--268510272_[sinwa]VS[宇宙第一美少女濑名花].grbr"
+    },
+    {
+      "row_index": 947,
+      "file": "2207_20260805--268510471_[Moist4Cheesecake]VS[笨蔬菜].grbr",
+      "group": "2207_20260805--268510471_[Moist4Cheesecake]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 948,
+      "file": "2207_20260805--268510543_[笨蔬菜]VS[bado].grbr",
+      "group": "2207_20260805--268510543_[笨蔬菜]VS[bado].grbr"
+    },
+    {
+      "row_index": 949,
+      "file": "2207_20260805--268510545_[小约]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260805--268510545_[小约]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 950,
+      "file": "2207_20260805--268510545_[小约]VS[B站指挥官教官].grbr",
+      "group": "2207_20260805--268510545_[小约]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 951,
+      "file": "2207_20260805--268510642_[笨蔬菜]VS[沐晨风].grbr",
+      "group": "2207_20260805--268510642_[笨蔬菜]VS[沐晨风].grbr"
+    },
+    {
+      "row_index": 952,
+      "file": "2207_20260805--268510709_[笨蔬菜]VS[沐晨风].grbr",
+      "group": "2207_20260805--268510709_[笨蔬菜]VS[沐晨风].grbr"
+    },
+    {
+      "row_index": 953,
+      "file": "2207_20260805--268510782_[笨蔬菜]VS[喵喵拳].grbr",
+      "group": "2207_20260805--268510782_[笨蔬菜]VS[喵喵拳].grbr"
+    },
+    {
+      "row_index": 954,
+      "file": "2207_20260805--268510963_[笨蔬菜]VS[喵喵拳].grbr",
+      "group": "2207_20260805--268510963_[笨蔬菜]VS[喵喵拳].grbr"
+    },
+    {
+      "row_index": 955,
+      "file": "2207_20260805--268511009_[LUL]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260805--268511009_[LUL]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 956,
+      "file": "2207_20260805--268511009_[LUL]VS[B站指挥官教官].grbr",
+      "group": "2207_20260805--268511009_[LUL]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 957,
+      "file": "2207_20260805--268511268_[笨蔬菜]VS[HungryMan].grbr",
+      "group": "2207_20260805--268511268_[笨蔬菜]VS[HungryMan].grbr"
+    },
+    {
+      "row_index": 958,
+      "file": "2207_20260805--268511363_[dragonite]VS[笨蔬菜].grbr",
+      "group": "2207_20260805--268511363_[dragonite]VS[笨蔬菜].grbr"
+    },
+    {
+      "row_index": 959,
+      "file": "2207_20260805--268511453_[笨蔬菜]VS[CopperH3AD].grbr",
+      "group": "2207_20260805--268511453_[笨蔬菜]VS[CopperH3AD].grbr"
+    },
+    {
+      "row_index": 960,
+      "file": "2207_20260805--67183148_[洞庭仙山但生橘]VS[B站指挥官教官](1).grbr",
+      "group": "2207_20260805--67183148_[洞庭仙山但生橘]VS[B站指挥官教官].grbr"
+    },
+    {
+      "row_index": 961,
+      "file": "2207_20260805--67183148_[洞庭仙山但生橘]VS[B站指挥官教官].grbr",
+      "group": "2207_20260805--67183148_[洞庭仙山但生橘]VS[B站指挥官教官].grbr"
+    }
+  ],
+  "input_skipped_count": 144,
+  "statistics": {
+    "included_match_count": 962,
+    "valid_round_count": 6698,
+    "spatial_invalid_round_count": 0,
+    "qc": {
+      "buff_advanced_defensive": 259,
+      "buff_advanced_offensive": 274,
+      "buff_cost_control": 1177,
+      "buff_heavy_armor": 1085,
+      "buff_tower_attack_0.1": 956,
+      "buff_tower_health_0.1": 4456,
+      "unallocated_unlock_tech_without_unit": 6299
+    }
+  }
+}
