@@ -1,0 +1,1519 @@
+{
+  "schema_version": 1,
+  "seed": 20260812,
+  "replay_dir": "local_data/humen_replay",
+  "input_file_count": 1106,
+  "eligible_match_count": 878,
+  "statistics": {
+    "total_unit_snapshots": 208814,
+    "with_position": 208814,
+    "missing_position": 0,
+    "by_player": {
+      "0": {
+        "total": 104297,
+        "with_position": 104297,
+        "missing_position": 0,
+        "x_min": -350,
+        "x_max": 350,
+        "y_min": -300,
+        "y_max": 300,
+        "y_negative": 100236,
+        "y_zero": 0,
+        "y_positive": 4061,
+        "is_rotate_true": 32766,
+        "is_rotate_false": 71531
+      },
+      "1": {
+        "total": 104517,
+        "with_position": 104517,
+        "missing_position": 0,
+        "x_min": -350,
+        "x_max": 350,
+        "y_min": -300,
+        "y_max": 300,
+        "y_negative": 4097,
+        "y_zero": 0,
+        "y_positive": 100420,
+        "is_rotate_true": 32134,
+        "is_rotate_false": 72383
+      }
+    },
+    "action_counts": {
+      "PAD_MoveUnit": 1116
+    },
+    "super_deploy_count": 1116,
+    "super_deploy_match_count": 413,
+    "total_structure_snapshots": 19275,
+    "structure_with_position": 19275,
+    "structure_missing_position": 0,
+    "structure_by_kind_id": {
+      "tower:1": 6074,
+      "tower:3": 3794,
+      "tower:2": 3296,
+      "tower:4": 3911,
+      "defense_building:10001": 1142,
+      "defense_building:20001": 959,
+      "defense_building:30001": 99
+    },
+    "coordinate_verdict": {
+      "shared_absolute_xy": true,
+      "evidence": "双方都暴露同名的 Position/x,y 字段，且语料中双方都有单位跨过 y=0 分界；super-deploy 的目标位置也保存在同一字段中。",
+      "axis_interpretation": "x 可解释为横向轴，y 可解释为共享纵向轴；正负号是统计描述，不应当当作不可违反的部署规则。"
+    }
+  },
+  "skipped": [
+    {
+      "file": "2119_20260710--134225672_[n_sacco]VS[笨蔬菜].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260711--134232613_[Azure~]VS[偷吃贡品].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260711--134232725_[你是蓬莱花仙]VS[哈宝哈宝蛤不思饱Habsburg].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260711--134232825_[Azure~]VS[B站指挥官教官].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260711--134233091_[偷吃贡品]VS[你是蓬莱花仙].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260711--134233235_[哈宝哈宝蛤不思饱Habsburg]VS[Azure~].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260711--268444296_[单真]VS[笨蔬菜].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--134234888_[SINANJU]VS[Gryning].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--134237176_[xl Joseph lx]VS[哈哈哈花熊].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--134237976_[两面包夹芝士]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--134239851_[魔法少女西琳琳]VS[my98765431].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--134239995_[魔法少女西琳琳]VS[my98765431].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--201343759_[Ankilon]VS[Urgestein].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--201345948_[Shim]VS[Frieren].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--201346724_[B站鲨鱼菜鸟]VS[秋南之leaf].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--201346753_[魚版]VS[糖葫芦].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--268455676_[糖葫芦]VS[二阶唐Cirno].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--268455799_[糖葫芦]VS[二阶唐Cirno].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--268457403_[K9 ASH]VS[LEONIDES].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260712--67125695_[笨蔬菜]VS[VoidInsanity].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260712--67128283_[御坂美琴天下第一]VS[老匪_GODOG].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260713--134247232_[B站鲨鱼菜鸟]VS[Legion].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260713--201356034_[[TUFF] Mathismight]VS[谈笑风生07].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260713--67132744_[Earihi]VS[XBlackDarknesX].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2119_20260714--268469000_[Geeden]VS[大菠萝].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260714--268471719_[wOOt]VS[大菠萝].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260714--268471774_[Dillo]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260715--201363248_[[TUFF] Mathismight]VS[cobaltwhite].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260716--67151232_[大西瓜🍉]VS[偷吃贡品].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_20260716--67151303_[大西瓜🍉]VS[偷吃贡品].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2119_26-07-15__13-01-41-448_[御坂美琴天下第一]VS[𝓹𝓸1𝓼_ღ].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260717--134272179_[n_sacco]VS[Chet Manley].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260717--134272663_[n_sacco]VS[单真].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260717--268488748_[笨蔬菜]VS[LL].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260717--268490287_[TiNaAch]VS[belief].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260717--67159376_[[SUFF]Eliminati]VS[大西瓜🍉].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260717--67163476_[你是蓬莱花仙]VS[belief].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--134273245_[沐晨风]VS[笨蔬菜].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--134273879_[KSP-lapizz]VS[Dillo].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--201382133_[VoidInsanity]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--201387780_[n_sacco]VS[Azure~].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--201388616_[n_sacco]VS[沐晨风].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--67169272_[Dzemp]VS[哈宝哈宝蛤不思饱Habsburg].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260718--67169965_[哈宝哈宝蛤不思饱Habsburg]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--134280702_[B站鲨鱼菜鸟]VS[沐晨风].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--134285992_[TelestoMyBesto]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--268503565_[大菠萝]VS[单真].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--268503867_[你是蓬莱花仙]VS[Legion].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--67170884_[你是蓬莱花仙]VS[Horrible Will].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--67171574_[Horrible Will]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--67171651_[[TUFF] Arptorious]VS[笨蔬菜].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--67176389_[IsaaX]VS[偷吃贡品].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--67176881_[哈吉弓]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260719--67177056_[你是蓬莱花仙]VS[IsaaX].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260720--134292686_[Xxlaomamjj]VS[Cyinst].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260720--268506170_[核力量]VS[Decay].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260720--268510697_[洛琪希_今天吃什么]VS[Xxlaomamjj].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260720--67183269_[xghdsgsdh]VS[洛琪希_今天吃什么].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260721--134297442_[Yukihiro]VS[白血夜].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2203_20260721--201405472_[2191257866]VS[Werter].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2203_20260721--67187373_[糕手]VS[神秘菠萝男].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2203_20260721--67187588_[糕手]VS[御坂美琴天下第一].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260721--134299008_[若安]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260721--134299194_[银牌悍匪来福]VS[n_sacco].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260721--134299220_[Shca0ut]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260721--134299323_[B站鲨鱼菜鸟]VS[野猪w123].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260721--201406604_[Xxlaomamjj]VS[カラッパ].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260721--67189282_[25561968]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260722--1674_[老元元]VS[IsaaX].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260722--1692_[[BORK] oddz]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260722--201411430_[Neon Black]VS[Fragile & Complicated].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260722--268520379_[恋云]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260722--268520712_[Mööp.]VS[无限晴空城].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260722--268522519_[Enderfolg]VS[大西瓜🍉].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260722--67193252_[NANSIFAN]VS[Midnight Coffee].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260722--67195091_[oo大帝独断万古前无古人后无来者]VS[Maitrepeters - CDE].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260724--134218080_[IsaaX]VS[狂乱君].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260724--134312310_[erwinhe33]VS[Geiler_Knueppel.].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260724--268435802_[cast]VS[法国赌神刘华强].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260724--67109862_[魔法少女西琳琳]VS[白].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260725--134220300_[B站鲨鱼菜鸟]VS[沐晨风].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260725--134220304_[大菠萝]VS[Jernsaxe].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260725--134220416_[B站鲨鱼菜鸟]VS[沐晨风].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260725--134220770_[大菠萝]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260725--201334113_[Xxlaomamjj]VS[谁没点小情绪].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260725--201335253_[Earihi]VS[Geckogod5].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260725--201335477_[你干啥呀赵玉田儿]VS[JDub].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260725--268443374_[minogame]VS[先锋小队].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260725--268444325_[OysterKing]VS[LTG].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260725--67116698_[卡爆斯基]VS[White Lion].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260726--134226908_[Squeezer]VS[JDub].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260726--134229937_[大西瓜🍉]VS[笨蔬菜].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260726--201338780_[猫头人]VS[[BUFF]DiscountTomHardy].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260726--268444621_[JDub]VS[依然永远不死].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260726--268450270_[大西瓜🍉]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260726--67118434_[Dillo]VS[Александр].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260726--67120840_[make双刀greatagain]VS[wnulll].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260726--67121883_[B站鲨鱼菜鸟]VS[Xxlaomamjj].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260726--67123337_[狂乱君]VS[猫头人].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260727--134238729_[Leonhard Oiler]VS[狂乱君].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260727--201347737_[Stones141]VS[chrissnake].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--201348145_[消逝即永恒]VS[Hermann the German].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--268455384_[windnora]VS[跳伞给我，包到].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--268456888_[25561968]VS[菜中菜老登零—院长].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--268457511_[Senti]VS[消逝即永恒].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--67129681_[滕老斜]VS[elhard].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--67129744_[Jarr0d]VS[ray].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260727--67130011_[B站鲨鱼菜鸟]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260727--67130192_[大菠萝]VS[甜甜喵喵小饼干].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260728--134243752_[永和的风]VS[亚莎神选伦巴].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260728--201348719_[Forgotten Arbiter]VS[Leonhard Oiler].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260728--201352396_[weqfgy]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260728--201352786_[duliangyin]VS[Pooty].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260728--201353032_[duliangyin]VS[Gias].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260728--268461715_[获野千寻]VS[kuromicro].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260728--67130635_[B站鲨鱼菜鸟]VS[洛琪希_今天吃什么].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260728--67134383_[银牌悍匪来福]VS[Xxlaomamjj].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260728--67134787_[RATTENFlCKER]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260728--67135061_[taskmaster-]VS[NonaKoi].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--134249353_[影病病原体]VS[涣散].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--134249431_[Yrutan]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--134249457_[法国赌神刘华强]VS[Asite].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260729--201358407_[devsnspa]VS[花生eyjObo1].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--201358464_[devsnspa]VS[花生eyjObo1].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--201358488_[Xxlaomamjj]VS[3077481602].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260729--201358674_[shurga]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--201358800_[Scrubor]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--268466872_[HanzoKenshiRon]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--268466933_[duliangyin]VS[Slayer].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--268467462_[禽大兽]VS[我还以为减速带呢].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260729--67139615_[B站鲨鱼菜鸟]VS[Xxlaomamjj].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260729--67140763_[Xxlaomamjj]VS[[TUFF] Masao - CdE].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260729--67140994_[Xxlaomamjj]VS[雪花想睡觉].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--134252107_[Chris]VS[大西瓜🍉].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--134256221_[oo大帝独断万古前无古人后无来者]VS[Leonhard Oiler].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--201361328_[B站鲨鱼菜鸟]VS[Mark二].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--201365531_[沐晨风]VS[1156136367].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--201365600_[Legion]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--201365989_[若安]VS[Chris].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--268469993_[Mahatma Gundhi]VS[Cyinst].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--268472907_[Seaki]VS[Mesquite Economy].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260730--268472956_[花生eyjObo1]VS[1113517986].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260730--268473014_[花生eyjObo1]VS[卡爆斯基].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260730--67142727_[[TUFF] Kepals]VS[大西瓜🍉].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260730--67145144_[SINANJU]VS[沙沙寨压寨夫人].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260730--67146197_[Effective]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260730--67146265_[duliangyin]VS[Arpsm].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260730--67146311_[kuromicro]VS[oo大帝独断万古前无古人后无来者].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260731--134257732_[[TUFF] Kepals]VS[Cyinst].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260731--134258247_[cobaltwhite]VS[AST Z.  Shionxavy Bot].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260731--134262322_[belief]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260731--268475976_[大西瓜🍉]VS[AST Z.  Shionxavy Bot].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260731--268478710_[花生eyjObo1]VS[a710712b].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260731--67151064_[Spaghetti]VS[不讲武德].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260731--67151113_[]VS[门线孤勇者].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260731--67151839_[Kpi]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260731--67153663_[[TUFF] Mathismight]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--201373101_[wOOt]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--201375945_[Rat Salat]VS[汐洛].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260801--201376369_[糖葫芦]VS[].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--201377145_[[TUFF] Mathismight]VS[Xxlaomamjj].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--268484763_[HanzoKenshiRon]VS[汐洛].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260801--268485347_[Kiic]VS[糖葫芦].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--268485632_[[TUFF] Mathismight]VS[dakittyda].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--268487188_[老匪_GODOG]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260801--67157170_[NANBEIHAO]VS[duliangyin].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--134274042_[老元元]VS[weqfgy].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260802--134274419_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--134274990_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--134275246_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--134275419_[B站指挥官教官]VS[菜中菜老登零—院长].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--134275615_[iorik]VS[无聊].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--134275883_[[TUFF] Sparty]VS[[TUFF] Kepals].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260802--134275970_[[TUFF] Sparty]VS[[TUFF] Kepals].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260802--1613_[Legion]VS[Xxlaomamjj].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--1617_[[TUFF] Merles tagelicht]VS[Mondkind].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--1644_[2055853227]VS[2371573448].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--201382536_[Anonymism]VS[不让].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--201384046_[MY4AI]VS[ep 异教].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--201384449_[Lubsda]VS[b站踩鸟杀鱼].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--201384658_[Dendra]VS[The Sand Witch].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--268491406_[没你好果汁吃]VS[Abortion_Tickles].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260802--67166699_[[TUFF] Sparty]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--134276086_[老元元]VS[DawiStandTall].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--134276421_[oo大帝独断万古前无古人后无来者]VS[Forgotten Arbiter].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--134276542_[Forgotten Arbiter]VS[oo大帝独断万古前无古人后无来者].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--134280489_[Steelsane]VS[B站鲨鱼菜鸟].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--134280698_[嘉文]VS[HolyNeko].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--134280855_[Ash]VS[Marco ausm Wald].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--201389425_[Meew]VS[].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--201389715_[Meew]VS[morloxx].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--201389783_[狂乱君]VS[甑欣甑奕].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--201389790_[p站智慧官叫馆]VS[B站指挥官教官].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--201389837_[morloxx]VS[一袋米要扛几楼].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--201389933_[Alysnes]VS[老元元].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--201390057_[老元元]VS[沐晨风].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--201390269_[eus Rapthor]VS[BLACK迷].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--268495029_[Cyinst]VS[cast].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--268495802_[AST Z.  Shionxavy Bot]VS[[TUFF] Kepals].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--268498484_[铭华]VS[超级地球是头猪].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--268498546_[铭华]VS[超级地球是头猪].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--268498632_[铭华]VS[超级地球是头猪].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--268498892_[Xxlaomamjj]VS[洛琪希_今天吃什么].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--268498949_[Xxlaomamjj]VS[cast].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--268499054_[Timbo Slice]VS[Ash].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--268499153_[ScionofSorcery7]VS[eus Rapthor].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--268499278_[Wuz]VS[crazy lama].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--67166996_[[TUFF] Sparty]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--67171173_[Firedragon363]VS[우중다향].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--67171277_[Death_Stapler]VS[ShadedTheFaded].grbr",
+      "reason": "unsupported_match_mode"
+    },
+    {
+      "file": "2207_20260803--67171895_[belief]VS[小菠萝之友].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--67172644_[谈笑风生07]VS[大菠萝].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260803--67172670_[duanw]VS[喵喵拳].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--134282538_[Xxlaomamjj]VS[大菠萝].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--134282609_[Xxlaomamjj]VS[[TUFF] Mathismight].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--134285183_[n_sacco]VS[Shca0ut].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--268503639_[Kiic]VS[Voleros].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--67172739_[大菠萝]VS[Xxlaomamjj].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--67174953_[[TUFF] Mathismight]VS[[SUFF] Macedonian] (1).grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--67174953_[[TUFF] Mathismight]VS[[SUFF] Macedonian](1).grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--67174953_[[TUFF] Mathismight]VS[[SUFF] Macedonian](2).grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260804--67174953_[[TUFF] Mathismight]VS[[SUFF] Macedonian].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260805--201401182_[Till]VS[1156136367](1).grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260805--201401182_[Till]VS[1156136367].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260805--268509890_[老元元]VS[哈吉弓](1).grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260805--268509890_[老元元]VS[哈吉弓].grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260805--67182142_[飞翔的阳光]VS[核力量](1).grbr",
+      "reason": "non_contiguous_rounds"
+    },
+    {
+      "file": "2207_20260805--67182142_[飞翔的阳光]VS[核力量].grbr",
+      "reason": "non_contiguous_rounds"
+    }
+  ],
+  "selected_matches": [
+    {
+      "kind": "random",
+      "file": "2119_20260713--134242397_[NTAGT]VS[二阶唐Cirno].grbr",
+      "snapshot_round": 6,
+      "image": "match_01.jpg",
+      "players": [
+        {
+          "player_index": 0,
+          "name": "NTAGT"
+        },
+        {
+          "player_index": 1,
+          "name": "二阶唐Cirno"
+        }
+      ],
+      "unit_count": 39,
+      "centroids": [
+        {
+          "player_index": 0,
+          "unit_id": 5,
+          "unit": "rhino",
+          "unit_cn": "犀牛",
+          "count": 1,
+          "mean_x": -285.0,
+          "mean_y": -25.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 0,
+          "unit_id": 9,
+          "unit": "fang",
+          "unit_cn": "尖牙",
+          "count": 3,
+          "mean_x": -163.333,
+          "mean_y": -98.333,
+          "is_rotate_true": 3,
+          "is_rotate_false": 0
+        },
+        {
+          "player_index": 0,
+          "unit_id": 10,
+          "unit": "crawler",
+          "unit_cn": "爬虫",
+          "count": 9,
+          "mean_x": -93.333,
+          "mean_y": -172.778,
+          "is_rotate_true": 6,
+          "is_rotate_false": 3
+        },
+        {
+          "player_index": 0,
+          "unit_id": 16,
+          "unit": "phoenix",
+          "unit_cn": "凤凰",
+          "count": 2,
+          "mean_x": -110.0,
+          "mean_y": -235.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 2
+        },
+        {
+          "player_index": 0,
+          "unit_id": 24,
+          "unit": "tarantula",
+          "unit_cn": "狼蛛",
+          "count": 5,
+          "mean_x": -69.0,
+          "mean_y": -119.0,
+          "is_rotate_true": 1,
+          "is_rotate_false": 4
+        },
+        {
+          "player_index": 1,
+          "unit_id": 10,
+          "unit": "crawler",
+          "unit_cn": "爬虫",
+          "count": 9,
+          "mean_x": -13.889,
+          "mean_y": 205.556,
+          "is_rotate_true": 6,
+          "is_rotate_false": 3
+        },
+        {
+          "player_index": 1,
+          "unit_id": 16,
+          "unit": "phoenix",
+          "unit_cn": "凤凰",
+          "count": 4,
+          "mean_x": -27.5,
+          "mean_y": 162.5,
+          "is_rotate_true": 0,
+          "is_rotate_false": 4
+        },
+        {
+          "player_index": 1,
+          "unit_id": 24,
+          "unit": "tarantula",
+          "unit_cn": "狼蛛",
+          "count": 6,
+          "mean_x": -28.333,
+          "mean_y": 120.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 6
+        }
+      ],
+      "structures": [
+        {
+          "kind": "defense_building",
+          "id": 10001,
+          "index": "0",
+          "name": "Shield Generator",
+          "position": {
+            "x": -175,
+            "y": -102
+          },
+          "player_index": 0,
+          "player_name": "NTAGT"
+        }
+      ],
+      "super_deploy": null
+    },
+    {
+      "kind": "random",
+      "file": "2207_20260724--268532888_[B站鲨鱼菜鸟]VS[谈笑风生07].grbr",
+      "snapshot_round": 6,
+      "image": "match_02.jpg",
+      "players": [
+        {
+          "player_index": 0,
+          "name": "B站鲨鱼菜鸟"
+        },
+        {
+          "player_index": 1,
+          "name": "谈笑风生07"
+        }
+      ],
+      "unit_count": 37,
+      "centroids": [
+        {
+          "player_index": 0,
+          "unit_id": 5,
+          "unit": "rhino",
+          "unit_cn": "犀牛",
+          "count": 1,
+          "mean_x": 255.0,
+          "mean_y": -45.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 0,
+          "unit_id": 8,
+          "unit": "steel ball",
+          "unit_cn": "钢球",
+          "count": 1,
+          "mean_x": -275.0,
+          "mean_y": -210.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 0,
+          "unit_id": 9,
+          "unit": "fang",
+          "unit_cn": "尖牙",
+          "count": 1,
+          "mean_x": -5.0,
+          "mean_y": -70.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 0,
+          "unit_id": 10,
+          "unit": "crawler",
+          "unit_cn": "爬虫",
+          "count": 7,
+          "mean_x": 45.0,
+          "mean_y": -147.143,
+          "is_rotate_true": 3,
+          "is_rotate_false": 4
+        },
+        {
+          "player_index": 0,
+          "unit_id": 13,
+          "unit": "sledgehammer",
+          "unit_cn": "铁锤",
+          "count": 2,
+          "mean_x": 0.0,
+          "mean_y": -120.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 2
+        },
+        {
+          "player_index": 0,
+          "unit_id": 15,
+          "unit": "arclight",
+          "unit_cn": "弧光",
+          "count": 5,
+          "mean_x": 2.0,
+          "mean_y": -150.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 5
+        },
+        {
+          "player_index": 0,
+          "unit_id": 25,
+          "unit": "phantom ray",
+          "unit_cn": "鬼鳐",
+          "count": 1,
+          "mean_x": 275.0,
+          "mean_y": -70.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 1,
+          "unit_id": 2,
+          "unit": "marksman",
+          "unit_cn": "长弓",
+          "count": 5,
+          "mean_x": -58.0,
+          "mean_y": 194.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 5
+        },
+        {
+          "player_index": 1,
+          "unit_id": 9,
+          "unit": "fang",
+          "unit_cn": "尖牙",
+          "count": 4,
+          "mean_x": -62.5,
+          "mean_y": 215.0,
+          "is_rotate_true": 4,
+          "is_rotate_false": 0
+        },
+        {
+          "player_index": 1,
+          "unit_id": 10,
+          "unit": "crawler",
+          "unit_cn": "爬虫",
+          "count": 4,
+          "mean_x": -80.0,
+          "mean_y": 210.0,
+          "is_rotate_true": 2,
+          "is_rotate_false": 2
+        },
+        {
+          "player_index": 1,
+          "unit_id": 13,
+          "unit": "sledgehammer",
+          "unit_cn": "铁锤",
+          "count": 2,
+          "mean_x": 0.0,
+          "mean_y": 140.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 2
+        },
+        {
+          "player_index": 1,
+          "unit_id": 15,
+          "unit": "arclight",
+          "unit_cn": "弧光",
+          "count": 4,
+          "mean_x": -62.5,
+          "mean_y": 157.5,
+          "is_rotate_true": 0,
+          "is_rotate_false": 4
+        }
+      ],
+      "structures": [],
+      "super_deploy": null
+    },
+    {
+      "kind": "flank",
+      "file": "2119_20260712--134239814_[NTAGT]VS[Mark二].grbr",
+      "snapshot_round": 10,
+      "image": "match_03.jpg",
+      "players": [
+        {
+          "player_index": 0,
+          "name": "NTAGT"
+        },
+        {
+          "player_index": 1,
+          "name": "Mark二"
+        }
+      ],
+      "unit_count": 62,
+      "centroids": [
+        {
+          "player_index": 0,
+          "unit_id": 9,
+          "unit": "fang",
+          "unit_cn": "尖牙",
+          "count": 1,
+          "mean_x": 140.0,
+          "mean_y": -225.0,
+          "is_rotate_true": 1,
+          "is_rotate_false": 0
+        },
+        {
+          "player_index": 0,
+          "unit_id": 10,
+          "unit": "crawler",
+          "unit_cn": "爬虫",
+          "count": 12,
+          "mean_x": -10.0,
+          "mean_y": -115.833,
+          "is_rotate_true": 9,
+          "is_rotate_false": 3
+        },
+        {
+          "player_index": 0,
+          "unit_id": 13,
+          "unit": "sledgehammer",
+          "unit_cn": "铁锤",
+          "count": 1,
+          "mean_x": 350.0,
+          "mean_y": 145.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 0,
+          "unit_id": 15,
+          "unit": "arclight",
+          "unit_cn": "弧光",
+          "count": 6,
+          "mean_x": -10.0,
+          "mean_y": -118.333,
+          "is_rotate_true": 0,
+          "is_rotate_false": 6
+        },
+        {
+          "player_index": 0,
+          "unit_id": 16,
+          "unit": "phoenix",
+          "unit_cn": "凤凰",
+          "count": 5,
+          "mean_x": 2.0,
+          "mean_y": -194.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 5
+        },
+        {
+          "player_index": 0,
+          "unit_id": 21,
+          "unit": "sabertooth",
+          "unit_cn": "剑齿虎",
+          "count": 5,
+          "mean_x": -19.0,
+          "mean_y": -101.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 5
+        },
+        {
+          "player_index": 0,
+          "unit_id": 2002,
+          "unit": "mountain",
+          "unit_cn": "泰山",
+          "count": 1,
+          "mean_x": 245.0,
+          "mean_y": -45.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 1,
+          "unit_id": 4,
+          "unit": "melting point",
+          "unit_cn": "熔点",
+          "count": 1,
+          "mean_x": 140.0,
+          "mean_y": 100.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 1
+        },
+        {
+          "player_index": 1,
+          "unit_id": 7,
+          "unit": "mustang",
+          "unit_cn": "野马",
+          "count": 3,
+          "mean_x": -130.0,
+          "mean_y": 241.667,
+          "is_rotate_true": 1,
+          "is_rotate_false": 2
+        },
+        {
+          "player_index": 1,
+          "unit_id": 9,
+          "unit": "fang",
+          "unit_cn": "尖牙",
+          "count": 1,
+          "mean_x": -180.0,
+          "mean_y": 205.0,
+          "is_rotate_true": 1,
+          "is_rotate_false": 0
+        },
+        {
+          "player_index": 1,
+          "unit_id": 10,
+          "unit": "crawler",
+          "unit_cn": "爬虫",
+          "count": 9,
+          "mean_x": 119.444,
+          "mean_y": 132.222,
+          "is_rotate_true": 3,
+          "is_rotate_false": 6
+        },
+        {
+          "player_index": 1,
+          "unit_id": 13,
+          "unit": "sledgehammer",
+          "unit_cn": "铁锤",
+          "count": 5,
+          "mean_x": 18.0,
+          "mean_y": 81.0,
+          "is_rotate_true": 5,
+          "is_rotate_false": 0
+        },
+        {
+          "player_index": 1,
+          "unit_id": 19,
+          "unit": "scorpion",
+          "unit_cn": "狂蝎",
+          "count": 4,
+          "mean_x": -2.5,
+          "mean_y": 112.5,
+          "is_rotate_true": 0,
+          "is_rotate_false": 4
+        },
+        {
+          "player_index": 1,
+          "unit_id": 24,
+          "unit": "tarantula",
+          "unit_cn": "狼蛛",
+          "count": 4,
+          "mean_x": 27.5,
+          "mean_y": 100.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 4
+        },
+        {
+          "player_index": 1,
+          "unit_id": 26,
+          "unit": "farseer",
+          "unit_cn": "先知",
+          "count": 2,
+          "mean_x": 30.0,
+          "mean_y": 200.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 2
+        },
+        {
+          "player_index": 1,
+          "unit_id": 31,
+          "unit": "vortex",
+          "unit_cn": "磁暴",
+          "count": 2,
+          "mean_x": 135.0,
+          "mean_y": 80.0,
+          "is_rotate_true": 0,
+          "is_rotate_false": 2
+        }
+      ],
+      "structures": [
+        {
+          "kind": "tower",
+          "id": 4,
+          "index": "2",
+          "name": "Tower construction #4",
+          "position": {
+            "x": 145,
+            "y": -35
+          },
+          "player_index": 0,
+          "player_name": "NTAGT"
+        },
+        {
+          "kind": "defense_building",
+          "id": 20001,
+          "index": "0",
+          "name": "Sentry Missile",
+          "position": {
+            "x": -244,
+            "y": -237
+          },
+          "player_index": 0,
+          "player_name": "NTAGT"
+        },
+        {
+          "kind": "defense_building",
+          "id": 20001,
+          "index": "0",
+          "name": "Sentry Missile",
+          "position": {
+            "x": 179,
+            "y": 294
+          },
+          "player_index": 1,
+          "player_name": "Mark二"
+        },
+        {
+          "kind": "defense_building",
+          "id": 10001,
+          "index": "6",
+          "name": "Shield Generator",
+          "position": {
+            "x": -118,
+            "y": 179
+          },
+          "player_index": 1,
+          "player_name": "Mark二"
+        }
+      ],
+      "super_deploy": {
+        "round": 9,
+        "player_index": 0,
+        "unit_id": 13,
+        "unit_index": "33",
+        "unit": "sledgehammer",
+        "unit_cn": "铁锤",
+        "source": {
+          "x": 350,
+          "y": 215
+        },
+        "target": {
+          "x": 350,
+          "y": 145
+        },
+        "is_rotate": false,
+        "rotate_record": false,
+        "snapshot_round": 10
+      }
+    }
+  ]
+}
