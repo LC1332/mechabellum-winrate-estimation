@@ -1,0 +1,15 @@
+dataset_npz: data/mechabellum_dense_v1.npz
+dataset_json: data/mechabellum_dense_v1.json
+replay_dir: local_data/humen_replay
+strategy_dataset_npz: data/logistic_battle_skill_v2.npz
+strategy_dataset_json: data/logistic_battle_skill_v2.json
+output_dir: artifacts/logistic_battle_skill_v2
+model_dir: models/logistic_battle_skill_v2
+report_path: information/battle_skill_report.md
+split_path: artifacts/logistic_strategy/split_v1.json
+selection_folds: 5
+model_seed: 20260812
+max_iter: 800
+tol: 1.0e-5
+bootstrap_replicates: 1000
+bootstrap_seed: 20260812
