@@ -3,6 +3,34 @@ Machine learning estimate mechabellum's winrate.
 
 钢铁指挥官 局面胜率估计
 
+## 运行前端模拟器与分享 Demo
+
+开发时分别启动后端和前端：
+
+```bash
+python3 -m uvicorn backend.run:app --reload --port 8000
+cd frontend && npm install && npm run dev
+```
+
+生产预览使用 FastAPI 同源托管构建后的前端：
+
+```bash
+cd frontend && npm run build
+cd .. && python3 -m uvicorn backend.run:app --host 127.0.0.1 --port 8000
+```
+
+需要临时给外网用户演示时，先安装 `cloudflared`，再运行：
+
+```bash
+brew install cloudflared
+./scripts/share_demo.sh
+```
+
+脚本会构建前端、启动后端和 Cloudflare Quick Tunnel，并打印一个临时的
+`https://*.trycloudflare.com` 地址。保持终端运行即可持续提供 Demo，按 `Ctrl+C`
+会同时停止后端和隧道。Quick Tunnel 适合短期测试，重启后地址会变化；不要在其中放置
+敏感数据或管理接口。
+
 
 ## 原始动机
 
@@ -318,3 +346,21 @@ o预留10个dimension作为新兵种的预留
 
 如果对局中出现双人（应该比较少）
 简化处理 直接一方两个玩家的资源相加 除以2作为o
+
+## 胜率模拟器 MVP
+
+项目现在包含一个本地前后端模拟器：
+
+```bash
+# 安装后端依赖（建议 Python 3.11，模型保存环境为 scikit-learn 1.7.2）
+python3 -m pip install -r backend/requirements.txt
+
+# 安装并构建前端
+cd frontend && npm install && npm run build && cd ..
+
+# 启动服务；构建后的前端会由 FastAPI 托管
+python3 run_simulator.py
+```
+
+开发时也可以分别启动 `uvicorn backend.run:app --reload` 与 `cd frontend && npm run dev`。
+打开 <http://127.0.0.1:8000>，即可进行买兵、卖兵、单个单位升级、科技投入、五栏拖动和三路 Top 5 推荐。素材刷新脚本为 `python3 scripts/download_unit_icons.py`，运行时不会访问 Wiki。
